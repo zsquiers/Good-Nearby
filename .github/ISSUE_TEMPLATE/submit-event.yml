@@ -1,0 +1,51 @@
+name: Share an event
+description: Suggest a restorative event to list on Good Nearby
+title: "[Event] "
+labels: ["event submission"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Event name
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Practice
+      options: [Yoga, Sound bath, Meditation, Massage, Breathwork, Reiki, Tai chi, Workshop, Other]
+    validations:
+      required: true
+  - type: input
+    id: when
+    attributes:
+      label: Date and time
+      placeholder: "Sat Oct 18, 10:00–11:30am"
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Venue and address
+    validations:
+      required: true
+  - type: input
+    id: price
+    attributes:
+      label: Cost
+      placeholder: "Free, $20, sliding scale…"
+  - type: input
+    id: host
+    attributes:
+      label: Host / teacher
+  - type: input
+    id: url
+    attributes:
+      label: Link to book or learn more
+  - type: textarea
+    id: description
+    attributes:
+      label: Short description
+      description: A friendly sentence or two about what to expect.
+    validations:
+      required: true
