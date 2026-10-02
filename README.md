@@ -1,13 +1,13 @@
 # Good Nearby
 
-A warm, calm directory of restorative events near you — yoga, sound baths, meditation, massage, breathwork, reiki, tai chi and more.
+A warm, calm directory of restorative events across Greater Boston, MetroWest and the South Shore — yoga, sound baths, meditation, massage, breathwork, reiki, tai chi, wellness expos and more.
 
 ## What's here
 
 | File | Purpose |
 | --- | --- |
 | `index.html` | The page layout |
-| `styles.css` | The warm, natural look (oat, sage, clay; automatic dark mode) |
+| `styles.css` | The green, earthy look (sage hills, leaf pattern, cream cards; automatic dark mode) |
 | `app.js` | Search, practice filters, date filters, "Near me" distance sorting, event details |
 | `data/events.js` | The event "database" — one entry per event |
 | `.github/ISSUE_TEMPLATE/submit-event.yml` | The "Share an event" form hosts fill out |
@@ -20,9 +20,16 @@ Open `index.html` in your browser. That's it.
 
 ## Add or edit events
 
-Open `data/events.js` and copy an existing entry. Each event needs a unique `id`, a `category` (`yoga`, `sound`, `meditation`, `massage`, `breathwork`, `reiki`, `tai-chi` or `workshop`), start/end times, a venue, and `lat`/`lng` coordinates so "Near me" can sort by distance. Past events hide themselves automatically.
+Open `data/events.js` and copy an existing entry that matches the kind of listing:
 
-The sample events are placeholders set around Boulder, CO — replace them with real listings from your area.
+- **One-time event:** `start: "2026-10-08T17:30"` (add `end` if known)
+- **All-day or multi-day event:** dates only, e.g. `start: "2026-11-14", end: "2026-11-15"`
+- **Weekly series:** `weekly: { day: "Saturday", time: "10:00", endTime: "11:00", from: "2026-09-19", until: "2026-10-17", skip: [] }`
+- **Ongoing class or practitioner:** no dates, just a `schedule` note such as `"Classes daily"` or `"By appointment"`
+
+Categories: `yoga`, `sound`, `meditation`, `massage`, `breathwork`, `reiki`, `tai-chi`, `workshop`, `expo`. Add `lat`/`lng` so "Near me" can sort by distance (approximate is fine). Past events and finished series hide themselves automatically.
+
+The current listings came from public event pages and directories in early October 2026. Coordinates are approximate. Good places to find more events: the Natural Awakenings Boston calendar, Eventbrite, boston.gov's Parks Fitness Series, local library calendars, and studio websites.
 
 ## Publish it free with GitHub Pages
 
