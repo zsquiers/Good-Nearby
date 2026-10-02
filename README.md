@@ -6,9 +6,9 @@ A warm, calm directory of restorative events across Greater Boston, MetroWest an
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | The page layout |
-| `styles.css` | The green, earthy look (sage hills, leaf pattern, cream cards; automatic dark mode) |
-| `app.js` | Search, practice filters, date filters, "Near me" distance sorting, event details |
+| `index.html` | The page layout (based on the design in `docs/design-reference.webp`) |
+| `styles.css` | The warm, golden look: cream paper, olive accents, DM Serif Display headings |
+| `app.js` | Renders events; search, category circles, filters, "Near me", saved hearts, event details, mobile menu |
 | `data/events.js` | The event "database" — one entry per event |
 | `.github/ISSUE_TEMPLATE/submit-event.yml` | The "Share an event" form hosts fill out |
 
@@ -30,6 +30,14 @@ Open `data/events.js` and copy an existing entry that matches the kind of listin
 Categories: `yoga`, `sound`, `meditation`, `massage`, `breathwork`, `reiki`, `tai-chi`, `workshop`, `expo`. Add `lat`/`lng` so "Near me" can sort by distance (approximate is fine). Past events and finished series hide themselves automatically.
 
 The current listings came from public event pages and directories in early October 2026. Coordinates are approximate. Good places to find more events: the Natural Awakenings Boston calendar, Eventbrite, boston.gov's Parks Fitness Series, local library calendars, and studio websites.
+
+## Photos
+
+Photos load from Unsplash. Each event card uses a photo for its category, set in the `CATEGORIES` list at the top of `app.js`. If a photo fails to load, a warm gradient shows instead. Before a big launch, consider downloading your favorite photos into `assets/` so they never depend on another site.
+
+## Newsletter
+
+The "Stay in the Loop" form isn't connected to an email service yet, and tells visitors so. Hooking it up to a free service like Buttondown or Mailchimp is a small change.
 
 ## Publish it free with GitHub Pages
 
