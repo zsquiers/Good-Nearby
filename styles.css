@@ -124,7 +124,7 @@ h3 { margin: 0 0 6px; font-size: 1.05rem; }
   align-items: center;
   background:
     linear-gradient(90deg, rgba(248,242,232,.97) 0%, rgba(248,242,232,.82) 37%, rgba(248,242,232,.08) 72%),
-    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=90") center 58% / cover no-repeat,
+    url("https://images.pexels.com/photos/4858584/pexels-photo-4858584.jpeg?auto=compress&cs=tinysrgb&w=1900") 70% 60% / cover no-repeat,
     linear-gradient(160deg, #f6e3c8, #e3b98f 60%, #b98c62);
   overflow: hidden;
 }
@@ -553,7 +553,7 @@ dialog::backdrop { background: rgba(40, 34, 22, .45); backdrop-filter: blur(3px)
     min-height: 640px;
     background:
       linear-gradient(180deg, rgba(248,242,232,.94) 0%, rgba(248,242,232,.84) 55%, rgba(248,242,232,.2)),
-      url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=88") 58% center / cover no-repeat,
+      url("https://images.pexels.com/photos/4858584/pexels-photo-4858584.jpeg?auto=compress&cs=tinysrgb&w=1200") 70% center / cover no-repeat,
       linear-gradient(160deg, #f6e3c8, #e3b98f 60%, #b98c62);
   }
   .hero-inner { min-height: 640px; align-items: flex-start; }
