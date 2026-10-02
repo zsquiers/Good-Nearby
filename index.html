@@ -12,23 +12,23 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="./">
-      <img src="assets/leaf.svg" alt="" width="28" height="28">
-      <span>Good Nearby</span>
-    </a>
-    <nav>
-      <a href="#events">Events</a>
-      <a href="#about">About</a>
-      <a href="#share" class="nav-cta">Share an event</a>
-    </nav>
-  </header>
+  <div class="top">
+    <header class="site-header">
+      <a class="brand" href="./">
+        <img src="assets/leaf.svg" alt="" width="28" height="28">
+        <span>Good Nearby</span>
+      </a>
+      <nav>
+        <a href="#events">Events</a>
+        <a href="#about">About</a>
+        <a href="#share" class="nav-cta">Share an event</a>
+      </nav>
+    </header>
 
-  <main>
     <section class="hero">
-      <p class="eyebrow">Slow down. Look around.</p>
+      <p class="eyebrow">Greater Boston · MetroWest · South Shore</p>
       <h1>Find something good, nearby.</h1>
-      <p class="lede">Yoga, sound baths, meditation circles, massage and other gentle gatherings in your community — all in one quiet place.</p>
+      <p class="lede">Yoga, sound baths, meditation, massage, wellness expos and other gentle gatherings in your community — all in one quiet place.</p>
 
       <form class="search" id="search-form" role="search">
         <label class="visually-hidden" for="q">Search events</label>
@@ -40,7 +40,14 @@
       </form>
       <p class="location-note" id="location-note" aria-live="polite"></p>
     </section>
+    <svg class="hills" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+      <path class="hill-3" d="M0 70C180 30 330 40 480 70s300 50 480 20 330-60 480-40v110H0Z"/>
+      <path class="hill-2" d="M0 100c160-30 320-40 520-10s360 40 560 10 280-30 360-20v80H0Z"/>
+      <path class="hill-1" d="M0 130c240-20 420-30 720-5s520 20 720 0v35H0Z"/>
+    </svg>
+  </div>
 
+  <main>
     <section id="events" class="events">
       <div class="filters">
         <div class="chips" id="category-chips" role="group" aria-label="Filter by practice"></div>
