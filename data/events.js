@@ -53,7 +53,7 @@ window.GOOD_NEARBY_EVENTS = [
     weekly: { day: "Saturday", time: "10:00", endTime: "11:00", from: "2026-09-19", until: "2026-10-17" },
     venue: "Savin Hill Park", address: "25 Caspian Way", city: "Dorchester, MA",
     lat: 42.3110, lng: -71.0470,
-    price: 0, priceNote: "Free · registration required",
+    price: 0, priceNote: "Registration required",
     host: "Boston Parks Fitness Series (Karma)",
     description: "All-levels vinyasa linking breath with movement, surrounded by nature. Bring a mat or towel and water.",
     url: "https://www.boston.gov/calendar/parks-fitness-yoga-karma"
@@ -65,7 +65,7 @@ window.GOOD_NEARBY_EVENTS = [
     weekly: { day: "Sunday", time: "08:00", endTime: "09:00", from: "2026-09-13", until: "2026-10-11" },
     venue: "Elliot Norton Park", address: "295 Tremont St", city: "Boston, MA",
     lat: 42.3490, lng: -71.0650,
-    price: 0, priceNote: "Free · sign up on Eventbrite",
+    price: 0, priceNote: "Sign up on Eventbrite",
     host: "Boston Parks Fitness Series (Debbie)",
     description: "A slow flow mixing gentle movement with moments of stillness, with options to level up or down.",
     url: "https://www.boston.gov/calendar/parks-fitness-yoga-debbie"
