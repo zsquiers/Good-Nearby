@@ -1,47 +1,58 @@
-// Good Nearby — renders events from data/events.js and powers search, filters,
-// "Near me", saved events, the mobile menu and the event detail dialog.
+// Good Nearby — one calm question, then one good thing at a time.
+//
+// Screens (hash routes):
+//   #/            "What would feel good right now?"
+//   #/m/<mood>    one event at a time for that mood (or "surprise")
+//   #/saved       events saved on this device
 (function () {
   "use strict";
 
-  // ---------- categories ----------
+  // ---------- photos & moods ----------
   const unsplash = (id, w) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
 
+  const CATEGORY = {
+    yoga:       { label: "Yoga",               photo: "1506126613408-eca07ce68773" },
+    meditation: { label: "Meditation",         photo: "1545205597-3d9d02c29597" },
+    sound:      { label: "Sound bath",         photo: "1608571423902-eed4a5ad8108" },
+    massage:    { label: "Massage",            photo: "1600334089648-b0d9d3028eb2" },
+    reiki:      { label: "Reiki & energy",     photo: "1544161515-4ab6ce6db874" },
+    "tai-chi":  { label: "Tai chi",            photo: "1518611012118-696072aa579a" },
+    breathwork: { label: "Breathwork",         photo: "1497250681960-ef046c08a56e" },
+    workshop:   { label: "Workshop",           photo: "1529156069898-49953e39b3ac" },
+    expo:       { label: "Expo & fair",        photo: "1515169067868-5387ec356754" },
+  };
+  const catLabel = (k) => (CATEGORY[k] ? CATEGORY[k].label : k);
+
   const ICONS = {
-    lotus: '<path d="M16 25c-5 0-9-3-10-7 3 0 6 1 8 3M16 25c5 0 9-3 10-7-3 0-6 1-8 3M16 25c-3-3-4-7-3-12 2 1 3 3 3 5 0-2 1-4 3-5 1 5 0 9-3 12Z"/>',
-    stones: '<ellipse cx="16" cy="24" rx="9" ry="3.5"/><ellipse cx="16" cy="16.5" rx="6.5" ry="3"/><ellipse cx="16" cy="10" rx="4" ry="2.4"/>',
-    waves: '<path d="M5 14v4M9 11v10M13 8v16M17 11v10M21 7v18M25 12v8"/>',
-    hands: '<path d="M7 26v-7l-2-6c-.4-1.2 1.4-2 2-.8L9 16V8.5c0-1.4 2-1.4 2 0V15M25 26v-7l2-6c.4-1.2-1.4-2-2-.8L23 16V8.5c0-1.4-2-1.4-2 0V15M11 15c0 3 1 5 2 6M21 15c0 3-1 5-2 6"/>',
-    leaf: '<path d="M16 27V15M16 15c0-6 4-9 10-9 0 6-4 9-10 9Zm0 4c0-5-3-8-9-8 0 5 3 8 9 8Z"/>',
-    sun: '<circle cx="16" cy="16" r="5"/><path d="M16 4v3M16 25v3M4 16h3M25 16h3M7.5 7.5l2 2M22.5 22.5l2 2M7.5 24.5l2-2M22.5 9.5l2-2"/>',
+    move:   '<path d="M16 25c-5 0-9-3-10-7 3 0 6 1 8 3M16 25c5 0 9-3 10-7-3 0-6 1-8 3M16 25c-3-3-4-7-3-12 2 1 3 3 3 5 0-2 1-4 3-5 1 5 0 9-3 12Z"/>',
+    calm:   '<path d="M5 14v4M9 11v10M13 8v16M17 11v10M21 7v18M25 12v8"/>',
+    care:   '<path d="M7 26v-7l-2-6c-.4-1.2 1.4-2 2-.8L9 16V8.5c0-1.4 2-1.4 2 0V15M25 26v-7l2-6c.4-1.2-1.4-2-2-.8L23 16V8.5c0-1.4-2-1.4-2 0V15M11 15c0 3 1 5 2 6M21 15c0 3-1 5-2 6"/>',
     people: '<circle cx="16" cy="11" r="3.5"/><circle cx="8" cy="13" r="2.7"/><circle cx="24" cy="13" r="2.7"/><path d="M10 25c0-3.5 2.7-7 6-7s6 3.5 6 7M3 24c0-3 2-5 5-5M29 24c0-3-2-5-5-5"/>',
-    wind: '<path d="M4 12h15a3.5 3.5 0 1 0-3.5-3.5M4 17h20a3.5 3.5 0 1 1-3.5 3.5M4 22h9"/>',
   };
 
-  // Order here is the order of the category circles and chips.
-  const CATEGORIES = {
-    yoga:       { label: "Yoga",                icon: "lotus",  tone: "#d98a68", ink: "#fff",   photo: "1506126613408-eca07ce68773" },
-    meditation: { label: "Meditation",          icon: "stones", tone: "#c3cab0",                photo: "1545205597-3d9d02c29597" },
-    sound:      { label: "Sound Baths",         icon: "waves",  tone: "#f0d3c4", ink: "#b0654a", photo: "1608571423902-eed4a5ad8108" },
-    massage:    { label: "Massage & Bodywork",  icon: "hands",  tone: "#e3d3b5",                photo: "1600334089648-b0d9d3028eb2" },
-    reiki:      { label: "Reiki & Energy",      icon: "leaf",   tone: "#d9a95a", ink: "#fff",   photo: "1544161515-4ab6ce6db874" },
-    "tai-chi":  { label: "Tai Chi",             icon: "sun",    tone: "#f1d4c0", ink: "#b0654a", photo: "1518611012118-696072aa579a" },
-    breathwork: { label: "Breathwork",          icon: "wind",   tone: "#dfe5cf",                photo: "1497250681960-ef046c08a56e" },
-    workshop:   { label: "Workshops",           icon: "sun",    tone: "#eadcc4",                photo: "1529156069898-49953e39b3ac" },
-    expo:       { label: "Expos & Fairs",       icon: "people", tone: "#c9d0b6",                photo: "1515169067868-5387ec356754" },
-  };
-  const catLabel = (key) => (CATEGORIES[key] ? CATEGORIES[key].label : key);
+  const MOODS = [
+    { id: "move",   label: "Move my body",          hint: "Yoga · tai chi",                         tone: "#d98a68", ink: "#fff",
+      match: (e) => ["yoga", "tai-chi"].includes(e.category) },
+    { id: "calm",   label: "Quiet my mind",         hint: "Meditation · sound baths · breathwork",  tone: "#c3cab0", ink: "#304022",
+      match: (e) => ["meditation", "sound", "breathwork"].includes(e.category) },
+    { id: "care",   label: "Be cared for",          hint: "Massage · reiki",                        tone: "#f0d3c4", ink: "#9a5236",
+      match: (e) => ["massage", "reiki"].includes(e.category) },
+    { id: "people", label: "Be with good people",   hint: "Classes, circles & expos",   tone: "#e3c98f", ink: "#304022",
+      // anything with a date that people attend together (not one-on-one appointments)
+      match: (e) => ["expo", "workshop"].includes(e.category) || (e.sessions && !["massage", "reiki"].includes(e.category)) },
+  ];
 
   // ---------- dates ----------
   const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   const now = new Date();
+  const DAY_MS = 86400000;
 
   function startOfDay(d) { const x = new Date(d); x.setHours(0, 0, 0, 0); return x; }
   function addDays(d, n) { const x = new Date(d); x.setDate(x.getDate() + n); return x; }
   // "2026-10-03" or "2026-10-03T09:30" → local Date (bare dates would otherwise parse as UTC)
   function parseLocal(s) { return new Date(s.includes("T") ? s : `${s}T00:00`); }
-  function ymd(d) {
-    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
-  }
+  const pad = (n) => String(n).padStart(2, "0");
+  function ymd(d) { return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`; }
 
   // Turn a listing into either dated (sessions[]) or ongoing (no sessions).
   function normalize(e) {
@@ -78,57 +89,70 @@
   const events = (window.GOOD_NEARBY_EVENTS || []).map(normalize).filter(Boolean);
   const byId = new Map(events.map((e) => [e.id, e]));
 
-  // ---------- saved (hearts) ----------
-  const SAVED_KEY = "goodNearby.saved";
-  let saved = new Set();
-  try { saved = new Set(JSON.parse(localStorage.getItem(SAVED_KEY) || "[]")); } catch (_) { /* storage unavailable */ }
-  function persistSaved() {
-    try { localStorage.setItem(SAVED_KEY, JSON.stringify([...saved])); } catch (_) { /* ignore */ }
+  // ---------- small storage helpers (never required to work) ----------
+  function load(key, fallback) {
+    try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback; } catch (_) { return fallback; }
+  }
+  function store(key, value) {
+    try { localStorage.setItem(key, JSON.stringify(value)); } catch (_) { /* ignore */ }
   }
 
-  const state = { query: "", category: "all", when: "all", freeOnly: false, savedOnly: false, origin: null };
-
-  const $ = (id) => document.getElementById(id);
+  let saved = new Set(load("goodNearby.saved", []).filter((id) => byId.has(id)));
+  let origin = load("goodNearby.origin", null);   // { lat, lng } once the visitor opts in
 
   // ---------- formatting ----------
   const escapeHtml = (s) =>
     String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
-  const wkFmt = new Intl.DateTimeFormat(undefined, { weekday: "short" });
-  const mdFmt = new Intl.DateTimeFormat(undefined, { month: "short", day: "numeric" });
-  const longDayFmt = new Intl.DateTimeFormat(undefined, { weekday: "long", month: "long", day: "numeric" });
   const timeFmt = new Intl.DateTimeFormat(undefined, { hour: "numeric", minute: "2-digit" });
-  const shortDay = (d) => `${wkFmt.format(d)} · ${mdFmt.format(d)}`;
+  const dateFmt = new Intl.DateTimeFormat(undefined, { weekday: "short", month: "short", day: "numeric" });
+  const mdFmt = new Intl.DateTimeFormat(undefined, { month: "short", day: "numeric" });
+
+  // "Today", "Tomorrow", "Saturday" (within a week), otherwise "Sat, Oct 17"
+  function dayWord(d) {
+    const diff = Math.round((startOfDay(d) - startOfDay(now)) / DAY_MS);
+    if (diff === 0) return "Today";
+    if (diff === 1) return "Tomorrow";
+    if (diff > 1 && diff < 7) return DAYS[d.getDay()];
+    return dateFmt.format(d);
+  }
+
+  // Plain-language countdown, to help with time blindness.
+  function countdown(s) {
+    if (s.start <= now && now < s.end) return "Happening right now";
+    const mins = Math.round((s.start - now) / 60000);
+    if (mins < 60) return `Starts in ${mins} min`;
+    const hours = Math.round(mins / 60);
+    if (hours < 12) return `Starts in ${hours} hour${hours === 1 ? "" : "s"}`;
+    const days = Math.round((startOfDay(s.start) - startOfDay(now)) / DAY_MS);
+    if (days <= 1) return days === 0 ? "Later today" : "Tomorrow";
+    if (days < 14) return `In ${days} days`;
+    const weeks = Math.round(days / 7);
+    return `In about ${weeks} weeks`;
+  }
+
+  function whenBig(e) {
+    if (!e.sessions) return escapeHtml(e.schedule || "Ongoing");
+    const s = e.next;
+    if (e.allDay) {
+      const lastDay = addDays(s.end, -1);
+      return ymd(lastDay) === ymd(s.start) ? dayWord(s.start) : `${dayWord(s.start)} – ${dayWord(lastDay)}`;
+    }
+    return `${dayWord(s.start)} · ${timeFmt.format(s.start)}`;
+  }
+
+  function whenSmall(e) {
+    if (!e.sessions) return "Whenever works for you — check their schedule";
+    const parts = [countdown(e.next)];
+    if (e.weekly) parts.push(`every ${e.weekly.day} until ${mdFmt.format(e.sessions[e.sessions.length - 1].start)}`);
+    else if (!e.allDay && e.hasEnd) parts.push(`ends ${timeFmt.format(e.next.end)}`);
+    return parts.join(" · ");
+  }
 
   function priceLabel(e) {
     if (e.price === 0) return "Free";
     if (typeof e.price === "number") return `$${e.price}`;
-    return "";
-  }
-
-  function cardWhen(e) {
-    if (!e.sessions) return escapeHtml(e.schedule || "Ongoing");
-    const s = e.next;
-    if (e.allDay) {
-      const lastDay = addDays(s.end, -1);
-      return ymd(lastDay) === ymd(s.start) ? shortDay(s.start) : `${shortDay(s.start)} – ${shortDay(lastDay)}`;
-    }
-    return `${shortDay(s.start)} · ${timeFmt.format(s.start)}`;
-  }
-
-  function dialogWhen(e) {
-    if (!e.sessions) return escapeHtml(e.schedule || "Ongoing");
-    const s = e.next;
-    if (e.weekly) {
-      const lastSession = e.sessions[e.sessions.length - 1].start;
-      return `${e.weekly.day}s, ${timeFmt.format(s.start)} – ${timeFmt.format(s.end)}<br>` +
-        `Next: ${longDayFmt.format(s.start)} · runs through ${mdFmt.format(lastSession)}`;
-    }
-    if (e.allDay) {
-      const lastDay = addDays(s.end, -1);
-      return ymd(lastDay) === ymd(s.start) ? longDayFmt.format(s.start) : `${longDayFmt.format(s.start)} – ${longDayFmt.format(lastDay)}`;
-    }
-    return `${longDayFmt.format(s.start)}, ${timeFmt.format(s.start)}${e.hasEnd ? ` – ${timeFmt.format(s.end)}` : ""}`;
+    return "Price: ask the host";
   }
 
   function distanceMiles(a, b) {
@@ -139,275 +163,363 @@
     const h = Math.sin(dLat / 2) ** 2 + Math.cos(toRad(a.lat)) * Math.cos(toRad(b.lat)) * Math.sin(dLng / 2) ** 2;
     return 2 * R * Math.asin(Math.sqrt(h));
   }
+  const milesText = (e) => {
+    if (!origin) return "";
+    const d = distanceMiles(origin, e);
+    return `${d < 10 ? d.toFixed(1) : Math.round(d)} mi away`;
+  };
 
-  // ---------- filtering ----------
-  function windowFor(when) {
-    const today = startOfDay(now);
-    if (when === "today") return [today, addDays(today, 1)];
-    if (when === "week") return [today, addDays(today, 7)];
-    if (when === "month") return [today, addDays(today, 30)];
-    if (when === "weekend") {
-      // Friday 5pm through Sunday night
-      const dow = today.getDay(); // 0 Sun … 6 Sat
-      if (dow === 0) return [today, addDays(today, 1)];
-      if (dow === 6) return [today, addDays(today, 2)];
-      const friday = addDays(today, 5 - dow);
-      const from = new Date(friday); from.setHours(17);
-      return [from, addDays(friday, 3)];
-    }
-    return null;
-  }
-
-  // Ongoing listings have no dates, so they only appear under "Any time".
-  function inWindow(e, when) {
-    const win = windowFor(when);
-    if (!win) return true;
-    if (!e.sessions) return false;
-    return e.sessions.some((s) => s.end >= win[0] && s.start < win[1]);
-  }
-
+  // ---------- decks ----------
   function bySoonest(a, b) {
     if (a.next && b.next) return a.next.start - b.next.start;
     if (a.next) return -1;
     if (b.next) return 1;
-    return a.city.localeCompare(b.city) || a.venue.localeCompare(b.venue);
+    return a.city.localeCompare(b.city);
+  }
+  function shuffle(list) {
+    const a = [...list];
+    for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+    return a;
   }
 
-  function filtered() {
-    const q = state.query.trim().toLowerCase();
-    let list = events.filter((e) => {
-      if (state.category !== "all" && e.category !== state.category) return false;
-      if (state.freeOnly && e.price !== 0) return false;
-      if (state.savedOnly && !saved.has(e.id)) return false;
-      if (!inWindow(e, state.when)) return false;
-      if (!q) return true;
-      return [e.title, e.description, e.host, e.venue, e.city, catLabel(e.category), e.schedule]
-        .join(" ").toLowerCase().includes(q);
-    });
-
-    if (state.origin) {
-      list = list.map((e) => ({ ...e, distance: distanceMiles(state.origin, e) }))
-        .sort((a, b) => a.distance - b.distance);
+  function buildDeck(moodId) {
+    if (moodId === "saved") return events.filter((e) => saved.has(e.id)).sort(bySoonest).map((e) => e.id);
+    if (moodId === "surprise") {
+      // Something soon first, then everything else — all in a fresh order.
+      const soon = events.filter((e) => e.next && e.next.start - now < 14 * DAY_MS);
+      const rest = events.filter((e) => !soon.includes(e));
+      return [...shuffle(soon), ...shuffle(rest)].map((e) => e.id);
+    }
+    const mood = MOODS.find((m) => m.id === moodId);
+    if (!mood) return [];
+    const list = events.filter(mood.match);
+    if (origin) {
+      // Closest first, but dated events before open-ended ones.
+      list.sort((a, b) => (Boolean(b.next) - Boolean(a.next)) || distanceMiles(origin, a) - distanceMiles(origin, b));
     } else {
       list.sort(bySoonest);
     }
-    return list;
+    return list.map((e) => e.id);
+  }
+
+  // ---------- calendar file (.ics) ----------
+  function icsText(s) {
+    return String(s).replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\n/g, "\\n");
+  }
+  const icsLocal = (d) => `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}T${pad(d.getHours())}${pad(d.getMinutes())}00`;
+  const icsDay = (d) => `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}`;
+
+  function downloadIcs(e) {
+    const s = e.next;
+    const stamp = new Date().toISOString().replace(/[-:]/g, "").replace(/\.\d+Z$/, "Z");
+    const lines = [
+      "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Good Nearby//EN", "CALSCALE:GREGORIAN",
+      "BEGIN:VEVENT",
+      `UID:${e.id}-${icsDay(s.start)}@goodnearby`,
+      `DTSTAMP:${stamp}`,
+    ];
+    if (e.allDay) {
+      lines.push(`DTSTART;VALUE=DATE:${icsDay(s.start)}`, `DTEND;VALUE=DATE:${icsDay(s.end)}`);
+    } else {
+      lines.push(`DTSTART:${icsLocal(s.start)}`, `DTEND:${icsLocal(s.end)}`);
+    }
+    if (e.weekly && e.sessions.length > 1) {
+      const last = e.sessions[e.sessions.length - 1].start;
+      lines.push(`RRULE:FREQ=WEEKLY;UNTIL=${icsDay(last)}T235959`);
+      const skips = (e.weekly.skip || []).filter((d) => parseLocal(d) > s.start);
+      if (skips.length) lines.push(`EXDATE:${skips.map((d) => icsLocal(parseLocal(`${d}T${e.weekly.time}`))).join(",")}`);
+    }
+    lines.push(
+      `SUMMARY:${icsText(e.title)}`,
+      `LOCATION:${icsText([e.venue, e.address, e.city].filter(Boolean).join(", "))}`,
+      `DESCRIPTION:${icsText(`${e.description}\n\nHost: ${e.host}${e.url ? `\n${e.url}` : ""}\n\nFound on Good Nearby — please confirm details with the host.`)}`,
+    );
+    if (e.url) lines.push(`URL:${e.url}`);
+    lines.push("BEGIN:VALARM", "TRIGGER:-PT2H", "ACTION:DISPLAY", `DESCRIPTION:${icsText(e.title)} in 2 hours`, "END:VALARM");
+    lines.push("END:VEVENT", "END:VCALENDAR");
+
+    const fold = (line) => {
+      const out = [];
+      let rest = line;
+      while (new TextEncoder().encode(rest).length > 74) {
+        let cut = 73;
+        while (new TextEncoder().encode(rest.slice(0, cut)).length > 73) cut--;
+        out.push(rest.slice(0, cut));
+        rest = " " + rest.slice(cut);
+      }
+      out.push(rest);
+      return out.join("\r\n");
+    };
+    const blob = new Blob([lines.map(fold).join("\r\n")], { type: "text/calendar" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `${e.id}.ics`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
   }
 
   // ---------- rendering ----------
-  function imgTag(e, w) {
-    const cat = CATEGORIES[e.category];
-    if (!cat) return "";
-    // If a photo fails to load it's removed, leaving the warm gradient behind it.
-    return `<img src="${unsplash(cat.photo, w)}" alt="" loading="lazy" onerror="this.remove()">`;
+  const $ = (id) => document.getElementById(id);
+  const screens = { start: $("screenStart"), pick: $("screenPick"), saved: $("screenSaved") };
+  const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  const state = { mood: null, deck: [], index: 0 };
+
+  function showScreen(name) {
+    Object.entries(screens).forEach(([k, el]) => { el.hidden = k !== name; });
+    document.body.dataset.screen = name;
+    window.scrollTo(0, 0);
   }
 
-  function cardHtml(e) {
-    const isSaved = saved.has(e.id);
-    const place = e.distance != null
-      ? `${escapeHtml(e.venue)} · ${e.distance < 10 ? e.distance.toFixed(1) : Math.round(e.distance)} mi`
-      : `${escapeHtml(e.venue)} · ${escapeHtml(e.city.replace(/, MA$/, ""))}`;
-    const tags = [`<span>${escapeHtml(catLabel(e.category))}</span>`];
-    const price = priceLabel(e);
-    if (price) tags.push(`<span class="${e.price === 0 ? "tag-free" : ""}">${price}</span>`);
-    if (e.weekly) tags.push("<span>Weekly</span>");
-    else if (!e.sessions) tags.push("<span>Ongoing</span>");
-    return `
-      <article class="event-card">
-        <button type="button" class="event-open" data-id="${escapeHtml(e.id)}" aria-label="${escapeHtml(e.title)} — details">
-          <div class="event-image">${imgTag(e, 700)}</div>
-          <div class="event-body">
-            <p class="event-date${e.sessions ? "" : " ongoing"}">${cardWhen(e)}</p>
-            <h3>${escapeHtml(e.title)}</h3>
-            <p class="event-place">${place}</p>
-            <div class="tags">${tags.join("")}</div>
-          </div>
-        </button>
-        <button type="button" class="heart${isSaved ? " saved" : ""}" data-save="${escapeHtml(e.id)}"
-          aria-label="Save ${escapeHtml(e.title)}" aria-pressed="${isSaved}">${isSaved ? "♥" : "♡"}</button>
-      </article>`;
+  function updateSavedPill() {
+    $("savedPill").hidden = saved.size === 0;
+    $("savedCount").textContent = saved.size;
   }
 
-  function renderCategories() {
-    const present = new Set(events.map((e) => e.category));
-    const keys = Object.keys(CATEGORIES).filter((k) => present.has(k));
-    $("categoryGrid").innerHTML = keys.map((k) => {
-      const c = CATEGORIES[k];
-      return `<button type="button" class="category-item" data-cat="${k}">
-        <span class="category-icon" style="--tone:${c.tone};${c.ink ? `--icon:${c.ink}` : ""}">
-          <svg viewBox="0 0 32 32" aria-hidden="true">${ICONS[c.icon]}</svg>
+  function renderStart() {
+    $("moods").innerHTML = MOODS.map((m) => `
+      <button type="button" class="mood" data-mood="${m.id}">
+        <span class="mood-icon" style="--tone:${m.tone};--icon:${m.ink}">
+          <svg viewBox="0 0 32 32" aria-hidden="true">${ICONS[m.id]}</svg>
         </span>
-        <span>${escapeHtml(c.label)}</span>
-      </button>`;
-    }).join("");
-
-    $("categoryChips").innerHTML = ["all", ...keys].map((k) =>
-      `<button type="button" class="chip" data-cat="${k}" aria-pressed="${k === state.category}">${k === "all" ? "All" : escapeHtml(catLabel(k))}</button>`
-    ).join("");
+        <span class="mood-text">
+          <span class="mood-label">${m.label}</span>
+          <span class="mood-hint">${m.hint}</span>
+        </span>
+        <span class="mood-arrow" aria-hidden="true">→</span>
+      </button>`).join("");
+    $("nearMe").checked = Boolean(origin);
+    $("nearNote").textContent = origin ? "Using your location — it stays on this device." : "";
   }
 
-  function renderFeatured() {
-    const featured = events.filter((e) => e.sessions).sort(bySoonest).slice(0, 4);
-    if (featured.length < 4) featured.push(...events.filter((e) => !e.sessions).slice(0, 4 - featured.length));
-    $("featuredGrid").innerHTML = featured.map(cardHtml).join("");
+  function photo(e, w) {
+    const cat = CATEGORY[e.category];
+    // A photo that fails to load is removed, leaving the warm gradient behind it.
+    return cat ? `<img src="${unsplash(cat.photo, w)}" alt="" onerror="this.remove()">` : "";
   }
 
-  function render() {
-    const list = filtered();
-    $("eventGrid").innerHTML = list.map(cardHtml).join("");
-    $("emptyState").hidden = list.length > 0;
-    let count = list.length === 1 ? "1 listing" : `${list.length} listings`;
-    if (state.when !== "all") count += " · ongoing classes appear under “Any time”";
-    $("resultCount").textContent = count;
-  }
+  function renderPick(focusTitle) {
+    const card = $("pickCard");
+    const total = state.deck.length;
 
-  function setCategory(cat) {
-    state.category = cat;
-    document.querySelectorAll(".chip").forEach((c) => c.setAttribute("aria-pressed", c.dataset.cat === cat));
-    render();
-  }
+    if (state.index >= total) {
+      $("progress").textContent = "";
+      card.innerHTML = `
+        <div class="pick-body done">
+          <p class="done-mark" aria-hidden="true">🌿</p>
+          <h2 id="pickTitle" tabindex="-1">${total ? "That's everything for now." : "Nothing here just yet."}</h2>
+          <p class="lede">${total ? "Take a breath. More good things are added often." : "Try another feeling — or come back soon."}</p>
+          <div class="done-actions">
+            <a href="#/" class="btn btn-dark">Pick another feeling</a>
+            ${saved.size ? `<a href="#/saved" class="btn btn-soft">See what I saved (${saved.size})</a>` : ""}
+          </div>
+        </div>`;
+      afterRender(focusTitle);
+      return;
+    }
 
-  function scrollToEvents() {
-    $("events").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
-  }
+    const e = byId.get(state.deck[state.index]);
+    const isSaved = saved.has(e.id);
+    $("progress").innerHTML =
+      `${state.index > 0 ? '<button type="button" class="quiet-link" data-act="prev">‹ Back</button>' : ""}` +
+      `<span>${state.index + 1} of ${total}</span>`;
 
-  function openEvent(id) {
-    const e = byId.get(id);
-    if (!e) return;
-    const place = [e.venue, e.address, e.city].filter(Boolean).join(", ");
-    const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(place)}`;
-    const dist = state.origin ? `<dt>Distance</dt><dd>${distanceMiles(state.origin, e).toFixed(1)} miles</dd>` : "";
-    const price = priceLabel(e) || "Check with host";
-    const phone = e.phone ? `<dt>Phone</dt><dd><a href="tel:${escapeHtml(e.phone.replace(/[^\d+]/g, ""))}">${escapeHtml(e.phone)}</a></dd>` : "";
-    $("dialogBody").innerHTML = `
-      <button type="button" class="close-btn" aria-label="Close">×</button>
-      <div class="dialog-image">${imgTag(e, 1100)}</div>
-      <div class="dialog-inner">
-        <h2 id="dialogTitle">${escapeHtml(e.title)}</h2>
-        <p class="dialog-host">with ${escapeHtml(e.host)}</p>
-        <dl>
-          <dt>When</dt><dd>${dialogWhen(e)}</dd>
-          <dt>Where</dt><dd>${escapeHtml(e.venue)}<br>${escapeHtml([e.address, e.city].filter(Boolean).join(", "))}</dd>
-          ${dist}
-          <dt>Cost</dt><dd>${price}${e.priceNote ? ` · ${escapeHtml(e.priceNote)}` : ""}</dd>
-          ${phone}
-        </dl>
-        <p>${escapeHtml(e.description)}</p>
-        <p class="confirm-note">Details can change — please confirm with the host before you go.</p>
-        <div class="dialog-actions">
-          ${e.url ? `<a class="btn btn-dark" href="${escapeHtml(e.url)}" target="_blank" rel="noopener">Details &amp; booking</a>` : ""}
-          <a class="btn btn-soft" href="${mapUrl}" target="_blank" rel="noopener">Directions</a>
+    const where = [e.venue, e.city.replace(/, MA$/, ""), milesText(e)].filter(Boolean).map(escapeHtml).join(" · ");
+    const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent([e.venue, e.address, e.city].filter(Boolean).join(", "))}`;
+
+    card.innerHTML = `
+      <div class="pick-image">${photo(e, 1100)}<span class="pick-tag">${escapeHtml(catLabel(e.category))}</span></div>
+      <div class="pick-body">
+        <p class="when-big">${whenBig(e)}</p>
+        <p class="when-small">${escapeHtml(whenSmall(e))}</p>
+        <h2 id="pickTitle" tabindex="-1">${escapeHtml(e.title)}</h2>
+        <p class="where">${where}</p>
+        <p class="price ${e.price === 0 ? "free" : ""}">${priceLabel(e)}${e.priceNote ? ` <span>· ${escapeHtml(e.priceNote)}</span>` : ""}</p>
+        <p class="desc">${escapeHtml(e.description)}</p>
+
+        <div class="go-panel" id="goPanel" hidden>
+          <p class="go-title">Nice. Here's what you need:</p>
+          <div class="go-actions">
+            ${e.sessions ? '<button type="button" class="go-btn" data-act="calendar"><span aria-hidden="true">📅</span> Add to my calendar</button>' : ""}
+            <a class="go-btn" href="${mapUrl}" target="_blank" rel="noopener"><span aria-hidden="true">📍</span> Directions</a>
+            ${e.url ? `<a class="go-btn" href="${escapeHtml(e.url)}" target="_blank" rel="noopener"><span aria-hidden="true">🎟️</span> ${e.sessions ? "Sign up / details" : "Book / see schedule"}</a>` : ""}
+            ${e.phone ? `<a class="go-btn" href="tel:${escapeHtml(e.phone.replace(/[^\d+]/g, ""))}"><span aria-hidden="true">📞</span> Call ${escapeHtml(e.phone)}</a>` : ""}
+          </div>
+          <p class="confirm">Details can change — a quick check with the host is always a good idea.</p>
         </div>
+      </div>
+      <div class="pick-actions">
+        <button type="button" class="act ${isSaved ? "on" : ""}" data-act="save" aria-pressed="${isSaved}">
+          <span aria-hidden="true">${isSaved ? "♥" : "♡"}</span> ${isSaved ? "Saved" : "Save"}
+        </button>
+        <button type="button" class="act" data-act="go" aria-expanded="false" aria-controls="goPanel">I'm in</button>
+        <button type="button" class="act act-next" data-act="next">${state.index + 1 < total ? "Next" : "Done"} <span aria-hidden="true">→</span></button>
       </div>`;
-    $("eventDialog").showModal();
+    afterRender(focusTitle);
+  }
+
+  function afterRender(focusTitle) {
+    const card = $("pickCard");
+    if (!reduceMotion) { card.classList.remove("enter"); void card.offsetWidth; card.classList.add("enter"); }
+    if (focusTitle) $("pickTitle")?.focus({ preventScroll: true });
+    updateSavedPill();
+  }
+
+  function renderSaved() {
+    const list = events.filter((e) => saved.has(e.id)).sort(bySoonest);
+    $("savedLede").textContent = list.length
+      ? "Saved on this device only. Tap one to open it."
+      : "Nothing saved yet. Tap ♡ Save on anything that looks good.";
+    $("savedList").innerHTML = list.map((e) => `
+      <li>
+        <button type="button" class="saved-item" data-open="${escapeHtml(e.id)}">
+          <span class="saved-when">${whenBig(e)}</span>
+          <span class="saved-name">${escapeHtml(e.title)}</span>
+          <span class="saved-where">${escapeHtml(e.venue)} · ${escapeHtml(e.city.replace(/, MA$/, ""))}</span>
+        </button>
+        <button type="button" class="saved-remove" data-unsave="${escapeHtml(e.id)}" aria-label="Remove ${escapeHtml(e.title)}">×</button>
+      </li>`).join("");
+    updateSavedPill();
+  }
+
+  // ---------- routing ----------
+  function route() {
+    const hash = location.hash.replace(/^#\/?/, "");
+    const [kind, arg, idx] = hash.split("/");
+
+    if (kind === "m" && arg) {
+      if (state.mood !== arg || !state.deck.length) {
+        state.mood = arg;
+        state.deck = buildDeck(arg);
+      }
+      state.index = Math.min(Math.max(parseInt(idx, 10) || 0, 0), state.deck.length);
+      showScreen("pick");
+      renderPick(true);
+      return;
+    }
+    if (kind === "saved") {
+      showScreen("saved");
+      renderSaved();
+      $("savedTitle").setAttribute("tabindex", "-1");
+      $("savedTitle").focus({ preventScroll: true });
+      return;
+    }
+    state.mood = null;
+    state.deck = [];
+    showScreen("start");
+    renderStart();
+    updateSavedPill();
+  }
+
+  // Moving between cards replaces the URL (so Back returns to the question, not every card).
+  function goTo(index) {
+    state.index = Math.min(Math.max(index, 0), state.deck.length);
+    history.replaceState(null, "", `#/m/${state.mood}/${state.index}`);
+    renderPick(true);
   }
 
   // ---------- interactions ----------
   document.addEventListener("click", (ev) => {
-    const heart = ev.target.closest("[data-save]");
-    if (heart) {
-      const id = heart.dataset.save;
-      if (saved.has(id)) saved.delete(id); else saved.add(id);
-      persistSaved();
-      // update every copy of this card (featured + grid)
-      document.querySelectorAll(`[data-save="${CSS.escape(id)}"]`).forEach((b) => {
-        const on = saved.has(id);
-        b.classList.toggle("saved", on);
-        b.setAttribute("aria-pressed", on);
-        b.textContent = on ? "♥" : "♡";
-      });
-      if (state.savedOnly) render();
+    const mood = ev.target.closest("[data-mood]");
+    if (mood) {
+      state.deck = [];                       // always build a fresh deck from the start screen
+      location.hash = `#/m/${mood.dataset.mood}/0`;
       return;
     }
-    const open = ev.target.closest(".event-open");
-    if (open) { openEvent(open.dataset.id); return; }
 
-    const catBtn = ev.target.closest(".category-item, .chip, .mood-card");
-    if (catBtn && catBtn.dataset.cat) {
-      if (catBtn.classList.contains("mood-card")) ev.preventDefault();
-      setCategory(catBtn.dataset.cat);
-      if (!catBtn.classList.contains("chip")) scrollToEvents();
+    const act = ev.target.closest("[data-act]");
+    if (act) {
+      const e = byId.get(state.deck[state.index]);
+      switch (act.dataset.act) {
+        case "next": goTo(state.index + 1); break;
+        case "prev": goTo(state.index - 1); break;
+        case "save":
+          if (saved.has(e.id)) saved.delete(e.id); else saved.add(e.id);
+          store("goodNearby.saved", [...saved]);
+          renderPick(false);
+          break;
+        case "go": {
+          const panel = $("goPanel");
+          panel.hidden = !panel.hidden;
+          act.setAttribute("aria-expanded", String(!panel.hidden));
+          act.classList.toggle("on", !panel.hidden);
+          if (!panel.hidden) panel.scrollIntoView({ block: "nearest", behavior: reduceMotion ? "auto" : "smooth" });
+          break;
+        }
+        case "calendar": downloadIcs(e); break;
+      }
+      return;
+    }
+
+    const open = ev.target.closest("[data-open]");
+    if (open) {
+      state.mood = "saved";
+      state.deck = buildDeck("saved");
+      location.hash = `#/m/saved/${Math.max(state.deck.indexOf(open.dataset.open), 0)}`;
+      return;
+    }
+
+    const unsave = ev.target.closest("[data-unsave]");
+    if (unsave) {
+      saved.delete(unsave.dataset.unsave);
+      store("goodNearby.saved", [...saved]);
+      renderSaved();
     }
   });
 
-  const dialog = $("eventDialog");
-  dialog.addEventListener("click", (ev) => {
-    if (ev.target === dialog || ev.target.closest(".close-btn")) dialog.close();
+  // Keyboard: → next, ← back, S save (only while looking at a card).
+  document.addEventListener("keydown", (ev) => {
+    if (document.body.dataset.screen !== "pick" || ev.altKey || ev.ctrlKey || ev.metaKey) return;
+    if (ev.target.closest("input, textarea, select")) return;
+    if (ev.key === "ArrowRight") { ev.preventDefault(); goTo(state.index + 1); }
+    else if (ev.key === "ArrowLeft" && state.index > 0) { ev.preventDefault(); goTo(state.index - 1); }
+    else if (ev.key.toLowerCase() === "s" && state.index < state.deck.length) $("pickCard").querySelector('[data-act="save"]')?.click();
   });
 
-  $("q").addEventListener("input", (ev) => { state.query = ev.target.value; render(); });
-  $("when").addEventListener("change", (ev) => { state.when = ev.target.value; render(); });
-  $("freeOnly").addEventListener("change", (ev) => { state.freeOnly = ev.target.checked; render(); });
-  $("savedOnly").addEventListener("change", (ev) => { state.savedOnly = ev.target.checked; render(); });
-
-  // Hero search: filters the full list and scrolls to it.
-  $("locationForm").addEventListener("submit", (ev) => {
-    ev.preventDefault();
-    const value = $("locationInput").value.trim();
-    state.query = value;
-    $("q").value = value;
-    render();
-    const n = filtered().length;
-    $("searchFeedback").textContent = value
-      ? (n ? `Found ${n} ${n === 1 ? "listing" : "listings"} matching “${value}”.` : `Nothing matches “${value}” yet — try another town or practice.`)
-      : "";
-    scrollToEvents();
+  // Swipe left for next, right for back.
+  let touchX = null, touchY = null;
+  $("pickCard").addEventListener("touchstart", (ev) => { touchX = ev.touches[0].clientX; touchY = ev.touches[0].clientY; }, { passive: true });
+  $("pickCard").addEventListener("touchend", (ev) => {
+    if (touchX === null) return;
+    const dx = ev.changedTouches[0].clientX - touchX;
+    const dy = ev.changedTouches[0].clientY - touchY;
+    touchX = touchY = null;
+    if (Math.abs(dx) < 70 || Math.abs(dy) > Math.abs(dx)) return;
+    if (dx < 0) goTo(state.index + 1);
+    else if (state.index > 0) goTo(state.index - 1);
   });
 
-  // "Use my location" — sorts everything by distance.
-  const nearBtn = $("nearMe");
-  const note = $("searchFeedback");
-  nearBtn.addEventListener("click", () => {
-    if (state.origin) {
-      state.origin = null;
-      nearBtn.setAttribute("aria-pressed", "false");
-      note.textContent = "Sorting by date again.";
-      render();
+  // "Show what's closest to me first"
+  $("nearMe").addEventListener("change", (ev) => {
+    const note = $("nearNote");
+    if (!ev.target.checked) {
+      origin = null;
+      store("goodNearby.origin", null);
+      note.textContent = "";
       return;
     }
     if (!("geolocation" in navigator)) {
-      note.textContent = "Your browser can't share location — sorting by date instead.";
+      ev.target.checked = false;
+      note.textContent = "Your browser can't share location — we'll show what's soonest instead.";
       return;
     }
     note.textContent = "Finding you…";
     navigator.geolocation.getCurrentPosition(
       (pos) => {
-        state.origin = { lat: pos.coords.latitude, lng: pos.coords.longitude };
-        nearBtn.setAttribute("aria-pressed", "true");
-        note.textContent = "Showing the closest listings first.";
-        render();
-        scrollToEvents();
+        origin = { lat: +pos.coords.latitude.toFixed(3), lng: +pos.coords.longitude.toFixed(3) };
+        store("goodNearby.origin", origin);
+        note.textContent = "Got it — closest first. Your location stays on this device.";
       },
-      () => { note.textContent = "We couldn't get your location — no worries, sorting by date."; },
+      () => {
+        ev.target.checked = false;
+        note.textContent = "No worries — we'll show what's soonest instead.";
+      },
       { enableHighAccuracy: false, timeout: 10000, maximumAge: 600000 }
     );
   });
 
-  // Header search icon focuses the events search box.
-  document.querySelector("[data-focus-search]")?.addEventListener("click", () => {
-    setTimeout(() => $("q").focus({ preventScroll: true }), 400);
-  });
-
-  // Mobile menu
-  const menuToggle = document.querySelector(".menu-toggle");
-  const mainNav = document.querySelector(".main-nav");
-  menuToggle?.addEventListener("click", () => {
-    const isOpen = mainNav.classList.toggle("open");
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
-  });
-  mainNav?.addEventListener("click", (ev) => {
-    if (ev.target.closest("a")) { mainNav.classList.remove("open"); menuToggle.setAttribute("aria-expanded", "false"); }
-  });
-
-  // Newsletter: no email service is connected yet, so say so honestly.
-  $("newsletterForm").addEventListener("submit", (ev) => {
-    ev.preventDefault();
-    $("newsletterFeedback").textContent = "Thanks! Email updates are launching soon — nothing was saved yet, so check back shortly.";
-    ev.target.reset();
-  });
-
-  $("year").textContent = now.getFullYear();
-  renderCategories();
-  renderFeatured();
-  render();
+  window.addEventListener("hashchange", route);
+  route();
 })();
