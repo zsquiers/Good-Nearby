@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Good Nearby — find what makes you feel good. Pick your town and a day to see yoga, sound baths, meditation, massage and gatherings happening near you across Greater Boston, MetroWest and the South Shore." />
+  <meta name="description" content="Good Nearby — find what makes you feel good. One calm question, one good thing to do nearby. Yoga, sound baths, meditation, massage and gatherings across Greater Boston, MetroWest and the South Shore." />
   <title>Good Nearby — Find what makes you feel good</title>
   <link rel="icon" href="assets/sun.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=8" />
+  <link rel="stylesheet" href="styles.css?v=9" />
 </head>
 <body>
   <div class="backdrop" aria-hidden="true"></div>
@@ -28,32 +28,50 @@
   </header>
 
   <main id="app" tabindex="-1">
-    <!-- Step 1: your town -->
-    <section class="screen start" id="screenTown" aria-labelledby="townTitle">
+    <!-- Screen 1: one question -->
+    <section class="screen start" id="screenStart" aria-labelledby="startTitle">
       <div class="start-card">
-        <h1 id="townTitle">Find what makes you <em>feel&nbsp;good.</em></h1>
-        <p class="lede">Yoga, sound baths, meditation, massage and good gatherings — near you, on the day you choose.</p>
+        <h1 id="startTitle">Find what makes you <em>feel&nbsp;good.</em></h1>
+        <p class="lede">One question. One good thing at a time. Nearby in Greater Boston, MetroWest &amp; the South Shore.</p>
 
-        <h2 class="ask"><span class="step">1</span> Where do you live?</h2>
-        <div class="town-tools">
-          <label class="visually-hidden" for="townFilter">Type your town</label>
-          <input id="townFilter" class="town-filter" type="search" placeholder="Type your town…" autocomplete="off">
-          <button type="button" class="locate-btn" id="locateBtn">
-            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 21s-7-7.2-7-12a7 7 0 0 1 14 0c0 4.8-7 12-7 12Z"/><circle cx="12" cy="9" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
-            Use my location
-          </button>
-        </div>
-        <p class="hint" id="townNote" aria-live="polite"></p>
-        <div class="towns" id="townList"></div>
+        <h2 class="ask">What would feel good right&nbsp;now?</h2>
+        <div class="moods" id="moods"></div>
+
+        <button type="button" class="surprise" data-mood="surprise">
+          <span aria-hidden="true">✨</span> Surprise me
+        </button>
+
+        <div class="or" aria-hidden="true"><span>or</span></div>
+        <a href="#/browse" class="browse-btn">
+          <span class="browse-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32"><rect x="5" y="7" width="22" height="20" rx="4"/><path d="M5 13h22M11 4v6M21 4v6"/><circle cx="11" cy="19" r="1.3"/><circle cx="16" cy="19" r="1.3"/><circle cx="21" cy="19" r="1.3"/></svg>
+          </span>
+          <span class="browse-text">
+            <span class="browse-label">Browse by area &amp; day</span>
+            <span class="browse-hint">See everything happening on the day you choose</span>
+          </span>
+          <span class="mood-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <label class="near-toggle">
+          <input type="checkbox" id="nearMe">
+          <span>Show what's closest to me first</span>
+        </label>
+        <p class="hint" id="nearNote" aria-live="polite"></p>
       </div>
     </section>
 
-    <!-- Step 2: which day -->
-    <section class="screen start" id="screenWhen" hidden aria-labelledby="whenTitle">
+    <!-- Browse: area + day on one screen -->
+    <section class="screen start" id="screenBrowse" hidden aria-labelledby="browseTitle">
       <div class="start-card">
-        <p class="near-line">Near <strong id="whenTown"></strong> · <a href="#/town" class="inline-link">change town</a></p>
-        <h2 class="ask ask-first" id="whenTitle" tabindex="-1"><span class="step">2</span> Which day?</h2>
-        <p class="hint-static">The number is how many good things are on within 20 miles. <span class="far-key">+2</span> means a bit farther.</p>
+        <a href="#/" class="quiet-link back-top">← Back</a>
+        <h2 class="browse-title" id="browseTitle" tabindex="-1">Browse by area &amp; day</h2>
+
+        <h3 class="ask"><span class="step">1</span> Pick your area</h3>
+        <div class="areas" id="areaList"></div>
+
+        <h3 class="ask"><span class="step">2</span> Pick a day</h3>
+        <p class="hint-static" id="dayHint">The number shows how many good things are on that day.</p>
         <div class="days" id="dayGrid"></div>
         <label class="other-day">
           <span>Another date:</span>
@@ -62,37 +80,40 @@
       </div>
     </section>
 
-    <!-- Step 3: everything that day -->
+    <!-- Everything happening that day in that area -->
     <section class="screen dayview" id="screenDay" hidden aria-labelledby="dayTitle">
+      <div class="pick-nav">
+        <a href="#/browse" class="quiet-link">← Pick another day</a>
+      </div>
       <div class="day-card">
         <div class="day-head">
           <button type="button" class="day-arrow" data-shift="-1" aria-label="Previous day">‹</button>
           <div class="day-head-text">
             <h2 id="dayTitle" tabindex="-1"></h2>
-            <p class="near-line">Near <strong id="dayTown"></strong> · <a href="#/town" class="inline-link">change</a> · <a href="#/when" class="inline-link">all days</a></p>
+            <p class="near-line" id="dayArea"></p>
           </div>
           <button type="button" class="day-arrow" data-shift="1" aria-label="Next day">›</button>
         </div>
-        <div class="mood-filter" id="moodFilter" role="group" aria-label="Show only"></div>
         <div id="dayList" aria-live="polite"></div>
       </div>
     </section>
 
-    <!-- One event -->
-    <section class="screen eventview" id="screenEvent" hidden aria-labelledby="eventTitle">
+    <!-- Screen 2: one event at a time -->
+    <section class="screen pick" id="screenPick" hidden aria-labelledby="pickTitle">
       <div class="pick-nav">
-        <a href="#/when" class="quiet-link" id="eventBack">← Back</a>
+        <a href="#/" class="quiet-link" id="pickBack">← Start over</a>
+        <p class="progress" id="progress" aria-live="polite"></p>
       </div>
-      <article class="pick-card" id="eventCard"></article>
+      <article class="pick-card" id="pickCard"></article>
     </section>
 
-    <!-- Saved -->
+    <!-- Screen 3: saved -->
     <section class="screen saved" id="screenSaved" hidden aria-labelledby="savedTitle">
       <div class="pick-nav">
-        <a href="#/when" class="quiet-link">← Back to days</a>
+        <a href="#/" class="quiet-link">← Start over</a>
       </div>
       <div class="saved-card">
-        <h2 id="savedTitle" tabindex="-1">Your saved good things</h2>
+        <h2 id="savedTitle">Your saved good things</h2>
         <p class="lede" id="savedLede">Saved on this device only.</p>
         <ul class="saved-list" id="savedList"></ul>
       </div>
@@ -105,8 +126,8 @@
     <span>Good Nearby · Find what makes you feel good · Photos via Unsplash &amp; Pexels</span>
   </footer>
 
-  <script src="data/events.js?v=8"></script>
-  <script src="data/towns.js?v=8"></script>
-  <script src="app.js?v=8"></script>
+  <script src="data/events.js?v=9"></script>
+  <script src="data/towns.js?v=9"></script>
+  <script src="app.js?v=9"></script>
 </body>
 </html>
