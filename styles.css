@@ -72,12 +72,16 @@ body:not([data-screen="start"]):not([data-screen="browse"]) .backdrop { opacity:
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  font-family: "DM Serif Display", Georgia, serif;
-  font-size: 1.55rem;
+  font-family: "Jost", "DM Sans", system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: .22em;
   line-height: 1;
   text-decoration: none;
 }
-.brand-mark { width: 30px; height: 30px; margin-bottom: 4px; }
+.brand > span { margin-right: -.22em; }   /* keeps the spaced letters centered under the sunflower */
+.brand-mark { width: 30px; height: 30px; margin-bottom: 7px; }
 .saved-pill {
   display: inline-flex;
   align-items: center;
