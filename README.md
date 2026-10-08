@@ -29,7 +29,7 @@ Design rules: one decision per screen, no menus, big tap targets, plain language
 | `app.js` | Moods, decks, area & day browsing, saving, calendar files, location sorting |
 | `data/events.js` | The event "database" — one entry per event |
 | `data/towns.js` | The areas for browsing and the towns in each (an event's area comes from its town) |
-| `.github/ISSUE_TEMPLATE/submit-event.yml` | The "Share an event" form hosts fill out |
+| `.github/ISSUE_TEMPLATE/submit-event.yml` | An older GitHub-based submission form (the site now uses its own form) |
 
 It's plain HTML, CSS and JavaScript — no build step or installs needed.
 
@@ -53,6 +53,13 @@ The current listings came from public event pages and directories in early Octob
 ## Photos
 
 Photos load from Unsplash. Each event uses a photo for its category, set in the `CATEGORY` list at the top of `app.js`. The background photo is set as `--hero` in `styles.css`. If a photo fails to load, a warm gradient shows instead. Before a big launch, consider downloading your favorite photos into `assets/` so they never depend on another site.
+
+## Listing events (for hosts)
+
+"Hosting something good? List it here" (bottom of every page) opens **List something good** — modeled on Community Kangaroo: pick the area first, then one simple form (what, when — one date, weekly or by appointment — where, cost and link, and the host's contact details, which aren't published), plus a short "What we list" guide. Every submission is reviewed before it goes live.
+
+- **Connecting it:** create a free form at [Formspree](https://formspree.io) and put its id (the part after `/f/` in the form's address) in `SUBMISSIONS.formspreeId` at the top of `app.js`. Formspree emails you each submission. Until then the form thanks the host and explains online listing is being set up — nothing is sent.
+- **Adding an approved listing:** each email includes `paste_into_events_js` — a finished entry (with the town's approximate location) to paste into `data/events.js`.
 
 ## Weekend Favorites newsletter
 
