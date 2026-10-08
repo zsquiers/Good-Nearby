@@ -1,9 +1,10 @@
-// Towns people can pick on the first screen, grouped by area.
+// Areas for "Browse by area & day", and the towns in each.
+// An event belongs to the area of its town (matched by name, or the nearest town by distance).
 // lat/lng are approximate town centers — used to measure distance to events.
-// To add a town, copy a line into the right group. `id` must be unique (lowercase, dashes).
+// To add a town, copy a line into the right area. `id` must be unique (lowercase, dashes).
 
 window.GOOD_NEARBY_TOWNS = [
-  { area: "Franklin & nearby", towns: [
+  { id: "franklin-area", area: "Franklin & nearby", towns: [
     { id: "franklin",     name: "Franklin",     lat: 42.0834, lng: -71.3967 },
     { id: "medway",       name: "Medway",       lat: 42.1392, lng: -71.3967 },
     { id: "bellingham",   name: "Bellingham",   lat: 42.0868, lng: -71.4745 },
@@ -15,7 +16,7 @@ window.GOOD_NEARBY_TOWNS = [
     { id: "milford",      name: "Milford",      lat: 42.1398, lng: -71.5162 },
     { id: "medfield",     name: "Medfield",     lat: 42.1876, lng: -71.3062 },
   ]},
-  { area: "MetroWest", towns: [
+  { id: "metrowest", area: "MetroWest", towns: [
     { id: "framingham",   name: "Framingham",   lat: 42.2793, lng: -71.4162 },
     { id: "natick",       name: "Natick",       lat: 42.2834, lng: -71.3495 },
     { id: "marlborough",  name: "Marlborough",  lat: 42.3459, lng: -71.5523 },
@@ -27,7 +28,7 @@ window.GOOD_NEARBY_TOWNS = [
     { id: "waltham",      name: "Waltham",      lat: 42.3765, lng: -71.2356 },
     { id: "newton",       name: "Newton",       lat: 42.3370, lng: -71.2092 },
   ]},
-  { area: "Boston area", towns: [
+  { id: "boston-area", area: "Boston area", towns: [
     { id: "boston",       name: "Boston",       lat: 42.3601, lng: -71.0589 },
     { id: "cambridge",    name: "Cambridge",    lat: 42.3736, lng: -71.1097 },
     { id: "somerville",   name: "Somerville",   lat: 42.3876, lng: -71.0995 },
@@ -38,7 +39,7 @@ window.GOOD_NEARBY_TOWNS = [
     { id: "dedham",       name: "Dedham",       lat: 42.2418, lng: -71.1662 },
     { id: "norwood",      name: "Norwood",      lat: 42.1945, lng: -71.1995 },
   ]},
-  { area: "South Shore", towns: [
+  { id: "south-shore", area: "South Shore", towns: [
     { id: "quincy",       name: "Quincy",       lat: 42.2529, lng: -71.0023 },
     { id: "braintree",    name: "Braintree",    lat: 42.2079, lng: -71.0040 },
     { id: "weymouth",     name: "Weymouth",     lat: 42.2207, lng: -70.9396 },

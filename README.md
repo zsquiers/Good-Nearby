@@ -4,24 +4,31 @@ A warm, calm, ADHD-friendly way to find restorative events across Greater Boston
 
 ## How it works
 
-1. **Where do you live?** Tap your town (or type it, or "Use my location"). It's remembered on this device.
-2. **Which day?** A 14-day grid shows how many good things are on within 20 miles each day (a faint "+2" means a bit farther). Or choose any date.
-3. **Everything that day,** grouped into Morning, Afternoon and Evening, with ‹ › to move day by day. Optional filters: Move, Calm, Be cared for, Gatherings. Things 20–40 miles away are listed under "A bit farther", and classes or practitioners without fixed dates sit in a collapsed "Also open most days near you". An empty day offers a button to the next day with something nearby.
-4. **Tap an event** for the details, then ♡ Save or **I'm in** (Add to my calendar with a 2-hour reminder, Directions, Sign up, Call).
+The first screen says **"Find what makes you feel good."** and offers two ways in:
 
-Links are shareable: `#/day/franklin/2026-10-17` opens that day near Franklin.
+**1. By feeling (one good thing at a time)**
+- "What would feel good right now?" — Move my body, Quiet my mind, Be cared for, Be with good people, or ✨ Surprise me.
+- Then one event at a time, soonest first (or closest first with "Show what's closest to me first"), with plain-language times ("Saturday · 10 AM — in 5 days").
+- Three buttons: ♡ Save, I'm in, Next. "I'm in" reveals Add to my calendar (with a 2-hour reminder), Directions, Sign up and Call.
 
-Design rules: one decision per screen, no menus, big tap targets, plain language, gentle motion (none for visitors who prefer reduced motion). Keyboard: ← → change the day. On phones, swipe left/right on the day view.
+**2. Browse by area & day**
+- Pick an area — Franklin & nearby, MetroWest, Boston area, South Shore, or Everywhere — and a day from a 14-day grid that shows how many things are on each day (or any other date). The area is remembered.
+- See everything that day grouped into Morning, Afternoon and Evening, with ‹ › to move day by day. Empty days offer the next day with something on, and a link to what's on elsewhere. Classes and practitioners without fixed dates sit in a collapsed "Also open most days" section.
+- Tap anything to open it as a card; Next steps through the rest of that day.
+
+Shareable links: `#/day/franklin-area/2026-10-17` opens that day in Franklin & nearby.
+
+Design rules: one decision per screen, no menus, big tap targets, plain language, gentle motion (none for visitors who prefer reduced motion). Keyboard: → next card / next day, ← back, S save. On phones, swipe left/right.
 
 ## What's here
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | The screens: town, day grid, day list, event, saved |
+| `index.html` | The screens: start, browse (area + day), day list, one-at-a-time card, saved |
 | `styles.css` | The warm, golden look (cream, olive, DM Serif Display) — see `docs/design-reference.webp` |
-| `app.js` | Town & day logic, distance, filters, saving, calendar files |
+| `app.js` | Moods, decks, area & day browsing, saving, calendar files, location sorting |
 | `data/events.js` | The event "database" — one entry per event |
-| `data/towns.js` | Towns people can pick, grouped by area, with approximate centers |
+| `data/towns.js` | The areas for browsing and the towns in each (an event's area comes from its town) |
 | `.github/ISSUE_TEMPLATE/submit-event.yml` | The "Share an event" form hosts fill out |
 
 It's plain HTML, CSS and JavaScript — no build step or installs needed.
@@ -39,7 +46,7 @@ Open `data/events.js` and copy an existing entry that matches the kind of listin
 - **Weekly series:** `weekly: { day: "Saturday", time: "10:00", endTime: "11:00", from: "2026-09-19", until: "2026-10-17", skip: [] }`
 - **Ongoing class or practitioner:** no dates, just a `schedule` note such as `"Classes daily"` or `"By appointment"`
 
-The day-view filters map to categories in `app.js` (`MOODS`); "near" is 20 miles and "a bit farther" is 40 (`NEAR_MILES`, `FAR_MILES`). Categories: `yoga`, `sound`, `meditation`, `massage`, `breathwork`, `reiki`, `tai-chi`, `workshop`, `expo`. Add `lat`/`lng` so "Near me" can sort by distance (approximate is fine). Past events and finished series hide themselves automatically.
+Feelings map to categories in `app.js` (`MOODS`). An event's browse area comes from its town in `data/towns.js` (or the nearest listed town). Categories: `yoga`, `sound`, `meditation`, `massage`, `breathwork`, `reiki`, `tai-chi`, `workshop`, `expo`. Add `lat`/`lng` so "Near me" can sort by distance (approximate is fine). Past events and finished series hide themselves automatically.
 
 The current listings came from public event pages and directories in early October 2026. Coordinates are approximate. Good places to find more events: the Natural Awakenings Boston calendar, Eventbrite, boston.gov's Parks Fitness Series, local library calendars, and studio websites.
 
@@ -49,7 +56,7 @@ Photos load from Unsplash. Each event uses a photo for its category, set in the 
 
 ## Newsletter (planned)
 
-A newsletter sign-up is planned. It was removed from the page for now to keep things calm; a good home for it later is under the day list or on empty days ("Get a note when something's on near you").
+A newsletter sign-up is planned. It was removed from the page for now to keep things calm; a good home for it later is the "That's everything for now" screen or empty days in the day view ("Get a note when something's on near you").
 
 ## Updating the site
 
