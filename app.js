@@ -7,9 +7,16 @@
 //   #/browse                  pick an area and a day
 //   #/day/<area>/<yyyy-mm-dd> everything happening that day in that area
 //   #/d/<area>/<date>/<i>     that day's events, one at a time
+//   #/weekend                 Weekend Favorites: newsletter sign-up + this weekend\'s picks
 //   #/saved                   events saved on this device
 (function () {
   "use strict";
+
+  // ---------- newsletter ----------
+  // Weekend Favorites sign-ups go to Buttondown (buttondown.com). Put your Buttondown
+  // username here once your account exists — until then the form says sign-ups open soon
+  // and nothing is collected.
+  const NEWSLETTER = { buttondownUsername: "" };
 
   // ---------- photos & moods ----------
   // A category photo is an Unsplash photo id, or a full image URL.
@@ -137,6 +144,21 @@
       .filter((x) => x.s && inArea(x.e, areaId))
       .sort((a, b) => a.s.start - b.s.start);
   }
+  // "This weekend": Friday 5 PM through Sunday night (or what's left of it, if it's the weekend now).
+  function weekendWindow() {
+    const today = startOfDay(now);
+    const dow = today.getDay();                       // 0 Sun … 6 Sat
+    const friday = addDays(today, dow === 0 ? -2 : 5 - dow);
+    const from = new Date(friday); from.setHours(17);
+    return { from: now > from ? now : from, to: addDays(friday, 3), friday };
+  }
+  function weekendPicks() {
+    const w = weekendWindow();
+    return events
+      .map((e) => ({ e, s: e.sessions && e.sessions.find((x) => x.end > w.from && x.start < w.to) }))
+      .filter((x) => x.s)
+      .sort((a, b) => a.s.start - b.s.start);
+  }
   const ongoingIn = (areaId) => events.filter((e) => !e.sessions && inArea(e, areaId)).sort((a, b) => a.city.localeCompare(b.city));
 
   // ---------- formatting ----------
@@ -231,6 +253,7 @@
 
   function buildDeck(moodId) {
     if (moodId === "saved") return events.filter((e) => saved.has(e.id)).sort(bySoonest).map((e) => e.id);
+    if (moodId === "weekend") return weekendPicks().map((x) => x.e.id);
     if (moodId === "surprise") {
       // Something soon first, then everything else — all in a fresh order.
       const soon = events.filter((e) => e.next && e.next.start - now < 14 * DAY_MS);
@@ -310,7 +333,7 @@
 
   // ---------- rendering ----------
   const $ = (id) => document.getElementById(id);
-  const screens = { start: $("screenStart"), browse: $("screenBrowse"), day: $("screenDay"), pick: $("screenPick"), saved: $("screenSaved") };
+  const screens = { start: $("screenStart"), browse: $("screenBrowse"), day: $("screenDay"), weekend: $("screenWeekend"), pick: $("screenPick"), saved: $("screenSaved") };
   const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // base: the URL prefix for the current deck; day: the chosen day when browsing by day
@@ -365,6 +388,7 @@
             <a href="#/" class="btn ${state.back ? "btn-soft" : "btn-dark"}">Pick a feeling</a>
             ${saved.size ? `<a href="#/saved" class="btn btn-soft">See what I saved (${saved.size})</a>` : ""}
           </div>
+          ${state.mood === "weekend" ? "" : `<p class="nudge"><a href="#/weekend">💌 Get Weekend Favorites in your inbox every Thursday →</a></p>`}
         </div>`;
       afterRender(focusTitle);
       return;
@@ -520,6 +544,34 @@
   const dayDeck = (areaId, day) => [...eventsOn(areaId, day).map((x) => x.e.id), ...ongoingIn(areaId).map((e) => e.id)];
   const goDay = (areaId, d) => { location.hash = `#/day/${areaId}/${ymd(d)}`; };
 
+  function renderWeekend() {
+    const w = weekendWindow();
+    const sun = addDays(w.friday, 2);
+    $("weekendPreviewTitle").textContent = `This weekend's good things · ${mdFmt.format(w.friday)}–${sun.getDate()}`;
+    const picks = weekendPicks();
+    if (!picks.length) {
+      $("weekendList").innerHTML = `<p class="hint-static">Nothing listed for this weekend yet — sign up and we'll send the latest on Thursday.</p>`;
+      return;
+    }
+    const groups = new Map();
+    picks.forEach((x, i) => {
+      const d = x.s.start < w.from ? w.from : x.s.start;
+      const label = d.getDay() === 5 ? "Friday evening" : DAYS[d.getDay()];
+      if (!groups.has(label)) groups.set(label, []);
+      groups.get(label).push({ ...x, i });
+    });
+    $("weekendList").innerHTML = [...groups].map(([label, items]) => `<section class="slot"><h3>${label}</h3><ul class="rows">${
+      items.map(({ e, s, i }) => `<li><button type="button" class="row" data-weekopen="${i}">
+        <span class="row-time">${e.allDay ? "All day" : shortTime(s.start)}</span>
+        <span class="row-main">
+          <span class="row-title">${escapeHtml(e.title)}</span>
+          <span class="row-meta">${[e.venue, e.city.replace(/, MA$/, ""), priceLabel(e) === "Price: ask the host" ? "" : priceLabel(e)].filter(Boolean).map(escapeHtml).join(" · ")}</span>
+          <span class="row-cat">${escapeHtml(catLabel(e.category))}</span>
+        </span>
+        <span class="row-arrow" aria-hidden="true">›</span>
+      </button></li>`).join("")}</ul></section>`).join("");
+  }
+
   function renderSaved() {
     const list = events.filter((e) => saved.has(e.id)).sort(bySoonest);
     $("savedLede").textContent = list.length
@@ -552,7 +604,8 @@
         state.deck = buildDeck(arg);
       }
       state.base = `#/m/${arg}`;
-      state.back = arg === "saved" ? { href: "#/saved", label: "← Back to saved" } : null;
+      state.back = arg === "saved" ? { href: "#/saved", label: "← Back to saved" }
+        : arg === "weekend" ? { href: "#/weekend", label: "← Back to Weekend Favorites" } : null;
       setPickBack();
       state.index = Math.min(Math.max(parseInt(idx, 10) || 0, 0), state.deck.length);
       showScreen("pick");
@@ -576,6 +629,13 @@
       return;
     }
     state.day = null;
+    if (kind === "weekend") {
+      renderWeekend();
+      showScreen("weekend");
+      $("weekendTitle").focus({ preventScroll: true });
+      updateSavedPill();
+      return;
+    }
     if (kind === "browse") {
       renderBrowse();
       showScreen("browse");
@@ -636,6 +696,13 @@
     if (gotoBtn) { goDay(dayView.area, parseLocal(gotoBtn.dataset.goto)); return; }
     const shift = ev.target.closest("[data-shift]");
     if (shift && dayView.day) { goDay(dayView.area, addDays(dayView.day, Number(shift.dataset.shift))); return; }
+    const weekOpen = ev.target.closest("[data-weekopen]");
+    if (weekOpen) {
+      state.mood = "weekend";
+      state.deck = buildDeck("weekend");
+      location.hash = `#/m/weekend/${weekOpen.dataset.weekopen}`;
+      return;
+    }
     const dayOpen = ev.target.closest("[data-dayopen]");
     if (dayOpen) {
       state.deck = [];
@@ -733,6 +800,22 @@
     if (Math.abs(dx) < 70 || Math.abs(dy) > Math.abs(dx)) return;
     if (dx < 0) goDay(dayView.area, addDays(dayView.day, 1));
     else if (dayView.day > startOfDay(now)) goDay(dayView.area, addDays(dayView.day, -1));
+  });
+
+  // Weekend Favorites sign-up
+  const signup = $("signupForm");
+  if (NEWSLETTER.buttondownUsername) {
+    signup.action = `https://buttondown.com/api/emails/embed-subscribe/${encodeURIComponent(NEWSLETTER.buttondownUsername)}`;
+  }
+  signup.addEventListener("submit", (ev) => {
+    if (!NEWSLETTER.buttondownUsername) {
+      ev.preventDefault();
+      $("signupNote").textContent = "Thank you! Sign-ups open very soon — we haven't saved your email yet, so please check back.";
+      return;
+    }
+    // The form posts to Buttondown in a new tab, which asks the person to confirm by email.
+    $("signupNote").textContent = "Almost done — check your inbox for a confirmation email.";
+    setTimeout(() => signup.reset(), 500);
   });
 
   // "Show what's closest to me first"

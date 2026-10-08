@@ -316,6 +316,31 @@ h3.ask { display: flex; align-items: center; }
 .ongoing summary span { font-weight: 400; font-size: .9rem; color: var(--ink-soft); }
 .ongoing .rows { margin-top: 10px; }
 
+/* Weekend Favorites */
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.weekend-link {
+  display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 12px;
+  margin-top: 12px; padding: 14px 18px;
+  border: 1.5px solid var(--line); border-radius: 18px;
+  background: rgba(255,255,255,.7); text-decoration: none; font-size: .95rem; color: var(--ink-soft);
+}
+.weekend-link strong { color: var(--ink); }
+.weekend-link:hover { border-color: var(--ink); background: #fff; }
+.weekend { width: min(720px, 100%); margin: 0 auto; }
+.weekend .day-card { text-align: left; }
+.weekend-mark { font-size: 2rem; margin: 0 0 4px; }
+.weekend h2 { font-size: clamp(2.1rem, 5vw, 2.8rem); }
+.signup { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.signup input {
+  flex: 1 1 240px; min-height: 54px; padding: 0 18px;
+  border: 1.5px solid var(--line); border-radius: 999px; background: #fff;
+}
+.signup input:focus { outline: none; border-color: var(--ink); }
+.signup .btn { min-height: 54px; }
+.preview-title { margin: 30px 0 0; padding-top: 22px; border-top: 1px solid var(--line); font-size: 1.15rem; }
+.nudge { margin: 22px 0 0; font-size: .95rem; }
+.nudge a { color: var(--clay); font-weight: 600; }
+
 /* Pick: one event at a time */
 .pick, .saved { width: min(640px, 100%); margin: 0 auto; }
 .dayview .pick-nav { width: 100%; }
