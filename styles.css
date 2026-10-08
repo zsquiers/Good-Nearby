@@ -434,6 +434,13 @@ h3.ask { display: flex; align-items: center; }
 .price span { font-weight: 400; color: var(--ink-soft); }
 .price.free { color: var(--olive); }
 .desc { margin: 14px 0 6px; font-size: 1.05rem; }
+.tags, .row-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 0; }
+.row-tags { margin-top: 6px; }
+.tag { padding: 3px 10px; border-radius: 999px; background: var(--paper-2); color: var(--ink); font-size: .8rem; font-weight: 600; }
+.tag-come-alone { background: #f6dfd2; color: #8a4a2e; }
+.tag-free { background: #dfe5cf; }
+.tag-women { background: #ecdcea; }
+.row-tags .tag { padding: 2px 8px; font-size: .72rem; }
 
 .go-panel { margin: 16px 0 6px; padding: 18px; border-radius: 20px; background: var(--paper-2); }
 .go-panel[hidden] { display: none; }

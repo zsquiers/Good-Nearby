@@ -40,6 +40,11 @@
     expo:       { label: "Expo & fair",        photo: "1515169067868-5387ec356754" },
     acupuncture:{ label: "Acupuncture",        photo: "1544161515-4ab6ce6db874" },
     salt:       { label: "Salt cave",          photo: "https://images.pexels.com/photos/2624400/pexels-photo-2624400.jpeg?auto=compress&cs=tinysrgb&w=1100" },
+    run:        { label: "Community run",      photo: "https://images.pexels.com/photos/8381747/pexels-photo-8381747.jpeg?auto=compress&cs=tinysrgb&w=1100" },
+    walk:       { label: "Walk",               photo: "https://images.pexels.com/photos/6960/pexels-photo-6960.jpeg?auto=compress&cs=tinysrgb&w=1100" },
+    hike:       { label: "Hike",               photo: "https://images.pexels.com/photos/19141785/pexels-photo-19141785.jpeg?auto=compress&cs=tinysrgb&w=1100" },
+    movement:   { label: "Movement & dance",   photo: "https://images.pexels.com/photos/36715608/pexels-photo-36715608.jpeg?auto=compress&cs=tinysrgb&w=1100" },
+    shop:       { label: "Holistic shop",      photo: "https://images.pexels.com/photos/3610753/pexels-photo-3610753.jpeg?auto=compress&cs=tinysrgb&w=1100" },
   };
   const catLabel = (k) => (CATEGORY[k] ? CATEGORY[k].label : k);
 
@@ -51,15 +56,16 @@
   };
 
   const MOODS = [
-    { id: "move",   label: "Move my body",          hint: "Yoga · tai chi",                         tone: "#d98a68", ink: "#fff",
-      match: (e) => ["yoga", "tai-chi"].includes(e.category) },
+    { id: "move",   label: "Move my body",          hint: "Yoga · runs · walks · hikes",                         tone: "#d98a68", ink: "#fff",
+      match: (e) => ["yoga", "tai-chi", "run", "walk", "hike", "movement"].includes(e.category) },
     { id: "calm",   label: "Quiet my mind",         hint: "Meditation · sound baths · salt caves",  tone: "#c3cab0", ink: "#304022",
       match: (e) => ["meditation", "sound", "breathwork", "salt"].includes(e.category) },
-    { id: "care",   label: "Be cared for",          hint: "Massage · reiki · acupuncture",          tone: "#f0d3c4", ink: "#9a5236",
-      match: (e) => ["massage", "reiki", "acupuncture"].includes(e.category) },
+    { id: "care",   label: "Be cared for",          hint: "Massage · reiki · acupuncture · shops",   tone: "#f0d3c4", ink: "#9a5236",
+      match: (e) => ["massage", "reiki", "acupuncture", "shop"].includes(e.category) },
     { id: "people", label: "Be with good people",   hint: "Classes, circles & expos",   tone: "#e3c98f", ink: "#304022",
       // anything with a date that people attend together (not one-on-one appointments)
-      match: (e) => ["expo", "workshop"].includes(e.category) || (e.sessions && !["massage", "reiki", "acupuncture"].includes(e.category)) },
+      match: (e) => ["expo", "workshop"].includes(e.category) || (e.sessions && !["massage", "reiki", "acupuncture", "shop"].includes(e.category))
+        || (!e.sessions && (e.tags || []).includes("come-alone")) },
   ];
 
   // ---------- dates ----------
@@ -81,9 +87,10 @@
       const w = e.weekly;
       const dow = DAYS.indexOf(w.day);
       const skip = new Set(w.skip || []);
-      let d = parseLocal(w.from);
+      // No dates given → it's an ongoing weekly meetup: show the next ~4 months.
+      let d = w.from ? parseLocal(w.from) : startOfDay(now);
       while (d.getDay() !== dow) d = addDays(d, 1);
-      const last = parseLocal(w.until);
+      const last = w.until ? parseLocal(w.until) : addDays(startOfDay(now), 120);
       out.sessions = [];
       for (; d <= last; d = addDays(d, 7)) {
         const day = ymd(d);
@@ -223,6 +230,11 @@
     else if (!e.allDay && e.hasEnd) parts.push(`ends ${timeFmt.format(s.end)}`);
     return parts.join(" · ");
   }
+
+  const TAG_LABELS = { free: "Free", "come-alone": "Come alone", beginner: "Beginner-friendly",
+    women: "Women", "all-paces": "All paces", outdoors: "Outdoors" };
+  const tagChips = (e) => (e.tags || []).filter((t) => TAG_LABELS[t] && !(t === "free" && e.price === 0))
+    .map((t) => `<span class="tag tag-${t}">${TAG_LABELS[t]}</span>`).join("");
 
   function priceLabel(e) {
     if (e.price === 0) return "Free";
@@ -417,6 +429,7 @@
         <h2 id="pickTitle" tabindex="-1">${escapeHtml(e.title)}</h2>
         <p class="where">${where}</p>
         <p class="price ${e.price === 0 ? "free" : ""}">${priceLabel(e)}${e.priceNote ? ` <span>· ${escapeHtml(e.priceNote)}</span>` : ""}</p>
+        ${e.tags && e.tags.length ? `<p class="tags">${tagChips(e)}</p>` : ""}
         <p class="desc">${escapeHtml(e.description)}</p>
 
         <div class="go-panel" id="goPanel" hidden>
@@ -506,6 +519,7 @@
           <span class="row-title">${escapeHtml(e.title)}${saved.has(e.id) ? ' <span class="row-saved" aria-label="saved">♥</span>' : ""}</span>
           <span class="row-meta">${meta}</span>
           ${extra ? "" : `<span class="row-cat">${escapeHtml(catLabel(e.category))}${e.weekly ? " · weekly" : ""}</span>`}
+          ${e.tags && e.tags.length ? `<span class="row-tags">${tagChips(e)}</span>` : ""}
         </span>
         <span class="row-arrow" aria-hidden="true">›</span>
       </button></li>`;
