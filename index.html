@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Jost:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=15" />
+  <link rel="stylesheet" href="styles.css?v=16" />
 </head>
 <body>
   <div class="backdrop" aria-hidden="true"></div>
@@ -123,6 +123,128 @@
       </div>
     </section>
 
+    <!-- List an event (hosts) -->
+    <section class="screen submit" id="screenSubmit" hidden aria-labelledby="submitTitle">
+      <div class="pick-nav">
+        <a href="#/" class="quiet-link">← Back</a>
+      </div>
+      <div class="day-card">
+        <h2 id="submitTitle" tabindex="-1">List something good</h2>
+        <p class="lede">Teachers, studios, healers and organizers: share your class, circle, session or expo. It's free, and a real person reviews every listing before it goes up.</p>
+
+        <details class="criteria">
+          <summary>What we list</summary>
+          <ul>
+            <li><strong>Restorative and wellness-focused:</strong> yoga, meditation, sound baths, breathwork, massage, reiki, acupuncture, tai chi, salt caves, wellness workshops and expos.</li>
+            <li><strong>Open to the public</strong> in Greater Boston, MetroWest, the South Shore or the Franklin area.</li>
+            <li><strong>One-time events, weekly series, and practitioners by appointment</strong> are all welcome.</li>
+            <li>Please keep descriptions calm and simple — no all-caps or hard selling.</li>
+            <li>We usually review new listings within a week, so send things in early.</li>
+          </ul>
+        </details>
+
+        <form id="submitForm" class="submit-form" novalidate>
+          <fieldset>
+            <legend><span class="step">1</span> Where is it?</legend>
+            <div class="areas" id="submitAreas"></div>
+          </fieldset>
+
+          <div id="submitRest" hidden>
+            <fieldset>
+              <legend><span class="step">2</span> What is it?</legend>
+              <label>Name of the event or offering <span class="req">*</span>
+                <input name="title" required maxlength="90" placeholder="e.g. Full Moon Sound Bath"></label>
+              <label>Type <span class="req">*</span>
+                <select name="category" required>
+                  <option value="">Choose one…</option>
+                  <option value="yoga">Yoga</option>
+                  <option value="meditation">Meditation</option>
+                  <option value="sound">Sound bath</option>
+                  <option value="breathwork">Breathwork</option>
+                  <option value="massage">Massage / bodywork</option>
+                  <option value="reiki">Reiki / energy work</option>
+                  <option value="acupuncture">Acupuncture</option>
+                  <option value="tai-chi">Tai chi / qigong</option>
+                  <option value="salt">Salt cave</option>
+                  <option value="workshop">Workshop</option>
+                  <option value="expo">Expo / fair</option>
+                </select></label>
+              <label>Short description <span class="req">*</span> <span class="hint-inline">One or two friendly sentences</span>
+                <textarea name="description" required maxlength="300" rows="3" placeholder="What will people do, and how will they feel?"></textarea></label>
+              <label>Host, teacher or studio <span class="req">*</span>
+                <input name="host" required maxlength="80"></label>
+            </fieldset>
+
+            <fieldset>
+              <legend><span class="step">3</span> When is it?</legend>
+              <div class="when-kind" role="radiogroup" aria-label="How often">
+                <label class="pill"><input type="radio" name="kind" value="once" checked> One date</label>
+                <label class="pill"><input type="radio" name="kind" value="weekly"> Weekly</label>
+                <label class="pill"><input type="radio" name="kind" value="ongoing"> By appointment / ongoing</label>
+              </div>
+              <div class="when-fields" data-kind="once">
+                <label>Date <span class="req">*</span><input type="date" name="date"></label>
+                <label>Starts<input type="time" name="time"></label>
+                <label>Ends<input type="time" name="endTime"></label>
+              </div>
+              <div class="when-fields" data-kind="weekly" hidden>
+                <label>Every <span class="req">*</span>
+                  <select name="day"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option selected>Saturday</option><option>Sunday</option></select></label>
+                <label>Starts <span class="req">*</span><input type="time" name="wTime"></label>
+                <label>Ends<input type="time" name="wEndTime"></label>
+                <label>First date <span class="req">*</span><input type="date" name="from"></label>
+                <label>Last date <span class="req">*</span><input type="date" name="until"></label>
+              </div>
+              <div class="when-fields" data-kind="ongoing" hidden>
+                <label>Schedule <span class="req">*</span>
+                  <input name="schedule" maxlength="60" placeholder="e.g. By appointment · Classes daily"></label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend><span class="step">4</span> Where exactly?</legend>
+              <label>Venue name <span class="req">*</span><input name="venue" required maxlength="80"></label>
+              <label>Street address <span class="req">*</span><input name="address" required maxlength="80"></label>
+              <label>Town <span class="req">*</span><input name="town" required list="submitTowns" maxlength="40"></label>
+              <datalist id="submitTowns"></datalist>
+            </fieldset>
+
+            <fieldset>
+              <legend><span class="step">5</span> Cost &amp; link</legend>
+              <label class="check"><input type="checkbox" name="free"> It's free</label>
+              <label class="price-field">Price in dollars<input name="price" inputmode="decimal" maxlength="10" placeholder="e.g. 25"></label>
+              <label>Price note<input name="priceNote" maxlength="80" placeholder="e.g. Sliding scale $10–30"></label>
+              <label>Link to sign up or learn more<input type="url" name="url" placeholder="https://"></label>
+              <label>Public phone (optional)<input type="tel" name="phone" maxlength="20"></label>
+            </fieldset>
+
+            <fieldset>
+              <legend><span class="step">6</span> About you</legend>
+              <p class="hint-static">Only so we can ask a quick question. We won't publish this.</p>
+              <label>Your name <span class="req">*</span><input name="contactName" required maxlength="60" autocomplete="name"></label>
+              <label>Your email <span class="req">*</span><input type="email" name="contactEmail" required autocomplete="email"></label>
+              <label class="check"><input type="checkbox" name="public" required> This is open to the public <span class="req">*</span></label>
+            </fieldset>
+
+            <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <p class="form-error" id="submitError" role="alert"></p>
+            <button type="submit" class="btn btn-dark submit-btn">Send for review</button>
+            <p class="hint-static">Spotted a mistake in a listing? Use the same form and start the description with "Correction:".</p>
+          </div>
+        </form>
+
+        <div id="submitDone" hidden>
+          <p class="done-mark" aria-hidden="true">🌻</p>
+          <h3 class="done-title" tabindex="-1" id="submitDoneTitle">Thank you — it's on its way!</h3>
+          <p class="lede" id="submitDoneText">We'll take a look and add it to Good Nearby, usually within a week.</p>
+          <div class="done-actions">
+            <a href="#/submit" class="btn btn-soft" id="submitAnother">List another</a>
+            <a href="#/" class="btn btn-dark">Back to Good Nearby</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Screen 2: one event at a time -->
     <section class="screen pick" id="screenPick" hidden aria-labelledby="pickTitle">
       <div class="pick-nav">
@@ -146,13 +268,13 @@
   </main>
 
   <footer class="footer">
-    <a href="https://github.com/zsquiers/Good-Nearby/issues/new?template=submit-event.yml" target="_blank" rel="noopener">Hosting something good? List it here</a>
+    <a href="#/submit">Hosting something good? List it here</a>
     <span class="sep" aria-hidden="true">·</span>
     <span>Good Nearby · Find what makes you feel good · Photos via Unsplash &amp; Pexels</span>
   </footer>
 
-  <script src="data/events.js?v=14"></script>
-  <script src="data/towns.js?v=14"></script>
-  <script src="app.js?v=14"></script>
+  <script src="data/events.js?v=16"></script>
+  <script src="data/towns.js?v=16"></script>
+  <script src="app.js?v=16"></script>
 </body>
 </html>

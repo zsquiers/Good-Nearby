@@ -18,6 +18,12 @@
   // and nothing is collected.
   const NEWSLETTER = { buttondownUsername: "" };
 
+  // ---------- event submissions ----------
+  // "List something good" sends each submission to Formspree (formspree.io), which emails it
+  // to you. Put your Formspree form id here (the part after /f/ in its address). Until then the
+  // form explains that online submissions are being set up, and nothing is sent.
+  const SUBMISSIONS = { formspreeId: "" };
+
   // ---------- photos & moods ----------
   // A category photo is an Unsplash photo id, or a full image URL.
   const unsplash = (id, w) => (id.startsWith("http") ? id : `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`);
@@ -333,7 +339,7 @@
 
   // ---------- rendering ----------
   const $ = (id) => document.getElementById(id);
-  const screens = { start: $("screenStart"), browse: $("screenBrowse"), day: $("screenDay"), weekend: $("screenWeekend"), pick: $("screenPick"), saved: $("screenSaved") };
+  const screens = { start: $("screenStart"), browse: $("screenBrowse"), day: $("screenDay"), weekend: $("screenWeekend"), submit: $("screenSubmit"), pick: $("screenPick"), saved: $("screenSaved") };
   const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // base: the URL prefix for the current deck; day: the chosen day when browsing by day
@@ -572,6 +578,90 @@
       </button></li>`).join("")}</ul></section>`).join("");
   }
 
+  // ---------- List something good (hosts) ----------
+  let submitArea = null;
+
+  function renderSubmit() {
+    $("submitDone").hidden = true;
+    $("submitForm").hidden = false;
+    $("submitAreas").innerHTML = AREAS.filter((a) => a.id !== "all").map((a) =>
+      `<button type="button" class="area${a.id === submitArea ? " on" : ""}" data-submitarea="${a.id}" aria-pressed="${a.id === submitArea}">
+        <span class="area-name">${escapeHtml(a.area)}</span>
+        <span class="area-towns">${escapeHtml(a.towns.slice(0, 4).map((t) => t.name).join(", "))}…</span>
+      </button>`).join("");
+    $("submitRest").hidden = !submitArea;
+    const towns = submitArea ? areaById.get(submitArea).towns : allTowns;
+    $("submitTowns").innerHTML = towns.map((t) => `<option value="${escapeHtml(t.name)}">`).join("");
+  }
+
+  const slug = (str) => str.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 50);
+
+  // Build a ready-to-paste entry for data/events.js from the form.
+  function buildEntry(f) {
+    const v = (k) => (f.get(k) || "").toString().trim();
+    const town = v("town");
+    const t = allTowns.find((x) => x.name.toLowerCase() === town.toLowerCase())
+      || (submitArea && areaById.get(submitArea).towns[0]);
+    const kind = v("kind");
+    const entry = { id: "", title: v("title"), category: v("category") };
+    if (kind === "once") {
+      entry.start = v("time") ? `${v("date")}T${v("time")}` : v("date");
+      if (v("endTime") && v("time")) entry.end = `${v("date")}T${v("endTime")}`;
+    } else if (kind === "weekly") {
+      entry.weekly = { day: v("day"), time: v("wTime"), ...(v("wEndTime") ? { endTime: v("wEndTime") } : {}), from: v("from"), until: v("until") };
+    } else {
+      entry.schedule = v("schedule");
+    }
+    Object.assign(entry, {
+      venue: v("venue"), address: v("address"), city: `${town}, MA`,
+      lat: t ? t.lat : null, lng: t ? t.lng : null,
+      price: f.get("free") ? 0 : (v("price") && !isNaN(parseFloat(v("price"))) ? parseFloat(v("price")) : null),
+    });
+    if (v("priceNote")) entry.priceNote = v("priceNote");
+    Object.assign(entry, { host: v("host"), description: v("description"), url: v("url") });
+    if (v("phone")) entry.phone = v("phone");
+    entry.id = slug(`${entry.title} ${town} ${kind === "once" ? v("date") : ""}`);
+    return entry;
+  }
+
+  function validateSubmit(form) {
+    const f = new FormData(form);
+    const v = (k) => (f.get(k) || "").toString().trim();
+    const missing = [];
+    for (const el of form.querySelectorAll("[required]")) {
+      if (el.closest("[hidden]")) continue;
+      if (el.type === "checkbox" ? !el.checked : !el.value.trim()) missing.push(el);
+    }
+    const kind = v("kind");
+    const need = kind === "once" ? ["date"] : kind === "weekly" ? ["wTime", "from", "until"] : ["schedule"];
+    for (const n of need) if (!v(n)) missing.push(form.elements[n]);
+    const email = form.elements.contactEmail;
+    if (email.value && !email.checkValidity()) missing.push(email);
+    form.querySelectorAll(".invalid").forEach((el) => el.classList.remove("invalid"));
+    missing.forEach((el) => el.classList.add("invalid"));
+    return missing;
+  }
+
+  async function sendSubmission(form) {
+    const f = new FormData(form);
+    if (f.get("_gotcha")) return true;                       // a bot filled the hidden field
+    const entry = buildEntry(f);
+    const areaName = areaById.get(submitArea).area;
+    const payload = {
+      _subject: `New listing for Good Nearby: ${entry.title}`,
+      area: areaName,
+      ...Object.fromEntries([...f.entries()].filter(([k]) => k !== "_gotcha")),
+      paste_into_events_js: JSON.stringify(entry, null, 2) + ",",
+    };
+    if (!SUBMISSIONS.formspreeId) return "not-configured";
+    const res = await fetch(`https://formspree.io/f/${encodeURIComponent(SUBMISSIONS.formspreeId)}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(payload),
+    });
+    return res.ok;
+  }
+
   function renderSaved() {
     const list = events.filter((e) => saved.has(e.id)).sort(bySoonest);
     $("savedLede").textContent = list.length
@@ -629,6 +719,13 @@
       return;
     }
     state.day = null;
+    if (kind === "submit") {
+      renderSubmit();
+      showScreen("submit");
+      $("submitTitle").focus({ preventScroll: true });
+      updateSavedPill();
+      return;
+    }
     if (kind === "weekend") {
       renderWeekend();
       showScreen("weekend");
@@ -696,6 +793,14 @@
     if (gotoBtn) { goDay(dayView.area, parseLocal(gotoBtn.dataset.goto)); return; }
     const shift = ev.target.closest("[data-shift]");
     if (shift && dayView.day) { goDay(dayView.area, addDays(dayView.day, Number(shift.dataset.shift))); return; }
+    if (ev.target.closest("#submitAnother")) { ev.preventDefault(); renderSubmit(); $("submitTitle").focus(); return; }
+    const subArea = ev.target.closest("[data-submitarea]");
+    if (subArea) {
+      submitArea = subArea.dataset.submitarea;
+      renderSubmit();
+      $("submitForm").elements.title.focus();
+      return;
+    }
     const weekOpen = ev.target.closest("[data-weekopen]");
     if (weekOpen) {
       state.mood = "weekend";
@@ -800,6 +905,51 @@
     if (Math.abs(dx) < 70 || Math.abs(dy) > Math.abs(dx)) return;
     if (dx < 0) goDay(dayView.area, addDays(dayView.day, 1));
     else if (dayView.day > startOfDay(now)) goDay(dayView.area, addDays(dayView.day, -1));
+  });
+
+  // Hosts' form: show the right date fields, hide price when free, and send.
+  const submitForm = $("submitForm");
+  submitForm.addEventListener("change", (ev) => {
+    if (ev.target.name === "kind") {
+      submitForm.querySelectorAll(".when-fields").forEach((el) => { el.hidden = el.dataset.kind !== ev.target.value; });
+    }
+    if (ev.target.name === "free") submitForm.querySelector(".price-field").hidden = ev.target.checked;
+    if (ev.target.classList.contains("invalid")) ev.target.classList.remove("invalid");
+  });
+  submitForm.addEventListener("submit", async (ev) => {
+    ev.preventDefault();
+    const missing = validateSubmit(submitForm);
+    if (missing.length) {
+      $("submitError").textContent = "A few details are still needed — they're outlined above.";
+      missing[0].focus();
+      return;
+    }
+    $("submitError").textContent = "";
+    const btn = submitForm.querySelector(".submit-btn");
+    btn.disabled = true;
+    btn.textContent = "Sending…";
+    let result;
+    try { result = await sendSubmission(submitForm); } catch (_) { result = false; }
+    btn.disabled = false;
+    btn.textContent = "Send for review";
+    if (result === false) {
+      $("submitError").textContent = "Something went wrong sending that. Please try again in a moment.";
+      return;
+    }
+    if (result === "not-configured") {
+      $("submitDoneTitle").textContent = "Thank you — almost there!";
+      $("submitDoneText").textContent = "Online listing is being set up this week, so your details haven't been sent yet. Please check back soon — we'd love to include you.";
+    } else {
+      $("submitDoneTitle").textContent = "Thank you — it's on its way!";
+      $("submitDoneText").textContent = "We'll take a look and add it to Good Nearby, usually within a week.";
+      submitForm.reset();
+      submitForm.querySelectorAll(".when-fields").forEach((el) => { el.hidden = el.dataset.kind !== "once"; });
+      submitForm.querySelector(".price-field").hidden = false;
+    }
+    submitForm.hidden = true;
+    $("submitDone").hidden = false;
+    $("submitDoneTitle").focus();
+    window.scrollTo(0, 0);
   });
 
   // Weekend Favorites sign-up
