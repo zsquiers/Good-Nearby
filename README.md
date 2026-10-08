@@ -30,6 +30,7 @@ Design rules: one decision per screen, no menus, big tap targets, plain language
 | `data/events.js` | Hand-picked listings — one entry per event |
 | `data/events-eventbrite.js` | ~140 wellness events found on Eventbrite across the region (generated, reviewed by hand) |
 | `data/events-move-shops.js` | Community runs, walks & hikes, all the salt caves, holistic shops and nature trails |
+| `data/events-venues.js` | Calendars from local venues: Scituate Salt Cave and House of Stellium |
 | `data/towns.js` | The areas for browsing and the towns in each (an event's area comes from its town) |
 | `.github/ISSUE_TEMPLATE/submit-event.yml` | An older GitHub-based submission form (the site now uses its own form) |
 
