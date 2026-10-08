@@ -54,9 +54,11 @@ The current listings came from public event pages and directories in early Octob
 
 Photos load from Unsplash. Each event uses a photo for its category, set in the `CATEGORY` list at the top of `app.js`. The background photo is set as `--hero` in `styles.css`. If a photo fails to load, a warm gradient shows instead. Before a big launch, consider downloading your favorite photos into `assets/` so they never depend on another site.
 
-## Newsletter (planned)
+## Weekend Favorites newsletter
 
-A newsletter sign-up is planned. It was removed from the page for now to keep things calm; a good home for it later is the "That's everything for now" screen or empty days in the day view ("Get a note when something's on near you").
+- **Sign-up:** the "💌 Weekend Favorites" link on the first screen opens a page with an email sign-up and a live preview of this weekend's picks. The end of every list also nudges people there.
+- **Connecting it:** create a free account at [Buttondown](https://buttondown.com), then put your Buttondown username in `NEWSLETTER.buttondownUsername` at the top of `app.js`. Until then the form politely says sign-ups open soon and collects nothing.
+- **Writing it:** open `newsletter.html` on the site (it isn't linked anywhere). It builds this weekend's email from `data/events.js`, with a subject line — check it, then copy it into Buttondown.
 
 ## Updating the site
 

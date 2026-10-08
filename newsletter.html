@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Write Weekend Favorites — Good Nearby</title>
+  <link rel="icon" href="assets/sunflower.svg" type="image/svg+xml">
+  <style>
+    body { margin: 0; background: #f7f1e7; color: #304022; font-family: system-ui, sans-serif; line-height: 1.5; }
+    main { width: min(760px, calc(100% - 32px)); margin: 32px auto 60px; }
+    h1 { font-family: Georgia, serif; font-weight: 400; font-size: 2rem; margin: 0 0 6px; }
+    .note { color: #5a5e4e; margin: 0 0 18px; }
+    .tools { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 14px 0; }
+    button, input { font: inherit; }
+    button { padding: 10px 18px; border-radius: 999px; border: 0; background: #304022; color: #fff; font-weight: 600; cursor: pointer; }
+    button.soft { background: #f1e7d6; color: #304022; }
+    input[type="date"] { padding: 8px 12px; border: 1px solid rgba(48,64,34,.2); border-radius: 10px; }
+    label { font-weight: 600; }
+    .subject { padding: 12px 16px; background: #fff; border-radius: 12px; border: 1px solid rgba(48,64,34,.15); }
+    .email { margin-top: 14px; padding: 28px; background: #fff; border-radius: 16px; border: 1px solid rgba(48,64,34,.15); }
+    .status { color: #a15e3d; font-weight: 600; min-height: 1.5em; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Write this week's Weekend Favorites</h1>
+  <p class="note">This page builds the email from the events on the site. Check it over, add a personal line if you like, then copy it into your newsletter tool (e.g. Buttondown). This page isn't linked from the site.</p>
+
+  <div class="tools">
+    <label for="friday">Weekend starting Friday</label>
+    <input type="date" id="friday">
+    <button type="button" id="copyHtml">Copy email</button>
+    <button type="button" class="soft" id="copyText">Copy as plain text</button>
+  </div>
+  <p class="status" id="status" aria-live="polite"></p>
+
+  <p><strong>Subject idea:</strong></p>
+  <div class="subject" id="subject"></div>
+
+  <div class="email" id="email"></div>
+</main>
+
+<script src="data/events.js"></script>
+<script>
+(function () {
+  "use strict";
+  const SITE = "https://zsquiers.github.io/Good-Nearby/";
+  const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const pad = (n) => String(n).padStart(2, "0");
+  const ymd = (d) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+  const parseLocal = (s) => new Date(s.includes("T") ? s : `${s}T00:00`);
+  const addDays = (d, n) => { const x = new Date(d); x.setDate(x.getDate() + n); return x; };
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const time = new Intl.DateTimeFormat(undefined, { hour: "numeric", minute: "2-digit" });
+  const md = new Intl.DateTimeFormat(undefined, { month: "long", day: "numeric" });
+
+  // Every dated session of every listing (same rules as the site).
+  function sessions(e) {
+    if (e.weekly) {
+      const w = e.weekly, out = [], skip = new Set(w.skip || []);
+      let d = parseLocal(w.from);
+      while (d.getDay() !== DAYS.indexOf(w.day)) d = addDays(d, 1);
+      for (; d <= parseLocal(w.until); d = addDays(d, 7)) {
+        if (!skip.has(ymd(d))) out.push({ start: parseLocal(`${ymd(d)}T${w.time}`), allDay: false });
+      }
+      return out;
+    }
+    if (e.start) {
+      const allDay = !e.start.includes("T");
+      const start = parseLocal(e.start), end = e.end ? parseLocal(e.end) : start;
+      return [{ start, end: allDay ? addDays(end, 1) : end, allDay }];
+    }
+    return [];
+  }
+
+  function picks(friday) {
+    const from = new Date(friday); from.setHours(17);
+    const to = addDays(friday, 3);
+    const out = [];
+    for (const e of window.GOOD_NEARBY_EVENTS || []) {
+      const s = sessions(e).find((x) => (x.end || x.start) >= from && x.start < to);
+      if (s) out.push({ e, s, day: s.start < from ? from : s.start });
+    }
+    return out.sort((a, b) => a.day - b.day);
+  }
+
+  const price = (e) => (e.price === 0 ? "Free" : typeof e.price === "number" ? `$${e.price}` : "");
+
+  function build() {
+    const friday = parseLocal($("friday").value);
+    const list = picks(friday);
+    const sun = addDays(friday, 2);
+    $("subject").textContent = list.length
+      ? `Weekend Favorites: ${list.length} good thing${list.length === 1 ? "" : "s"} near you, ${md.format(friday)}–${sun.getDate()}`
+      : `Weekend Favorites, ${md.format(friday)}–${sun.getDate()}`;
+
+    const groups = new Map();
+    for (const x of list) {
+      const label = x.day.getDay() === 5 ? "Friday evening" : DAYS[x.day.getDay()];
+      if (!groups.has(label)) groups.set(label, []);
+      groups.get(label).push(x);
+    }
+    let html = `<p style="font-family:Georgia,serif;font-size:22px;margin:0 0 8px;color:#304022;">🌻 Weekend Favorites</p>
+<p style="margin:0 0 18px;color:#5a5e4e;">A few good things happening near you this weekend, ${md.format(friday)}–${sun.getDate()}. Pick one, and go easy on yourself.</p>`;
+    if (!list.length) html += `<p>Nothing is listed for this weekend yet — add events to the site, or write a short note instead.</p>`;
+    for (const [label, items] of groups) {
+      html += `<p style="margin:22px 0 6px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:13px;color:#a15e3d;">${label}</p>`;
+      for (const { e, s } of items) {
+        const when = s.allDay ? "All day" : time.format(s.start);
+        const where = [e.venue, e.city.replace(/, MA$/, "")].filter(Boolean).join(", ");
+        const link = e.url || SITE;
+        html += `<p style="margin:0 0 14px;"><strong><a href="${esc(link)}" style="color:#304022;">${esc(e.title)}</a></strong><br>
+<span style="color:#5a5e4e;">${when} · ${esc(where)}${price(e) ? ` · ${price(e)}` : ""}</span><br>
+${esc(e.description)}</p>`;
+      }
+    }
+    html += `<p style="margin:26px 0 0;color:#5a5e4e;">Find more good things any day at <a href="${SITE}" style="color:#a15e3d;">Good Nearby</a>. Details can change — a quick check with the host is always a good idea.</p>`;
+    $("email").innerHTML = html;
+  }
+
+  function $(id) { return document.getElementById(id); }
+
+  async function copy(asHtml) {
+    const el = $("email");
+    try {
+      if (asHtml && window.ClipboardItem) {
+        await navigator.clipboard.write([new ClipboardItem({
+          "text/html": new Blob([el.innerHTML], { type: "text/html" }),
+          "text/plain": new Blob([el.innerText], { type: "text/plain" }),
+        })]);
+      } else {
+        await navigator.clipboard.writeText(`${$("subject").textContent}\n\n${el.innerText}`);
+      }
+      $("status").textContent = "Copied — paste it into your newsletter.";
+    } catch (_) {
+      $("status").textContent = "Couldn't copy automatically — select the email below and copy it by hand.";
+    }
+  }
+
+  // Default to the coming weekend (or this one, if it's already Fri–Sun).
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  const dow = today.getDay();
+  $("friday").value = ymd(addDays(today, dow === 0 ? -2 : dow === 6 ? -1 : 5 - dow));
+  $("friday").addEventListener("change", build);
+  $("copyHtml").addEventListener("click", () => copy(true));
+  $("copyText").addEventListener("click", () => copy(false));
+  build();
+})();
+</script>
+</body>
+</html>
