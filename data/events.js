@@ -351,6 +351,45 @@ window.GOOD_NEARBY_EVENTS = [
     phone: "(508) 507-8015"
   },
   {
+    id: "acupunkture-needles-namaste-nov",
+    title: "Needles & Namaste: Acupuncture & Reiki-Infused Meditation",
+    category: "meditation",
+    start: "2026-11-08T18:30", end: "2026-11-08T19:30",
+    venue: "AcuPUNKture & The Whimsical Wellness Boutique", address: "37 E Central St", city: "Franklin, MA",
+    lat: 42.0838, lng: -71.3955,
+    price: 80, priceNote: "Pre-registration required",
+    host: "Crystal Farnsworth, L.Ac. & Tina Grzyboski (Reiki Vibes)",
+    description: "Acupuncture and crystals, then a guided Reiki meditation into a quiet redwood forest. Mats, cushions, a fuzzy blanket and an eye mask are provided — just show up and rest for an hour.",
+    url: "https://franklinacupunkture.com/upcoming-events-and-workshops/",
+    phone: "(508) 507-8015"
+  },
+  {
+    id: "acupunkture-needles-namaste-dec",
+    title: "Needles & Namaste: Acupuncture & Reiki-Infused Meditation",
+    category: "meditation",
+    start: "2026-12-06T18:30", end: "2026-12-06T19:30",
+    venue: "AcuPUNKture & The Whimsical Wellness Boutique", address: "37 E Central St", city: "Franklin, MA",
+    lat: 42.0838, lng: -71.3955,
+    price: 80, priceNote: "Pre-registration required",
+    host: "Crystal Farnsworth, L.Ac. & Tina Grzyboski (Reiki Vibes)",
+    description: "Acupuncture and crystals, then a guided Reiki meditation into a quiet redwood forest. Mats, cushions, a fuzzy blanket and an eye mask are provided — just show up and rest for an hour.",
+    url: "https://franklinacupunkture.com/upcoming-events-and-workshops/",
+    phone: "(508) 507-8015"
+  },
+  {
+    id: "acupunkture-winter-solstice",
+    title: "Winter Solstice: Acupuncture & Acoustic Sound Healing",
+    category: "sound",
+    start: "2026-12-20T18:30", end: "2026-12-20T19:30",
+    venue: "AcuPUNKture & The Whimsical Wellness Boutique", address: "37 E Central St", city: "Franklin, MA",
+    lat: 42.0838, lng: -71.3955,
+    price: 80, priceNote: "Pre-registration required",
+    host: "Crystal Farnsworth, L.Ac. & Maria Gauthier (Haven Sound)",
+    description: "A peaceful evening to honor the solstice: acupuncture with gentle guitar, vocals and healing sounds. Rest, release the past season and welcome the return of the light.",
+    url: "https://franklinacupunkture.com/upcoming-events-and-workshops/",
+    phone: "(508) 507-8015"
+  },
+  {
     id: "acupunkture-acupuncture",
     title: "Acupuncture & Cupping",
     category: "acupuncture",
@@ -359,7 +398,7 @@ window.GOOD_NEARBY_EVENTS = [
     lat: 42.0838, lng: -71.3955,
     price: null, priceNote: "Accepts some insurance (BCBS, Harvard Pilgrim, MGB, Aetna) — confirm when you book",
     host: "Crystal Farnsworth, L.Ac.",
-    description: "Private Chinese and Japanese style acupuncture, plus cupping, gua sha and moxibustion. The boutique also hosts sound baths, Reiki meditations and reflexology mini clinics — call or check their socials for dates.",
+    description: "Private Chinese and Japanese style acupuncture, plus cupping, gua sha and moxibustion. The boutique also hosts monthly Needles & Namaste evenings, sound healing and reflexology clinics.",
     url: "https://acupunkture.janeapp.com/",
     phone: "(508) 507-8015"
   },

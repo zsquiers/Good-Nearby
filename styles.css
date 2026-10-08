@@ -367,6 +367,14 @@ h3.ask { display: flex; align-items: center; }
 .submit-form .invalid { border-color: var(--clay) !important; background: #fff6f1 !important; }
 .submit-form .areas { margin-top: 0; }
 .req { color: var(--clay); }
+.more-details { margin-top: 26px; border-top: 1px solid var(--line); padding-top: 18px; }
+.more-details summary { cursor: pointer; font-weight: 700; font-size: 1.05rem; display: flex; flex-direction: column; gap: 2px; padding: 12px 16px; border-radius: 16px; background: var(--paper-2); list-style: none; }
+.more-details summary::-webkit-details-marker { display: none; }
+.more-details summary span { font-weight: 400; font-size: .88rem; color: var(--ink-soft); }
+.more-details summary::after { content: "Show ▾"; font-size: .85rem; color: var(--clay); }
+.more-details[open] summary::after { content: "Hide ▴"; }
+.more-details fieldset:first-of-type { border-top: 0; }
+.more-details legend { font-size: 1rem !important; }
 .hint-inline { font-weight: 400; color: var(--ink-soft); font-size: .85rem; }
 .when-kind { display: flex; flex-wrap: wrap; gap: 8px; }
 .pill { flex-direction: row !important; align-items: center; gap: 8px !important; padding: 10px 16px; border: 1.5px solid var(--line); border-radius: 999px; background: #fff; cursor: pointer; }

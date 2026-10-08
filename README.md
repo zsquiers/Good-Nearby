@@ -56,7 +56,7 @@ Photos load from Unsplash. Each event uses a photo for its category, set in the 
 
 ## Listing events (for hosts)
 
-"Hosting something good? List it here" (bottom of every page) opens **List something good** — modeled on Community Kangaroo: pick the area first, then one simple form (what, when — one date, weekly or by appointment — where, cost and link, and the host's contact details, which aren't published), plus a short "What we list" guide. Every submission is reviewed before it goes live.
+"Hosting something good? List it here" (bottom of every page) opens **List something good** — modeled on Community Kangaroo: pick the area first, then just the basics — event name, town, a link with the details (and an optional day-of updates link), and the host's name, email and organization (not published). Hosts can optionally add the type, date, address and cost themselves. A short "What we list" guide sits on top. Every submission is reviewed before it goes live.
 
 - **Connecting it:** create a free form at [Formspree](https://formspree.io) and put its id (the part after `/f/` in the form's address) in `SUBMISSIONS.formspreeId` at the top of `app.js`. Formspree emails you each submission. Until then the form thanks the host and explains online listing is being set up — nothing is sent.
 - **Adding an approved listing:** each email includes `paste_into_events_js` — a finished entry (with the town's approximate location) to paste into `data/events.js`.
