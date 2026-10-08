@@ -27,7 +27,9 @@ Design rules: one decision per screen, no menus, big tap targets, plain language
 | `index.html` | The screens: start, browse (area + day), day list, one-at-a-time card, saved |
 | `styles.css` | The warm, golden look (cream, olive, DM Serif Display) — see `docs/design-reference.webp` |
 | `app.js` | Moods, decks, area & day browsing, saving, calendar files, location sorting |
-| `data/events.js` | The event "database" — one entry per event |
+| `data/events.js` | Hand-picked listings — one entry per event |
+| `data/events-eventbrite.js` | ~140 wellness events found on Eventbrite across the region (generated, reviewed by hand) |
+| `data/events-move-shops.js` | Community runs, walks & hikes, all the salt caves, holistic shops and nature trails |
 | `data/towns.js` | The areas for browsing and the towns in each (an event's area comes from its town) |
 | `.github/ISSUE_TEMPLATE/submit-event.yml` | An older GitHub-based submission form (the site now uses its own form) |
 
@@ -46,7 +48,7 @@ Open `data/events.js` and copy an existing entry that matches the kind of listin
 - **Weekly series:** `weekly: { day: "Saturday", time: "10:00", endTime: "11:00", from: "2026-09-19", until: "2026-10-17", skip: [] }`
 - **Ongoing class or practitioner:** no dates, just a `schedule` note such as `"Classes daily"` or `"By appointment"`
 
-Feelings map to categories in `app.js` (`MOODS`). An event's browse area comes from its town in `data/towns.js` (or the nearest listed town). Categories: `yoga`, `sound`, `meditation`, `massage`, `breathwork`, `reiki`, `tai-chi`, `acupuncture`, `salt`, `workshop`, `expo`. Add `lat`/`lng` so "Near me" can sort by distance (approximate is fine). Past events and finished series hide themselves automatically.
+Feelings map to categories in `app.js` (`MOODS`). An event's browse area comes from its town in `data/towns.js` (or the nearest listed town). Categories: `yoga`, `sound`, `meditation`, `massage`, `breathwork`, `reiki`, `tai-chi`, `acupuncture`, `salt`, `run`, `walk`, `hike`, `movement`, `shop`, `workshop`, `expo`. Optional `tags`: `free`, `come-alone`, `beginner`, `women`, `all-paces`, `outdoors` — shown as friendly chips. A `weekly` listing with no `from`/`until` is an ongoing weekly meetup and repeats for the next four months. Add `lat`/`lng` so "Near me" can sort by distance (approximate is fine). Past events and finished series hide themselves automatically.
 
 The current listings came from public event pages and directories in early October 2026. Coordinates are approximate. Good places to find more events: the Natural Awakenings Boston calendar, Eventbrite, boston.gov's Parks Fitness Series, local library calendars, and studio websites.
 

@@ -435,12 +435,12 @@ window.GOOD_NEARBY_EVENTS = [
     title: "Salt Cave Relaxation",
     category: "salt",
     schedule: "By appointment",
-    venue: "The Salted Soul Salt Cave", address: "340 Great Rd", city: "Acton, MA",
+    venue: "The Salted Soul Salt Cave", address: "340 Great Rd, Ste 5", city: "Acton, MA",
     lat: 42.4895, lng: -71.4475,
     price: null,
     host: "The Salted Soul",
     description: "Sit quietly in a Himalayan salt cave — a peaceful reset a little north of MetroWest.",
-    url: "",
+    url: "https://www.saltedsoulacton.com/",
     phone: "(978) 206-9034"
   }
 ];
