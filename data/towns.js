@@ -46,6 +46,7 @@ window.GOOD_NEARBY_TOWNS = [
     { id: "hingham",      name: "Hingham",      lat: 42.2418, lng: -70.8898 },
     { id: "cohasset",     name: "Cohasset",     lat: 42.2418, lng: -70.8037 },
     { id: "scituate",     name: "Scituate",     lat: 42.1959, lng: -70.7259 },
+    { id: "rockland",     name: "Rockland",     lat: 42.1307, lng: -70.9162 },
     { id: "marshfield",   name: "Marshfield",   lat: 42.0918, lng: -70.7056 },
     { id: "duxbury",      name: "Duxbury",      lat: 42.0418, lng: -70.6723 },
     { id: "plymouth",     name: "Plymouth",     lat: 41.9584, lng: -70.6673 },
