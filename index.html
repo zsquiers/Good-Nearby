@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Jost:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=16" />
+  <link rel="stylesheet" href="styles.css?v=17" />
 </head>
 <body>
   <div class="backdrop" aria-hidden="true"></div>
@@ -151,80 +151,82 @@
 
           <div id="submitRest" hidden>
             <fieldset>
-              <legend><span class="step">2</span> What is it?</legend>
-              <label>Name of the event or offering <span class="req">*</span>
+              <legend><span class="step">2</span> The basics</legend>
+              <label>Event or offering name <span class="req">*</span>
                 <input name="title" required maxlength="90" placeholder="e.g. Full Moon Sound Bath"></label>
-              <label>Type <span class="req">*</span>
-                <select name="category" required>
-                  <option value="">Choose one…</option>
-                  <option value="yoga">Yoga</option>
-                  <option value="meditation">Meditation</option>
-                  <option value="sound">Sound bath</option>
-                  <option value="breathwork">Breathwork</option>
-                  <option value="massage">Massage / bodywork</option>
-                  <option value="reiki">Reiki / energy work</option>
-                  <option value="acupuncture">Acupuncture</option>
-                  <option value="tai-chi">Tai chi / qigong</option>
-                  <option value="salt">Salt cave</option>
-                  <option value="workshop">Workshop</option>
-                  <option value="expo">Expo / fair</option>
-                </select></label>
-              <label>Short description <span class="req">*</span> <span class="hint-inline">One or two friendly sentences</span>
-                <textarea name="description" required maxlength="300" rows="3" placeholder="What will people do, and how will they feel?"></textarea></label>
-              <label>Host, teacher or studio <span class="req">*</span>
-                <input name="host" required maxlength="80"></label>
-            </fieldset>
-
-            <fieldset>
-              <legend><span class="step">3</span> When is it?</legend>
-              <div class="when-kind" role="radiogroup" aria-label="How often">
-                <label class="pill"><input type="radio" name="kind" value="once" checked> One date</label>
-                <label class="pill"><input type="radio" name="kind" value="weekly"> Weekly</label>
-                <label class="pill"><input type="radio" name="kind" value="ongoing"> By appointment / ongoing</label>
-              </div>
-              <div class="when-fields" data-kind="once">
-                <label>Date <span class="req">*</span><input type="date" name="date"></label>
-                <label>Starts<input type="time" name="time"></label>
-                <label>Ends<input type="time" name="endTime"></label>
-              </div>
-              <div class="when-fields" data-kind="weekly" hidden>
-                <label>Every <span class="req">*</span>
-                  <select name="day"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option selected>Saturday</option><option>Sunday</option></select></label>
-                <label>Starts <span class="req">*</span><input type="time" name="wTime"></label>
-                <label>Ends<input type="time" name="wEndTime"></label>
-                <label>First date <span class="req">*</span><input type="date" name="from"></label>
-                <label>Last date <span class="req">*</span><input type="date" name="until"></label>
-              </div>
-              <div class="when-fields" data-kind="ongoing" hidden>
-                <label>Schedule <span class="req">*</span>
-                  <input name="schedule" maxlength="60" placeholder="e.g. By appointment · Classes daily"></label>
-              </div>
-            </fieldset>
-
-            <fieldset>
-              <legend><span class="step">4</span> Where exactly?</legend>
-              <label>Venue name <span class="req">*</span><input name="venue" required maxlength="80"></label>
-              <label>Street address <span class="req">*</span><input name="address" required maxlength="80"></label>
               <label>Town <span class="req">*</span><input name="town" required list="submitTowns" maxlength="40"></label>
               <datalist id="submitTowns"></datalist>
+              <label>Venue name<input name="venue" maxlength="80" placeholder="e.g. Franklin Yoga & Wellness"></label>
+              <label>Link with the event details <span class="req">*</span> <span class="hint-inline">We'll pull the details from here, and readers use it to confirm</span>
+                <input type="url" name="url" required placeholder="https://"></label>
+              <label>Best link for day-of updates <span class="hint-inline">If different — e.g. your Instagram</span>
+                <input type="url" name="updatesUrl" placeholder="https://"></label>
             </fieldset>
 
             <fieldset>
-              <legend><span class="step">5</span> Cost &amp; link</legend>
-              <label class="check"><input type="checkbox" name="free"> It's free</label>
-              <label class="price-field">Price in dollars<input name="price" inputmode="decimal" maxlength="10" placeholder="e.g. 25"></label>
-              <label>Price note<input name="priceNote" maxlength="80" placeholder="e.g. Sliding scale $10–30"></label>
-              <label>Link to sign up or learn more<input type="url" name="url" placeholder="https://"></label>
-              <label>Public phone (optional)<input type="tel" name="phone" maxlength="20"></label>
-            </fieldset>
-
-            <fieldset>
-              <legend><span class="step">6</span> About you</legend>
+              <legend><span class="step">3</span> About you</legend>
               <p class="hint-static">Only so we can ask a quick question. We won't publish this.</p>
               <label>Your name <span class="req">*</span><input name="contactName" required maxlength="60" autocomplete="name"></label>
               <label>Your email <span class="req">*</span><input type="email" name="contactEmail" required autocomplete="email"></label>
+              <label>Your business or organization <span class="req">*</span><input name="host" required maxlength="80" autocomplete="organization"></label>
               <label class="check"><input type="checkbox" name="public" required> This is open to the public <span class="req">*</span></label>
             </fieldset>
+
+            <details class="more-details">
+              <summary>Add more details yourself <span>optional — helps us list it faster</span></summary>
+              <fieldset>
+                <legend>What kind of thing is it?</legend>
+                <label>Type
+                  <select name="category">
+                    <option value="">Choose one…</option>
+                    <option value="yoga">Yoga</option>
+                    <option value="meditation">Meditation</option>
+                    <option value="sound">Sound bath</option>
+                    <option value="breathwork">Breathwork</option>
+                    <option value="massage">Massage / bodywork</option>
+                    <option value="reiki">Reiki / energy work</option>
+                    <option value="acupuncture">Acupuncture</option>
+                    <option value="tai-chi">Tai chi / qigong</option>
+                    <option value="salt">Salt cave</option>
+                    <option value="workshop">Workshop</option>
+                    <option value="expo">Expo / fair</option>
+                  </select></label>
+                <label>Short description <span class="hint-inline">One or two friendly sentences</span>
+                  <textarea name="description" maxlength="300" rows="3" placeholder="What will people do, and how will they feel?"></textarea></label>
+              </fieldset>
+              <fieldset>
+                <legend>When is it?</legend>
+                <div class="when-kind" role="radiogroup" aria-label="How often">
+                  <label class="pill"><input type="radio" name="kind" value="once" checked> One date</label>
+                  <label class="pill"><input type="radio" name="kind" value="weekly"> Weekly</label>
+                  <label class="pill"><input type="radio" name="kind" value="ongoing"> By appointment / ongoing</label>
+                </div>
+                <div class="when-fields" data-kind="once">
+                  <label>Date<input type="date" name="date"></label>
+                  <label>Starts<input type="time" name="time"></label>
+                  <label>Ends<input type="time" name="endTime"></label>
+                </div>
+                <div class="when-fields" data-kind="weekly" hidden>
+                  <label>Every
+                    <select name="day"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option selected>Saturday</option><option>Sunday</option></select></label>
+                  <label>Starts<input type="time" name="wTime"></label>
+                  <label>Ends<input type="time" name="wEndTime"></label>
+                  <label>First date<input type="date" name="from"></label>
+                  <label>Last date<input type="date" name="until"></label>
+                </div>
+                <div class="when-fields" data-kind="ongoing" hidden>
+                  <label>Schedule<input name="schedule" maxlength="60" placeholder="e.g. By appointment · Classes daily"></label>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Address &amp; cost</legend>
+                <label>Street address<input name="address" maxlength="80"></label>
+                <label class="check"><input type="checkbox" name="free"> It's free</label>
+                <label class="price-field">Price in dollars<input name="price" inputmode="decimal" maxlength="10" placeholder="e.g. 25"></label>
+                <label>Price note<input name="priceNote" maxlength="80" placeholder="e.g. Sliding scale $10–30"></label>
+                <label>Public phone<input type="tel" name="phone" maxlength="20"></label>
+              </fieldset>
+            </details>
 
             <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
             <p class="form-error" id="submitError" role="alert"></p>
@@ -273,8 +275,8 @@
     <span>Good Nearby · Find what makes you feel good · Photos via Unsplash &amp; Pexels</span>
   </footer>
 
-  <script src="data/events.js?v=16"></script>
-  <script src="data/towns.js?v=16"></script>
-  <script src="app.js?v=16"></script>
+  <script src="data/events.js?v=17"></script>
+  <script src="data/towns.js?v=17"></script>
+  <script src="app.js?v=17"></script>
 </body>
 </html>

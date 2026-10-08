@@ -603,8 +603,10 @@
     const t = allTowns.find((x) => x.name.toLowerCase() === town.toLowerCase())
       || (submitArea && areaById.get(submitArea).towns[0]);
     const kind = v("kind");
-    const entry = { id: "", title: v("title"), category: v("category") };
-    if (kind === "once") {
+    const entry = { id: "", title: v("title"), category: v("category") || "TODO" };
+    if (kind === "once" && !v("date")) {
+      entry.start = "TODO-YYYY-MM-DDTHH:MM";
+    } else if (kind === "once") {
       entry.start = v("time") ? `${v("date")}T${v("time")}` : v("date");
       if (v("endTime") && v("time")) entry.end = `${v("date")}T${v("endTime")}`;
     } else if (kind === "weekly") {
@@ -613,12 +615,12 @@
       entry.schedule = v("schedule");
     }
     Object.assign(entry, {
-      venue: v("venue"), address: v("address"), city: `${town}, MA`,
+      venue: v("venue") || "TODO", address: v("address") || "TODO", city: `${town}, MA`,
       lat: t ? t.lat : null, lng: t ? t.lng : null,
       price: f.get("free") ? 0 : (v("price") && !isNaN(parseFloat(v("price"))) ? parseFloat(v("price")) : null),
     });
     if (v("priceNote")) entry.priceNote = v("priceNote");
-    Object.assign(entry, { host: v("host"), description: v("description"), url: v("url") });
+    Object.assign(entry, { host: v("host"), description: v("description") || "TODO — see the link", url: v("url") });
     if (v("phone")) entry.phone = v("phone");
     entry.id = slug(`${entry.title} ${town} ${kind === "once" ? v("date") : ""}`);
     return entry;
@@ -632,9 +634,10 @@
       if (el.closest("[hidden]")) continue;
       if (el.type === "checkbox" ? !el.checked : !el.value.trim()) missing.push(el);
     }
-    const kind = v("kind");
-    const need = kind === "once" ? ["date"] : kind === "weekly" ? ["wTime", "from", "until"] : ["schedule"];
-    for (const n of need) if (!v(n)) missing.push(form.elements[n]);
+    for (const name of ["url", "updatesUrl"]) {
+      const el = form.elements[name];
+      if (el.value && !el.checkValidity()) missing.push(el);
+    }
     const email = form.elements.contactEmail;
     if (email.value && !email.checkValidity()) missing.push(email);
     form.querySelectorAll(".invalid").forEach((el) => el.classList.remove("invalid"));
@@ -945,6 +948,7 @@
       submitForm.reset();
       submitForm.querySelectorAll(".when-fields").forEach((el) => { el.hidden = el.dataset.kind !== "once"; });
       submitForm.querySelector(".price-field").hidden = false;
+      submitForm.querySelector(".more-details").open = false;
     }
     submitForm.hidden = true;
     $("submitDone").hidden = false;
