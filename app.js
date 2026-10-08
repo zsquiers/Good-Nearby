@@ -12,7 +12,8 @@
   "use strict";
 
   // ---------- photos & moods ----------
-  const unsplash = (id, w) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+  // A category photo is an Unsplash photo id, or a full image URL.
+  const unsplash = (id, w) => (id.startsWith("http") ? id : `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`);
 
   const CATEGORY = {
     yoga:       { label: "Yoga",               photo: "1506126613408-eca07ce68773" },
@@ -24,6 +25,8 @@
     breathwork: { label: "Breathwork",         photo: "1497250681960-ef046c08a56e" },
     workshop:   { label: "Workshop",           photo: "1529156069898-49953e39b3ac" },
     expo:       { label: "Expo & fair",        photo: "1515169067868-5387ec356754" },
+    acupuncture:{ label: "Acupuncture",        photo: "1544161515-4ab6ce6db874" },
+    salt:       { label: "Salt cave",          photo: "https://images.pexels.com/photos/2624400/pexels-photo-2624400.jpeg?auto=compress&cs=tinysrgb&w=1100" },
   };
   const catLabel = (k) => (CATEGORY[k] ? CATEGORY[k].label : k);
 
@@ -37,13 +40,13 @@
   const MOODS = [
     { id: "move",   label: "Move my body",          hint: "Yoga · tai chi",                         tone: "#d98a68", ink: "#fff",
       match: (e) => ["yoga", "tai-chi"].includes(e.category) },
-    { id: "calm",   label: "Quiet my mind",         hint: "Meditation · sound baths · breathwork",  tone: "#c3cab0", ink: "#304022",
-      match: (e) => ["meditation", "sound", "breathwork"].includes(e.category) },
-    { id: "care",   label: "Be cared for",          hint: "Massage · reiki",                        tone: "#f0d3c4", ink: "#9a5236",
-      match: (e) => ["massage", "reiki"].includes(e.category) },
+    { id: "calm",   label: "Quiet my mind",         hint: "Meditation · sound baths · salt caves",  tone: "#c3cab0", ink: "#304022",
+      match: (e) => ["meditation", "sound", "breathwork", "salt"].includes(e.category) },
+    { id: "care",   label: "Be cared for",          hint: "Massage · reiki · acupuncture",          tone: "#f0d3c4", ink: "#9a5236",
+      match: (e) => ["massage", "reiki", "acupuncture"].includes(e.category) },
     { id: "people", label: "Be with good people",   hint: "Classes, circles & expos",   tone: "#e3c98f", ink: "#304022",
       // anything with a date that people attend together (not one-on-one appointments)
-      match: (e) => ["expo", "workshop"].includes(e.category) || (e.sessions && !["massage", "reiki"].includes(e.category)) },
+      match: (e) => ["expo", "workshop"].includes(e.category) || (e.sessions && !["massage", "reiki", "acupuncture"].includes(e.category)) },
   ];
 
   // ---------- dates ----------

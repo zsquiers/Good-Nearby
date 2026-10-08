@@ -14,7 +14,7 @@
 // Fields:
 //   id          unique slug
 //   title       listing name
-//   category    one of: yoga, sound, meditation, massage, breathwork, reiki, tai-chi, workshop, expo
+//   category    one of: yoga, sound, meditation, massage, breathwork, reiki, tai-chi, acupuncture, salt, workshop, expo
 //   start, end  dated events only
 //   weekly      weekly series only (see above)
 //   schedule    short note on when it happens (ongoing listings)
@@ -335,5 +335,73 @@ window.GOOD_NEARBY_EVENTS = [
     description: "Reiki, chakra balancing with Tibetan bowls, crystal healing and guided meditation sessions.",
     url: "https://www.thehealingmoon.com",
     phone: "(781) 929-7514"
+  },
+  // ---------- AcuPUNKture, Franklin ----------
+  {
+    id: "acupunkture-forgiveness-meditation",
+    title: "Reiki-Infused Self-Forgiveness Guided Meditation",
+    category: "meditation",
+    start: "2026-10-11T13:00",
+    venue: "AcuPUNKture & The Whimsical Wellness Boutique", address: "37 E Central St", city: "Franklin, MA",
+    lat: 42.0838, lng: -71.3955,
+    price: null, priceNote: "Call or text to reserve",
+    host: "AcuPUNKture",
+    description: "A gentle guided meditation on self-forgiveness, infused with Reiki, in AcuPUNKture's cozy community event space downtown.",
+    url: "https://www.facebook.com/franklinacupunkture/",
+    phone: "(508) 507-8015"
+  },
+  {
+    id: "acupunkture-acupuncture",
+    title: "Acupuncture & Cupping",
+    category: "acupuncture",
+    schedule: "By appointment (new patients: waitlist)",
+    venue: "AcuPUNKture & The Whimsical Wellness Boutique", address: "37 E Central St", city: "Franklin, MA",
+    lat: 42.0838, lng: -71.3955,
+    price: null, priceNote: "Accepts some insurance (BCBS, Harvard Pilgrim, MGB, Aetna) — confirm when you book",
+    host: "Crystal Farnsworth, L.Ac.",
+    description: "Private Chinese and Japanese style acupuncture, plus cupping, gua sha and moxibustion. The boutique also hosts sound baths, Reiki meditations and reflexology mini clinics — call or check their socials for dates.",
+    url: "https://acupunkture.janeapp.com/",
+    phone: "(508) 507-8015"
+  },
+
+  // ---------- Salt caves ----------
+  {
+    id: "scituate-salt-cave",
+    title: "Himalayan Salt Cave Session",
+    category: "salt",
+    schedule: "Open daily 9 AM – 5 PM · 45-minute sessions",
+    venue: "Scituate Salt Cave", address: "164 Front St", city: "Scituate, MA",
+    lat: 42.1990, lng: -70.7235,
+    price: 40, priceNote: "$40 community cave · $50 private small cave",
+    host: "Scituate Salt Cave",
+    description: "Settle into a zero-gravity chair in the South Shore's Himalayan salt cave, right in Scituate Harbor. Quiet, dim and warm — 45 minutes to just breathe.",
+    url: "https://scituatesaltcave.com/",
+    phone: "(781) 545-7258"
+  },
+  {
+    id: "just-breathe-salt-room",
+    title: "Salt Room Session",
+    category: "salt",
+    schedule: "By appointment",
+    venue: "Just Breathe A Salt Room", address: "45 E Main St", city: "Westborough, MA",
+    lat: 42.2695, lng: -71.6135,
+    price: null,
+    host: "Just Breathe",
+    description: "A calm salt room in downtown Westborough for a quiet, restful halotherapy session.",
+    url: "",
+    phone: "(508) 366-8292"
+  },
+  {
+    id: "salted-soul-acton",
+    title: "Salt Cave Relaxation",
+    category: "salt",
+    schedule: "By appointment",
+    venue: "The Salted Soul Salt Cave", address: "340 Great Rd", city: "Acton, MA",
+    lat: 42.4895, lng: -71.4475,
+    price: null,
+    host: "The Salted Soul",
+    description: "Sit quietly in a Himalayan salt cave — a peaceful reset a little north of MetroWest.",
+    url: "",
+    phone: "(978) 206-9034"
   }
 ];
