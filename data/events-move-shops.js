@@ -71,19 +71,6 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
     url: "https://events.humanitix.com/jogs-with-261-fearless-club",
     tags: ["women", "come-alone", "all-paces", "beginner", "outdoors"]
   },
-  {
-    id: "wrentham-runners",
-    title: "Wrentham Runners Group Runs",
-    category: "run",
-    schedule: "Saturday mornings & weeknights · 5K–10K",
-    venue: "Locations vary around Wrentham", address: "", city: "Wrentham, MA",
-    lat: 42.0668, lng: -71.3281,
-    price: 0, priceNote: "Free membership, open to all",
-    host: "Wrentham Runners",
-    description: "Friendly weekly group training runs on a mix of road and trail. Meet-up times and places are posted on their calendar.",
-    url: "https://www.wrenthamrunners.org/",
-    tags: ["free", "come-alone", "outdoors"]
-  },
 
   // ---------- Hikes & walks ----------
   {

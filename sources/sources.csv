@@ -1,0 +1,61 @@
+name,area,look_for,how_often,url,notes
+Eventbrite wellness search,Everywhere,eventbrite,monthly,https://www.eventbrite.com/d/ma--franklin/meditation/,"Run tools/eventbrite_collect.py — it searches 8 towns × 8 wellness words"
+Natural Awakenings Boston calendar,Everywhere,events,monthly,https://www.naturalawakeningsboston.com/calendar/,Regional holistic calendar — expos and workshops
+Boston Parks Fitness Series,Boston area,events,monthly,https://www.boston.gov/calendar,"Free outdoor yoga & walks, spring–fall; search 'Parks Fitness'"
+Boston Public Library yoga & meditation,Boston area,events,monthly,https://bpl.bibliocommons.com/v2/events?q=yoga,Also try ?q=meditation
+Franklin Public Library events,Franklin & nearby,events,monthly,https://www.franklinlibrary.org/events,Chair yoga / mindfulness programs show up here
+Mount Auburn Cemetery events,Boston area,events,monthly,https://mountauburn.org/events/,Sunset sound baths and nature walks
+Mass Audubon programs,Everywhere,events,monthly,https://www.massaudubon.org/programs,"Filter to Stony Brook (Norfolk) and Broadmoor (Natick); forest bathing, guided walks"
+Meetup — meditation near Boston,Boston area,events,monthly,https://www.meetup.com/find/?keywords=meditation&location=us--ma--Boston,Free meditation groups; only list ones with a real place and time
+Healing With Spirit,South Shore,events,monthly,https://www.eventbrite.com/o/healing-with-spirit-3874767831,Sound healing gatherings in Hingham
+Plymouth Recreation,South Shore,events,monthly,https://plymouthma.myrec.com/info/activities/default.aspx,Kripalu yoga series and other classes
+Healing by Wilhelmina,Boston area,events,monthly,https://healingbywilhelmina.com/public-event-and-retreats,Sound baths and retreats
+Health and Wellness Show,MetroWest,events,every 3 months,https://healthandwellnessshow.net/,Natick fall show — check for next date
+Natural Living Expo,MetroWest,events,every 3 months,https://www.naturalexpo.org/,Annual expo
+AcuPUNKture events,Franklin & nearby,events,monthly,https://franklinacupunkture.com/upcoming-events-and-workshops/,Needles & Namaste nights and workshops
+Franklin Yoga & Wellness workshops,Franklin & nearby,events,monthly,https://www.franklinyoga.com/workshops,Sound baths and reiki workshops
+The Healing Moon,Franklin & nearby,events,monthly,https://www.thehealingmoon.com,Reiki and sound events
+Scituate Salt Cave events,South Shore,events,monthly,https://scituatesaltcave.com/events,Busy calendar — salt yoga and sound
+House of Stellium,South Shore,events,monthly,https://www.houseofstellium.com/,Full moon gatherings and workshops; also posts on Instagram
+Friends of the Blue Hills,Boston area,events,monthly,https://www.friendsofthebluehills.org/,Guided hikes
+Appalachian Mountain Club Boston,Boston area,events,monthly,https://amcboston.org/,Group hikes and walks
+Friends of the Fells,Boston area,events,monthly,https://www.fells.org/,Guided walks
+Jamaica Pond parkrun,Boston area,still open,every 3 months,https://www.parkrun.us/jamaicapond/,Weekly free 5K — just confirm it's still on
+November Project Boston,Boston area,still open,every 3 months,https://november-project.com/boston/,Weekly free workouts — confirm times/places
+Boston Road Runners,Boston area,still open,every 3 months,https://www.heylo.com/event/-OZirSSbWYcQ0tVsRIYt,Weekly group runs
+261 Fearless Club New England,Boston area,still open,every 3 months,https://events.humanitix.com/jogs-with-261-fearless-club,Women's running club
+The Gentle Place,MetroWest,still open,every 3 months,https://thegentleplace.com,Massage
+Franklin Council on Aging,Franklin & nearby,still open,every 3 months,https://www.franklinma.gov/583/Franklin-Senior-Center-Council-on-Aging,Tai chi
+Bellezza Day Spa,Franklin & nearby,still open,every 3 months,http://www.bellezzaspafranklin.com,Massage
+Drift + Oak,Franklin & nearby,still open,every 3 months,https://www.driftandoak.com,Yoga
+Universal Power Yoga,Franklin & nearby,still open,every 3 months,https://universalpoweryoga.com,Yoga (Wrentham)
+AcuPUNKture booking,Franklin & nearby,still open,every 3 months,https://acupunkture.janeapp.com/,Acupuncture & cupping
+The Salted Soul,MetroWest,still open,every 3 months,https://www.saltedsoulacton.com/,Salt cave (Acton)
+Himalayan Salt Cave Framingham,MetroWest,still open,every 3 months,https://www.thanhseyemazinglashes.com/himalayansaltcave,Salt cave
+The Indoor Oasis,MetroWest,still open,every 3 months,https://theindooroasis.com/halotherapy/,Salt room (Newton)
+Elite Medspa salt sanctuary,MetroWest,still open,every 3 months,https://www.myelitemedspa.com/salt-sanctuary,Salt room (Needham)
+OceanAir salt cave,South Shore,still open,every 3 months,https://www.oceanairhimalayansaltcave.com/,Orleans
+Pura Salt Cave & Spa,South Shore,still open,every 3 months,https://www.purasaltcave.com/,Mashpee
+Just Breathe Salt Spa,South Shore,still open,every 3 months,https://justbreathesaltspa.com/,Hyannis
+The Enchanted Fox,Franklin & nearby,still open,every 3 months,https://enchantedfox.com/,Holistic shop (Medway)
+The Serendipity Place,MetroWest,still open,every 3 months,https://www.theserendipityplace.com/,Holistic shop (Framingham)
+Open Doors,South Shore,still open,every 3 months,https://www.opendoors7.com/,Holistic shop (Braintree)
+Briggs Garden & Home Café,Franklin & nearby,still open,every 3 months,https://www.toasttab.com/local/order/briggs-cafe,Garden-center café
+Nirvana Tea House & Café,Franklin & nearby,still open,every 3 months,https://nirvanateahousecafe.com/,Café
+Honey Bean Café,Franklin & nearby,still open,every 3 months,https://www.honeybeancafe.com/,Café
+Copper City Espresso,Franklin & nearby,still open,every 3 months,https://www.coppercityespresso.com/,Café
+Ward's Berry Farm,Franklin & nearby,still open,every 3 months,https://www.wardsberryfarm.com/,Farm stand & bakery
+Angel's Garden Center & Café,MetroWest,still open,every 3 months,https://www.angelsgardenandcafe.com/angels-cafe,Garden-center café
+Heirloom,MetroWest,still open,every 3 months,https://www.heirloomweston.com/,Bakery-café
+Volante Farms,MetroWest,still open,every 3 months,https://www.volantefarms.com/,Farm market & coffee
+Ula Café,Boston area,still open,every 3 months,https://www.ulacafe.com/,Café
+Third Cliff Bakery,Boston area,still open,every 3 months,https://thirdcliffbakery.com/,Bakery
+A Sanctuary Café,Boston area,still open,every 3 months,https://www.asanctuarycafe.com/,Cat café
+Beacon Hill Books & Café,Boston area,still open,every 3 months,https://www.bhbooks.com/,Bookshop café
+Madhouse Café,Boston area,still open,every 3 months,https://madhousecafe.com/,Café
+Broadsheet Coffee Roasters,Boston area,still open,every 3 months,https://www.broadsheetcoffee.com/,Café
+bōm dough,Boston area,still open,every 3 months,https://bomdough.com/,Café
+3 Little Figs,Boston area,still open,every 3 months,https://www.3littlefigs.com/,Bakery
+Seabird Coffee & Co.,South Shore,still open,every 3 months,https://www.seabirdcoffee.com/,Café
+Redeye Coffee Roasters,South Shore,still open,every 3 months,https://www.redeyeroasters.com/,Café
+Veronica's Sweetcakes,South Shore,still open,every 3 months,https://www.veronicassweetcakes.com/,Bakery

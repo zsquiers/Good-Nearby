@@ -1,5 +1,5 @@
 // Wellness events found on Eventbrite across Greater Boston, MetroWest, the South Shore and the Franklin area.
-// Collected Oct 2026 and reviewed by hand; regenerate rather than edit. Added to the main list on load.
+// Made by tools/eventbrite_to_js.py — re-run it rather than editing by hand (add unwanted titles to SKIP).
 window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
  {
   "id": "eb-1977458519664",
