@@ -1,9 +1,11 @@
 name,area,look_for,how_often,url,notes
 Eventbrite wellness search,Everywhere,eventbrite,monthly,https://www.eventbrite.com/d/ma--franklin/meditation/,"Run tools/eventbrite_collect.py — it searches 8 towns × 8 wellness words"
+Eventbrite creative classes,Everywhere,eventbrite,monthly,https://www.eventbrite.com/d/ma--franklin/pottery-class/,"Run tools/eventbrite_collect.py with --make — pottery, painting, floral, cooking, candles…"
+Library calendars (13 libraries),Everywhere,libraries,monthly,https://medwaylib.assabetinteractive.com/calendar/,"Run tools/library_collect.py — Medway, Wrentham, Norfolk, Millis, Bellingham, Foxborough, Milford, Holliston, Hopkinton, Framingham, Sudbury, Norwood, Marshfield"
+Franklin Public Library,Franklin & nearby,events,monthly,https://www.franklinma.gov/franklin-public-library,"Book clubs and programs; not on the shared library calendar system yet"
 Natural Awakenings Boston calendar,Everywhere,events,monthly,https://www.naturalawakeningsboston.com/calendar/,Regional holistic calendar — expos and workshops
 Boston Parks Fitness Series,Boston area,events,monthly,https://www.boston.gov/calendar,"Free outdoor yoga & walks, spring–fall; search 'Parks Fitness'"
 Boston Public Library yoga & meditation,Boston area,events,monthly,https://bpl.bibliocommons.com/v2/events?q=yoga,Also try ?q=meditation
-Franklin Public Library events,Franklin & nearby,events,monthly,https://www.franklinlibrary.org/events,Chair yoga / mindfulness programs show up here
 Mount Auburn Cemetery events,Boston area,events,monthly,https://mountauburn.org/events/,Sunset sound baths and nature walks
 Mass Audubon programs,Everywhere,events,monthly,https://www.massaudubon.org/programs,"Filter to Stony Brook (Norfolk) and Broadmoor (Natick); forest bathing, guided walks"
 Meetup — meditation near Boston,Boston area,events,monthly,https://www.meetup.com/find/?keywords=meditation&location=us--ma--Boston,Free meditation groups; only list ones with a real place and time

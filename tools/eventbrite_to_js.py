@@ -1,5 +1,6 @@
 # Turn raw Eventbrite results into listings, merged into data/events-eventbrite.js.
 # Usage: python3 tools/eventbrite_to_js.py raw.json data/events-eventbrite.js
+#        python3 tools/eventbrite_to_js.py raw-make.json data/events-eventbrite.js --make   (creative classes)
 # Keeps every upcoming event already in the file, drops ones that have passed, adds new finds,
 # skips anything already listed by hand in the other data files, and prints what's new.
 import datetime, glob, json, os, re, sys
@@ -18,6 +19,25 @@ RULES = [("walk", r"\bwalk"), ("tai-chi", r"tai chi|qigong"), ("sound", r"sound 
          ("acupuncture", r"acupuncture"), ("reiki", r"reiki"), ("breathwork", r"breath|pranayama"), ("yoga", r"yoga|yin\b|flow\b|stretch"),
          ("movement", r"pilates|barre|dance|5rhythms|bollyx|joy movement|ride\b|fitness|moves"),
          ("meditation", r"meditat|zen|mindful|dharma|retreat|nidra|mantra|buddh|vajrasattva|nondual|whirling|dervish|cacao|stillpoint|tangle")]
+MAKE = "--make" in sys.argv
+# Creative classes: no chains, nothing for kids, nothing without a real place, and only near our towns.
+MAKE_SKIP = [r"pinot'?s palette", r"paint ?nite", r"yaymaker", r"muse paintbar", r"board (&|and) brush", r"eataly", r"color me mine",
+             r"\bkids?\b", r"children", r"toddler", r"\bteens?\b", r"family", r"ages? \d", r"parent", r"bachelorette", r"private event",
+             r"location provided after booking", r"\bpub\b", r"\bbar\b", r"distillery", r"cocktail", r"mahjong", r"trivia", r"bingo",
+             r"\bsip\b", r"byob", r"martini", r"margarita", r"booze", r"naked", r"boob", r"inebri", r"classpop", r"\buno\b", r"couple",
+             r"no.school.day", r"high school", r"storytime", r"release party", r"festival", r"\bfest\b", r"\bfair\b", r"restaurant week",
+             r"template", r"3d print", r"plasma", r"sandblast", r"metalwork", r"\bcnc\b", r"\bai\b", r"photography", r"sold out",
+             r"halloween after dark", r"stein", r"pro.range", r"steam", r"bootcamp", r"tavern",
+             r"building romance", r"paint the block", r"paint-a-ghost", r"drop in crafternoon"]
+# A creative class has to say what you'll make.
+MAKE_ONLY = (r"pottery|clay|ceramic|kintsugi|wheel throwing|watercolou?r|painting|\bpaint\b|oil|acrylic|drawing|sketch|floral|flower|bouquet|"
+             r"wreath|centerpiece|candle|terrarium|succulent|moss|bonsai|planter|knit|crochet|sew|mend|darn|embroider|weav|basket|macram|"
+             r"print|mosaic|soap|cook|baking|bread|sourdough|pasta|gnocchi|dim sum|macaron|truffle|cake|cookie|tufting|marbling|stamp|"
+             r"journal|collage|mixed media|bead|fiber|textile|garland|resin")
+towns_js = open(os.path.join(os.path.dirname(out) or ".", "towns.js")).read()
+TOWNS = [(float(a), float(b)) for a, b in re.findall(r"lat: ([\d.-]+), lng: ([\d.-]+)", towns_js)]
+def near_us(lat, lng, miles=6):
+    return any(((lat - a) * 69) ** 2 + ((lng - b) * 51) ** 2 <= miles ** 2 for a, b in TOWNS)
 # Skip anything already listed by hand in the other data files (same day, similar title).
 main = "".join(open(f).read() for f in glob.glob(os.path.join(os.path.dirname(out) or ".", "*.js"))
                if os.path.abspath(f) != os.path.abspath(out))
@@ -30,10 +50,15 @@ seen = set(); rows = []
 for e in sorted(d, key=lambda x: (x["start_date"], x["start_time"] or "")):
     name = e["name"].strip(); low = (name + " " + e["summary"]).lower()
     if any(re.search(p, name.lower()) for p in SKIP): continue
+    if MAKE:
+        if e.get("online") or not e.get("lat") or not near_us(float(e["lat"]), float(e["lng"])): continue
+        if any(re.search(p, (name + " " + (e["venue"] or "") + " " + (e["organizer"] or "")).lower()) for p in MAKE_SKIP): continue
+        if not re.search(MAKE_ONLY, name.lower()): continue
     key = (re.sub(r"\W+", "", name.lower())[:40], e["start_date"])
     if key in seen: continue
     seen.add(key)
-    cat = next((c for c, p in RULES if re.search(p, name.lower())), None) or next((c for c, p in RULES if re.search(p, low)), "workshop")
+    cat = "craft" if MAKE else (next((c for c, p in RULES if re.search(p, name.lower())), None)
+                                or next((c for c, p in RULES if re.search(p, low)), "workshop"))
     if dup(name, e["start_date"]): continue
     start = f'{e["start_date"]}T{e["start_time"]}' if e["start_time"] else e["start_date"]
     end = f'{e["end_date"]}T{e["end_time"]}' if e.get("end_time") and e.get("end_date") else None

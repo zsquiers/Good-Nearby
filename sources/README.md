@@ -11,14 +11,15 @@ Community Kangaroo's team checks over 2,000 websites by hand every month. Good N
 | `last-check.json` | When each source was last checked. |
 | `report.md` | The latest report: what changed, what's new, and what couldn't be reached. |
 | `../tools/check_sources.py` | Checks the sources that are due and writes the report. |
-| `../tools/eventbrite_collect.py` + `eventbrite_to_js.py` | Searches Eventbrite for wellness events and merges new ones into `data/events-eventbrite.js`. Events that have passed drop off. |
+| `../tools/eventbrite_collect.py` + `eventbrite_to_js.py` | Searches Eventbrite for wellness events (and, with `--make`, creative classes) and merges new ones into `data/events-eventbrite.js`. Events that have passed drop off. Chains, kids' events and bar nights are skipped. |
+| `../tools/library_collect.py` | Reads 13 local library calendars at once and keeps the adult book groups, creative classes and wellness programs (`data/events-libraries.js`). Add a library to its `LIBRARIES` list. |
 
 ## The columns in `sources.csv`
 
 - **look_for**:
   - `events`: a calendar with dated events; read it for new ones.
   - `still open`: a place listed as "open most days"; just make sure it's still there.
-  - `eventbrite`: handled by the Eventbrite tools.
+  - `eventbrite` / `libraries`: handled by their own tools.
 - **how_often**: `monthly` or `every 3 months`.
 - **notes**: anything that helps the next person checking.
 
@@ -28,7 +29,7 @@ To add a source, add a row. Good sources have a page that lists dates, such as a
 
 On the 25th of each month, a scheduled Claude session does the following:
 
-1. Runs `python3 tools/check_sources.py` and the Eventbrite tools.
+1. Runs `python3 tools/check_sources.py`, the Eventbrite tools (wellness and `--make`) and `tools/library_collect.py`.
 2. Reads the report and visits the changed pages. It adds new events that fit (wellness, calm, local, real date and place) to the right file in `data/`.
 3. Removes listings for places that have closed. It flags anything it isn't sure about instead of guessing.
 4. Searches the web for a few new sources and adds good ones to `sources.csv`.

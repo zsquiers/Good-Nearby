@@ -19,7 +19,7 @@
   const NEWSLETTER = { buttondownUsername: "" };
 
   // ---------- event submissions ----------
-  // "List something good" sends each submission to Formspree (formspree.io), which emails it
+  // "Share something good" sends each submission to Formspree (formspree.io), which emails it
   // to you. Put your Formspree form id here (the part after /f/ in its address). Until then the
   // form explains that online submissions are being set up, and nothing is sent.
   const SUBMISSIONS = { formspreeId: "" };
@@ -46,6 +46,8 @@
     movement:   { label: "Movement & dance",   photo: "https://images.pexels.com/photos/36715608/pexels-photo-36715608.jpeg?auto=compress&cs=tinysrgb&w=1100" },
     shop:       { label: "Holistic shop",      photo: "https://images.pexels.com/photos/3610753/pexels-photo-3610753.jpeg?auto=compress&cs=tinysrgb&w=1100" },
     cafe:       { label: "Cozy café",          photo: "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1100" },
+    craft:      { label: "Creative class",     photo: "https://images.pexels.com/photos/3094218/pexels-photo-3094218.jpeg?auto=compress&cs=tinysrgb&w=1100" },
+    book:       { label: "Book group",         photo: "https://images.pexels.com/photos/590493/pexels-photo-590493.jpeg?auto=compress&cs=tinysrgb&w=1100" },
     bakery:     { label: "Cozy bakery",        photo: "https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=compress&cs=tinysrgb&w=1100" },
   };
   const catLabel = (k) => (CATEGORY[k] ? CATEGORY[k].label : k);
@@ -54,6 +56,7 @@
     move:   '<path d="M16 25c-5 0-9-3-10-7 3 0 6 1 8 3M16 25c5 0 9-3 10-7-3 0-6 1-8 3M16 25c-3-3-4-7-3-12 2 1 3 3 3 5 0-2 1-4 3-5 1 5 0 9-3 12Z"/>',
     calm:   '<path d="M5 14v4M9 11v10M13 8v16M17 11v10M21 7v18M25 12v8"/>',
     care:   '<path d="M7 26v-7l-2-6c-.4-1.2 1.4-2 2-.8L9 16V8.5c0-1.4 2-1.4 2 0V15M25 26v-7l2-6c.4-1.2-1.4-2-2-.8L23 16V8.5c0-1.4-2-1.4-2 0V15M11 15c0 3 1 5 2 6M21 15c0 3-1 5-2 6"/>',
+    make:   '<path d="M9 27h14M11 27c-3-2-4-5-4-8 0-3 2-5 4-6l1-4h8l1 4c2 1 4 3 4 6 0 3-1 6-4 8M12 9h8M10 18c2 1 10 1 12 0"/>',
     wander: '<path d="M7 13h15v6a7 7 0 0 1-7 7h-1a7 7 0 0 1-7-7Z M22 15h2a3 3 0 0 1 0 6h-2.5M11 9c0-2 2-2 2-4M16 9c0-2 2-2 2-4M6 28h18"/>',
     people: '<circle cx="16" cy="11" r="3.5"/><circle cx="8" cy="13" r="2.7"/><circle cx="24" cy="13" r="2.7"/><path d="M10 25c0-3.5 2.7-7 6-7s6 3.5 6 7M3 24c0-3 2-5 5-5M29 24c0-3-2-5-5-5"/>',
   };
@@ -65,11 +68,13 @@
       match: (e) => ["meditation", "sound", "breathwork", "salt"].includes(e.category) },
     { id: "care",   label: "Be cared for",          hint: "Massage · reiki · acupuncture",   tone: "#f0d3c4", ink: "#9a5236",
       match: (e) => ["massage", "reiki", "acupuncture"].includes(e.category) },
+    { id: "make",   label: "Make something good",   hint: "Pottery · painting · flowers · cooking",   tone: "#ddd0e6", ink: "#5e4670",
+      match: (e) => e.category === "craft" },
     { id: "wander", label: "Wander somewhere cozy", hint: "Cafés · bakeries · little shops",   tone: "#e6d6bd", ink: "#7a5a2e",
       match: (e) => ["cafe", "bakery", "shop"].includes(e.category) },
-    { id: "people", label: "Be with good people",   hint: "Classes, circles & expos",   tone: "#e3c98f", ink: "#304022",
+    { id: "people", label: "Be with good people",   hint: "Classes, circles & book groups",   tone: "#e3c98f", ink: "#304022",
       // anything with a date that people attend together (not one-on-one appointments)
-      match: (e) => ["expo", "workshop"].includes(e.category) || (e.sessions && !["massage", "reiki", "acupuncture", "shop", "cafe", "bakery"].includes(e.category))
+      match: (e) => ["expo", "workshop", "book"].includes(e.category) || (e.sessions && !["massage", "reiki", "acupuncture", "shop", "cafe", "bakery"].includes(e.category))
         || (!e.sessions && (e.tags || []).includes("come-alone") && !["shop", "cafe", "bakery"].includes(e.category)) },
   ];
 
@@ -598,8 +603,15 @@
       </button></li>`).join("")}</ul></section>`).join("");
   }
 
-  // ---------- List something good (hosts) ----------
+  // ---------- Share something good (hosts, and people recommending things they love) ----------
   let submitArea = null;
+
+  // Hosts give us the details; someone recommending a thing just tells us about it.
+  function applyWho(form) {
+    const host = (form.elements.who.value || "host") === "host";
+    form.querySelectorAll("[data-for]").forEach((el) => { el.hidden = (el.dataset.for === "host") !== host; });
+    for (const name of ["url", "contactName", "contactEmail"]) form.elements[name].required = host;
+  }
 
   function renderSubmit() {
     $("submitDone").hidden = true;
@@ -610,6 +622,7 @@
         <span class="area-towns">${escapeHtml(a.towns.slice(0, 4).map((t) => t.name).join(", "))}…</span>
       </button>`).join("");
     $("submitRest").hidden = !submitArea;
+    applyWho($("submitForm"));
     const towns = submitArea ? areaById.get(submitArea).towns : allTowns;
     $("submitTowns").innerHTML = towns.map((t) => `<option value="${escapeHtml(t.name)}">`).join("");
   }
@@ -670,8 +683,9 @@
     if (f.get("_gotcha")) return true;                       // a bot filled the hidden field
     const entry = buildEntry(f);
     const areaName = areaById.get(submitArea).area;
+    const tip = f.get("who") === "fan";
     const payload = {
-      _subject: `New listing for Good Nearby: ${entry.title}`,
+      _subject: `${tip ? "New tip" : "New listing"} for Good Nearby: ${entry.title}`,
       area: areaName,
       ...Object.fromEntries([...f.entries()].filter(([k]) => k !== "_gotcha")),
       paste_into_events_js: JSON.stringify(entry, null, 2) + ",",
@@ -933,6 +947,7 @@
   // Hosts' form: show the right date fields, hide price when free, and send.
   const submitForm = $("submitForm");
   submitForm.addEventListener("change", (ev) => {
+    if (ev.target.name === "who") applyWho(submitForm);
     if (ev.target.name === "kind") {
       submitForm.querySelectorAll(".when-fields").forEach((el) => { el.hidden = el.dataset.kind !== ev.target.value; });
     }
@@ -969,6 +984,7 @@
       submitForm.querySelectorAll(".when-fields").forEach((el) => { el.hidden = el.dataset.kind !== "once"; });
       submitForm.querySelector(".price-field").hidden = false;
       submitForm.querySelector(".more-details").open = false;
+      applyWho(submitForm);
     }
     submitForm.hidden = true;
     $("submitDone").hidden = false;
