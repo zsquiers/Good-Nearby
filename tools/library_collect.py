@@ -28,6 +28,7 @@ LIBRARIES = {
 # What we list, checked against the title first, then the description. First match wins.
 RULES = [
     ("book",       r"book (club|group|discussion|talk group)|readers?'? (circle|group)|page turners|cookbook club|read it and eat"),
+    ("herbal",     r"herbal|herbalism|\bherbs?\b|tea blend|salve|tincture|foraging|apothecary|plant medicine|aromatherapy"),
     ("craft",      r"pottery|clay|ceramic|watercolou?r|acrylic|oil paint|painting|paint night|floral|flower arrang|bouquet|wreath|"
                    r"knit|crochet|sewing|quilt|embroider|needle|candle|terrarium|macram|calligraph|drawing|sketch|collage|"
                    r"journal(ing)? workshop|art class|art workshop|craft night|crafternoon|adult craft|make (and|&) take|cooking class|cooking demo"),
@@ -94,7 +95,7 @@ def to_listing(e):
         return None
     cat = next((c for c, p in RULES if re.search(p, text)), None)
     if not cat and "category-adult" in e["cls"]:
-        cat = next((c for c, p in RULES[:2] if re.search(p, e["desc"].lower())), None)
+        cat = next((c for c, p in RULES[:3] if re.search(p, e["desc"].lower())), None)
     if not cat: return None
     start, end = times(e["when"])
     if not start: return None

@@ -1,4 +1,4 @@
-// Wellness events and creative classes found on Eventbrite across Greater Boston, MetroWest, the South Shore and the Franklin area.
+// Wellness events found on Eventbrite across Greater Boston, MetroWest, the South Shore and the Franklin area.
 // Made by tools/eventbrite_to_js.py — re-run it rather than editing by hand (add unwanted titles to SKIP).
 window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
  {
@@ -1586,6 +1586,24 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "source": "Eventbrite"
  },
  {
+  "id": "eb-2002572847294",
+  "title": "Fall Tea Blending Experience (Cambridge)",
+  "category": "herbal",
+  "start": "2026-10-16T12:00",
+  "end": "2026-10-16T17:00",
+  "venue": "2265 Massachusetts Ave",
+  "address": "2265 Massachusetts Avenue",
+  "city": "Cambridge, MA",
+  "lat": 42.3946,
+  "lng": -71.1267,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "2265 Massachusetts Ave",
+  "description": "Join Curio Spice Co. for a drop-in custom Tea Blending Experience at our Cambridge location. Create your own handmade loose-leaf tea blend!",
+  "url": "https://www.eventbrite.com/e/fall-tea-blending-experience-cambridge-tickets-2002572847294",
+  "source": "Eventbrite"
+ },
+ {
   "id": "eb-1492326792609",
   "title": "Freedom Within Meditation & Watercolor",
   "category": "meditation",
@@ -1709,6 +1727,24 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Azerbaijan Cultural Center",
   "description": "Create your own Turkish mosaic lamp in Brighton, MA! Perfect for all skill levels, includes materials, Turkish tea, and delights.",
   "url": "https://www.eventbrite.com/e/mosaic-lamp-workshop-in-brighton-ma-tickets-1995009407843",
+  "source": "Eventbrite"
+ },
+ {
+  "id": "eb-2001094075247",
+  "title": "Fall Tea Blending Experience (Boston)",
+  "category": "herbal",
+  "start": "2026-10-17T11:00",
+  "end": "2026-10-17T16:00",
+  "venue": "Boston Public Market",
+  "address": "100 Hanover Street",
+  "city": "Boston, MA",
+  "lat": 42.3617,
+  "lng": -71.0575,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Boston Public Market",
+  "description": "Join Curio Spice Co. for a drop-in custom Tea Blending Experience at Boston Public Market. Create your own handmade loose-leaf tea blend!",
+  "url": "https://www.eventbrite.com/e/fall-tea-blending-experience-boston-tickets-2001094075247",
   "source": "Eventbrite"
  },
  {
@@ -4033,6 +4069,24 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "source": "Eventbrite"
  },
  {
+  "id": "eb-2002574057915",
+  "title": "Ink & Infusion Tea Blending Event",
+  "category": "herbal",
+  "start": "2026-11-07T11:00",
+  "end": "2026-11-07T16:00",
+  "venue": "The Paper Mouse",
+  "address": "1274 Washington Street",
+  "city": "Newton, MA",
+  "lat": 42.3492,
+  "lng": -71.2258,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "The Paper Mouse",
+  "description": "Celebrate Fountain Pen Day with Tea & Writing! Co-hosted by Curio Spice Co and The Paper Mouse.",
+  "url": "https://www.eventbrite.com/e/ink-infusion-tea-blending-event-tickets-2002574057915",
+  "source": "Eventbrite"
+ },
+ {
   "id": "eb-2002551158422",
   "title": "Babywearing Dance Class",
   "category": "movement",
@@ -4174,6 +4228,24 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Hannah's Brewing Co.",
   "description": "Join us for a fun and creative evening as you build your own unique terrarium with our step-by-step instruction during your workshop!",
   "url": "https://www.eventbrite.com/e/terrarium-workshop-succulent-edition-build-your-own-terrarium-tickets-1988528810201",
+  "source": "Eventbrite"
+ },
+ {
+  "id": "eb-2002837646315",
+  "title": "Breathe Easy: Herbs for the Respiratory System",
+  "category": "herbal",
+  "start": "2026-11-11T19:30",
+  "end": "2026-11-11T21:00",
+  "venue": "Cambridge Naturals",
+  "address": "23 White Street",
+  "city": "Cambridge, MA",
+  "lat": 42.3896,
+  "lng": -71.119,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Cambridge Naturals",
+  "description": "Come to our shop and learn about supportive herbs for your respiratory system from a super knowledgeable clinical herbalist - Alex Klein.",
+  "url": "https://www.eventbrite.com/e/breathe-easy-herbs-for-the-respiratory-system-tickets-2002837646315",
   "source": "Eventbrite"
  },
  {

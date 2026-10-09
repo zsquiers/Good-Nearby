@@ -61,3 +61,8 @@ bōm dough,Boston area,still open,every 3 months,https://bomdough.com/,Café
 Seabird Coffee & Co.,South Shore,still open,every 3 months,https://www.seabirdcoffee.com/,Café
 Redeye Coffee Roasters,South Shore,still open,every 3 months,https://www.redeyeroasters.com/,Café
 Veronica's Sweetcakes,South Shore,still open,every 3 months,https://www.veronicassweetcakes.com/,Bakery
+Eventbrite herbal classes,Everywhere,eventbrite,monthly,https://www.eventbrite.com/d/ma--boston/herbalism/,"Run tools/eventbrite_collect.py with --herbal — herbal workshops, tea blending, foraging"
+Boston School of Herbal Studies,Everywhere,events,monthly,https://linktr.ee/herbstudiesboston,"Herbal classes around Boston (Lincoln, Milton, Cambridge); each class has its own page"
+Cambridge Naturals events,Boston area,events,monthly,https://cambridgenaturals.com/events,Herbal classes and quarterly herbalist tea nights
+Boston Food Forest Coalition,Boston area,events,monthly,https://www.bostonfoodforest.org/workshops,"Community garden workdays, foraging walks and herbal workshops"
+HerbRally Massachusetts,Everywhere,events,every 3 months,https://www.herbrally.com/events/massachusetts,Statewide herbal events calendar — mostly bigger gatherings
