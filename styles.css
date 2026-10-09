@@ -377,6 +377,7 @@ h3.ask { display: flex; align-items: center; }
 .more-details legend { font-size: 1rem !important; }
 .hint-inline { font-weight: 400; color: var(--ink-soft); font-size: .85rem; }
 .when-kind { display: flex; flex-wrap: wrap; gap: 8px; }
+.who { margin-bottom: 18px; }
 .pill { flex-direction: row !important; align-items: center; gap: 8px !important; padding: 10px 16px; border: 1.5px solid var(--line); border-radius: 999px; background: #fff; cursor: pointer; }
 .pill:has(input:checked) { border-color: var(--ink); background: var(--paper-2); }
 .pill input { accent-color: var(--olive); }
@@ -565,3 +566,6 @@ h3.ask { display: flex; align-items: center; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* Anything marked hidden stays hidden, whatever its display style. */
+[hidden] { display: none !important; }

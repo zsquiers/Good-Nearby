@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Jost:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20" />
+  <link rel="stylesheet" href="styles.css?v=21" />
 </head>
 <body>
   <div class="backdrop" aria-hidden="true"></div>
@@ -129,13 +129,13 @@
         <a href="#/" class="quiet-link">← Back</a>
       </div>
       <div class="day-card">
-        <h2 id="submitTitle" tabindex="-1">List something good</h2>
-        <p class="lede">Teachers, studios, healers and organizers: share your class, circle, session or expo. It's free, and a real person reviews every listing before it goes up.</p>
+        <h2 id="submitTitle" tabindex="-1">Share something good</h2>
+        <p class="lede">Hosting a class, circle or gathering — or know a lovely thing nearby that more people should find? Tell us. It's free, and a real person reviews everything before it goes up.</p>
 
         <details class="criteria">
           <summary>What we list</summary>
           <ul>
-            <li><strong>Restorative and wellness-focused:</strong> yoga, meditation, sound baths, breathwork, massage, reiki, acupuncture, tai chi, salt caves, wellness workshops and expos.</li>
+            <li><strong>Things that make people feel good:</strong> yoga, meditation, sound baths, breathwork, massage, reiki, acupuncture, tai chi, salt caves, creative classes (pottery, painting, flowers, cooking), book groups, community walks and runs, cozy independent cafés and little shops, wellness workshops and expos.</li>
             <li><strong>Open to the public</strong> in Greater Boston, MetroWest, the South Shore or the Franklin area.</li>
             <li><strong>One-time events, weekly series, and practitioners by appointment</strong> are all welcome.</li>
             <li>Please keep descriptions calm and simple — no all-caps or hard selling.</li>
@@ -144,6 +144,10 @@
         </details>
 
         <form id="submitForm" class="submit-form" novalidate>
+          <div class="when-kind who" role="radiogroup" aria-label="Who are you?">
+            <label class="pill"><input type="radio" name="who" value="host" checked> I'm hosting it</label>
+            <label class="pill"><input type="radio" name="who" value="fan"> I'm recommending something I love</label>
+          </div>
           <fieldset>
             <legend><span class="step">1</span> Where is it?</legend>
             <div class="areas" id="submitAreas"></div>
@@ -152,27 +156,30 @@
           <div id="submitRest" hidden>
             <fieldset>
               <legend><span class="step">2</span> The basics</legend>
-              <label>Event or offering name <span class="req">*</span>
-                <input name="title" required maxlength="90" placeholder="e.g. Full Moon Sound Bath"></label>
+              <label>What is it? <span class="req">*</span>
+                <input name="title" required maxlength="90" placeholder="e.g. Full Moon Sound Bath · Saturday women's walk at the state forest"></label>
+              <label data-for="fan" hidden>Tell us about it <span class="req">*</span> <span class="hint-inline">When and where it happens, and why it's good</span>
+                <textarea name="tip" maxlength="600" rows="4" required placeholder="e.g. A friendly group of women walks the loop at Franklin State Forest every Saturday at 8 — anyone can join."></textarea></label>
               <label>Town <span class="req">*</span><input name="town" required list="submitTowns" maxlength="40"></label>
               <datalist id="submitTowns"></datalist>
               <label>Venue name<input name="venue" maxlength="80" placeholder="e.g. Franklin Yoga & Wellness"></label>
-              <label>Link with the event details <span class="req">*</span> <span class="hint-inline">We'll pull the details from here, and readers use it to confirm</span>
+              <label>Link with the details <span class="req" data-for="host">*</span> <span class="hint-inline" data-for="host">We'll pull the details from here, and readers use it to confirm</span><span class="hint-inline" data-for="fan" hidden>If you have one — a website, Facebook or Instagram page</span>
                 <input type="url" name="url" required placeholder="https://"></label>
-              <label>Best link for day-of updates <span class="hint-inline">If different — e.g. your Instagram</span>
+              <label data-for="host">Best link for day-of updates <span class="hint-inline">If different — e.g. your Instagram</span>
                 <input type="url" name="updatesUrl" placeholder="https://"></label>
             </fieldset>
 
             <fieldset>
               <legend><span class="step">3</span> About you</legend>
-              <p class="hint-static">Only so we can ask a quick question. We won't publish this.</p>
-              <label>Your name <span class="req">*</span><input name="contactName" required maxlength="60" autocomplete="name"></label>
-              <label>Your email <span class="req">*</span><input type="email" name="contactEmail" required autocomplete="email"></label>
-              <label>Your business or organization <span class="req">*</span><input name="host" required maxlength="80" autocomplete="organization"></label>
+              <p class="hint-static" data-for="host">Only so we can ask a quick question. We won't publish this.</p>
+              <p class="hint-static" data-for="fan" hidden>Optional — only if you'd like a thank-you when it goes up. We won't publish this.</p>
+              <label>Your name <span class="req" data-for="host">*</span><input name="contactName" required maxlength="60" autocomplete="name"></label>
+              <label>Your email <span class="req" data-for="host">*</span><input type="email" name="contactEmail" required autocomplete="email"></label>
+              <label data-for="host">Your business or organization <span class="req">*</span><input name="host" required maxlength="80" autocomplete="organization"></label>
               <label class="check"><input type="checkbox" name="public" required> This is open to the public <span class="req">*</span></label>
             </fieldset>
 
-            <details class="more-details">
+            <details class="more-details" data-for="host">
               <summary>Add more details yourself <span>optional — helps us list it faster</span></summary>
               <fieldset>
                 <legend>What kind of thing is it?</legend>
@@ -188,6 +195,14 @@
                     <option value="acupuncture">Acupuncture</option>
                     <option value="tai-chi">Tai chi / qigong</option>
                     <option value="salt">Salt cave</option>
+                    <option value="craft">Creative class (pottery, painting, flowers, cooking…)</option>
+                    <option value="book">Book group</option>
+                    <option value="walk">Walk</option>
+                    <option value="run">Run</option>
+                    <option value="hike">Hike</option>
+                    <option value="cafe">Cozy café</option>
+                    <option value="bakery">Bakery</option>
+                    <option value="shop">Little shop</option>
                     <option value="workshop">Workshop</option>
                     <option value="expo">Expo / fair</option>
                   </select></label>
@@ -270,17 +285,18 @@
   </main>
 
   <footer class="footer">
-    <a href="#/submit">Hosting something good? List it here</a>
+    <a href="#/submit">Know something good? Share it here</a>
     <span class="sep" aria-hidden="true">·</span>
     <span>Good Nearby · Find what makes you feel good · Photos via Unsplash &amp; Pexels</span>
   </footer>
 
-  <script src="data/events.js?v=20"></script>
-  <script src="data/events-eventbrite.js?v=20"></script>
-  <script src="data/events-move-shops.js?v=20"></script>
-  <script src="data/events-venues.js?v=20"></script>
-  <script src="data/events-cafes.js?v=20"></script>
-  <script src="data/towns.js?v=20"></script>
-  <script src="app.js?v=20"></script>
+  <script src="data/events.js?v=21"></script>
+  <script src="data/events-eventbrite.js?v=21"></script>
+  <script src="data/events-move-shops.js?v=21"></script>
+  <script src="data/events-venues.js?v=21"></script>
+  <script src="data/events-cafes.js?v=21"></script>
+  <script src="data/events-libraries.js?v=21"></script>
+  <script src="data/towns.js?v=21"></script>
+  <script src="app.js?v=21"></script>
 </body>
 </html>
