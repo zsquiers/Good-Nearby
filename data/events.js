@@ -32,7 +32,7 @@
 // Listings below were gathered from public listings in early Oct 2026.
 // Schedules change — the site always asks visitors to confirm with the host.
 
-window.GOOD_NEARBY_EVENTS = [
+window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   // ---------- Dated events & series ----------
   {
     id: "bpl-morning-yoga-allston",
@@ -443,4 +443,4 @@ window.GOOD_NEARBY_EVENTS = [
     url: "https://www.saltedsoulacton.com/",
     phone: "(978) 206-9034"
   }
-];
+]);
