@@ -1,6 +1,7 @@
 # Turn raw Eventbrite results into listings, merged into data/events-eventbrite.js.
 # Usage: python3 tools/eventbrite_to_js.py raw.json data/events-eventbrite.js
-#        python3 tools/eventbrite_to_js.py raw-make.json data/events-eventbrite.js --make   (creative classes)
+#        python3 tools/eventbrite_to_js.py raw-make.json data/events-eventbrite.js --make     (creative classes)
+#        python3 tools/eventbrite_to_js.py raw-herbal.json data/events-eventbrite.js --herbal (herbalism)
 # Keeps every upcoming event already in the file, drops ones that have passed, adds new finds,
 # skips anything already listed by hand in the other data files, and prints what's new.
 import datetime, glob, json, os, re, sys
@@ -19,7 +20,8 @@ RULES = [("walk", r"\bwalk"), ("tai-chi", r"tai chi|qigong"), ("sound", r"sound 
          ("acupuncture", r"acupuncture"), ("reiki", r"reiki"), ("breathwork", r"breath|pranayama"), ("yoga", r"yoga|yin\b|flow\b|stretch"),
          ("movement", r"pilates|barre|dance|5rhythms|bollyx|joy movement|ride\b|fitness|moves"),
          ("meditation", r"meditat|zen|mindful|dharma|retreat|nidra|mantra|buddh|vajrasattva|nondual|whirling|dervish|cacao|stillpoint|tangle")]
-MAKE = "--make" in sys.argv
+MAKE = "--make" in sys.argv or "--herbal" in sys.argv   # both are hands-on classes
+HERBAL = "--herbal" in sys.argv
 # Creative classes: no chains, nothing for kids, nothing without a real place, and only near our towns.
 MAKE_SKIP = [r"pinot'?s palette", r"paint ?nite", r"yaymaker", r"muse paintbar", r"board (&|and) brush", r"eataly", r"color me mine",
              r"\bkids?\b", r"children", r"toddler", r"\bteens?\b", r"family", r"ages? \d", r"parent", r"bachelorette", r"private event",
@@ -29,6 +31,9 @@ MAKE_SKIP = [r"pinot'?s palette", r"paint ?nite", r"yaymaker", r"muse paintbar",
              r"template", r"3d print", r"plasma", r"sandblast", r"metalwork", r"\bcnc\b", r"\bai\b", r"photography", r"sold out",
              r"halloween after dark", r"stein", r"pro.range", r"steam", r"bootcamp", r"tavern",
              r"building romance", r"paint the block", r"paint-a-ghost", r"drop in crafternoon"]
+HERBAL_ONLY = (r"herbal|herbalism|\bherbs?\b|tea blend|salve|tincture|forag|apothecary|plant medicine|plant walk|"
+               r"aromatherapy|flower essence|medicinal|wild edible|mushroom walk")
+HERBAL_SKIP = [r"tea blending series with the boston school", r"essential oils? (party|business)", r"doterra", r"young living", r"cannabis", r"\bcbd\b", r"psilocybin", r"ayahuasca"]
 # A creative class has to say what you'll make.
 MAKE_ONLY = (r"pottery|clay|ceramic|kintsugi|wheel throwing|watercolou?r|painting|\bpaint\b|oil|acrylic|drawing|sketch|floral|flower|bouquet|"
              r"wreath|centerpiece|candle|terrarium|succulent|moss|bonsai|planter|knit|crochet|sew|mend|darn|embroider|weav|basket|macram|"
@@ -53,11 +58,13 @@ for e in sorted(d, key=lambda x: (x["start_date"], x["start_time"] or "")):
     if MAKE:
         if e.get("online") or not e.get("lat") or not near_us(float(e["lat"]), float(e["lng"])): continue
         if any(re.search(p, (name + " " + (e["venue"] or "") + " " + (e["organizer"] or "")).lower()) for p in MAKE_SKIP): continue
-        if not re.search(MAKE_ONLY, name.lower()): continue
+        if HERBAL:
+            if not re.search(HERBAL_ONLY, name.lower()) or any(re.search(p, low) for p in HERBAL_SKIP): continue
+        elif not re.search(MAKE_ONLY, name.lower()): continue
     key = (re.sub(r"\W+", "", name.lower())[:40], e["start_date"])
     if key in seen: continue
     seen.add(key)
-    cat = "craft" if MAKE else (next((c for c, p in RULES if re.search(p, name.lower())), None)
+    cat = "herbal" if HERBAL else "craft" if MAKE else (next((c for c, p in RULES if re.search(p, name.lower())), None)
                                 or next((c for c, p in RULES if re.search(p, low)), "workshop"))
     if dup(name, e["start_date"]): continue
     start = f'{e["start_date"]}T{e["start_time"]}' if e["start_time"] else e["start_date"]

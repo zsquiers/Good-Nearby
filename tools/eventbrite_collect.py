@@ -1,6 +1,7 @@
 # Search Eventbrite for wellness events around each area and save the raw results.
 # Usage: python3 tools/eventbrite_collect.py raw.json             wellness search (takes ~5 minutes)
 #        python3 tools/eventbrite_collect.py raw.json --make      creative classes: pottery, painting, floral, cooking…
+#        python3 tools/eventbrite_collect.py raw.json --herbal    herbalism: herbal workshops, tea blending, foraging walks…
 import json, re, sys, time, urllib.request
 OUT = sys.argv[1]
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"
@@ -8,6 +9,8 @@ towns = ["franklin", "framingham", "natick", "needham", "boston", "quincy", "hin
 terms = ["meditation", "sound-bath", "yoga", "breathwork", "reiki", "wellness", "mindfulness", "tai-chi"]
 if "--make" in sys.argv:
     terms = ["pottery-class", "painting-class", "floral-workshop", "cooking-class", "candle-making", "watercolor", "wreath-workshop", "terrarium"]
+if "--herbal" in sys.argv:
+    terms = ["herbalism", "herbal-workshop", "herbal-medicine", "tea-blending", "foraging", "apothecary", "plant-medicine", "salve"]
 found = {}
 def walk(o):
     if isinstance(o, dict):
