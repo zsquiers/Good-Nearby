@@ -45,6 +45,8 @@
     hike:       { label: "Hike",               photo: "https://images.pexels.com/photos/19141785/pexels-photo-19141785.jpeg?auto=compress&cs=tinysrgb&w=1100" },
     movement:   { label: "Movement & dance",   photo: "https://images.pexels.com/photos/36715608/pexels-photo-36715608.jpeg?auto=compress&cs=tinysrgb&w=1100" },
     shop:       { label: "Holistic shop",      photo: "https://images.pexels.com/photos/3610753/pexels-photo-3610753.jpeg?auto=compress&cs=tinysrgb&w=1100" },
+    cafe:       { label: "Cozy café",          photo: "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1100" },
+    bakery:     { label: "Cozy bakery",        photo: "https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=compress&cs=tinysrgb&w=1100" },
   };
   const catLabel = (k) => (CATEGORY[k] ? CATEGORY[k].label : k);
 
@@ -52,6 +54,7 @@
     move:   '<path d="M16 25c-5 0-9-3-10-7 3 0 6 1 8 3M16 25c5 0 9-3 10-7-3 0-6 1-8 3M16 25c-3-3-4-7-3-12 2 1 3 3 3 5 0-2 1-4 3-5 1 5 0 9-3 12Z"/>',
     calm:   '<path d="M5 14v4M9 11v10M13 8v16M17 11v10M21 7v18M25 12v8"/>',
     care:   '<path d="M7 26v-7l-2-6c-.4-1.2 1.4-2 2-.8L9 16V8.5c0-1.4 2-1.4 2 0V15M25 26v-7l2-6c.4-1.2-1.4-2-2-.8L23 16V8.5c0-1.4-2-1.4-2 0V15M11 15c0 3 1 5 2 6M21 15c0 3-1 5-2 6"/>',
+    wander: '<path d="M7 13h15v6a7 7 0 0 1-7 7h-1a7 7 0 0 1-7-7Z M22 15h2a3 3 0 0 1 0 6h-2.5M11 9c0-2 2-2 2-4M16 9c0-2 2-2 2-4M6 28h18"/>',
     people: '<circle cx="16" cy="11" r="3.5"/><circle cx="8" cy="13" r="2.7"/><circle cx="24" cy="13" r="2.7"/><path d="M10 25c0-3.5 2.7-7 6-7s6 3.5 6 7M3 24c0-3 2-5 5-5M29 24c0-3-2-5-5-5"/>',
   };
 
@@ -60,12 +63,14 @@
       match: (e) => ["yoga", "tai-chi", "run", "walk", "hike", "movement"].includes(e.category) },
     { id: "calm",   label: "Quiet my mind",         hint: "Meditation · sound baths · salt caves",  tone: "#c3cab0", ink: "#304022",
       match: (e) => ["meditation", "sound", "breathwork", "salt"].includes(e.category) },
-    { id: "care",   label: "Be cared for",          hint: "Massage · reiki · acupuncture · shops",   tone: "#f0d3c4", ink: "#9a5236",
-      match: (e) => ["massage", "reiki", "acupuncture", "shop"].includes(e.category) },
+    { id: "care",   label: "Be cared for",          hint: "Massage · reiki · acupuncture",   tone: "#f0d3c4", ink: "#9a5236",
+      match: (e) => ["massage", "reiki", "acupuncture"].includes(e.category) },
+    { id: "wander", label: "Wander somewhere cozy", hint: "Cafés · bakeries · little shops",   tone: "#e6d6bd", ink: "#7a5a2e",
+      match: (e) => ["cafe", "bakery", "shop"].includes(e.category) },
     { id: "people", label: "Be with good people",   hint: "Classes, circles & expos",   tone: "#e3c98f", ink: "#304022",
       // anything with a date that people attend together (not one-on-one appointments)
-      match: (e) => ["expo", "workshop"].includes(e.category) || (e.sessions && !["massage", "reiki", "acupuncture", "shop"].includes(e.category))
-        || (!e.sessions && (e.tags || []).includes("come-alone")) },
+      match: (e) => ["expo", "workshop"].includes(e.category) || (e.sessions && !["massage", "reiki", "acupuncture", "shop", "cafe", "bakery"].includes(e.category))
+        || (!e.sessions && (e.tags || []).includes("come-alone") && !["shop", "cafe", "bakery"].includes(e.category)) },
   ];
 
   // ---------- dates ----------
@@ -232,13 +237,14 @@
   }
 
   const TAG_LABELS = { free: "Free", "come-alone": "Come alone", beginner: "Beginner-friendly",
-    women: "Women", "all-paces": "All paces", outdoors: "Outdoors" };
+    women: "Women", "all-paces": "All paces", outdoors: "Outdoors", "gluten-free": "Gluten-free" };
   const tagChips = (e) => (e.tags || []).filter((t) => TAG_LABELS[t] && !(t === "free" && e.price === 0))
     .map((t) => `<span class="tag tag-${t}">${TAG_LABELS[t]}</span>`).join("");
 
   function priceLabel(e) {
     if (e.price === 0) return "Free";
     if (typeof e.price === "number") return `$${e.price}`;
+    if (["cafe", "bakery", "shop"].includes(e.category)) return "Drop in anytime";
     return "Price: ask the host";
   }
 
