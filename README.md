@@ -33,6 +33,7 @@ Design rules: one decision per screen, no menus, big tap targets, plain language
 | `data/events-venues.js` | Calendars from local venues: Scituate Salt Cave and House of Stellium |
 | `data/events-libraries.js` | Book groups, creative classes and wellness programs at 13 local libraries (made by `tools/library_collect.py`) |
 | `data/events-herbal.js` | Herbal classes, tea nights and herbal shops |
+| `data/events-meditation.js` | Meditation centers' regular sits, beginner classes and short courses |
 | `data/events-cafes.js` | Cozy independent cafés, bakeries and garden-center / farm cafés (no chains) |
 | `sources/` | The list of every source we check, and the monthly report (see `sources/README.md`) |
 | `tools/` | Small scripts that check sources and pull in Eventbrite events |
