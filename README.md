@@ -32,6 +32,8 @@ Design rules: one decision per screen, no menus, big tap targets, plain language
 | `data/events-move-shops.js` | Community runs, walks & hikes, all the salt caves, holistic shops and nature trails |
 | `data/events-venues.js` | Calendars from local venues: Scituate Salt Cave and House of Stellium |
 | `data/events-cafes.js` | Cozy independent cafés, bakeries and garden-center / farm cafés (no chains) |
+| `sources/` | The list of every source we check, and the monthly report (see `sources/README.md`) |
+| `tools/` | Small scripts that check sources and pull in Eventbrite events |
 | `data/towns.js` | The areas for browsing and the towns in each (an event's area comes from its town) |
 | `.github/ISSUE_TEMPLATE/submit-event.yml` | An older GitHub-based submission form (the site now uses its own form) |
 
@@ -52,7 +54,7 @@ Open `data/events.js` and copy an existing entry that matches the kind of listin
 
 Feelings map to categories in `app.js` (`MOODS`). An event's browse area comes from its town in `data/towns.js` (or the nearest listed town). Categories: `yoga`, `sound`, `meditation`, `massage`, `breathwork`, `reiki`, `tai-chi`, `acupuncture`, `salt`, `run`, `walk`, `hike`, `movement`, `shop`, `cafe`, `bakery`, `workshop`, `expo`. Optional `tags`: `free`, `come-alone`, `beginner`, `women`, `all-paces`, `outdoors`, `gluten-free` — shown as friendly chips. A `weekly` listing with no `from`/`until` is an ongoing weekly meetup and repeats for the next four months. Add `lat`/`lng` so "Near me" can sort by distance (approximate is fine). Past events and finished series hide themselves automatically.
 
-The current listings came from public event pages and directories in early October 2026. Coordinates are approximate. Good places to find more events: the Natural Awakenings Boston calendar, Eventbrite, boston.gov's Parks Fitness Series, local library calendars, and studio websites.
+The current listings came from public event pages and directories in early October 2026. Every source is listed in `sources/sources.csv`, and a monthly search checks them for new events. See `sources/README.md` for how it works. Coordinates are approximate. Good places to find more events: the Natural Awakenings Boston calendar, Eventbrite, boston.gov's Parks Fitness Series, local library calendars, and studio websites.
 
 ## Photos
 

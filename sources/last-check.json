@@ -1,0 +1,238 @@
+{
+ "http://www.bellezzaspafranklin.com": {
+  "checked": "2026-10-09",
+  "hash": "2f92a95d2972"
+ },
+ "https://acupunkture.janeapp.com/": {
+  "checked": "2026-10-09",
+  "hash": "6aa35bc605df"
+ },
+ "https://amcboston.org/": {
+  "checked": "2026-10-09",
+  "hash": "37efa256d5f5"
+ },
+ "https://bomdough.com/": {
+  "checked": "2026-10-09",
+  "hash": "9b22f0f78d19"
+ },
+ "https://bpl.bibliocommons.com/v2/events?q=yoga": {
+  "checked": "2026-10-09",
+  "hash": "052b77a9aaf7"
+ },
+ "https://enchantedfox.com/": {
+  "checked": "2026-10-09",
+  "error": "<urlopen error [Errno 104] Connection reset by peer>"
+ },
+ "https://events.humanitix.com/jogs-with-261-fearless-club": {
+  "checked": "2026-10-09",
+  "hash": "2c13a338703f"
+ },
+ "https://franklinacupunkture.com/upcoming-events-and-workshops/": {
+  "checked": "2026-10-09",
+  "hash": "f275aa6d8d80"
+ },
+ "https://healingbywilhelmina.com/public-event-and-retreats": {
+  "checked": "2026-10-09",
+  "hash": "49e9d59328b5"
+ },
+ "https://healthandwellnessshow.net/": {
+  "checked": "2026-10-09",
+  "hash": "a06983c30601"
+ },
+ "https://justbreathesaltspa.com/": {
+  "checked": "2026-10-09",
+  "hash": "452bdabd34ae"
+ },
+ "https://madhousecafe.com/": {
+  "checked": "2026-10-09",
+  "hash": "26daa7faa4c0"
+ },
+ "https://mountauburn.org/events/": {
+  "checked": "2026-10-09",
+  "hash": "7bd44f7de19b"
+ },
+ "https://nirvanateahousecafe.com/": {
+  "checked": "2026-10-09",
+  "hash": "1ca964a5034f"
+ },
+ "https://november-project.com/boston/": {
+  "checked": "2026-10-09",
+  "hash": "3c83375c5a40"
+ },
+ "https://plymouthma.myrec.com/info/activities/default.aspx": {
+  "checked": "2026-10-09",
+  "hash": "d813cb9d5a89"
+ },
+ "https://scituatesaltcave.com/events": {
+  "checked": "2026-10-09",
+  "hash": "66fe6c8b152c"
+ },
+ "https://thegentleplace.com": {
+  "checked": "2026-10-09",
+  "hash": "3c85f05d8d49"
+ },
+ "https://theindooroasis.com/halotherapy/": {
+  "checked": "2026-10-09",
+  "hash": "d4c973129b04"
+ },
+ "https://thirdcliffbakery.com/": {
+  "checked": "2026-10-09",
+  "hash": "0ca9ffac9c41"
+ },
+ "https://universalpoweryoga.com": {
+  "checked": "2026-10-09",
+  "hash": "6fd05e193d01"
+ },
+ "https://www.3littlefigs.com/": {
+  "checked": "2026-10-09",
+  "hash": "9bc5e33f63ab"
+ },
+ "https://www.angelsgardenandcafe.com/angels-cafe": {
+  "checked": "2026-10-09",
+  "hash": "94f1e984e1ed"
+ },
+ "https://www.asanctuarycafe.com/": {
+  "checked": "2026-10-09",
+  "hash": "8975e6e8be7f"
+ },
+ "https://www.bhbooks.com/": {
+  "checked": "2026-10-09",
+  "hash": "76e8ceda1263"
+ },
+ "https://www.boston.gov/calendar": {
+  "checked": "2026-10-09",
+  "hash": "3cc90e460924"
+ },
+ "https://www.broadsheetcoffee.com/": {
+  "checked": "2026-10-09",
+  "hash": "eeb80df9589e"
+ },
+ "https://www.coppercityespresso.com/": {
+  "checked": "2026-10-09",
+  "hash": "adc83b19e793"
+ },
+ "https://www.driftandoak.com": {
+  "checked": "2026-10-09",
+  "hash": "34969af9b438"
+ },
+ "https://www.eventbrite.com/o/healing-with-spirit-3874767831": {
+  "checked": "2026-10-09",
+  "hash": "e62516ed81fa"
+ },
+ "https://www.fells.org/": {
+  "checked": "2026-10-09",
+  "hash": "909668db2923"
+ },
+ "https://www.franklinlibrary.org/events": {
+  "checked": "2026-10-09",
+  "hash": "ddf26f09d6ae"
+ },
+ "https://www.franklinma.gov/583/Franklin-Senior-Center-Council-on-Aging": {
+  "checked": "2026-10-09",
+  "hash": "c8dd15f2012a"
+ },
+ "https://www.franklinyoga.com/workshops": {
+  "checked": "2026-10-09",
+  "hash": "833a894e7bb1"
+ },
+ "https://www.friendsofthebluehills.org/": {
+  "checked": "2026-10-09",
+  "hash": "774216488477"
+ },
+ "https://www.heirloomweston.com/": {
+  "checked": "2026-10-09",
+  "hash": "a537f9d30cad"
+ },
+ "https://www.heylo.com/event/-OZirSSbWYcQ0tVsRIYt": {
+  "checked": "2026-10-09",
+  "hash": "26e2d9213410"
+ },
+ "https://www.honeybeancafe.com/": {
+  "checked": "2026-10-09",
+  "hash": "adc83b19e793"
+ },
+ "https://www.houseofstellium.com/": {
+  "checked": "2026-10-09",
+  "hash": "dd10c4204eab"
+ },
+ "https://www.massaudubon.org/programs": {
+  "checked": "2026-10-09",
+  "hash": "0dd31203e180"
+ },
+ "https://www.meetup.com/find/?keywords=meditation&location=us--ma--Boston": {
+  "checked": "2026-10-09",
+  "hash": "2715d6451571"
+ },
+ "https://www.myelitemedspa.com/salt-sanctuary": {
+  "checked": "2026-10-09",
+  "hash": "f7e4bfcfbe7e"
+ },
+ "https://www.naturalawakeningsboston.com/calendar/": {
+  "checked": "2026-10-09",
+  "hash": "4557ccd448fb"
+ },
+ "https://www.naturalexpo.org/": {
+  "checked": "2026-10-09",
+  "hash": "c336af9f7440"
+ },
+ "https://www.oceanairhimalayansaltcave.com/": {
+  "checked": "2026-10-09",
+  "hash": "037c62e8e594"
+ },
+ "https://www.opendoors7.com/": {
+  "checked": "2026-10-09",
+  "hash": "42d6801b68b1"
+ },
+ "https://www.parkrun.us/jamaicapond/": {
+  "checked": "2026-10-09",
+  "hash": "5aa94308f295"
+ },
+ "https://www.purasaltcave.com/": {
+  "checked": "2026-10-09",
+  "hash": "319990cff544"
+ },
+ "https://www.redeyeroasters.com/": {
+  "checked": "2026-10-09",
+  "hash": "66f3dad1bfc6"
+ },
+ "https://www.saltedsoulacton.com/": {
+  "checked": "2026-10-09",
+  "hash": "f1da418379b1"
+ },
+ "https://www.seabirdcoffee.com/": {
+  "checked": "2026-10-09",
+  "hash": "cd79da483689"
+ },
+ "https://www.thanhseyemazinglashes.com/himalayansaltcave": {
+  "checked": "2026-10-09",
+  "hash": "b1ac50124aea"
+ },
+ "https://www.thehealingmoon.com": {
+  "checked": "2026-10-09",
+  "hash": "b985ff9e9b6f"
+ },
+ "https://www.theserendipityplace.com/": {
+  "checked": "2026-10-09",
+  "hash": "10178943bb07"
+ },
+ "https://www.toasttab.com/local/order/briggs-cafe": {
+  "checked": "2026-10-09",
+  "error": "HTTP Error 403: Forbidden"
+ },
+ "https://www.ulacafe.com/": {
+  "checked": "2026-10-09",
+  "hash": "19950f020842"
+ },
+ "https://www.veronicassweetcakes.com/": {
+  "checked": "2026-10-09",
+  "hash": "0529be3e6624"
+ },
+ "https://www.volantefarms.com/": {
+  "checked": "2026-10-09",
+  "hash": "0d504d6f5522"
+ },
+ "https://www.wardsberryfarm.com/": {
+  "checked": "2026-10-09",
+  "hash": "a1ab15d0b72a"
+ }
+}
