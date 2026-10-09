@@ -6,6 +6,19 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
 
   // ---------- Franklin & nearby ----------
   {
+    id: "path-of-peace-sangha-franklin",
+    title: "Path of Peace Sangha: mindfulness evening",
+    category: "meditation",
+    monthly: { week: 2, day: "Monday", time: "19:00", endTime: "20:30" },
+    venue: "First Universalist Society in Franklin", address: "262 Chestnut St", city: "Franklin, MA",
+    lat: 42.0870, lng: -71.4000,
+    price: 0,
+    host: "Path of Peace Sangha",
+    description: "A friendly group practicing mindfulness in the tradition of Thich Nhat Hanh — mindful breathing, sitting and walking meditation, and sharing. You don't have to be Buddhist or a church member. They meet in person on the second Monday; other Mondays are on Zoom (email pathofpeacesanghafranklinma@gmail.com for the link).",
+    url: "https://pathsangha.com/",
+    tags: ["free", "beginner", "come-alone"]
+  },
+  {
     id: "providence-zen-sunday",
     title: "Sunday Morning Zen: beginner class + sitting",
     category: "meditation",

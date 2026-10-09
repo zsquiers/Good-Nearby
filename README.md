@@ -53,6 +53,7 @@ Open `data/events.js` and copy an existing entry that matches the kind of listin
 - **One-time event:** `start: "2026-10-08T17:30"` (add `end` if known)
 - **All-day or multi-day event:** dates only, e.g. `start: "2026-11-14", end: "2026-11-15"`
 - **Weekly series:** `weekly: { day: "Saturday", time: "10:00", endTime: "11:00", from: "2026-09-19", until: "2026-10-17", skip: [] }`
+- **Monthly (e.g. every 2nd Monday):** `monthly: { week: 2, day: "Monday", time: "19:00", endTime: "20:30" }` — shows the next few months automatically
 - **Ongoing class or practitioner:** no dates, just a `schedule` note such as `"Classes daily"` or `"By appointment"`
 
 Feelings map to categories in `app.js` (`MOODS`). An event's browse area comes from its town in `data/towns.js` (or the nearest listed town). Categories: `yoga`, `sound`, `meditation`, `massage`, `breathwork`, `reiki`, `tai-chi`, `acupuncture`, `salt`, `run`, `walk`, `hike`, `movement`, `shop`, `cafe`, `bakery`, `craft`, `herbal`, `book`, `workshop`, `expo`. Optional `tags`: `free`, `come-alone`, `beginner`, `women`, `all-paces`, `outdoors`, `gluten-free` — shown as friendly chips. A `weekly` listing with no `from`/`until` is an ongoing weekly meetup and repeats for the next four months. Add `lat`/`lng` so "Near me" can sort by distance (approximate is fine). Past events and finished series hide themselves automatically.
