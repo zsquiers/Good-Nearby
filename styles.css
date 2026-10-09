@@ -518,6 +518,8 @@ h3.ask { display: flex; align-items: center; }
   font-size: .85rem; color: var(--ink-soft);
 }
 .footer a { color: var(--ink); }
+.footer .insta { display: inline-flex; align-items: center; gap: 6px; }
+.footer .insta svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.8; }
 
 /* ---------- Phones ---------- */
 @media (max-width: 640px) {
