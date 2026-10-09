@@ -108,6 +108,17 @@
         if (skip.has(day)) continue;
         out.sessions.push({ start: parseLocal(`${day}T${w.time}`), end: parseLocal(`${day}T${w.endTime || w.time}`) });
       }
+    } else if (e.monthly) {
+      // e.g. { week: 2, day: "Monday" } = the second Monday of every month, for the next ~4 months
+      const m = e.monthly, dow = DAYS.indexOf(m.day);
+      out.sessions = [];
+      for (let k = 0; k < 5; k++) {
+        const first = new Date(now.getFullYear(), now.getMonth() + k, 1);
+        const d = addDays(first, ((dow - first.getDay() + 7) % 7) + (m.week - 1) * 7);
+        if (d.getMonth() !== first.getMonth()) continue;
+        const day = ymd(d);
+        out.sessions.push({ start: parseLocal(`${day}T${m.time}`), end: parseLocal(`${day}T${m.endTime || m.time}`) });
+      }
     } else if (e.start) {
       out.allDay = !e.start.includes("T");
       const start = parseLocal(e.start);
@@ -238,6 +249,7 @@
     const s = sessionFor(e);
     const parts = [countdown(s)];
     if (e.weekly) parts.push(`every ${e.weekly.day} until ${mdFmt.format(e.sessions[e.sessions.length - 1].start)}`);
+    else if (e.monthly) parts.push(`every ${["", "1st", "2nd", "3rd", "4th"][e.monthly.week]} ${e.monthly.day} of the month`);
     else if (!e.allDay && e.hasEnd) parts.push(`ends ${timeFmt.format(s.end)}`);
     return parts.join(" · ");
   }
@@ -329,6 +341,9 @@
       lines.push(`RRULE:FREQ=WEEKLY;UNTIL=${icsDay(last)}T235959`);
       const skips = (e.weekly.skip || []).filter((d) => parseLocal(d) > s.start);
       if (skips.length) lines.push(`EXDATE:${skips.map((d) => icsLocal(parseLocal(`${d}T${e.weekly.time}`))).join(",")}`);
+    } else if (!single && e.monthly && e.sessions.length > 1) {
+      const last = e.sessions[e.sessions.length - 1].start;
+      lines.push(`RRULE:FREQ=MONTHLY;BYDAY=${e.monthly.week}${e.monthly.day.slice(0, 2).toUpperCase()};UNTIL=${icsDay(last)}T235959`);
     }
     lines.push(
       `SUMMARY:${icsText(e.title)}`,
@@ -530,7 +545,7 @@
         <span class="row-main">
           <span class="row-title">${escapeHtml(e.title)}${saved.has(e.id) ? ' <span class="row-saved" aria-label="saved">♥</span>' : ""}</span>
           <span class="row-meta">${meta}</span>
-          ${extra ? "" : `<span class="row-cat">${escapeHtml(catLabel(e.category))}${e.weekly ? " · weekly" : ""}</span>`}
+          ${extra ? "" : `<span class="row-cat">${escapeHtml(catLabel(e.category))}${e.weekly ? " · weekly" : e.monthly ? " · monthly" : ""}</span>`}
           ${e.tags && e.tags.length ? `<span class="row-tags">${tagChips(e)}</span>` : ""}
         </span>
         <span class="row-arrow" aria-hidden="true">›</span>
