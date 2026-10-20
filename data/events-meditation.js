@@ -45,6 +45,21 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
     tags: ["free", "beginner", "come-alone"]
   },
 
+  {
+    id: "wat-nawamin-thursday-meditation",
+    title: "Thursday evening mindfulness meditation",
+    category: "meditation",
+    weekly: { day: "Thursday", time: "17:30", endTime: "18:30" },
+    venue: "Wat Nawamintararachutis (NMR Buddhist Meditation Center)", address: "382 South St East", city: "Raynham, MA",
+    lat: 41.9285, lng: -71.0520,
+    price: 0,
+    host: "Wat Nawamintararachutis",
+    description: "A free beginners' class in mindfulness meditation in the meditation room of a peaceful Thai Buddhist temple. Suitable for everyone.",
+    url: "https://watnawamin.org/courses/evening-meditation/",
+    phone: "(508) 823-1800",
+    tags: ["free", "beginner", "come-alone"]
+  },
+
   // ---------- MetroWest / Newton ----------
   {
     id: "kadampa-newton-calm-clear-mind-2026",
@@ -58,6 +73,34 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
     description: "Simple guided meditations for staying calm and thinking clearly, taught by Buddhist monk Gen Khedrub. No experience needed.",
     url: "https://meditationinboston.org/newton-classes",
     tags: ["beginner"]
+  },
+
+  {
+    id: "brahma-kumaris-watertown-drop-in",
+    title: "Drop-in evening meditation",
+    category: "meditation",
+    schedule: "Mon–Fri 7–7:30 PM · Sundays 6:30–7:30 PM",
+    venue: "Brahma Kumaris Meditation Center", address: "75 Common St", city: "Watertown, MA",
+    lat: 42.3700, lng: -71.1830,
+    price: 0,
+    host: "Brahma Kumaris New England",
+    description: "A guided meditation with music, commentary and silence, followed by a short reflection. Drop in — no registration. They also offer a free 3-session beginners' course.",
+    url: "https://www.bknewengland.org/",
+    phone: "(617) 926-1230",
+    tags: ["free", "beginner", "come-alone"]
+  },
+  {
+    id: "brahma-kumaris-world-peace-meditation",
+    title: "World Peace Meditation Hour",
+    category: "meditation",
+    monthly: { week: 3, day: "Sunday", time: "18:30", endTime: "19:30" },
+    venue: "Brahma Kumaris Meditation Center", address: "75 Common St", city: "Watertown, MA",
+    lat: 42.3700, lng: -71.1830,
+    price: 0,
+    host: "Brahma Kumaris New England",
+    description: "Once a month, thousands of meditation centers around the world sit together for an hour dedicated to peace. All are welcome.",
+    url: "https://www.bknewengland.org/",
+    tags: ["free", "come-alone"]
   },
 
   // ---------- Boston area ----------
@@ -138,5 +181,20 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
     description: "A quiet morning of silent sitting — come for the whole time or just part of it.",
     url: "https://boston.shambhala.org/",
     tags: ["come-alone"]
+  },
+
+  // ---------- South Shore ----------
+  {
+    id: "emerald-yoga-pembroke",
+    title: "Emerald Yoga Studio",
+    category: "yoga",
+    schedule: "Classes daily — see the schedule",
+    venue: "Emerald Yoga Studio", address: "15 Columbia Rd", city: "Pembroke, MA",
+    lat: 42.0717, lng: -70.8090,
+    price: null, priceNote: "First month $59",
+    host: "Emerald Yoga Studio",
+    description: "A long-running, beginner-friendly South Shore studio. For calm, try Restorative Yin, Revive & Thrive (gentle props and acupressure) or Soulful Slow Flow.",
+    url: "https://www.emeraldyoga.com/class-descriptions",
+    tags: ["beginner"]
   }
 ]);

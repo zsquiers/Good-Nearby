@@ -20,6 +20,9 @@ RULES = [("walk", r"\bwalk"), ("tai-chi", r"tai chi|qigong"), ("sound", r"sound 
          ("acupuncture", r"acupuncture"), ("reiki", r"reiki"), ("breathwork", r"breath|pranayama"), ("yoga", r"yoga|yin\b|flow\b|stretch"),
          ("movement", r"pilates|barre|dance|5rhythms|bollyx|joy movement|ride\b|fitness|moves"),
          ("meditation", r"meditat|zen|mindful|dharma|retreat|nidra|mantra|buddh|vajrasattva|nondual|whirling|dervish|cacao|stillpoint|tangle")]
+# Brand pop-ups, spas and anything that isn't really about feeling good.
+WELL_SKIP = [r"lululemon", r"vuori", r"corepower", r"yogasix", r"med ?spa", r"glowtox", r"botox", r"reunion", r"boxing",
+             r"gala", r"banquet", r"\bsip\b", r"date night", r"goat yoga", r"psychic", r"medium\b", r"a conversation on"]
 MAKE = "--make" in sys.argv or "--herbal" in sys.argv   # both are hands-on classes
 HERBAL = "--herbal" in sys.argv
 # Creative classes: no chains, nothing for kids, nothing without a real place, and only near our towns.
@@ -47,7 +50,24 @@ def near_us(lat, lng, miles=6):
 main = "".join(open(f).read() for f in glob.glob(os.path.join(os.path.dirname(out) or ".", "*.js"))
                if os.path.abspath(f) != os.path.abspath(out))
 norm = lambda t: re.sub(r"[^a-z]", "", t.lower())
-hand = [(norm(t), dt) for t, dt in re.findall(r'title: "([^"]+)",[\s\S]{0,120}?start: "(\d{4}-\d{2}-\d{2})', main)]
+# Regular sessions we already list (weekly sits, monthly groups) — skip Eventbrite copies of those exact sessions
+# (same host, weekday and start time). Special one-off events from the same places are still welcome.
+import subprocess
+_js = ("global.window={};const fs=require('fs'),d=process.argv[1];for(const f of fs.readdirSync(d))"
+       "if(f!=='" + os.path.basename(out) + "')require(require('path').resolve(d,f));"
+       "console.log(JSON.stringify((window.GOOD_NEARBY_EVENTS||[]).filter(e=>e.weekly||e.monthly)"
+       ".flatMap(e=>[e.host,e.venue].map(h=>[h,(e.weekly||e.monthly).day,(e.weekly||e.monthly).time]))))")
+try:
+    regular = {(norm(h or ""), d, t) for h, d, t in json.loads(subprocess.run(
+        ["node", "-e", _js, os.path.dirname(out) or "."], capture_output=True, text=True, check=True).stdout)}
+except Exception as _e:
+    print("note: couldn't read regular sessions:", _e, file=sys.stderr); regular = set()
+_DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+def is_regular(host, start):
+    if len(start) < 16: return False
+    d = datetime.date.fromisoformat(start[:10])
+    return (norm(host or ""), _DAYS[d.weekday()], start[11:16]) in regular
+hand = [(norm(t), dt) for t, dt in re.findall(r'"?title"?: "([^"]+)",[\s\S]{0,200}?"?start"?: "(\d{4}-\d{2}-\d{2})', main)]
 def dup(name, date):
     n = norm(name)
     return any(dt == date and (h[:14] in n or n[:14] in h) for h, dt in hand)
@@ -55,9 +75,15 @@ seen = set(); rows = []
 for e in sorted(d, key=lambda x: (x["start_date"], x["start_time"] or "")):
     name = e["name"].strip(); low = (name + " " + e["summary"]).lower()
     if any(re.search(p, name.lower()) for p in SKIP): continue
+    if not e.get("lat") or e.get("online"): continue          # no real place to go
+    if not near_us(float(e["lat"]), float(e["lng"]), 6 if MAKE else 8): continue   # only our four areas
+    # Skip events at places we already list by hand with their regular schedule (e.g. weekly sits).
+    _st = f'{e["start_date"]}T{e["start_time"]}' if e.get("start_time") else e["start_date"]
+    if is_regular(e.get("organizer"), _st) or is_regular(e.get("venue"), _st): continue
     if MAKE:
         if e.get("online") or not e.get("lat") or not near_us(float(e["lat"]), float(e["lng"])): continue
         if any(re.search(p, (name + " " + (e["venue"] or "") + " " + (e["organizer"] or "")).lower()) for p in MAKE_SKIP): continue
+        if re.search(r"\bages? \d|\bkids?\b|children|toddler|grades? \d|families", low) and not re.search(r"adults? only|\b18\+|\b21\+", low): continue
         if HERBAL:
             if not re.search(HERBAL_ONLY, name.lower()) or any(re.search(p, low) for p in HERBAL_SKIP): continue
         elif not re.search(MAKE_ONLY, name.lower()): continue
@@ -65,7 +91,9 @@ for e in sorted(d, key=lambda x: (x["start_date"], x["start_time"] or "")):
     if key in seen: continue
     seen.add(key)
     cat = "herbal" if HERBAL else "craft" if MAKE else (next((c for c, p in RULES if re.search(p, name.lower())), None)
-                                or next((c for c, p in RULES if re.search(p, low)), "workshop"))
+                                or next((c for c, p in RULES if re.search(p, low)), None))
+    if not cat: continue                                     # not clearly a wellness event: leave it out
+    if not MAKE and any(re.search(p, (name + " " + (e["venue"] or "") + " " + (e["organizer"] or "")).lower()) for p in WELL_SKIP): continue
     if dup(name, e["start_date"]): continue
     start = f'{e["start_date"]}T{e["start_time"]}' if e["start_time"] else e["start_date"]
     end = f'{e["end_date"]}T{e["end_time"]}' if e.get("end_time") and e.get("end_date") else None
@@ -92,7 +120,10 @@ if os.path.exists(out):
     txt = open(out).read()
     existing = json.loads(txt[txt.index(".concat(") + 8: txt.rindex(");")])
 def upcoming(r): return (r.get("end") or r["start"])[:10] >= today
-kept = [r for r in existing if upcoming(r)]
+KIDS = r"\bages? \d|\bkids?\b|children|toddler|grades? \d|families"
+kept = [r for r in existing if upcoming(r) and not dup(r["title"], r["start"][:10]) and not is_regular(r.get("host"), r["start"]) and not is_regular(r.get("venue"), r["start"])
+        and not (r["category"] in ("craft", "herbal") and re.search(KIDS, (r["title"] + " " + r["description"]).lower())
+                 and not re.search(r"adults? only|\b18\+|\b21\+", (r["title"] + " " + r["description"]).lower()))]
 have = {r["id"] for r in kept}
 new = [r for r in rows if r["id"] not in have and upcoming(r)]
 merged = sorted(kept + new, key=lambda r: r["start"])
