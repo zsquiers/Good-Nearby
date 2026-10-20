@@ -2,321 +2,6 @@
 // Made by tools/library_collect.py; re-run it rather than editing by hand.
 window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
  {
-  "id": "lib-norfolkpl-fiber-art-group-157-2026-10-09",
-  "title": "Fiber Art Group",
-  "category": "craft",
-  "start": "2026-10-09T10:30",
-  "end": "2026-10-09T12:00",
-  "venue": "Norfolk Public Library",
-  "address": "2 Liberty Lane",
-  "city": "Norfolk, MA",
-  "lat": 42.119,
-  "lng": -71.325,
-  "price": 0,
-  "host": "Norfolk Public Library",
-  "description": "Do you love to knit, crochet, embroider, or do another fiber craft? If so, bring your current WIP to our informal group where you can work on projects, socialize, and share advice. Please note that this is not a formal class. No instruction will be provided, although participants are usually willing",
-  "url": "https://norfolkpl.assabetinteractive.com/calendar/fiber-art-group-157/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-bellinghamlibrary-fall-into-yoga-october-2026-2026-10-13",
-  "title": "Fall into Yoga / October 2026",
-  "category": "yoga",
-  "start": "2026-10-13T08:30",
-  "end": "2026-10-13T09:45",
-  "venue": "Bellingham Public Library",
-  "address": "100 Blackstone Street",
-  "city": "Bellingham, MA",
-  "lat": 42.087,
-  "lng": -71.474,
-  "price": 0,
-  "host": "Bellingham Public Library",
-  "description": "It’s time to transition to a yoga practice that helps our body and mind get in rhythm with the shorter days and cooler, crisper air of the season. Autumn yoga is grounding, strengthening, calming, routine, and warming. The practice includes asana (poses), intentional breathing, and meditation.…",
-  "url": "https://bellinghamlibrary.assabetinteractive.com/calendar/fall-into-yoga-october-2026/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-norfolkpl-watercolor-meet-up-348-2026-10-13",
-  "title": "Watercolor Meet Up",
-  "category": "craft",
-  "start": "2026-10-13T13:00",
-  "end": "2026-10-13T15:00",
-  "venue": "Norfolk Public Library",
-  "address": "2 Liberty Lane",
-  "city": "Norfolk, MA",
-  "lat": 42.119,
-  "lng": -71.325,
-  "price": 0,
-  "host": "Norfolk Public Library",
-  "description": "Do you enjoy painting with watercolors? This group is for adult watercolor painters, all levels welcome, to gather together while painting your own projects. Join us on Tuesday afternoons for a relaxed painting session where we can share techniques, ideas, tips and projects.…",
-  "url": "https://norfolkpl.assabetinteractive.com/calendar/watercolor-meet-up-348/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-framinghamlibrary-mcauliffe-evening-book-discussion-4-2026-10-13",
-  "title": "Evening Book Discussion: Black Sheep",
-  "category": "book",
-  "start": "2026-10-13T19:00",
-  "end": "2026-10-13T20:00",
-  "venue": "Framingham Public Library (McAuliffe Branch)",
-  "address": "746 Water Street",
-  "city": "Framingham, MA",
-  "lat": 42.279,
-  "lng": -71.416,
-  "price": 0,
-  "host": "Framingham Public Library",
-  "description": "Join us on the second Tuesday of the month for a lively discussion. This month's title is Black Sheep by Rachel Harrison. \"A cynical twentysomething must confront her cultish family in this fiery, irreverent novel from the national bestselling author of Such Sharp Teeth and Cackle.…",
-  "url": "https://framinghamlibrary.assabetinteractive.com/calendar/mcauliffe-evening-book-discussion-4/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-bellinghamlibrary-needlecraft-night-109-2026-10-14",
-  "title": "Needlecraft Night",
-  "category": "craft",
-  "start": "2026-10-14T18:00",
-  "end": "2026-10-14T20:00",
-  "venue": "Bellingham Public Library",
-  "address": "100 Blackstone Street",
-  "city": "Bellingham, MA",
-  "lat": 42.087,
-  "lng": -71.474,
-  "price": 0,
-  "host": "Bellingham Public Library",
-  "description": "Do you enjoy knitting, crocheting, or any of the other fiber arts? Come and join us on Wednesdays. All skill levels are welcome, including beginners. Please bring your own materials. No registration. - This is a Bellingham Library program/event.",
-  "url": "https://bellinghamlibrary.assabetinteractive.com/calendar/needlecraft-night-109/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-framinghamlibrary-mcauliffe-yarn-social-16-2026-10-14",
-  "title": "Yarn Social",
-  "category": "craft",
-  "start": "2026-10-14T18:00",
-  "end": "2026-10-14T19:00",
-  "venue": "Framingham Public Library (McAuliffe Branch)",
-  "address": "746 Water Street",
-  "city": "Framingham, MA",
-  "lat": 42.279,
-  "lng": -71.416,
-  "price": 0,
-  "host": "Framingham Public Library",
-  "description": "Join us for a yarn social hour for knitting, crocheting, and yarn crafting!At the McAuliffe Branch, meet Wednesday evenings at 6 PM. At the Main Library, meet Wednesday mornings at 10 AM and the 2nd and 4th Saturdays at 10 AM. This is not a learn to knit or crochet program, but we can offer pointers",
-  "url": "https://framinghamlibrary.assabetinteractive.com/calendar/mcauliffe-yarn-social-16/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-fiskelib-skull-painting-workshop-2026-10-14",
-  "title": "Skull Painting Workshop",
-  "category": "craft",
-  "start": "2026-10-14T18:30",
-  "end": "2026-10-14T20:00",
-  "venue": "Fiske Public Library",
-  "address": "110 Randall Road",
-  "city": "Wrentham, MA",
-  "lat": 42.0655,
-  "lng": -71.329,
-  "price": 0,
-  "host": "Fiske Public Library",
-  "description": "Get in the Halloween spirit with this fun spooky craft! Space is limited to fifteen adult participants. Registration is required. Led by Mandy Roberge of Wicked Good Henna. Sponsored by the Friends of the Fiske Library.",
-  "url": "https://fiskelib.assabetinteractive.com/calendar/skull-painting-workshop/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-goodnowlibrary-sudbury-yarn-enthusiasts-161-2026-10-14",
-  "title": "Sudbury Yarn Enthusiasts",
-  "category": "craft",
-  "start": "2026-10-14T19:00",
-  "end": "2026-10-14T20:30",
-  "venue": "Goodnow Library",
-  "address": "21 Concord Rd",
-  "city": "Sudbury, MA",
-  "lat": 42.3835,
-  "lng": -71.416,
-  "price": 0,
-  "host": "Goodnow Library",
-  "description": "Welcome to Sudbury Yarn Enthusiasts! Sudbury Yarn Enthusiasts meet every Wednesday from 7PM - 8:30PM in the Old Octagon at the library. This group is open to anyone who loves to knit, crochet, embroider or do other fiber arts. All levels are welcome.…",
-  "url": "https://goodnowlibrary.assabetinteractive.com/calendar/sudbury-yarn-enthusiasts-161/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-ventresslibrary-contemporary-book-group-102-2026-10-14",
-  "title": "Contemporary Book Group",
-  "category": "book",
-  "start": "2026-10-14T19:00",
-  "end": "2026-10-14T20:00",
-  "venue": "Ventress Memorial Library",
-  "address": "15 Library Plaza",
-  "city": "Marshfield, MA",
-  "lat": 42.092,
-  "lng": -70.7055,
-  "price": 0,
-  "host": "Ventress Memorial Library",
-  "description": "All are welcome. Copies of the current selection are available at the library. When We Flew Away: A Novel of Anne Frank Before the Diary by Alice HoffmanAnne Frank's The Diary of a Young Girl has captivated and inspired readers for decades. Published posthumously by her bereaved father, Anne's journ",
-  "url": "https://ventresslibrary.assabetinteractive.com/calendar/contemporary-book-group-102/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-framinghamlibrary-mcauliffe-morning-book-discussion-4-2026-10-15",
-  "title": "Morning Book Discussion: The Essex Serpent",
-  "category": "book",
-  "start": "2026-10-15T10:00",
-  "end": "2026-10-15T11:00",
-  "venue": "Framingham Public Library (McAuliffe Branch)",
-  "address": "746 Water Street",
-  "city": "Framingham, MA",
-  "lat": 42.279,
-  "lng": -71.416,
-  "price": 0,
-  "host": "Framingham Public Library",
-  "description": "Join us on the third Thursday of the month for a lively discussion. This month's title is The Essex Serpent by Sarah Perry. \"Costa Book Award Finalist and the Waterstones (UK) Book of the Year 2016. \" \"I loved this book. At once numinous, intimate and wise, The Essex Serpent is a marvelous novel abo",
-  "url": "https://framinghamlibrary.assabetinteractive.com/calendar/mcauliffe-morning-book-discussion-4/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-milfordtownlibrary-milford-town-library-adult-book-club-8-2026-10-15",
-  "title": "Milford Town Library Adult Book Club",
-  "category": "book",
-  "start": "2026-10-15T19:00",
-  "end": "2026-10-15T20:00",
-  "venue": "Milford Town Library",
-  "address": "80 Spruce St.",
-  "city": "Milford, MA",
-  "lat": 42.14,
-  "lng": -71.516,
-  "price": 0,
-  "host": "Milford Town Library",
-  "description": "Love reading and discussing books with others? Come join us at the Milford Town Library Adult Book Club! Designed for readers 18 and older, our meetings take place on the third Thursday of each month at 7 pm. Titles are provided in various formats (e.…",
-  "url": "https://milfordtownlibrary.assabetinteractive.com/calendar/milford-town-library-adult-book-club-8/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-boydenlibrary-zentangle-workshop-36-2026-10-16",
-  "title": "Zentangle Workshop",
-  "category": "craft",
-  "start": "2026-10-16T10:00",
-  "end": "2026-10-16T11:30",
-  "venue": "Boyden Library",
-  "address": "2 Baker Street",
-  "city": "Foxborough, MA",
-  "lat": 42.065,
-  "lng": -71.248,
-  "price": 0,
-  "host": "Boyden Library",
-  "description": "Come Join CZT Linda Evans to learn and practice this relaxed method of drawing. We could all use a little slow down and relax time. No art background is needed. Participants must bring their own supplies: 1-2H or HB pencil sharpened1-black Micron pen size 01 or whatever black pen you have1-sketchboo",
-  "url": "https://boydenlibrary.assabetinteractive.com/calendar/zentangle-workshop-36/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-norfolkpl-fiber-art-group-158-2026-10-16",
-  "title": "Fiber Art Group",
-  "category": "craft",
-  "start": "2026-10-16T10:30",
-  "end": "2026-10-16T12:00",
-  "venue": "Norfolk Public Library",
-  "address": "2 Liberty Lane",
-  "city": "Norfolk, MA",
-  "lat": 42.119,
-  "lng": -71.325,
-  "price": 0,
-  "host": "Norfolk Public Library",
-  "description": "Do you love to knit, crochet, embroider, or do another fiber craft? If so, bring your current WIP to our informal group where you can work on projects, socialize, and share advice. Please note that this is not a formal class. No instruction will be provided, although participants are usually willing",
-  "url": "https://norfolkpl.assabetinteractive.com/calendar/fiber-art-group-158/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-boydenlibrary-breathe-together-an-lgbtq-art-of-living-breathwork-meditation-gathering-open-to-all-2026-10-17",
-  "title": "Breathe Together: An LGBTQ+ Art of Living Breathwork & Meditation Gathering- Open to all",
-  "category": "meditation",
-  "start": "2026-10-17T10:30",
-  "end": "2026-10-17T11:30",
-  "venue": "Boyden Library",
-  "address": "2 Baker Street",
-  "city": "Foxborough, MA",
-  "lat": 42.065,
-  "lng": -71.248,
-  "price": 0,
-  "host": "Boyden Library",
-  "description": "Join us for a welcoming and affirming gathering where LGBTQ+ community members and allies can relax, reconnect, and recharge through guided breathwork and meditation. This beginner-friendly Art of Living session offers simple practices to support well-being, reduce stress, and cultivate inner peace ",
-  "url": "https://boydenlibrary.assabetinteractive.com/calendar/breathe-together-an-lgbtq-art-of-living-breathwork-meditation-gathering-open-to-all/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-medwaylib-fiber-arts-mee-up-47-2026-10-19",
-  "title": "Fiber Arts Meet-Up",
-  "category": "craft",
-  "start": "2026-10-19T18:00",
-  "end": "2026-10-19T20:00",
-  "venue": "Medway Public Library",
-  "address": "26 High Street",
-  "city": "Medway, MA",
-  "lat": 42.1395,
-  "lng": -71.396,
-  "price": 0,
-  "host": "Medway Public Library",
-  "description": "This group welcomes anyone who is interested in the fiber arts which includes but not limited to knitting, crocheting, embroidery, needlepoint, and cross stitching. Stop by if you would like to spend the evening with a group of people who also love to stitch.",
-  "url": "https://medwaylib.assabetinteractive.com/calendar/fiber-arts-mee-up-47/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
   "id": "lib-bellinghamlibrary-fall-into-yoga-october-2026-2-2026-10-20",
   "title": "Fall into Yoga / October 2026",
   "category": "yoga",
@@ -457,6 +142,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Morrill Memorial Library",
   "description": "Connect with Patty Bailey and fellow local readers for a friendly and informal conversation of The North Woods, a historical fiction novel written by Daniel Mason. When a pair of young lovers abscond from a Puritan colony, little do they know that their humble cabin in the woods will become the home",
   "url": "https://norwoodlibrary.assabetinteractive.com/calendar/turn-the-page-book-group-the-north-woods/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
+  "id": "lib-medwaylib-block-party-sewing-meet-up-13-2026-10-21",
+  "title": "Block Party: Sewing Meet-Up",
+  "category": "craft",
+  "start": "2026-10-21T18:00",
+  "end": "2026-10-21T19:30",
+  "venue": "Medway Public Library",
+  "address": "26 High Street",
+  "city": "Medway, MA",
+  "lat": 42.1395,
+  "lng": -71.396,
+  "price": 0,
+  "host": "Medway Public Library",
+  "description": "Block Party is a casual time to join other sewists in the MakerSpace to start and/or continue individual sewing projects. We can share ideas, tips, tricks, tools, etc. Sometimes it is just fun to be with others while you sew/quilt!",
+  "url": "https://medwaylib.assabetinteractive.com/calendar/block-party-sewing-meet-up-13/",
   "source": "Library",
   "tags": [
    "free",
@@ -779,27 +485,6 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   ]
  },
  {
-  "id": "lib-norfolkpl-page-turners-book-club-51-2026-10-27",
-  "title": "Page Turners Book Club",
-  "category": "book",
-  "start": "2026-10-27T13:00",
-  "end": "2026-10-27T14:00",
-  "venue": "Norfolk Public Library",
-  "address": "2 Liberty Lane",
-  "city": "Norfolk, MA",
-  "lat": 42.119,
-  "lng": -71.325,
-  "price": 0,
-  "host": "Norfolk Public Library",
-  "description": "Page Turners is a book club that meets the last Tuesday of every month. This month's book: The Librarians by Sherry ThomasNext month's book: Piranesi by Susanna Clarke",
-  "url": "https://norfolkpl.assabetinteractive.com/calendar/page-turners-book-club-51/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
   "id": "lib-norfolkpl-watercolor-meet-up-350-2026-10-27",
   "title": "Watercolor Meet Up",
   "category": "craft",
@@ -814,6 +499,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Norfolk Public Library",
   "description": "Do you enjoy painting with watercolors? This group is for adult watercolor painters, all levels welcome, to gather together while painting your own projects. Join us on Tuesday afternoons for a relaxed painting session where we can share techniques, ideas, tips and projects.…",
   "url": "https://norfolkpl.assabetinteractive.com/calendar/watercolor-meet-up-350/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
+  "id": "lib-norfolkpl-page-turners-book-club-51-2026-10-27",
+  "title": "Page Turners Book Club",
+  "category": "book",
+  "start": "2026-10-27T13:00",
+  "end": "2026-10-27T14:00",
+  "venue": "Norfolk Public Library",
+  "address": "2 Liberty Lane",
+  "city": "Norfolk, MA",
+  "lat": 42.119,
+  "lng": -71.325,
+  "price": 0,
+  "host": "Norfolk Public Library",
+  "description": "Page Turners is a book club that meets the last Tuesday of every month. This month's book: The Librarians by Sherry ThomasNext month's book: Piranesi by Susanna Clarke",
+  "url": "https://norfolkpl.assabetinteractive.com/calendar/page-turners-book-club-51/",
   "source": "Library",
   "tags": [
    "free",
@@ -905,27 +611,6 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   ]
  },
  {
-  "id": "lib-framinghamlibrary-mcauliffe-yarn-social-18-2026-10-28",
-  "title": "Yarn Social",
-  "category": "craft",
-  "start": "2026-10-28T18:00",
-  "end": "2026-10-28T19:00",
-  "venue": "Framingham Public Library (McAuliffe Branch)",
-  "address": "746 Water Street",
-  "city": "Framingham, MA",
-  "lat": 42.279,
-  "lng": -71.416,
-  "price": 0,
-  "host": "Framingham Public Library",
-  "description": "Join us for a yarn social hour for knitting, crocheting, and yarn crafting!At the McAuliffe Branch, meet Wednesday evenings at 6 PM. At the Main Library, meet Wednesday mornings at 10 AM and the 2nd and 4th Saturdays at 10 AM. This is not a learn to knit or crochet program, but we can offer pointers",
-  "url": "https://framinghamlibrary.assabetinteractive.com/calendar/mcauliffe-yarn-social-18/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
   "id": "lib-framinghamlibrary-main-hot-takes-romance-book-discussion-5-2026-10-28",
   "title": "Hot Takes: Romance Book Discussion",
   "category": "book",
@@ -940,6 +625,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Framingham Public Library",
   "description": "Join us for Hot Takes: Romance Book Discussion every third Wednesday of the month at the Main Library!",
   "url": "https://framinghamlibrary.assabetinteractive.com/calendar/main-hot-takes-romance-book-discussion-5/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
+  "id": "lib-framinghamlibrary-mcauliffe-yarn-social-18-2026-10-28",
+  "title": "Yarn Social",
+  "category": "craft",
+  "start": "2026-10-28T18:00",
+  "end": "2026-10-28T19:00",
+  "venue": "Framingham Public Library (McAuliffe Branch)",
+  "address": "746 Water Street",
+  "city": "Framingham, MA",
+  "lat": 42.279,
+  "lng": -71.416,
+  "price": 0,
+  "host": "Framingham Public Library",
+  "description": "Join us for a yarn social hour for knitting, crocheting, and yarn crafting!At the McAuliffe Branch, meet Wednesday evenings at 6 PM. At the Main Library, meet Wednesday mornings at 10 AM and the 2nd and 4th Saturdays at 10 AM. This is not a learn to knit or crochet program, but we can offer pointers",
+  "url": "https://framinghamlibrary.assabetinteractive.com/calendar/mcauliffe-yarn-social-18/",
   "source": "Library",
   "tags": [
    "free",
@@ -1221,7 +927,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
  },
  {
   "id": "lib-framinghamlibrary-mcauliffe-recipe-readers-cookbook-group-7-2026-11-03",
-  "title": "Recipe Readers Cookbook Group",
+  "title": "Recipe Readers Cookbook Group: The Apple Lover's Cookbook",
   "category": "book",
   "start": "2026-11-03T18:00",
   "end": "2026-11-03T19:30",
@@ -1451,6 +1157,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   ]
  },
  {
+  "id": "lib-bellinghamlibrary-stretch-into-gratitude-november-2026-2026-11-10",
+  "title": "Stretch Into Gratitude Yoga / November 2026",
+  "category": "yoga",
+  "start": "2026-11-10T08:30",
+  "end": "2026-11-10T09:45",
+  "venue": "Bellingham Public Library",
+  "address": "100 Blackstone Street",
+  "city": "Bellingham, MA",
+  "lat": 42.087,
+  "lng": -71.474,
+  "price": 0,
+  "host": "Bellingham Public Library",
+  "description": "It’s time to transition to a yoga practice that helps our body and mind get in rhythm with the shorter days and cooler, crisper air of the season. Autumn yoga is grounding, strengthening, calming, routine, and warming. The practice includes asana (poses), intentional breathing, and meditation.…",
+  "url": "https://bellinghamlibrary.assabetinteractive.com/calendar/stretch-into-gratitude-november-2026/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
   "id": "lib-fiskelib-leaf-paintiung-2026-11-10",
   "title": "Leaf Painting",
   "category": "craft",
@@ -1556,6 +1283,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   ]
  },
  {
+  "id": "lib-medwaylib-winter-pysanky-the-art-of-ukrainian-egg-decorating-2026-11-14",
+  "title": "Winter Pysanky: The Art of Ukrainian Egg Decorating",
+  "category": "craft",
+  "start": "2026-11-14T11:00",
+  "end": "2026-11-14T13:00",
+  "venue": "Medway Public Library",
+  "address": "26 High Street",
+  "city": "Medway, MA",
+  "lat": 42.1395,
+  "lng": -71.396,
+  "price": 0,
+  "host": "Medway Public Library",
+  "description": "Discover the beautiful Ukrainian art of egg painting! In this hands-on workshop, participants will learn the traditional wax-resist technique used to create intricate designs on eggs, known as pysanky. Explore the history and cultural significance of this art form, including the meanings behind diff",
+  "url": "https://medwaylib.assabetinteractive.com/calendar/winter-pysanky-the-art-of-ukrainian-egg-decorating/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
   "id": "lib-medwaylib-fiber-arts-mee-up-51-2026-11-16",
   "title": "Fiber Arts Meet-Up",
   "category": "craft",
@@ -1570,6 +1318,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Medway Public Library",
   "description": "This group welcomes anyone who is interested in the fiber arts which includes but not limited to knitting, crocheting, embroidery, needlepoint, and cross stitching. Stop by if you would like to spend the evening with a group of people who also love to stitch.",
   "url": "https://medwaylib.assabetinteractive.com/calendar/fiber-arts-mee-up-51/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
+  "id": "lib-bellinghamlibrary-stretch-into-gratitude-november-2026-2-2026-11-17",
+  "title": "Stretch Into Gratitude Yoga / November 2026",
+  "category": "yoga",
+  "start": "2026-11-17T08:30",
+  "end": "2026-11-17T09:45",
+  "venue": "Bellingham Public Library",
+  "address": "100 Blackstone Street",
+  "city": "Bellingham, MA",
+  "lat": 42.087,
+  "lng": -71.474,
+  "price": 0,
+  "host": "Bellingham Public Library",
+  "description": "It’s time to transition to a yoga practice that helps our body and mind get in rhythm with the shorter days and cooler, crisper air of the season. Autumn yoga is grounding, strengthening, calming, routine, and warming. The practice includes asana (poses), intentional breathing, and meditation.…",
+  "url": "https://bellinghamlibrary.assabetinteractive.com/calendar/stretch-into-gratitude-november-2026-2/",
   "source": "Library",
   "tags": [
    "free",
@@ -1661,8 +1430,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   ]
  },
  {
-  "id": "lib-norwoodlibrary-turn-the-page-book-group-35-2026-11-18",
-  "title": "Turn the Page Book Group",
+  "id": "lib-norwoodlibrary-turn-the-page-book-group-hello-beautiful-2026-11-18",
+  "title": "Turn the Page Book Group-Hello Beautiful",
   "category": "book",
   "start": "2026-11-18T10:00",
   "end": "2026-11-18T11:30",
@@ -1673,8 +1442,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "lng": -71.1995,
   "price": 0,
   "host": "Morrill Memorial Library",
-  "description": "See the library's page for details.",
-  "url": "https://norwoodlibrary.assabetinteractive.com/meeting-and-study-rooms/turn-the-page-book-group-35/",
+  "description": "Connect with Patty Bailey and fellow local readers for a friendly and informal conversation of Hello Beautiful, a novel written by Ann Napolitano. Hello Beautiful is a compelling multi-generational family saga based on Little Women that explores themes of sibling love and found family.…",
+  "url": "https://norwoodlibrary.assabetinteractive.com/calendar/turn-the-page-book-group-hello-beautiful/",
   "source": "Library",
   "tags": [
    "free",
@@ -1830,7 +1599,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
  },
  {
   "id": "lib-framinghamlibrary-mcauliffe-morning-book-discussion-5-2026-11-19",
-  "title": "Morning Book Discussion",
+  "title": "Morning Book Discussion: Five Decembers",
   "category": "book",
   "start": "2026-11-19T10:00",
   "end": "2026-11-19T11:00",
@@ -1841,7 +1610,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "lng": -71.416,
   "price": 0,
   "host": "Framingham Public Library",
-  "description": "Join us on the third Thursday of the month for a lively discussion. This month's title is TBD.",
+  "description": "Join us on the third Thursday of the month for a lively discussion. This month's title is Five Decembers by James Kestrel.",
   "url": "https://framinghamlibrary.assabetinteractive.com/calendar/mcauliffe-morning-book-discussion-5/",
   "source": "Library",
   "tags": [
@@ -1976,6 +1745,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   ]
  },
  {
+  "id": "lib-norwoodlibrary-diwali-rangoli-mat-2026-11-21",
+  "title": "Diwali Art: Rangoli Mat",
+  "category": "craft",
+  "start": "2026-11-21T14:00",
+  "end": "2026-11-21T15:30",
+  "venue": "Morrill Memorial Library",
+  "address": "33 Walpole St.",
+  "city": "Norwood, MA",
+  "lat": 42.1945,
+  "lng": -71.1995,
+  "price": 0,
+  "host": "Morrill Memorial Library",
+  "description": "Morrill Memorial Library is thrilled to welcome back Kashmica Sarkar for a Diwali-themed art class. Title: Diwali Art: Rangoli MatWhen: Saturday November 21, 2026 Time: 2PM- 3:30PMDiwali, the Festival of Lights, is one of the biggest festivals celebrated in India, and all over the world.…",
+  "url": "https://norwoodlibrary.assabetinteractive.com/calendar/diwali-rangoli-mat/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
   "id": "lib-medwaylib-fiber-arts-mee-up-52-2026-11-23",
   "title": "Fiber Arts Meet-Up",
   "category": "craft",
@@ -1990,6 +1780,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Medway Public Library",
   "description": "This group welcomes anyone who is interested in the fiber arts which includes but not limited to knitting, crocheting, embroidery, needlepoint, and cross stitching. Stop by if you would like to spend the evening with a group of people who also love to stitch.",
   "url": "https://medwaylib.assabetinteractive.com/calendar/fiber-arts-mee-up-52/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
+  "id": "lib-bellinghamlibrary-stretch-into-gratitude-november-2026-3-2026-11-24",
+  "title": "Stretch Into Gratitude Yoga / November 2026",
+  "category": "yoga",
+  "start": "2026-11-24T08:30",
+  "end": "2026-11-24T09:45",
+  "venue": "Bellingham Public Library",
+  "address": "100 Blackstone Street",
+  "city": "Bellingham, MA",
+  "lat": 42.087,
+  "lng": -71.474,
+  "price": 0,
+  "host": "Bellingham Public Library",
+  "description": "It’s time to transition to a yoga practice that helps our body and mind get in rhythm with the shorter days and cooler, crisper air of the season. Autumn yoga is grounding, strengthening, calming, routine, and warming. The practice includes asana (poses), intentional breathing, and meditation.…",
+  "url": "https://bellinghamlibrary.assabetinteractive.com/calendar/stretch-into-gratitude-november-2026-3/",
   "source": "Library",
   "tags": [
    "free",

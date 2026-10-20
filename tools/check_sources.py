@@ -37,7 +37,7 @@ def main():
     unreachable, changed, same, skipped = [], [], [], 0
     for row in csv.DictReader(open(SRC)):
         url, name = row["url"].strip(), row["name"].strip()
-        if not url or row["look_for"].strip() in ("eventbrite", "libraries"):
+        if not url or row["look_for"].strip() in ("eventbrite", "libraries", "calendars"):
             continue  # these have their own tools (see sources/README.md)
         last = state.get(url, {}).get("checked")
         due = EVERY.get(row["how_often"].strip(), 25)

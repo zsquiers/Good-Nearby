@@ -34,6 +34,7 @@ Design rules: one decision per screen, no menus, big tap targets, plain language
 | `data/events-libraries.js` | Book groups, creative classes and wellness programs at 13 local libraries (made by `tools/library_collect.py`) |
 | `data/events-herbal.js` | Herbal classes, tea nights and herbal shops |
 | `data/events-meditation.js` | Meditation centers' regular sits, beginner classes and short courses |
+| `data/events-calendars.js` | Classes read straight from venues' own calendars, e.g. Common Street Spiritual Center in Natick and Mount Auburn (made by `tools/calendar_collect.py`) |
 | `data/events-cafes.js` | Cozy independent cafés, bakeries and garden-center / farm cafés (no chains) |
 | `sources/` | The list of every source we check, and the monthly report (see `sources/README.md`) |
 | `tools/` | Small scripts that check sources and pull in Eventbrite events |
@@ -75,7 +76,7 @@ Photos load from Unsplash. Each event uses a photo for its category, set in the 
 
 - **Sign-up:** the "💌 Weekend Favorites" link on the first screen opens a page with an email sign-up and a live preview of this weekend's picks. The end of every list also nudges people there.
 - **Connecting it:** create a free account at [Buttondown](https://buttondown.com), then put your Buttondown username in `NEWSLETTER.buttondownUsername` at the top of `app.js`. Until then the form politely says sign-ups open soon and collects nothing.
-- **Writing it:** open `newsletter.html` on the site (it isn't linked anywhere). It builds this weekend's email from `data/events.js`, with a subject line — check it, then copy it into Buttondown.
+- **Writing it:** open `newsletter.html` on the site (it isn't linked anywhere). Add a line or two in your own voice, tick the favorites you want (it suggests about 8 varied picks from everything on the site), and it builds the email with a subject line and a cozy café of the week. Click **Copy email** and paste it into Buttondown.
 
 ## Updating the site
 

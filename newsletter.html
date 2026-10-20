@@ -20,12 +20,17 @@
     .subject { padding: 12px 16px; background: #fff; border-radius: 12px; border: 1px solid rgba(48,64,34,.15); }
     .email { margin-top: 14px; padding: 28px; background: #fff; border-radius: 16px; border: 1px solid rgba(48,64,34,.15); }
     .status { color: #a15e3d; font-weight: 600; min-height: 1.5em; }
+    textarea { width: 100%; box-sizing: border-box; font: inherit; padding: 12px; border-radius: 12px; border: 1px solid rgba(48,64,34,.2); }
+    details.pick { margin: 14px 0; background: #fbf7ef; border-radius: 12px; padding: 10px 14px; }
+    details.pick summary { cursor: pointer; font-weight: 700; }
+    .pick label { display: flex; gap: 8px; align-items: flex-start; font-weight: 400; padding: 5px 0; border-bottom: 1px solid rgba(48,64,34,.08); }
+    .pick label small { color: #5a5e4e; }
   </style>
 </head>
 <body>
 <main>
   <h1>Write this week's Weekend Favorites</h1>
-  <p class="note">This page builds the email from the events on the site. Check it over, add a personal line if you like, then copy it into your newsletter tool (e.g. Buttondown). This page isn't linked from the site.</p>
+  <p class="note">This page builds the email from everything on the site. Add a personal note, choose your favorites, then copy it into Buttondown. This page isn't linked from the site.</p>
 
   <div class="tools">
     <label for="friday">Weekend starting Friday</label>
@@ -35,6 +40,15 @@
   </div>
   <p class="status" id="status" aria-live="polite"></p>
 
+  <p><label for="intro">Your note at the top <span style="font-weight:400;color:#5a5e4e;">(optional — a line or two in your own voice)</span></label></p>
+  <textarea id="intro" rows="3" placeholder="e.g. The leaves are turning and I'm craving slow mornings. Here's what I'd do this weekend…"></textarea>
+
+  <details class="pick" open>
+    <summary id="pickSummary">Choose this week's favorites</summary>
+    <p class="note" style="margin:8px 0;">We suggest a few varied picks (a mix of days, kinds and places, free things first). Tick or untick anything.</p>
+    <div id="pickList"></div>
+  </details>
+
   <p><strong>Subject idea:</strong></p>
   <div class="subject" id="subject"></div>
 
@@ -42,6 +56,15 @@
 </main>
 
 <script src="data/events.js"></script>
+<script src="data/events-eventbrite.js"></script>
+<script src="data/events-move-shops.js"></script>
+<script src="data/events-venues.js"></script>
+<script src="data/events-cafes.js"></script>
+<script src="data/events-libraries.js"></script>
+<script src="data/events-herbal.js"></script>
+<script src="data/events-meditation.js"></script>
+<script src="data/events-calendars.js"></script>
+<script src="data/towns.js"></script>
 <script>
 (function () {
   "use strict";
@@ -57,11 +80,22 @@
 
   // Every dated session of every listing (same rules as the site).
   function sessions(e) {
+    if (e.monthly) {
+      const m = e.monthly, out = [], now = new Date();
+      for (let k = 0; k < 5; k++) {
+        const first = new Date(now.getFullYear(), now.getMonth() + k, 1);
+        const d = addDays(first, ((DAYS.indexOf(m.day) - first.getDay() + 7) % 7) + (m.week - 1) * 7);
+        if (d.getMonth() === first.getMonth()) out.push({ start: parseLocal(`${ymd(d)}T${m.time}`), allDay: false });
+      }
+      return out;
+    }
     if (e.weekly) {
       const w = e.weekly, out = [], skip = new Set(w.skip || []);
-      let d = parseLocal(w.from);
+      const today0 = new Date(); today0.setHours(0, 0, 0, 0);
+      let d = w.from ? parseLocal(w.from) : today0;
+      const last = w.until ? parseLocal(w.until) : addDays(today0, 120);
       while (d.getDay() !== DAYS.indexOf(w.day)) d = addDays(d, 1);
-      for (; d <= parseLocal(w.until); d = addDays(d, 7)) {
+      for (; d <= last; d = addDays(d, 7)) {
         if (!skip.has(ymd(d))) out.push({ start: parseLocal(`${ymd(d)}T${w.time}`), allDay: false });
       }
       return out;
@@ -87,23 +121,61 @@
 
   const price = (e) => (e.price === 0 ? "Free" : typeof e.price === "number" ? `$${e.price}` : "");
 
+  const chosen = new Map();   // weekend key → Set of picked ids (so ticks survive re-renders)
+  const key = () => $("friday").value;
+
+  // Suggest ~8 varied picks: spread across days and kinds, free / come-alone first, at most one per host.
+  function suggest(list) {
+    const score = ({ e }) => (e.price === 0 ? 2 : 0) + ((e.tags || []).includes("come-alone") ? 1 : 0) + (e.source ? 0 : 1);
+    const ranked = [...list].sort((a, b) => score(b) - score(a));
+    const out = [], kinds = {}, days = {}, hosts = new Set();
+    for (const x of ranked) {
+      const d = x.day.getDay(), k = x.e.category, h = x.e.host;
+      if (hosts.has(h) || (kinds[k] || 0) >= 2 || (days[d] || 0) >= 3) continue;
+      out.push(x.e.id); hosts.add(h); kinds[k] = (kinds[k] || 0) + 1; days[d] = (days[d] || 0) + 1;
+      if (out.length >= 8) break;
+    }
+    return new Set(out);
+  }
+
+  function cafeOfWeek(friday) {
+    const cafes = (window.GOOD_NEARBY_EVENTS || []).filter((e) => ["cafe", "bakery"].includes(e.category) && !e.start && !e.weekly);
+    if (!cafes.length) return null;
+    const week = Math.floor(friday.getTime() / (7 * 86400000));
+    return cafes[week % cafes.length];
+  }
+
   function build() {
     const friday = parseLocal($("friday").value);
     const list = picks(friday);
+    if (!chosen.has(key())) chosen.set(key(), suggest(list));
+    const picked = chosen.get(key());
     const sun = addDays(friday, 2);
-    $("subject").textContent = list.length
-      ? `Weekend Favorites: ${list.length} good thing${list.length === 1 ? "" : "s"} near you, ${md.format(friday)}–${sun.getDate()}`
+
+    // The picker
+    $("pickSummary").textContent = `Choose this week's favorites (${picked.size} of ${list.length} picked)`;
+    $("pickList").innerHTML = list.map(({ e, day }) => {
+      const label = day.getDay() === 5 ? "Fri" : DAYS[day.getDay()].slice(0, 3);
+      return `<label><input type="checkbox" data-id="${esc(e.id)}" ${picked.has(e.id) ? "checked" : ""}>
+        <span><strong>${esc(e.title)}</strong><br><small>${label} ${time.format(day)} · ${esc(e.city.replace(/, MA$/, ""))} · ${esc(e.category)}${price(e) ? " · " + price(e) : ""}</small></span></label>`;
+    }).join("") || "<p>Nothing on this weekend yet.</p>";
+
+    const show = list.filter((x) => picked.has(x.e.id));
+    $("subject").textContent = show.length
+      ? `Weekend Favorites: ${show.length} good thing${show.length === 1 ? "" : "s"} near you, ${md.format(friday)}–${sun.getDate()}`
       : `Weekend Favorites, ${md.format(friday)}–${sun.getDate()}`;
 
     const groups = new Map();
-    for (const x of list) {
+    for (const x of show) {
       const label = x.day.getDay() === 5 ? "Friday evening" : DAYS[x.day.getDay()];
       if (!groups.has(label)) groups.set(label, []);
       groups.get(label).push(x);
     }
+    const intro = $("intro").value.trim();
     let html = `<p style="font-family:Georgia,serif;font-size:22px;margin:0 0 8px;color:#304022;">🌻 Weekend Favorites</p>
+${intro ? `<p style="margin:0 0 14px;">${esc(intro).replace(/\n/g, "<br>")}</p>` : ""}
 <p style="margin:0 0 18px;color:#5a5e4e;">A few good things happening near you this weekend, ${md.format(friday)}–${sun.getDate()}. Pick one, and go easy on yourself.</p>`;
-    if (!list.length) html += `<p>Nothing is listed for this weekend yet — add events to the site, or write a short note instead.</p>`;
+    if (!show.length) html += `<p>Nothing picked yet — tick a few favorites above.</p>`;
     for (const [label, items] of groups) {
       html += `<p style="margin:22px 0 6px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:13px;color:#a15e3d;">${label}</p>`;
       for (const { e, s } of items) {
@@ -115,7 +187,12 @@
 ${esc(e.description)}</p>`;
       }
     }
-    html += `<p style="margin:26px 0 0;color:#5a5e4e;">Find more good things any day at <a href="${SITE}" style="color:#a15e3d;">Good Nearby</a>. Details can change — a quick check with the host is always a good idea.</p>`;
+    const cafe = cafeOfWeek(friday);
+    if (cafe) {
+      html += `<p style="margin:26px 0 6px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:13px;color:#a15e3d;">☕ Cozy spot of the week</p>
+<p style="margin:0 0 14px;"><strong><a href="${esc(cafe.url || SITE)}" style="color:#304022;">${esc(cafe.title)}</a></strong> · ${esc(cafe.city.replace(/, MA$/, ""))}<br>${esc(cafe.description)}</p>`;
+    }
+    html += `<p style="margin:26px 0 0;color:#5a5e4e;">Find more good things any day at <a href="${SITE}" style="color:#a15e3d;">Good Nearby</a>. Know something lovely we should share? <a href="${SITE}#/submit" style="color:#a15e3d;">Tell us</a>. Details can change — a quick check with the host is always a good idea.</p>`;
     $("email").innerHTML = html;
   }
 
@@ -143,6 +220,11 @@ ${esc(e.description)}</p>`;
   const dow = today.getDay();
   $("friday").value = ymd(addDays(today, dow === 0 ? -2 : dow === 6 ? -1 : 5 - dow));
   $("friday").addEventListener("change", build);
+  $("intro").addEventListener("input", build);
+  $("pickList").addEventListener("change", (ev) => {
+    const id = ev.target.dataset.id; if (!id) return;
+    const set = chosen.get(key()); ev.target.checked ? set.add(id) : set.delete(id); build();
+  });
   $("copyHtml").addEventListener("click", () => copy(true));
   $("copyText").addEventListener("click", () => copy(false));
   build();

@@ -124,7 +124,9 @@ def main():
         txt = open(out).read()
         existing = json.loads(txt[txt.index(".concat(") + 8: txt.rindex(");")])
     upcoming = lambda r: r["start"][:10] >= today.isoformat()
-    kept = [r for r in existing if upcoming(r)]
+    # The library's calendar is the source of truth: a fresh copy of the same session replaces the old one.
+    fresh = {(r["venue"], r["start"]) for r in rows}
+    kept = [r for r in existing if upcoming(r) and (r["venue"], r["start"]) not in fresh]
     have = {r["id"] for r in kept}
     new = [r for r in rows if r["id"] not in have and upcoming(r)]
     merged = sorted(kept + new, key=lambda r: r["start"])
@@ -132,7 +134,7 @@ def main():
            "// Made by tools/library_collect.py; re-run it rather than editing by hand.\n")
     open(out, "w").write(hdr + "window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat("
                          + json.dumps(merged, indent=1, ensure_ascii=False) + ");\n")
-    print(f"kept {len(kept)} upcoming, dropped {len(existing) - len(kept)} past, added {len(new)} new")
+    print(f"kept {len(kept)}, replaced or dropped {len(existing) - len(kept)} (past or refreshed), added {len(new)}")
     for r in new: print(f"NEW  {r['start']}  {r['category']:<10} {r['title'][:60]}  ({r['venue']})")
 
 if __name__ == "__main__":
