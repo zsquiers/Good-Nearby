@@ -13,7 +13,7 @@
   --line: rgba(48, 64, 34, 0.14);
   --shadow: 0 24px 70px rgba(57, 49, 31, 0.14);
   --radius: 28px;
-  --hero: url("https://images.pexels.com/photos/4858584/pexels-photo-4858584.jpeg?auto=compress&cs=tinysrgb&w=1900");
+  --hero: url("assets/hero.jpg");
   color-scheme: light;
 }
 
@@ -45,14 +45,14 @@ h1, h2 {
   line-height: 1.05;
 }
 
-/* ---------- Backdrop: the sunset photo, softened on inner screens ---------- */
+/* ---------- Backdrop: sunflowers, sun and lake (assets/hero.jpg), softened on inner screens ---------- */
 .backdrop {
   position: fixed;
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(90deg, rgba(248,242,232,.9) 0%, rgba(248,242,232,.55) 45%, rgba(248,242,232,.05) 75%),
-    var(--hero) 70% 60% / cover no-repeat,
+    linear-gradient(90deg, rgba(248,242,232,.35) 0%, rgba(248,242,232,.15) 40%, rgba(248,242,232,0) 55%),
+    var(--hero) left bottom / cover no-repeat,
     linear-gradient(160deg, #f6e3c8, #e3b98f 60%, #b98c62);
   transition: opacity .6s ease, filter .6s ease;
 }
@@ -121,7 +121,7 @@ main { flex: 1; width: min(1120px, calc(100% - 32px)); margin: 0 auto; padding: 
   width: min(560px, 100%);
   padding: clamp(24px, 4vw, 40px);
   border-radius: var(--radius);
-  background: rgba(251, 247, 239, .82);
+  background: rgba(251, 247, 239, .8);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: var(--shadow);
@@ -531,7 +531,7 @@ h3.ask { display: flex; align-items: center; }
   .backdrop {
     background:
       linear-gradient(180deg, rgba(248,242,232,.55) 0%, rgba(248,242,232,.25) 40%, rgba(248,242,232,.85) 100%),
-      var(--hero) 62% center / cover no-repeat,
+      var(--hero) 30% bottom / cover no-repeat,
       linear-gradient(160deg, #f6e3c8, #e3b98f 60%, #b98c62);
   }
   .topbar { padding-top: 14px; }
