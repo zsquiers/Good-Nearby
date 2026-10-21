@@ -128,7 +128,7 @@
       out.sessions = [{ start, end: end || new Date(start.getTime() + 60 * 60 * 1000) }];
     }
     if (out.sessions) {
-      out.sessions = out.sessions.filter((s) => s.end >= now);
+      out.sessions = out.sessions.filter((s) => s.end > now);
       if (!out.sessions.length) return null;                    // all over
       out.next = out.sessions[0];
     }
@@ -219,7 +219,7 @@
 
   // Plain-language countdown, to help with time blindness.
   function countdown(s) {
-    if (s.start <= now && now < s.end) return "Happening right now";
+    if (s.start <= now) return "Happening right now";
     const mins = Math.round((s.start - now) / 60000);
     if (mins < 60) return `Starts in ${mins} min`;
     const hours = Math.round(mins / 60);
