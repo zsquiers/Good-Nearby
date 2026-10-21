@@ -518,7 +518,13 @@ h3.ask { display: flex; align-items: center; }
 /* ---------- Footer: one quiet line ---------- */
 .footer {
   display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
-  padding: 18px 16px 26px;
+  width: min(1120px, calc(100% - 32px));
+  margin: 18px auto 20px;
+  padding: 12px 20px;
+  border-radius: 18px;
+  background: rgba(251, 247, 239, .88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   font-size: .85rem; color: var(--ink-soft);
 }
 .footer a { color: var(--ink); }
@@ -528,14 +534,16 @@ h3.ask { display: flex; align-items: center; }
 /* ---------- Phones ---------- */
 @media (max-width: 640px) {
   body { font-size: 16px; }
+  /* Phones: the whole photo as a banner across the top (it's 1536×927, so 60vw tall), fading into cream. */
   .backdrop {
     background:
-      linear-gradient(180deg, rgba(248,242,232,.55) 0%, rgba(248,242,232,.25) 40%, rgba(248,242,232,.85) 100%),
-      var(--hero) 30% bottom / cover no-repeat,
-      linear-gradient(160deg, #f6e3c8, #e3b98f 60%, #b98c62);
+      linear-gradient(180deg, rgba(248,242,232,0) calc(60vw - 40px), var(--bg) 60vw),
+      var(--hero) center top / 100% auto no-repeat,
+      var(--bg);
   }
   .topbar { padding-top: 14px; }
   .start { align-items: flex-start; min-height: 0; padding-top: 8px; }
+  body[data-screen="start"] .start { padding-top: calc(60vw - 100px); }
   .start-card { background: rgba(251, 247, 239, .9); }
   .mood { min-height: 72px; gap: 12px; }
   .mood-icon { width: 48px; height: 48px; }
