@@ -17,7 +17,7 @@
   // Weekend Favorites sign-ups go to Buttondown (buttondown.com). Put your Buttondown
   // username here once your account exists — until then the form says sign-ups open soon
   // and nothing is collected.
-  const NEWSLETTER = { buttondownUsername: "" };
+  const NEWSLETTER = { buttondownUsername: "goodnearby" };
 
   // ---------- event submissions ----------
   // "Share something good" sends each submission to Formspree (formspree.io), which emails it
