@@ -21,6 +21,8 @@ Shareable links: `#/day/franklin-area/2026-10-17` opens that day in Franklin & n
 
 **Areas** are about 30 minutes across: a place only shows under an area if it's within ~15 miles of that area's nearest town (`AREA_CAP_MILES` in `app.js`). Farther places still show under Everywhere.
 
+**Saved list on another device:** the Saved screen has "Text my saved list to myself", which shares a link like `#/saved/<id>,<id>`. Opening it adds those listings to that device's saved list. No accounts. Below it, a nudge to sign up for Weekend Favorites.
+
 **App icon:** `manifest.webmanifest` and the icons in `assets/` let people add Good Nearby to their phone's home screen with the sunflower icon.
 
 Design rules: one decision per screen, no menus, big tap targets, plain language, gentle motion (none for visitors who prefer reduced motion). Keyboard: → next card / next day, ← back, S save. On phones, swipe left/right.

@@ -9,6 +9,7 @@
 //   #/d/<area>/<date>/<i>     that day's events, one at a time
 //   #/weekend                 Weekend Favorites: newsletter sign-up + this weekend\'s picks
 //   #/saved                   events saved on this device
+//   #/saved/<id>,<id>         a saved list sent from another device (added to this one)
 (function () {
   "use strict";
 
@@ -489,6 +490,18 @@
     } catch (_) { /* closed the share sheet — nothing to do */ }
   }
 
+  // No accounts: the saved list travels as a link, e.g. from your phone to your laptop.
+  async function sendSavedList(btn) {
+    const ids = events.filter((e) => saved.has(e.id)).sort(bySoonest).map((e) => encodeURIComponent(e.id));
+    const url = `${location.origin}${location.pathname}#/saved/${ids.join(",")}`;
+    const text = `My saved good things on Good Nearby (${ids.length}) 🌻`;
+    try {
+      if (navigator.share) { await navigator.share({ title: "My Good Nearby list", text, url }); return; }
+      await navigator.clipboard.writeText(`${text}\n${url}`);
+      btn.innerHTML = '<span aria-hidden="true">✓</span> Link copied — paste it in a text or email to yourself';
+    } catch (_) { /* closed the share sheet — nothing to do */ }
+  }
+
   function renderPick(focusTitle) {
     const card = $("pickCard");
     const total = state.deck.length;
@@ -860,8 +873,10 @@
   function renderSaved() {
     const list = events.filter((e) => saved.has(e.id)).sort(bySoonest);
     $("savedLede").textContent = list.length
-      ? "Saved on this device only. Tap one to open it."
+      ? "Saved on this device. Tap one to open it."
       : "Nothing saved yet. Tap ♡ Save on anything that looks good.";
+    $("savedExtras").hidden = !list.length;
+    $("sendSaved").innerHTML = '<span aria-hidden="true">📱</span> Text my saved list to myself';
     $("savedList").innerHTML = list.map((e) => `
       <li>
         <button type="button" class="saved-item" data-open="${escapeHtml(e.id)}">
@@ -973,6 +988,18 @@
       return;
     }
     if (kind === "saved") {
+      const incoming = (arg || "").split(",").map((id) => { try { return decodeURIComponent(id); } catch (_) { return ""; } })
+        .filter((id) => byId.has(id));
+      const added = incoming.filter((id) => !saved.has(id));
+      added.forEach((id) => saved.add(id));
+      if (arg) {
+        store("goodNearby.saved", [...saved]);
+        history.replaceState(null, "", "#/saved");
+        const gone = arg.split(",").length - incoming.length;
+        $("savedNote").textContent = (added.length ? `Added ${added.length} from your link — they're saved on this device now.`
+          : "Everything from your link is already saved here.") + (gone ? ` ${gone} ${gone === 1 ? "has" : "have"} already passed.` : "");
+      }
+      $("savedNote").hidden = !arg;
       showScreen("saved");
       renderSaved();
       $("savedTitle").setAttribute("tabindex", "-1");
@@ -1088,9 +1115,13 @@
       return;
     }
 
+    const send = ev.target.closest("#sendSaved");
+    if (send) { sendSavedList(send); return; }
+
     const unsave = ev.target.closest("[data-unsave]");
     if (unsave) {
       saved.delete(unsave.dataset.unsave);
+      $("savedNote").hidden = true;
       store("goodNearby.saved", [...saved]);
       renderSaved();
     }
