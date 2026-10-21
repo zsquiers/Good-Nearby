@@ -8,6 +8,7 @@
 //   #/day/<area>/<yyyy-mm-dd> everything happening that day in that area
 //   #/d/<area>/<date>/<i>     that day's events, one at a time
 //   #/weekend                 Weekend Favorites: newsletter sign-up + this weekend\'s picks
+//   #/weekend/thanks|confirmed  where Buttondown sends people after signing up / confirming
 //   #/find/<collection|word>[/<area>]   a seasonal collection (data/collections.js) or any word
 //   #/saved                   events saved on this device
 //   #/saved/<id>,<id>         a saved list sent from another device (added to this one)
@@ -1061,6 +1062,11 @@
     }
     if (kind === "weekend") {
       renderWeekend();
+      // Buttondown sends people back here: #/weekend/thanks after signing up, #/weekend/confirmed after confirming.
+      const note = $("signupNote");
+      note.classList.toggle("saved-note", arg === "thanks" || arg === "confirmed");
+      if (arg === "thanks") note.textContent = "Almost there! Check your inbox and tap the link in our email to confirm. 🌻";
+      else if (arg === "confirmed") note.textContent = "You're in! Your first Weekend Favorites arrives on Thursday. 🌻";
       showScreen("weekend");
       $("weekendTitle").focus({ preventScroll: true });
       updateSavedPill();
