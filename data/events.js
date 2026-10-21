@@ -442,5 +442,63 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
     description: "Sit quietly in a Himalayan salt cave — a peaceful reset a little north of MetroWest.",
     url: "https://www.saltedsoulacton.com/",
     phone: "(978) 206-9034"
+  },
+  // ---------- Holistic Wellness Center, Medfield (checked on their website, Oct 2026) ----------
+  {
+    id: "hwc-massage",
+    title: "Massage & lymphatic drainage",
+    category: "massage",
+    schedule: "Daily by appointment",
+    hours: { mon: "10:00-17:00", tue: "10:00-18:30", wed: "10:00-16:00", thu: "09:00-19:00", fri: "09:00-18:00", sat: "09:00-17:00", sun: "09:00-18:00" },
+    venue: "Holistic Wellness Center", address: "18 North Meadows Rd, Suite 12B", city: "Medfield, MA",
+    lat: 42.1915, lng: -71.3040,
+    host: "Holistic Wellness Center",
+    phone: "(508) 359-7400",
+    price: 75, priceNote: "From $75/30 min · Swedish $110/60 min",
+    description: "An independent wellness center since 2010, in calm private rooms: Swedish, therapeutic, deep tissue, prenatal and lymphatic drainage massage. Add cupping for $35. Book online or by phone.",
+    url: "https://www.holisticwellnesscenter.org/massage-therapy"
+  },
+  {
+    id: "hwc-reiki-sound",
+    title: "Reiki & sound healing",
+    category: "reiki",
+    schedule: "Daily by appointment",
+    hours: { mon: "10:00-17:00", tue: "10:00-18:30", wed: "10:00-16:00", thu: "09:00-19:00", fri: "09:00-18:00", sat: "09:00-17:00", sun: "09:00-18:00" },
+    venue: "Holistic Wellness Center", address: "18 North Meadows Rd, Suite 12B", city: "Medfield, MA",
+    lat: 42.1915, lng: -71.3040,
+    host: "Holistic Wellness Center",
+    phone: "(508) 359-7400",
+    price: 105, priceNote: "Reiki from $105/60 min · Reiki + singing bowls $130/75 min",
+    description: "Reiki and energy healing with an intention-setting conversation first; the Reiki & Sound Healing session adds singing bowls to help you settle and rebalance. Chakra balancing is offered too.",
+    url: "https://www.holisticwellnesscenter.org/energy-work"
+  },
+  {
+    id: "hwc-acupuncture",
+    title: "Acupuncture",
+    category: "acupuncture",
+    schedule: "Daily by appointment",
+    hours: { mon: "10:00-17:00", tue: "10:00-18:30", wed: "10:00-16:00", thu: "09:00-19:00", fri: "09:00-18:00", sat: "09:00-17:00", sun: "09:00-18:00" },
+    venue: "Holistic Wellness Center", address: "18 North Meadows Rd, Suite 12B", city: "Medfield, MA",
+    lat: 42.1915, lng: -71.3040,
+    host: "Holistic Wellness Center",
+    phone: "(508) 359-7400",
+    price: 100, priceNote: "First visit $130 · follow-ups $100/60 min · gua sha add-on $25",
+    description: "Traditional acupuncture to rebalance the body's energy, with optional gua sha.",
+    url: "https://www.holisticwellnesscenter.org/acupuncture"
+  },
+  {
+    id: "hwc-salt-sauna",
+    title: "Himalayan salt room & infrared sauna",
+    category: "salt",
+    schedule: "Daily — book online (weekdays) or by phone",
+    hours: { mon: "10:00-17:00", tue: "10:00-18:30", wed: "10:00-16:00", thu: "09:00-19:00", fri: "09:00-18:00", sat: "09:00-17:00", sun: "09:00-18:00" },
+    venue: "Holistic Wellness Center", address: "18 North Meadows Rd, Suite 12B", city: "Medfield, MA",
+    lat: 42.1915, lng: -71.3040,
+    host: "Holistic Wellness Center",
+    phone: "(508) 359-7400",
+    price: 20, priceNote: "Salt room $20/30 min · $35/60 min · infrared salt sauna $40/30 min",
+    description: "Quiet time on your own, no practitioner needed: a Himalayan salt room for up to four people, and a two-person full-spectrum infrared sauna with salt walls and soft colored light. Lovely on its own or after a massage.",
+    url: "https://www.holisticwellnesscenter.org/passive-therapies",
+    tags: ["come-alone"]
   }
 ]);
