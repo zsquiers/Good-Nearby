@@ -294,7 +294,7 @@
     return parts.join(" · ");
   }
 
-  const TAG_LABELS = { free: "Free", "come-alone": "Come alone", beginner: "Beginner-friendly",
+  const TAG_LABELS = { free: "Free", "come-alone": "Easy to go solo", beginner: "Beginner-friendly",
     women: "Women", "all-paces": "All paces", outdoors: "Outdoors", "gluten-free": "Gluten-free" };
   const tagChips = (e) => (e.tags || []).filter((t) => TAG_LABELS[t] && !(t === "free" && e.price === 0))
     .map((t) => `<span class="tag tag-${t}">${TAG_LABELS[t]}</span>`).join("");
