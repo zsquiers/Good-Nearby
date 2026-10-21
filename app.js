@@ -8,6 +8,7 @@
 //   #/day/<area>/<yyyy-mm-dd> everything happening that day in that area
 //   #/d/<area>/<date>/<i>     that day's events, one at a time
 //   #/weekend                 Weekend Favorites: newsletter sign-up + this weekend\'s picks
+//   #/find/<collection|word>[/<area>]   a seasonal collection (data/collections.js) or any word
 //   #/saved                   events saved on this device
 //   #/saved/<id>,<id>         a saved list sent from another device (added to this one)
 (function () {
@@ -439,7 +440,7 @@
 
   // ---------- rendering ----------
   const $ = (id) => document.getElementById(id);
-  const screens = { start: $("screenStart"), browse: $("screenBrowse"), day: $("screenDay"), weekend: $("screenWeekend"), submit: $("screenSubmit"), pick: $("screenPick"), saved: $("screenSaved"), wander: $("screenWander") };
+  const screens = { find: $("screenFind"), start: $("screenStart"), browse: $("screenBrowse"), day: $("screenDay"), weekend: $("screenWeekend"), submit: $("screenSubmit"), pick: $("screenPick"), saved: $("screenSaved"), wander: $("screenWander") };
   const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // base: the URL prefix for the current deck; day: the chosen day when browsing by day
@@ -469,6 +470,7 @@
         <span class="mood-arrow" aria-hidden="true">→</span>
       </button>`).join("");
     renderWhere();
+    renderSeasonLink();
   }
 
   function photo(e, w) {
@@ -743,6 +745,81 @@
       }).join("")}</ul>${g.items.length > 5 ? `<button type="button" class="show-more" data-showmore>Show ${g.items.length - 5} more</button>` : ""}</section>`).join("") || `<div class="nothing"><p class="nothing-title">No cozy spots listed here yet.</p><p><a class="inline-link" href="#/wander/all">See everywhere →</a></p></div>`;
   }
 
+  // ---------- Collections: every upcoming thing about a theme, e.g. #/find/halloween ----------
+  const COLLECTIONS = window.GOOD_NEARBY_COLLECTIONS || [];
+  // The end of a collection's season: the next time its `to` date comes round (handles Dec → Jan).
+  function seasonEnd(c, from) {
+    const [m, d] = c.to.split("-").map(Number);
+    let end = new Date(from.getFullYear(), m - 1, d + 1);
+    if (end <= from) end = new Date(from.getFullYear() + 1, m - 1, d + 1);
+    return end;
+  }
+  function inSeason(c, d) {
+    const md = (d.getMonth() + 1) * 100 + d.getDate();
+    const num = (s) => Number(s.replace("-", ""));
+    const a = num(c.from), b = num(c.to);
+    return a <= b ? md >= a && md <= b : md >= a || md <= b;
+  }
+  function collectionFor(key) {
+    const c = COLLECTIONS.find((x) => x.id === key);
+    if (c) return c;
+    const word = key.replace(/[^\p{L}\p{N} '-]/gu, "").trim().slice(0, 40);
+    if (!word) return null;
+    return { id: key, emoji: "🔎", title: `Good things: “${word}”`, match: new RegExp(word.replace(/[-']/g, "\\$&"), "i") };
+  }
+  function collectionItems(c, areaId) {
+    const until = c.to ? seasonEnd(c, startOfDay(now)) : addDays(startOfDay(now), 90);
+    return events
+      .filter((e) => e.sessions && inArea(e, areaId) && c.match.test(`${e.title} ${e.description || ""}`))
+      .map((e) => ({ e, s: e.sessions.find((x) => x.end > now && x.start < until) }))
+      .filter((x) => x.s)
+      .sort((a, b) => a.s.start - b.s.start);
+  }
+  const findDeck = (key, areaId) => { const c = collectionFor(key); return c ? collectionItems(c, areaId).map((x) => x.e.id) : []; };
+  let findView = { key: "", area: "all" };
+  function renderFind(key, areaId) {
+    const c = collectionFor(key);
+    findView = { key, area: areaId };
+    $("findTitle").textContent = c ? `${c.emoji} ${c.title}` : "Nothing to show";
+    const items = c ? collectionItems(c, areaId) : [];
+    $("findLede").textContent = items.length
+      ? `${items.length} upcoming thing${items.length === 1 ? "" : "s"}${c.blurb ? ` — ${c.blurb}` : ""}. Soonest first.`
+      : "";
+    $("findAreas").innerHTML = AREAS.map((a) =>
+      `<button type="button" class="chip${a.id === areaId ? " on" : ""}" data-findarea="${a.id}" aria-pressed="${a.id === areaId}">${escapeHtml(a.id === "all" ? "Everywhere" : a.area)}</button>`).join("");
+    const days = new Map();
+    items.forEach((x, i) => {
+      const d = startOfDay(x.s.start < now ? now : x.s.start), k = ymd(d);
+      if (!days.has(k)) days.set(k, { d, rows: [] });
+      days.get(k).rows.push({ ...x, i });
+    });
+    $("findList").innerHTML = [...days.values()].map(({ d, rows }) => {
+      const w = dayWord(d);
+      return `<section class="slot"><h3>${escapeHtml(w.includes(",") ? w : `${w} · ${mdFmt.format(d)}`)}</h3><ul class="rows">${rows.map(({ e, s, i }) => {
+        const meta = [e.venue, e.city.replace(/, MA$/, ""), priceLabel(e) === "Price: ask the host" ? "" : priceLabel(e)].filter(Boolean).map(escapeHtml).join(" · ");
+        return `<li><button type="button" class="row" data-findopen="${i}">
+          <span class="row-time">${e.allDay ? "All day" : shortTime(s.start)}</span>
+          <span class="row-main">
+            <span class="row-title">${escapeHtml(e.title)}${saved.has(e.id) ? ' <span class="row-saved" aria-label="saved">♥</span>' : ""}</span>
+            <span class="row-meta">${meta}</span>
+            <span class="row-cat">${escapeHtml(catLabel(e.category))}</span>
+          </span>
+          <span class="row-arrow" aria-hidden="true">›</span>
+        </button></li>`;
+      }).join("")}</ul></section>`;
+    }).join("") || `<div class="nothing"><p class="nothing-title">Nothing coming up${areaId !== "all" ? " in this area" : ""} — yet.</p>${areaId !== "all" ? `<p><a class="inline-link" href="#/find/${encodeURIComponent(key)}/all">See everywhere →</a></p>` : `<p><a class="inline-link" href="#/browse">Browse the full calendar →</a></p>`}</div>`;
+  }
+  // On the first screen: a gentle link to the season's collection, when there's enough in it.
+  function renderSeasonLink() {
+    const link = $("seasonLink");
+    const c = COLLECTIONS.find((x) => inSeason(x, now));
+    const n = c ? collectionItems(c, "all").length : 0;
+    link.hidden = n < 3;
+    if (link.hidden) return;
+    link.href = `#/find/${c.id}`;
+    link.innerHTML = `<span aria-hidden="true">${c.emoji}</span><span><strong>${escapeHtml(c.title)}</strong> — ${n} things coming up</span><span aria-hidden="true">→</span>`;
+  }
+
   const dayDeck = (areaId, day) => [...eventsOn(areaId, day).map((x) => x.e.id), ...ongoingIn(areaId).map((e) => e.id)];
   const goDay = (areaId, d) => { location.hash = `#/day/${areaId}/${ymd(d)}`; };
 
@@ -935,6 +1012,18 @@
       state.index = 0; showScreen("pick"); renderPick(true);
       return;
     }
+    if (kind === "fp" && arg && areaById.has(parts[2])) {
+      const key = decodeURIComponent(arg), deckKey = `fp:${key}:${parts[2]}`;
+      if (state.mood !== deckKey || !state.deck.length) { state.mood = deckKey; state.deck = findDeck(key, parts[2]); }
+      state.limit = Infinity; state.deckBuiltFor = null; state.day = null;
+      state.base = `#/fp/${arg}/${parts[2]}`;
+      state.back = { href: `#/find/${arg}/${parts[2]}`, label: "← Back to the list" };
+      setPickBack();
+      state.index = Math.min(Math.max(parseInt(parts[3], 10) || 0, 0), state.deck.length);
+      showScreen("pick");
+      renderPick(true);
+      return;
+    }
     if (kind === "p" && areaById.has(arg)) {
       const key = `p:${arg}`;
       if (state.mood !== key || !state.deck.length) { state.mood = key; state.deck = wanderDeck(arg); }
@@ -953,6 +1042,13 @@
       renderWander(areaId);
       showScreen("wander");
       $("wanderTitle").focus({ preventScroll: true });
+      updateSavedPill();
+      return;
+    }
+    if (kind === "find" && arg) {
+      renderFind(decodeURIComponent(arg), areaById.has(parts[2]) ? parts[2] : "all");
+      showScreen("find");
+      $("findTitle").focus({ preventScroll: true });
       updateSavedPill();
       return;
     }
@@ -1059,6 +1155,10 @@
     }
     const more = ev.target.closest("[data-showmore]");
     if (more) { more.closest(".slot").querySelectorAll("li.more").forEach((li) => { li.hidden = false; }); more.remove(); return; }
+    const fArea = ev.target.closest("[data-findarea]");
+    if (fArea) { location.hash = `#/find/${encodeURIComponent(findView.key)}/${fArea.dataset.findarea}`; return; }
+    const fOpen = ev.target.closest("[data-findopen]");
+    if (fOpen) { location.hash = `#/fp/${encodeURIComponent(findView.key)}/${findView.area}/${fOpen.dataset.findopen}`; return; }
     const wArea = ev.target.closest("[data-wanderarea]");
     if (wArea) { location.hash = `#/wander/${wArea.dataset.wanderarea}`; return; }
     const wOpen = ev.target.closest("[data-wanderopen]");

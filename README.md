@@ -21,6 +21,8 @@ Shareable links: `#/day/franklin-area/2026-10-17` opens that day in Franklin & n
 
 **Areas** are about 30 minutes across: a place only shows under an area if it's within ~15 miles of that area's nearest town (`AREA_CAP_MILES` in `app.js`). Farther places still show under Everywhere.
 
+**Seasonal collections:** `#/find/halloween` gathers every upcoming listing about a theme into one page, by day, with area chips. The seasons (Halloween, Thanksgiving, holidays, New Year, Valentine's, Mother's Day) live in `data/collections.js`, each with its dates and the words it looks for. Add one by copying an entry. Any word works too: `#/find/pottery`. While a season is on and has at least 3 things, the first screen shows a link to it.
+
 **Saved list on another device:** the Saved screen has "Text my saved list to myself", which shares a link like `#/saved/<id>,<id>`. Opening it adds those listings to that device's saved list. No accounts. Below it, a nudge to sign up for Weekend Favorites.
 
 **App icon:** `manifest.webmanifest` and the icons in `assets/` let people add Good Nearby to their phone's home screen with the sunflower icon.
@@ -86,6 +88,7 @@ Photos load from Unsplash. Each event uses a photo for its category, set in the 
 
 - **Sign-up:** the "💌 Weekend Favorites" link on the first screen opens a page with an email sign-up and a live preview of this weekend's picks. The end of every list also nudges people there.
 - **Connecting it:** create a free account at [Buttondown](https://buttondown.com), then put your Buttondown username in `NEWSLETTER.buttondownUsername` at the top of `app.js`. Until then the form politely says sign-ups open soon and collects nothing.
+- **Spotlight and full calendar:** every email ends with a "📅 See the full calendar" button. In season, the builder also adds a spotlight box (e.g. "🎃 Halloween & spooky season — See all 21 →") linking to that collection; pick a different one or none from the Seasonal spotlight menu.
 - **Writing it:** open `newsletter.html` on the site (it isn't linked anywhere). Add a line or two in your own voice, tick the favorites you want (it suggests about 8 varied picks from everything on the site), and it builds the email with a subject line and a cozy café of the week. Click **Copy email** and paste it into Buttondown.
 
 ## Updating the site

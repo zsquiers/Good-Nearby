@@ -15,6 +15,7 @@
     button, input { font: inherit; }
     button { padding: 10px 18px; border-radius: 999px; border: 0; background: #304022; color: #fff; font-weight: 600; cursor: pointer; }
     button.soft { background: #f1e7d6; color: #304022; }
+    select { font: inherit; padding: 8px 12px; border: 1px solid rgba(48,64,34,.2); border-radius: 10px; background: #fff; max-width: 100%; }
     input[type="date"] { padding: 8px 12px; border: 1px solid rgba(48,64,34,.2); border-radius: 10px; }
     label { font-weight: 600; }
     .subject { padding: 12px 16px; background: #fff; border-radius: 12px; border: 1px solid rgba(48,64,34,.15); }
@@ -43,6 +44,9 @@
   <p><label for="intro">Your note at the top <span style="font-weight:400;color:#5a5e4e;">(optional — a line or two in your own voice)</span></label></p>
   <textarea id="intro" rows="3" placeholder="e.g. The leaves are turning and I'm craving slow mornings. Here's what I'd do this weekend…"></textarea>
 
+  <p><label for="spotlight">Seasonal spotlight <span style="font-weight:400;color:#5a5e4e;">(a box with a button to every listing for the season — e.g. all Halloween events)</span></label></p>
+  <select id="spotlight"></select>
+
   <details class="pick" open>
     <summary id="pickSummary">Choose this week's favorites</summary>
     <p class="note" style="margin:8px 0;">We suggest a few varied picks (a mix of days, kinds and places, free things first). Tick or untick anything.</p>
@@ -65,6 +69,7 @@
 <script src="data/events-meditation.js"></script>
 <script src="data/events-calendars.js"></script>
 <script src="data/events-meetup.js"></script>
+<script src="data/collections.js"></script>
 <script src="data/towns.js"></script>
 <script>
 (function () {
@@ -146,12 +151,39 @@
     return cafes[week % cafes.length];
   }
 
+  // Seasonal collections (data/collections.js): listings about a theme from now to the end of its season.
+  const COLLECTIONS = window.GOOD_NEARBY_COLLECTIONS || [];
+  function inSeason(c, d) {
+    const n = (d.getMonth() + 1) * 100 + d.getDate(), num = (s) => Number(s.replace("-", ""));
+    const a = num(c.from), b = num(c.to);
+    return a <= b ? n >= a && n <= b : n >= a || n <= b;
+  }
+  function collectionCount(c, friday) {
+    const from = addDays(friday, -1), [m, d] = c.to.split("-").map(Number);
+    let end = new Date(from.getFullYear(), m - 1, d + 1);
+    if (end <= from) end = new Date(from.getFullYear() + 1, m - 1, d + 1);
+    return (window.GOOD_NEARBY_EVENTS || []).filter((e) => c.match.test(`${e.title} ${e.description || ""}`)
+      && sessions(e).some((s) => (s.end || s.start) >= from && s.start < end)).length;
+  }
+  let spotlightFor = "";
+  function fillSpotlight(friday) {
+    if (spotlightFor === key()) return;          // keep the owner's choice for this weekend
+    spotlightFor = key();
+    const opts = COLLECTIONS.map((c) => ({ c, n: collectionCount(c, friday) })).filter((x) => x.n);
+    const auto = opts.find((x) => inSeason(x.c, friday) && x.n >= 3);
+    $("spotlight").innerHTML = `<option value="">No spotlight this week</option>` + opts.map(({ c, n }) =>
+      `<option value="${c.id}" ${auto && auto.c === c ? "selected" : ""}>${c.emoji} ${esc(c.title)} (${n} listed)</option>`).join("");
+  }
+
+  const button = (href, label, bg) => `<a href="${href}" style="display:inline-block;padding:11px 20px;border-radius:999px;background:${bg};color:#ffffff;text-decoration:none;font-weight:600;">${label}</a>`;
+
   function build() {
     const friday = parseLocal($("friday").value);
     const list = picks(friday);
     if (!chosen.has(key())) chosen.set(key(), suggest(list));
     const picked = chosen.get(key());
     const sun = addDays(friday, 2);
+    fillSpotlight(friday);
 
     // The picker
     $("pickSummary").textContent = `Choose this week's favorites (${picked.size} of ${list.length} picked)`;
@@ -193,6 +225,17 @@ ${esc(e.description)}</p>`;
       html += `<p style="margin:26px 0 6px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:13px;color:#a15e3d;">☕ Cozy spot of the week</p>
 <p style="margin:0 0 14px;"><strong><a href="${esc(cafe.url || SITE)}" style="color:#304022;">${esc(cafe.title)}</a></strong> · ${esc(cafe.city.replace(/, MA$/, ""))}<br>${esc(cafe.description)}</p>`;
     }
+    const spot = COLLECTIONS.find((c) => c.id === $("spotlight").value);
+    if (spot) {
+      const n = collectionCount(spot, friday);
+      html += `<div style="margin:28px 0 0;padding:20px 22px;background:#fbf3e6;border-radius:16px;">
+<p style="margin:0 0 6px;font-family:Georgia,serif;font-size:20px;color:#304022;">${spot.emoji} ${esc(spot.title)}</p>
+<p style="margin:0 0 14px;color:#5a5e4e;">${n} thing${n === 1 ? "" : "s"} coming up nearby — ${esc(spot.blurb)}.</p>
+${button(`${SITE}#/find/${spot.id}`, `See all ${n} →`, "#a15e3d")}</div>`;
+    }
+    html += `<div style="margin:28px 0 0;text-align:center;">
+<p style="margin:0 0 12px;color:#5a5e4e;">Want more than the highlights? Every class, gathering and cozy spot near you, any day.</p>
+${button(`${SITE}#/browse`, "📅 See the full calendar", "#304022")}</div>`;
     html += `<p style="margin:26px 0 0;color:#5a5e4e;">Find more good things any day at <a href="${SITE}" style="color:#a15e3d;">Good Nearby</a>. Know something lovely we should share? <a href="${SITE}#/submit" style="color:#a15e3d;">Tell us</a>. Details can change — a quick check with the host is always a good idea.</p>`;
     $("email").innerHTML = html;
   }
@@ -208,7 +251,12 @@ ${esc(e.description)}</p>`;
           "text/plain": new Blob([el.innerText], { type: "text/plain" }),
         })]);
       } else {
-        await navigator.clipboard.writeText(`${$("subject").textContent}\n\n${el.innerText}`);
+        // Plain text: keep each link's address after its words, so buttons still work.
+        const copyEl = el.cloneNode(true);
+        copyEl.querySelectorAll("a").forEach((a) => { a.textContent = `${a.textContent} (${a.href})`; });
+        copyEl.style.cssText = "position:absolute;left:-9999px"; document.body.append(copyEl);
+        const text = copyEl.innerText; copyEl.remove();
+        await navigator.clipboard.writeText(`${$("subject").textContent}\n\n${text}`);
       }
       $("status").textContent = "Copied — paste it into your newsletter.";
     } catch (_) {
@@ -222,6 +270,7 @@ ${esc(e.description)}</p>`;
   $("friday").value = ymd(addDays(today, dow === 0 ? -2 : dow === 6 ? -1 : 5 - dow));
   $("friday").addEventListener("change", build);
   $("intro").addEventListener("input", build);
+  $("spotlight").addEventListener("change", build);
   $("pickList").addEventListener("change", (ev) => {
     const id = ev.target.dataset.id; if (!id) return;
     const set = chosen.get(key()); ev.target.checked ? set.add(id) : set.delete(id); build();
