@@ -23,6 +23,21 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
     tags: ["come-alone", "outdoors"]
   },
   {
+    id: "bakery-birchwood-franklin",
+    title: "Birchwood Bakery & Kitchen",
+    category: "bakery",
+    schedule: "Mon–Fri 7–3 · Sat–Sun 8–3",
+    hours: { mon: "07:00-15:00", tue: "07:00-15:00", wed: "07:00-15:00", thu: "07:00-15:00", fri: "07:00-15:00", sat: "08:00-15:00", sun: "08:00-15:00" },
+    menu: "https://www.birchwoodbakery.com/menu",
+    venue: "Birchwood Bakery & Kitchen", address: "17 East Central St", city: "Franklin, MA",
+    lat: 42.0836, lng: -71.3958,
+    price: null,
+    host: "Birchwood Bakery & Kitchen",
+    description: "A bright, cozy bakery in downtown Franklin — artisanal pastries, good coffee and a seasonal breakfast and lunch menu. Easy to linger with a friend or on your own.",
+    url: "https://www.birchwoodbakery.com/",
+    tags: ["come-alone"]
+  },
+  {
     id: "cafe-twist-millis",
     title: "Twist Bakery & Café",
     category: "bakery",
