@@ -2,50 +2,6 @@
 // Made by tools/calendar_collect.py; re-run it rather than editing by hand.
 window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
  {
-  "id": "cal-commonstreet-gentle-vinyasa-yoga-with-laura-pansire-tue",
-  "title": "Gentle Vinyasa Yoga with Laura Pansire",
-  "category": "yoga",
-  "venue": "Common Street Spiritual Center",
-  "address": "13 Common St",
-  "city": "Natick, MA",
-  "lat": 42.2843,
-  "lng": -71.3497,
-  "price": null,
-  "host": "Common Street Spiritual Center",
-  "description": "First Tuesday class! Join Laura Pansire for Gentle Vinyasa Yoga on Tuesday afternoons, 5 to 6pm, in the Sanctuary at Common Street Spiritual Center. Laura’s classes began Saturday, October 17, and Tuesdays start October 20. Laura is a certified yoga instructor with over six years of experience and a…",
-  "url": "https://commonstreet.org/event/gentle-vinyasa-yoga-with-laura-pansire-2/",
-  "source": "Venue calendar",
-  "weekly": {
-   "day": "Tuesday",
-   "time": "17:00",
-   "endTime": "18:00",
-   "from": "2026-10-20",
-   "until": "2026-12-15"
-  }
- },
- {
-  "id": "cal-commonstreet-biodanza-the-dance-of-life-tue",
-  "title": "Biodanza – The Dance of Life",
-  "category": "movement",
-  "venue": "Common Street Spiritual Center · Moon Room",
-  "address": "13 Common St",
-  "city": "Natick, MA",
-  "lat": 42.2843,
-  "lng": -71.3497,
-  "price": null,
-  "host": "Common Street Spiritual Center",
-  "description": "Join us in a welcoming and compassionate space to dance, to play, to connect with our emotions all while revealing our identity through music, movement and group interaction. Biodanza invites us to transition from daily roles (masks) to the authentic self, using the music, the movement and group int…",
-  "url": "https://commonstreet.org/event/biodanza-the-dance-of-life/",
-  "source": "Venue calendar",
-  "weekly": {
-   "day": "Tuesday",
-   "time": "19:00",
-   "endTime": "21:00",
-   "from": "2026-10-20",
-   "until": "2026-12-08"
-  }
- },
- {
   "id": "cal-commonstreet-gentle-jaguar-path-yoga-wed",
   "title": "Gentle Jaguar Path Yoga",
   "category": "yoga",
@@ -59,6 +15,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Jaguar Path yoga incorporates Vinyasa flow postures with a focus on opening the body’s meridians and expanding the Energy Body. This sixty minute all-levels class provides a gentle and complete physical stretch with space for breath awareness and meditation. Email leo.j.ryan@gmail to confirm your at…",
   "url": "https://commonstreet.org/event/gentle-jaguar-path-yoga-2-2-6/",
   "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2020/10/jaguar-path-yoga.jpg",
   "weekly": {
    "day": "Wednesday",
    "time": "07:30",
@@ -125,6 +82,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Join Lauren Tutuny (CYT-300) Creator of Luna Yoga , on Wednesday evenings, 7-8pm, in the Sanctuary, for an all-levels Hatha Vinyasa Yoga practice inspired by the ever-changing rhythms of the moon! Rooted in the traditions of classical yoga and guided by the current lunar phase and zodiac sign, each …",
   "url": "https://commonstreet.org/event/hatha-vinyasa-yoga-3/",
   "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2026/08/luna-yoga-flyer-preview1.png",
   "weekly": {
    "day": "Wednesday",
    "time": "19:00",
@@ -169,6 +127,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Buddhist practice is not about retreating from our lives or rejecting the things that bring us meaning and joy. Rather, it is about cultivating our natural capacity for unconditional well-being; a well-being that is not dependent on external circumstances. This unconditional well-being is not withdr…",
   "url": "https://commonstreet.org/event/buddhist-meditation-group-tibetan-vajrayana-2/",
   "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2026/02/IMG_6287.png",
   "weekly": {
    "day": "Thursday",
    "time": "18:00",
@@ -191,6 +150,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Jaguar Path yoga incorporates Vinyasa flow postures with a focus on opening the body’s meridians and expanding the Energy Body. This sixty minute all-levels class provides a gentle and complete physical stretch with space for breath awareness and meditation. Email leo.j.ryan@gmail to confirm your at…",
   "url": "https://commonstreet.org/event/gentle-jaguar-path-yoga-2-2-6/",
   "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2020/10/jaguar-path-yoga.jpg",
   "weekly": {
    "day": "Friday",
    "time": "07:30",
@@ -235,6 +195,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "No matter your craft, you’re meant to be here! Join us every Friday from 6–10pm in Fellowship Hall for a laid-back community craft circle. Bring your own projects or dig into our community craft library — light refreshments provided. All tips and supply donations appreciated. Questions? 401-601-9340",
   "url": "https://commonstreet.org/event/community-craft-circle/",
   "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2026/08/Community-Craft-Circle.png",
   "weekly": {
    "day": "Friday",
    "time": "18:00",
@@ -261,7 +222,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Common Street Spiritual Center",
   "description": "Part of the Embodiment & Movement Weekend (Oct 23–25), in partnership with Collective Effervescence: a weekend of movement, somatics, safe non-sexual touch, and shared presence. Friday evening schedule ($20–30 sliding scale). Full workshop descriptions, presenter bios and tickets are on the weekend …",
   "url": "https://commonstreet.org/event/embodiment-movement-weekend-friday-evening/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2026/09/embodiment-movement-weekend-2026.png"
  },
  {
   "id": "cal-commonstreet-mohanji-meditations-sat",
@@ -277,6 +239,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "The Mohanji Meditation is a powerful heart-opening guided meditation that offers release from binding patterns through love and gratitude. All are welcome. No prior experience necessary.",
   "url": "https://commonstreet.org/event/mohanji-meditations-12-2/",
   "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2025/09/Mohanji-Meditations.png",
   "weekly": {
    "day": "Saturday",
    "time": "09:00",
@@ -299,6 +262,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Join Laura Pansire for Gentle Vinyasa Yoga on Saturday mornings, 9:30 to 10:30am, in the Moon Room at Common Street Spiritual Center. Laura is a certified yoga instructor with over six years of experience and a genuine passion for helping others feel grounded, strong, balanced, and connected through…",
   "url": "https://commonstreet.org/event/gentle-vinyasa-yoga-with-laura-pansire-3/",
   "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2026/10/gentle-vinyasa-yoga-laura-pansire.png",
   "weekly": {
    "day": "Saturday",
    "time": "09:30",
@@ -321,6 +285,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Bollywood Dance Workout with Purnima Part of the Embodied Weekend at Common Street Spiritual Center Come move, sweat, and smile. This is a full-body workout set to Bollywood music, songs so joyful it’s impossible to stand still. No dance experience is needed. Two left feet are welcome here. Purnima …",
   "url": "https://commonstreet.org/event/bollywood-dance-workout-3-3-2-2-3-2-2-3-6/",
   "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2025/01/BollyX-2025-Poster-1.png",
   "weekly": {
    "day": "Saturday",
    "time": "11:45",
@@ -344,7 +309,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Common Street Spiritual Center",
   "description": "Part of the Embodiment & Movement Weekend (Oct 23–25), in partnership with Collective Effervescence: a weekend of movement, somatics, safe non-sexual touch, and shared presence. Saturday schedule ($40–50 sliding scale for the full day). Full workshop descriptions, presenter bios and tickets are on t…",
   "url": "https://commonstreet.org/event/embodiment-movement-weekend-saturday/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2026/09/embodiment-movement-weekend-2026.png"
  },
  {
   "id": "cal-mountauburn-11146",
@@ -361,7 +327,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Mount Auburn Cemetery",
   "description": "Our popular Fall foliage tour returns for another year. Capacity: 30 people Experience the beauty of autumn at Mount Auburn during this fall walking tour led by Visitors Services Assistant, Jim Gorman. We will visit some of the more colorful trees in our landscape in addition to looking for plant an…",
   "url": "https://mountauburn.org/event/awash-in-color-a-fall-foliage-walking-tour-3/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://mountauburn.org/app/uploads/2024/10/c-Mount-Auburn-Cemetery-Fall-2.jpg"
  },
  {
   "id": "cal-commonstreet-44750",
@@ -378,7 +345,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Common Street Spiritual Center",
   "description": "Kirtan is a practice of chanting mantras which are relaxing sound formulas. Michael Orlando, the kirtan leader sings and the group responds back with the help of Lisa Leake, the response leader. Bruno Giles provides the drumming on a djembe drum to keep a steady rhythm. Kirtan is very helpful with r…",
   "url": "https://commonstreet.org/event/kirtan-east-west-october-24-2026/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2026/06/kirtan-east-west-flyer.png"
  },
  {
   "id": "cal-commonstreet-10025795",
@@ -395,7 +363,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Common Street Spiritual Center",
   "description": "A spiritual circle that is open to the public and is geared for adult participation (younger attendees must be able to maintain focus for the full 2 hours). SpiritDrum blends together meditative drumming, sacred chant and life-affirming ritual to create an experience that can bring inner peace and a…",
   "url": "https://commonstreet.org/event/spiritdrum/2026-10-24/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2025/12/AnCaHGkXMqKcXmvR.png"
  },
  {
   "id": "cal-commonstreet-community-yoga-restore-renew-with-paulin-sun",
@@ -411,12 +380,13 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Sundays, 6:00–7:00 PM Slow down, soften, and let yourself be held. Restorative yoga is the art of active relaxation — a practice of gentle, fully supported postures held with the help of props. It invites the nervous system to settle and the body to release what it’s been carrying. No experience nee…",
   "url": "https://commonstreet.org/event/community-yoga-restore-renew-with-pauline-2-2/",
   "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2026/07/restorative-yoga-flyer.png",
   "weekly": {
    "day": "Sunday",
    "time": "18:00",
    "endTime": "19:00",
    "from": "2026-10-25",
-   "until": "2026-12-13"
+   "until": "2026-12-20"
   }
  },
  {
@@ -434,7 +404,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Common Street Spiritual Center",
   "description": "Part of the Embodiment & Movement Weekend (Oct 23–25), in partnership with Collective Effervescence: a weekend of movement, somatics, safe non-sexual touch, and shared presence. Sunday schedule ($40–50 sliding scale for the full day). Full workshop descriptions, presenter bios and tickets are on the…",
   "url": "https://commonstreet.org/event/embodiment-movement-weekend-sunday/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2026/09/embodiment-movement-weekend-2026.png"
  },
  {
   "id": "cal-mountauburn-11114",
@@ -451,7 +422,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Mount Auburn Cemetery",
   "description": "Join former Artist-in-Residence Lonnie Stanton for a mindful workshop at Auburn Lake. Join former Artist-in-Residence Lonnie Stanton for a meditative walk and chair yoga class at Mount Auburn. This adult workshop is rooted in yoga, initiating movement through intentional breathwork. All bodies are w…",
   "url": "https://mountauburn.org/event/https-www-eventbrite-com-e-letting-go-a-meditative-walk-and-chair-yoga-class-at-auburn-lake-tickets-1998227485199affoddtdtcreator/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://mountauburn.org/app/uploads/2026/08/IMG_2498.jpg"
  },
  {
   "id": "cal-commonstreet-10028814",
@@ -468,7 +440,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Common Street Spiritual Center",
   "description": "What if healing could be as simple as lying down and listening? On the last Sunday of every month, our Open Circle gathers for a Community Sound Bath — an immersive, centering, and healing experience where sacred sound does the work and all you have to do is receive it. And when we come up from the …",
   "url": "https://commonstreet.org/event/community-sound-bath-open-circle/2026-10-25/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2026/07/Community-Sound-Bath1.png"
  },
  {
   "id": "cal-commonstreet-95935",
@@ -485,7 +458,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Common Street Spiritual Center",
   "description": "All are welcome. No experience necessary. From the tradition of the great love poet Rumi, these classes provide instruction in the whirling practice which polishes the heart, clears the mind, and trains the body to participate in wordless prayer. The format of the classes will usually include warm-u…",
   "url": "https://commonstreet.org/event/the-turning-practice-of-the-whirling-dervishes-2-4/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2026/01/whirling-dervishes-oct25-weekend.png"
  },
  {
   "id": "cal-commonstreet-gentle-jaguar-path-yoga-mon",
@@ -501,12 +475,59 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Jaguar Path yoga incorporates Vinyasa flow postures with a focus on opening the body’s meridians and expanding the Energy Body. This sixty minute all-levels class provides a gentle and complete physical stretch with space for breath awareness and meditation. Email leo.j.ryan@gmail to confirm your at…",
   "url": "https://commonstreet.org/event/gentle-jaguar-path-yoga-2-2-6/",
   "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2020/10/jaguar-path-yoga.jpg",
   "weekly": {
    "day": "Monday",
    "time": "07:30",
    "endTime": "08:30",
    "from": "2026-10-26",
    "until": "2026-12-14"
+  }
+ },
+ {
+  "id": "cal-commonstreet-gentle-vinyasa-yoga-with-laura-pansire-tue",
+  "title": "Gentle Vinyasa Yoga with Laura Pansire",
+  "category": "yoga",
+  "venue": "Common Street Spiritual Center",
+  "address": "13 Common St",
+  "city": "Natick, MA",
+  "lat": 42.2843,
+  "lng": -71.3497,
+  "price": null,
+  "host": "Common Street Spiritual Center",
+  "description": "Join Laura Pansire for Gentle Vinyasa Yoga on Tuesday afternoons, 5 to 6pm, in the Sanctuary at Common Street Spiritual Center. Laura is a certified yoga instructor with over six years of experience and a genuine passion for helping others feel grounded, strong, balanced, and connected through yoga.…",
+  "url": "https://commonstreet.org/event/gentle-vinyasa-yoga-with-laura-pansire-4/",
+  "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2026/10/gentle-vinyasa-yoga-laura-pansire.png",
+  "weekly": {
+   "day": "Tuesday",
+   "time": "17:00",
+   "endTime": "18:00",
+   "from": "2026-10-27",
+   "until": "2026-12-15"
+  }
+ },
+ {
+  "id": "cal-commonstreet-biodanza-the-dance-of-life-tue",
+  "title": "Biodanza – The Dance of Life",
+  "category": "movement",
+  "venue": "Common Street Spiritual Center · Moon Room",
+  "address": "13 Common St",
+  "city": "Natick, MA",
+  "lat": 42.2843,
+  "lng": -71.3497,
+  "price": null,
+  "host": "Common Street Spiritual Center",
+  "description": "Join us in a welcoming and compassionate space to dance, to play, to connect with our emotions all while revealing our identity through music, movement and group interaction. Biodanza invites us to transition from daily roles (masks) to the authentic self, using the music, the movement and group int…",
+  "url": "https://commonstreet.org/event/biodanza-the-dance-of-life/",
+  "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2026/07/Biodanza-Fall-Series-CSSC-2026.png",
+  "weekly": {
+   "day": "Tuesday",
+   "time": "19:00",
+   "endTime": "21:00",
+   "from": "2026-10-27",
+   "until": "2026-12-08"
   }
  },
  {
@@ -524,7 +545,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Common Street Spiritual Center",
   "description": "Hosted by Amber and John Featuring: Live Acoustic Music Join your fellow artists and musicians for an evening of creativity! Bring your latest arts/crafts project or start a new one! Bring your own materials or use ours! When: Thursday, October 29 7–9 PM Where: Common Street Spiritual Center Sanctua…",
   "url": "https://commonstreet.org/event/art-sanctuary/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2026/08/Art-Sanctuary-9.webp"
  },
  {
   "id": "cal-commonstreet-10030893",
@@ -541,7 +563,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Common Street Spiritual Center",
   "description": "Join us on the 1st and 3rd Sundays of the month from 9-10am for a time of meditation practice, mixing silent and guided modalities, breath work, chanting, and reflection. This is a space to quiet the mind, deepen your peace, and build community with fellow seekers. You’re welcome whether you’re new …",
   "url": "https://commonstreet.org/event/community-meditation/2026-11-01/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2026/08/Community-Meditation-no-dates.png"
  },
  {
   "id": "cal-mountauburn-11148",
@@ -558,7 +581,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Mount Auburn Cemetery",
   "description": "Our popular Fall foliage tour returns for another year. Capacity: 30 people Experience the beauty of autumn at Mount Auburn during this fall walking tour led by Visitors Services Assistant, Jim Gorman. We will visit some of the more colorful trees in our landscape in addition to looking for plant an…",
   "url": "https://mountauburn.org/event/awash-in-color-a-fall-foliage-walking-tour-4/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://mountauburn.org/app/uploads/2024/10/c-Mount-Auburn-Cemetery-Fall-2.jpg"
  },
  {
   "id": "cal-commonstreet-tai-chi-with-boris-klebanov-tue",
@@ -574,6 +598,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Discover the ancient art of Tai Chi, a gentle yet powerful practice that combines flowing movements, mindful breathing, and focused awareness to bring harmony to your body and mind. Join Boris Klebanov every Tuesday evening for a welcoming class designed for all levels, from complete beginners to ex…",
   "url": "https://commonstreet.org/event/tai-chi-with-boris-klebanov/",
   "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2026/10/tai-chi-flyer.jpg",
   "weekly": {
    "day": "Tuesday",
    "time": "19:00",
@@ -597,7 +622,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Common Street Spiritual Center",
   "description": "Imagine not just listening to a song, but being immersed in song- moving, feeling, and adding energy to the music as it’s happening. Seraphine is a local singer-songwriter and percussionist who is no longer content with the old model of simply singing to an audience. There are themes and truths in m…",
   "url": "https://commonstreet.org/event/live-ecstatic-dance-with-seraphine/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2026/07/IMG_3105-scaled.png"
  },
  {
   "id": "cal-mountauburn-11155",
@@ -614,7 +640,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Mount Auburn Cemetery",
   "description": "Join us November 4th at 2pm to discuss, “The Serviceberry: Abundance and Reciprocity in the Natural World” by Robin Wall Kimmerer. REGISTER HERE>> Experience a deeper connection to Mount Auburn Cemetery with free or discounted access to all our public programs and special events by joining the Frien…",
   "url": "https://mountauburn.org/event/book-club-the-camera-does-the-rest-how-polaroid-changed-photography/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://mountauburn.org/app/uploads/2026/08/image-3.webp"
  },
  {
   "id": "cal-mountauburn-10000594",
@@ -631,7 +658,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Mount Auburn Cemetery",
   "description": "This 1.5-mile walking tour will focus on stories of history, monuments, and the lives of those buried here. Mount Auburn, designated a National Historic Landmark, is one of the country’s most significant designed landscapes. Here the arts of horticulture, architecture and sculpture combine with the …",
   "url": "https://mountauburn.org/event/discover-mount-auburn-walking-tour-6/2026-11-07/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://mountauburn.org/app/uploads/2025/08/54639445961_da33fa0a96_o-1.jpg"
  },
  {
   "id": "cal-mountauburn-10752",
@@ -648,7 +676,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Mount Auburn Cemetery",
   "description": "Join Stefanie Haug , LICSW, ecotherapist and nature and meditation teacher as we step into the restorative beauty of Mount Auburn Cemetery for a gentle, guided mindful nature walk. Together, we’ll slow down, awaken our senses, and experience the healing benefits of being fully present in the natural…",
   "url": "https://mountauburn.org/event/https-www-eventbrite-com-e-1992826197803affoddtdtcreator/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://mountauburn.org/app/uploads/2026/02/Nature-Nourishment-.jpg"
  },
  {
   "id": "cal-mountauburn-11143",
@@ -665,7 +694,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Mount Auburn Cemetery",
   "description": "A celebration of America’s most widespread hardwood tree. Capacity: 30 people We just celebrated our 195 th birthday, and of all our Cemetery trees, there are few that are more majestic and revered than our legacy oak trees. Join us as we will view a sampling of spectacular, mature oaks believed to …",
   "url": "https://mountauburn.org/event/great-oaks-a-walking-tour/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://mountauburn.org/app/uploads/2026/08/Oak-crop.jpg"
  },
  {
   "id": "cal-commonstreet-10026578",
@@ -682,7 +712,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Common Street Spiritual Center",
   "description": "All are welcome. No experience necessary. From the tradition of the great love poet Rumi, these classes provide instruction in the whirling practice which polishes the heart, clears the mind, and trains the body to participate in wordless prayer. The format of the classes will usually include warm-u…",
   "url": "https://commonstreet.org/event/the-turning-practice-of-the-whirling-dervishes/2026-11-08/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2026/01/Turn-Classes.png"
  },
  {
   "id": "cal-mountauburn-11153",
@@ -699,7 +730,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Mount Auburn Cemetery",
   "description": "An indoor Guided Meditation, Relaxation and Sound Experience. Sound Healing practitioner Marlene Boyette welcomes all to be held by the earth, to find refuge, to rest, and to be led through a guided meditation intended to bring the mind and the body into unison, while also engaging the senses. Weavi…",
   "url": "https://mountauburn.org/event/https-www-eventbrite-com-e-1999025451939affoddtdtcreator/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://mountauburn.org/app/uploads/2026/05/soundbath-1.jpg"
  },
  {
   "id": "cal-commonstreet-95636",
@@ -716,7 +748,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Common Street Spiritual Center",
   "description": "NOVEMBER 14 — EMBODIED ALIGNMENT Tickets (sliding scale): $25 – $35 https://www.danielmontoyareiki.com/events/reiki-dance REIKI DANCE is a live healing experience combining Reiki, somatic movement, meditation, intuitive dance, live music, and sound healing to support relaxation, stress reduction, em…",
   "url": "https://commonstreet.org/event/reiki-dance-embodied-aligmnet/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2026/09/Reiki-Dance-Nov-14-2026_v4.jpg"
  },
  {
   "id": "cal-commonstreet-10025735",
@@ -733,7 +766,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Common Street Spiritual Center",
   "description": "A freestyle drum and dance circle that is open to the public and welcomes all skill levels, ages 12 and up. Some extra drums are available for borrowing, but people are encouraged to bring their own drums and percussion instruments. 2nd Saturday monthly, 7pm to 9pm (setup starts at 6:30pm) $5 per pe…",
   "url": "https://commonstreet.org/event/natick-drum-circle-4/2026-11-14/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2025/12/251zYIC18vOY1wr6.png"
  },
  {
   "id": "cal-commonstreet-10030912",
@@ -750,7 +784,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Common Street Spiritual Center",
   "description": "Join us on the 1st and 3rd Sundays of the month from 9-10am for a time of meditation practice, mixing silent and guided modalities, breath work, chanting, and reflection. This is a space to quiet the mind, deepen your peace, and build community with fellow seekers. You’re welcome whether you’re new …",
   "url": "https://commonstreet.org/event/community-meditation-2/2026-11-15/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2026/08/Community-Meditation-no-dates.png"
  },
  {
   "id": "cal-commonstreet-96769",
@@ -767,7 +802,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Common Street Spiritual Center",
   "description": "Coming Home to Yourself: Community Yoga Nidra with Dr. Sally Nazari, PsyD When: Sunday, November 15, 2026, 6:30–8:00 PM Where: Sanctuary at Common Street Spiritual Center, 13 Common Street, Natick, MA Cost: By donation. This is a free community offering, and all are welcome whether or not they give.…",
   "url": "https://commonstreet.org/event/coming-home-to-yourself-community-yoga-nidra-2/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2026/10/CS-Yoga-Nidra-Nov-Flyer.png"
  },
  {
   "id": "cal-mountauburn-10754",
@@ -784,7 +820,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Mount Auburn Cemetery",
   "description": "Join us for a hands-on fall centerpiece making workshop led by a member of Mount Auburn’s Greenhouse team. Learn the basics of seasonal arrangements while creating your own fall- themed centerpiece inspired by the beauty of the landscape! All materials will be provided by Mount Auburn and are includ…",
   "url": "https://mountauburn.org/event/https-www-eventbrite-com-e-fall-centerpiece-making-workshop-tickets-1992827394382affoddtdtcreator/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://mountauburn.org/app/uploads/2026/08/Fall-Floral--e1787688817788.jpg"
  },
  {
   "id": "cal-commonstreet-10026698",
@@ -801,7 +838,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Common Street Spiritual Center",
   "description": "All are welcome. No experience necessary. From the tradition of the great love poet Rumi, these classes provide instruction in the whirling practice which polishes the heart, clears the mind, and trains the body to participate in wordless prayer. The format of the classes will usually include warm-u…",
   "url": "https://commonstreet.org/event/the-turning-practice-of-the-whirling-dervishes-2/2026-11-22/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2026/01/Turn-Classes.png"
  },
  {
   "id": "cal-commonstreet-10025796",
@@ -818,7 +856,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Common Street Spiritual Center",
   "description": "A spiritual circle that is open to the public and is geared for adult participation (younger attendees must be able to maintain focus for the full 2 hours). SpiritDrum blends together meditative drumming, sacred chant and life-affirming ritual to create an experience that can bring inner peace and a…",
   "url": "https://commonstreet.org/event/spiritdrum/2026-11-28/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2025/12/AnCaHGkXMqKcXmvR.png"
  },
  {
   "id": "cal-commonstreet-44747",
@@ -835,7 +874,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Common Street Spiritual Center",
   "description": "A blend of traditional chants with western instrumentation and melodies in a call and response format. An active, effective way to meditate. No previous chanting experience necessary. All are welcome!",
   "url": "https://commonstreet.org/event/kirtan-east-west-november-28-2026/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2026/06/Kirtan-Event-November-28-2026-PNG-scaled.png"
  },
  {
   "id": "cal-commonstreet-10028815",
@@ -852,7 +892,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Common Street Spiritual Center",
   "description": "What if healing could be as simple as lying down and listening? On the last Sunday of every month, our Open Circle gathers for a Community Sound Bath — an immersive, centering, and healing experience where sacred sound does the work and all you have to do is receive it. And when we come up from the …",
   "url": "https://commonstreet.org/event/community-sound-bath-open-circle/2026-11-29/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2026/07/Community-Sound-Bath1.png"
  },
  {
   "id": "cal-mountauburn-10000656",
@@ -869,7 +910,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Mount Auburn Cemetery",
   "description": "This 1.5-mile walking tour will focus on stories of history, monuments, and the lives of those buried here. Mount Auburn, designated a National Historic Landmark, is one of the country’s most significant designed landscapes. Here the arts of horticulture, architecture and sculpture combine with the …",
   "url": "https://mountauburn.org/event/discover-mount-auburn-walking-tour-6/2026-12-05/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://mountauburn.org/app/uploads/2025/08/54639445961_da33fa0a96_o-1.jpg"
  },
  {
   "id": "cal-commonstreet-10030894",
@@ -886,7 +928,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Common Street Spiritual Center",
   "description": "Join us on the 1st and 3rd Sundays of the month from 9-10am for a time of meditation practice, mixing silent and guided modalities, breath work, chanting, and reflection. This is a space to quiet the mind, deepen your peace, and build community with fellow seekers. You’re welcome whether you’re new …",
   "url": "https://commonstreet.org/event/community-meditation/2026-12-06/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2026/08/Community-Meditation-no-dates.png"
  },
  {
   "id": "cal-commonstreet-10025736",
@@ -903,7 +946,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Common Street Spiritual Center",
   "description": "A freestyle drum and dance circle that is open to the public and welcomes all skill levels, ages 12 and up. Some extra drums are available for borrowing, but people are encouraged to bring their own drums and percussion instruments. 2nd Saturday monthly, 7pm to 9pm (setup starts at 6:30pm) $5 per pe…",
   "url": "https://commonstreet.org/event/natick-drum-circle-4/2026-12-12/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2025/12/251zYIC18vOY1wr6.png"
  },
  {
   "id": "cal-commonstreet-10026579",
@@ -920,6 +964,25 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Common Street Spiritual Center",
   "description": "All are welcome. No experience necessary. From the tradition of the great love poet Rumi, these classes provide instruction in the whirling practice which polishes the heart, clears the mind, and trains the body to participate in wordless prayer. The format of the classes will usually include warm-u…",
   "url": "https://commonstreet.org/event/the-turning-practice-of-the-whirling-dervishes/2026-12-13/",
-  "source": "Venue calendar"
+  "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2026/01/Turn-Classes.png"
+ },
+ {
+  "id": "cal-commonstreet-10030913",
+  "title": "Community Meditation",
+  "category": "meditation",
+  "start": "2026-12-20T09:00",
+  "end": "2026-12-20T10:00",
+  "venue": "Common Street Spiritual Center · Moon Room",
+  "address": "13 Common St",
+  "city": "Natick, MA",
+  "lat": 42.2843,
+  "lng": -71.3497,
+  "price": null,
+  "host": "Common Street Spiritual Center",
+  "description": "Join us on the 1st and 3rd Sundays of the month from 9-10am for a time of meditation practice, mixing silent and guided modalities, breath work, chanting, and reflection. This is a space to quiet the mind, deepen your peace, and build community with fellow seekers. You’re welcome whether you’re new …",
+  "url": "https://commonstreet.org/event/community-meditation-2/2026-12-20/",
+  "source": "Venue calendar",
+  "image": "https://commonstreet.org/wp-content/uploads/2026/08/Community-Meditation-no-dates.png"
  }
 ]);

@@ -3,13 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Good Nearby — find what makes you feel good. One calm question, one good thing to do nearby. Yoga, sound baths, meditation, massage and gatherings across Greater Boston, MetroWest and the South Shore." />
+  <meta name="description" content="Good Nearby — find what makes you feel good. Yoga, sound baths, meditation, creative and herbal classes, book groups and cozy cafés near Franklin, MetroWest, Boston and the South Shore." />
   <title>Good Nearby — Find what makes you feel good</title>
   <link rel="icon" href="assets/sunflower.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#f7f1e7">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Good Nearby">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Jost:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=31" />
+  <link rel="stylesheet" href="styles.css?v=33" />
 </head>
 <body>
   <div class="backdrop" aria-hidden="true"></div>
@@ -31,6 +37,7 @@
         <h1 id="startTitle">Find what makes you <em>feel&nbsp;good.</em></h1>
         <p class="lede">One question. One good thing at a time. Nearby in Greater Boston, MetroWest &amp; the South Shore.</p>
 
+        <div class="where-box" id="whereBox" aria-live="polite"></div>
         <h2 class="ask">What would feel good right&nbsp;now?</h2>
         <div class="moods" id="moods"></div>
 
@@ -56,11 +63,7 @@
           <span aria-hidden="true">→</span>
         </a>
 
-        <label class="near-toggle">
-          <input type="checkbox" id="nearMe">
-          <span>Show what's closest to me first</span>
-        </label>
-        <p class="hint" id="nearNote" aria-live="polite"></p>
+
       </div>
     </section>
 
@@ -307,16 +310,17 @@
     <span>Good Nearby · Find what makes you feel good · Photos via Unsplash &amp; Pexels</span>
   </footer>
 
-  <script src="data/events.js?v=31"></script>
-  <script src="data/events-eventbrite.js?v=31"></script>
-  <script src="data/events-move-shops.js?v=31"></script>
-  <script src="data/events-venues.js?v=31"></script>
-  <script src="data/events-cafes.js?v=31"></script>
-  <script src="data/events-libraries.js?v=31"></script>
-  <script src="data/events-herbal.js?v=31"></script>
-  <script src="data/events-meditation.js?v=31"></script>
-  <script src="data/events-calendars.js?v=31"></script>
-  <script src="data/towns.js?v=31"></script>
-  <script src="app.js?v=31"></script>
+  <script src="data/events.js?v=33"></script>
+  <script src="data/events-eventbrite.js?v=33"></script>
+  <script src="data/events-move-shops.js?v=33"></script>
+  <script src="data/events-venues.js?v=33"></script>
+  <script src="data/events-cafes.js?v=33"></script>
+  <script src="data/events-libraries.js?v=33"></script>
+  <script src="data/events-herbal.js?v=33"></script>
+  <script src="data/events-meditation.js?v=33"></script>
+  <script src="data/events-calendars.js?v=33"></script>
+  <script src="data/events-meetup.js?v=33"></script>
+  <script src="data/towns.js?v=33"></script>
+  <script src="app.js?v=33"></script>
 </body>
 </html>

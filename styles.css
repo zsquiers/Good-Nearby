@@ -57,6 +57,17 @@ h1, h2 {
   transition: opacity .6s ease, filter .6s ease;
 }
 body:not([data-screen="start"]):not([data-screen="browse"]) .backdrop { opacity: .28; filter: blur(14px) saturate(1.1); }
+.backdrop::after {
+  content: "";
+  position: absolute;
+  right: -1vw;
+  bottom: -2vh;
+  width: min(30vw, 46vh);
+  aspect-ratio: 420 / 640;
+  background: url("assets/sunflowers.svg") bottom right / contain no-repeat;
+  filter: drop-shadow(0 10px 24px rgba(57, 49, 31, .25));
+  pointer-events: none;
+}
 
 /* ---------- Top bar: logo + saved, nothing else ---------- */
 .topbar {
@@ -530,6 +541,7 @@ h3.ask { display: flex; align-items: center; }
       var(--hero) 62% center / cover no-repeat,
       linear-gradient(160deg, #f6e3c8, #e3b98f 60%, #b98c62);
   }
+  .backdrop::after { display: none; }
   .topbar { padding-top: 14px; }
   .start { align-items: flex-start; min-height: 0; padding-top: 8px; }
   .start-card { background: rgba(251, 247, 239, .9); }
@@ -591,3 +603,18 @@ table.hours tr.today th, table.hours tr.today td { color: var(--ink); font-weigh
 .pick-actions.two { grid-template-columns: 1fr 1.4fr; }
 .show-more { margin-top: 10px; width: 100%; padding: 12px; border-radius: 14px; border: 1.5px dashed var(--line); background: transparent; color: var(--clay); font: inherit; font-weight: 700; cursor: pointer; }
 .show-more:hover { border-color: var(--clay); }
+
+/* "Where are you?" */
+.where-box { margin: 4px 0 18px; }
+.where-ask { display: block; font-weight: 700; font-size: 1.02rem; margin-bottom: 8px; }
+.where-ask span { font-weight: 500; color: var(--ink-soft); font-size: .9rem; margin-left: 4px; }
+.where-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.where-row input { flex: 1 1 180px; min-width: 0; font: inherit; padding: 11px 14px; border-radius: 14px; border: 1.5px solid var(--line); background: #fff; }
+.where-btn { font: inherit; font-weight: 600; padding: 11px 14px; border-radius: 14px; border: 1.5px solid var(--line); background: #fff; color: var(--ink); cursor: pointer; }
+.where-set { margin: 0; color: var(--ink-soft); }
+.where-set strong { color: var(--ink); }
+.where-box .hint { margin: 6px 0 0; font-size: .82rem; color: var(--ink-soft); }
+/* progress dots for "Just 3" */
+.dots { display: inline-flex; gap: 6px; align-items: center; }
+.dots i { width: 8px; height: 8px; border-radius: 50%; background: var(--line); display: block; }
+.dots i.on { background: var(--clay); }
