@@ -156,13 +156,16 @@
   let browseArea = areaById.has(load("goodNearby.area", "")) ? load("goodNearby.area", "") : null;
 
   // An event's area: its town by name, otherwise the nearest listed town.
+  // Nearby means about 30 minutes' drive: farther than that from every listed town → only under "Everywhere".
+  const AREA_CAP_MILES = 15;   // ≈ 30 minutes' drive (same estimate as driveMin)
   function areaOf(e) {
     const name = e.city.replace(/, MA$/, "").trim().toLowerCase();
     const match = allTowns.find((t) => t.name.toLowerCase() === name);
     if (match) return match.areaId;
+    if (e.lat == null) return null;
     let best = null, bestMi = Infinity;
     for (const t of allTowns) { const mi = distanceMiles(e, t); if (mi < bestMi) { best = t; bestMi = mi; } }
-    return best ? best.areaId : null;
+    return best && bestMi <= AREA_CAP_MILES ? best.areaId : null;
   }
   events.forEach((e) => { e.area = areaOf(e); });
   const inArea = (e, areaId) => areaId === "all" || e.area === areaId;
@@ -311,10 +314,12 @@
     const h = Math.sin(dLat / 2) ** 2 + Math.cos(toRad(a.lat)) * Math.cos(toRad(b.lat)) * Math.sin(dLng / 2) ** 2;
     return 2 * R * Math.asin(Math.sqrt(h));
   }
+  // Rough drive time from straight-line miles (winding roads, highways for longer trips, a few minutes to park).
+  const driveMin = (e) => Math.round(distanceMiles(origin, e) * 1.7 + 4);
   const milesText = (e) => {
-    if (!origin) return "";
-    const d = distanceMiles(origin, e);
-    return `${d < 10 ? d.toFixed(1) : Math.round(d)} mi away`;
+    if (!origin || e.lat == null) return "";
+    const m = driveMin(e);
+    return m < 60 ? `~${m} min away` : `~${Math.floor(m / 60)} hr ${m % 60 ? `${m % 60} min ` : ""}away`;
   };
 
   // ---------- decks ----------
@@ -341,14 +346,32 @@
     }
     const mood = MOODS.find((m) => m.id === moodId);
     if (!mood) return [];
-    const list = events.filter(mood.match);
-    if (origin) {
-      // Closest first, but dated events before open-ended ones.
-      list.sort((a, b) => (Boolean(b.next) - Boolean(a.next)) || distanceMiles(origin, a) - distanceMiles(origin, b));
-    } else {
-      list.sort(bySoonest);
+    return bestFirst(events.filter(mood.match)).map((e) => e.id);
+  }
+
+  // The best few first: soon, close, hand-checked, free or come-alone — and not the same host twice in a row.
+  function score(e) {
+    let sc = 0;
+    if (e.next) {
+      const days = (startOfDay(e.next.start) - startOfDay(now)) / DAY_MS;
+      sc += days <= 2 ? 3 : days <= 7 ? 2 : days <= 14 ? 1 : 0;
+    } else sc += 1;
+    sc += e.source === "Eventbrite" ? 0 : e.source ? 1 : 2;
+    if (e.price === 0) sc += 1;
+    if ((e.tags || []).includes("come-alone")) sc += 0.5;
+    if (origin && e.lat != null) sc -= distanceMiles(origin, e) / 8;
+    return sc;
+  }
+  function bestFirst(list) {
+    const pool = list.map((e) => ({ e, s: score(e) })).sort((a, b) => b.s - a.s);
+    const out = [], recent = [];
+    while (pool.length) {
+      let k = pool.findIndex((x) => !recent.includes(x.e.host));
+      if (k < 0) k = 0;
+      const [x] = pool.splice(k, 1);
+      out.push(x.e); recent.push(x.e.host); if (recent.length > 3) recent.shift();
     }
-    return list.map((e) => e.id);
+    return out;
   }
 
   // ---------- calendar file (.ics) ----------
@@ -419,7 +442,7 @@
   const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // base: the URL prefix for the current deck; day: the chosen day when browsing by day
-  const state = { mood: null, deck: [], index: 0, base: "", day: null, back: null };
+  const state = { mood: null, deck: [], index: 0, base: "", day: null, back: null, limit: Infinity, deckBuiltFor: null };
 
   function showScreen(name) {
     Object.entries(screens).forEach(([k, el]) => { el.hidden = k !== name; });
@@ -444,19 +467,50 @@
         </span>
         <span class="mood-arrow" aria-hidden="true">→</span>
       </button>`).join("");
-    $("nearMe").checked = Boolean(origin);
-    $("nearNote").textContent = origin ? "Using your location — it stays on this device." : "";
+    renderWhere();
   }
 
   function photo(e, w) {
     const cat = CATEGORY[e.category];
+    // The event's own picture when we have one, otherwise a photo for its category.
     // A photo that fails to load is removed, leaving the warm gradient behind it.
+    if (e.image) return `<img src="${escapeHtml(e.image)}" alt="" onerror="this.remove()">`;
     return cat ? `<img src="${unsplash(cat.photo, w)}" alt="" onerror="this.remove()">` : "";
+  }
+
+  async function shareListing(e, btn) {
+    const url = `${location.origin}${location.pathname}#/e/${encodeURIComponent(e.id)}`;
+    const when = e.sessions ? `${whenBig(e).replace(/<[^>]+>/g, "")} · ` : "";
+    const text = `${e.title} — ${when}${e.city.replace(/, MA$/, "")}. Want to go? 🌻`;
+    try {
+      if (navigator.share) { await navigator.share({ title: e.title, text, url }); return; }
+      await navigator.clipboard.writeText(`${text}\n${url}`);
+      btn.innerHTML = '<span aria-hidden="true">✓</span> Link copied — paste it in a text';
+    } catch (_) { /* closed the share sheet — nothing to do */ }
   }
 
   function renderPick(focusTitle) {
     const card = $("pickCard");
     const total = state.deck.length;
+
+    // "Just 3 for you": after each batch, a gentle pause instead of an endless stack.
+    if (state.index >= state.limit && state.index < total) {
+      $("progress").innerHTML = '<button type="button" class="quiet-link" data-act="prev">‹ Back</button>';
+      const left = total - state.index;
+      card.innerHTML = `
+        <div class="pick-body done">
+          <p class="done-mark" aria-hidden="true">🌻</p>
+          <h2 id="pickTitle" tabindex="-1">That's your ${state.limit === 3 ? "3" : "picks"} for now.</h2>
+          <p class="lede">Save the one that feels right, or see a few more.</p>
+          <div class="done-actions">
+            <button type="button" class="btn btn-dark" data-act="more">Show me ${Math.min(3, left)} more</button>
+            <a href="#/" class="btn btn-soft">Pick another feeling</a>
+            ${saved.size ? `<a href="#/saved" class="btn btn-soft">See what I saved (${saved.size})</a>` : ""}
+          </div>
+        </div>`;
+      afterRender(focusTitle);
+      return;
+    }
 
     if (state.index >= total) {
       $("progress").textContent = "";
@@ -478,9 +532,14 @@
 
     const e = byId.get(state.deck[state.index]);
     const isSaved = saved.has(e.id);
+    const batched = Number.isFinite(state.limit);
+    const batchStart = batched ? Math.floor(state.index / 3) * 3 : 0;
+    const batchSize = batched ? Math.min(3, total - batchStart) : 0;
     $("progress").innerHTML =
       `${state.index > 0 ? '<button type="button" class="quiet-link" data-act="prev">‹ Back</button>' : ""}` +
-      `<span>${state.index + 1} of ${total}</span>`;
+      (batched
+        ? `<span class="dots" aria-label="${state.index - batchStart + 1} of ${batchSize}">${Array.from({ length: batchSize }, (_, k) => `<i class="${batchStart + k === state.index ? "on" : ""}"></i>`).join("")}</span>`
+        : `<span>${state.index + 1} of ${total}</span>`);
 
     const where = [e.venue && e.venue !== e.title && !e.title.startsWith(e.venue) ? e.venue : "", e.city.replace(/, MA$/, ""), milesText(e)].filter(Boolean).map(escapeHtml).join(" · ");
     const placeQuery = encodeURIComponent([e.venue, e.address, e.city].filter(Boolean).join(", "));
@@ -508,6 +567,7 @@
             ${place ? `<a class="go-btn" href="${mapUrl}" target="_blank" rel="noopener"><span aria-hidden="true">⭐</span> Reviews, photos &amp; map</a>` : ""}
             ${e.menu ? `<a class="go-btn" href="${escapeHtml(e.menu)}" target="_blank" rel="noopener"><span aria-hidden="true">🍽️</span> Menu</a>` : ""}
             ${e.url ? `<a class="go-btn" href="${escapeHtml(e.url)}" target="_blank" rel="noopener"><span aria-hidden="true">${place ? "🌐" : "🎟️"}</span> ${e.sessions ? "Sign up / details" : place ? "Website" : "Book / see schedule"}</a>` : ""}
+            <button type="button" class="go-btn" data-act="share"><span aria-hidden="true">💬</span> Send to a friend</button>
             ${e.phone ? `<a class="go-btn" href="tel:${escapeHtml(e.phone.replace(/[^\d+]/g, ""))}"><span aria-hidden="true">📞</span> Call ${escapeHtml(e.phone)}</a>` : ""}
           </div>
           <p class="confirm">Details can change — a quick check with the host is always a good idea.</p>
@@ -518,7 +578,7 @@
           <span aria-hidden="true">${isSaved ? "♥" : "♡"}</span> ${isSaved ? "Saved" : "Save"}
         </button>
         ${place ? "" : `<button type="button" class="act" data-act="go" aria-expanded="false" aria-controls="goPanel">I'm in</button>`}
-        <button type="button" class="act act-next" data-act="next">${state.index + 1 < total ? "Next" : "Done"} <span aria-hidden="true">→</span></button>
+        <button type="button" class="act act-next" data-act="next">${state.index + 1 < Math.min(total, state.limit) ? "Next" : "Done"} <span aria-hidden="true">→</span></button>
       </div>`;
     afterRender(focusTitle);
   }
@@ -828,6 +888,7 @@
         state.mood = arg;
         state.deck = buildDeck(arg);
       }
+      if (state.deckBuiltFor !== arg) { state.limit = (MOODS.some((m) => m.id === arg) || arg === "surprise") ? 3 : Infinity; state.deckBuiltFor = arg; }
       state.base = `#/m/${arg}`;
       state.back = arg === "saved" ? { href: "#/saved", label: "← Back to saved" }
         : arg === "weekend" ? { href: "#/weekend", label: "← Back to Weekend Favorites" } : null;
@@ -851,6 +912,12 @@
       state.index = Math.min(Math.max(parseInt(parts[3], 10) || 0, 0), state.deck.length);
       showScreen("pick");
       renderPick(true);
+      return;
+    }
+    if (kind === "e" && arg && byId.has(decodeURIComponent(arg))) {
+      state.mood = `e:${arg}`; state.deck = [decodeURIComponent(arg)]; state.limit = Infinity; state.deckBuiltFor = null;
+      state.day = null; state.base = `#/e/${arg}`; state.back = null; setPickBack();
+      state.index = 0; showScreen("pick"); renderPick(true);
       return;
     }
     if (kind === "p" && areaById.has(arg)) {
@@ -1007,6 +1074,8 @@
           break;
         }
         case "calendar": downloadIcs(e); break;
+        case "more": state.limit += 3; renderPick(true); break;
+        case "share": shareListing(e, act); break;
       }
       return;
     }
@@ -1136,31 +1205,48 @@
     setTimeout(() => signup.reset(), 500);
   });
 
-  // "Show what's closest to me first"
-  $("nearMe").addEventListener("change", (ev) => {
-    const note = $("nearNote");
-    if (!ev.target.checked) {
-      origin = null;
-      store("goodNearby.origin", null);
-      note.textContent = "";
+  // ---------- "Where are you?" — asked once, remembered on this device ----------
+  function renderWhere(note) {
+    const box = $("whereBox");
+    if (origin) {
+      box.innerHTML = `<p class="where-set">📍 Near <strong>${escapeHtml(origin.name || "you")}</strong> · closest first
+        <button type="button" class="inline-link" id="whereChange">change</button></p>`;
       return;
     }
-    if (!("geolocation" in navigator)) {
-      ev.target.checked = false;
-      note.textContent = "Your browser can't share location — we'll show what's soonest instead.";
-      return;
-    }
-    note.textContent = "Finding you…";
+    box.innerHTML = `<label class="where-ask" for="whereTown">Where are you? <span>So we can show what's close</span></label>
+      <div class="where-row">
+        <input id="whereTown" list="whereTowns" placeholder="Your town, e.g. Franklin" autocomplete="address-level2">
+        <button type="button" class="where-btn" id="whereGeo">📍 Use my location</button>
+      </div>
+      <datalist id="whereTowns">${allTowns.map((t) => `<option value="${escapeHtml(t.name)}">`).join("")}</datalist>
+      <p class="hint">${note || "Stays on this device. You can skip this."}</p>`;
+  }
+  function setOrigin(o) {
+    origin = o; store("goodNearby.origin", o);
+    const near = o && allTowns.reduce((b, t) => (distanceMiles(o, t) < distanceMiles(o, b) ? t : b), allTowns[0]);
+    if (near) { browseArea = near.areaId; store("goodNearby.area", browseArea); }
+    events.forEach((e) => { e.area = areaOf(e); });
+    state.deck = []; state.deckBuiltFor = null;
+    renderWhere();
+  }
+  document.addEventListener("change", (ev) => {
+    if (ev.target.id !== "whereTown") return;
+    const t = allTowns.find((x) => x.name.toLowerCase() === ev.target.value.trim().toLowerCase());
+    if (t) setOrigin({ lat: t.lat, lng: t.lng, name: t.name });
+    else renderWhere("We don't know that town yet — try a nearby one, or use your location.");
+  });
+  document.addEventListener("click", (ev) => {
+    if (ev.target.id === "whereChange") { origin = null; store("goodNearby.origin", null); renderWhere(); $("whereTown")?.focus(); }
+    if (ev.target.id !== "whereGeo") return;
+    if (!("geolocation" in navigator)) { renderWhere("Your browser can't share location — type your town instead."); return; }
+    ev.target.textContent = "Finding you…";
     navigator.geolocation.getCurrentPosition(
       (pos) => {
-        origin = { lat: +pos.coords.latitude.toFixed(3), lng: +pos.coords.longitude.toFixed(3) };
-        store("goodNearby.origin", origin);
-        note.textContent = "Got it — closest first. Your location stays on this device.";
+        const o = { lat: +pos.coords.latitude.toFixed(3), lng: +pos.coords.longitude.toFixed(3) };
+        const near = allTowns.reduce((b, t) => (distanceMiles(o, t) < distanceMiles(o, b) ? t : b), allTowns[0]);
+        setOrigin({ ...o, name: near ? near.name : "you" });
       },
-      () => {
-        ev.target.checked = false;
-        note.textContent = "No worries — we'll show what's soonest instead.";
-      },
+      () => renderWhere("No worries — type your town instead, or skip it."),
       { enableHighAccuracy: false, timeout: 10000, maximumAge: 600000 }
     );
   });

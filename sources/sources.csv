@@ -8,7 +8,7 @@ Boston Parks Fitness Series,Boston area,events,monthly,https://www.boston.gov/ca
 Boston Public Library yoga & meditation,Boston area,events,monthly,https://bpl.bibliocommons.com/v2/events?q=yoga,Also try ?q=meditation
 Mount Auburn Cemetery events,Boston area,events,monthly,https://mountauburn.org/events/,Sunset sound baths and nature walks
 Mass Audubon programs,Everywhere,events,monthly,https://www.massaudubon.org/programs,"Filter to Stony Brook (Norfolk) and Broadmoor (Natick); forest bathing, guided walks"
-Meetup — meditation near Boston,Boston area,events,monthly,https://www.meetup.com/find/?keywords=meditation&location=us--ma--Boston,Free meditation groups; only list ones with a real place and time
+Meetup search,Everywhere,meetup,monthly,https://www.meetup.com/find/?keywords=meditation&location=us--ma--Franklin,"Run tools/meetup_collect.py — it searches 8 towns × 8 calm words, in-person only"
 Healing With Spirit,South Shore,events,monthly,https://www.eventbrite.com/o/healing-with-spirit-3874767831,Sound healing gatherings in Hingham
 Plymouth Recreation,South Shore,events,monthly,https://plymouthma.myrec.com/info/activities/default.aspx,Kripalu yoga series and other classes
 Healing by Wilhelmina,Boston area,events,monthly,https://healingbywilhelmina.com/public-event-and-retreats,Sound baths and retreats

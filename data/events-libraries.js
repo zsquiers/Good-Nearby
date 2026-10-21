@@ -2,132 +2,6 @@
 // Made by tools/library_collect.py; re-run it rather than editing by hand.
 window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
  {
-  "id": "lib-bellinghamlibrary-fall-into-yoga-october-2026-2-2026-10-20",
-  "title": "Fall into Yoga / October 2026",
-  "category": "yoga",
-  "start": "2026-10-20T08:30",
-  "end": "2026-10-20T09:45",
-  "venue": "Bellingham Public Library",
-  "address": "100 Blackstone Street",
-  "city": "Bellingham, MA",
-  "lat": 42.087,
-  "lng": -71.474,
-  "price": 0,
-  "host": "Bellingham Public Library",
-  "description": "It’s time to transition to a yoga practice that helps our body and mind get in rhythm with the shorter days and cooler, crisper air of the season. Autumn yoga is grounding, strengthening, calming, routine, and warming. The practice includes asana (poses), intentional breathing, and meditation.…",
-  "url": "https://bellinghamlibrary.assabetinteractive.com/calendar/fall-into-yoga-october-2026-2/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-norfolkpl-watercolor-meet-up-349-2026-10-20",
-  "title": "Watercolor Meet Up",
-  "category": "craft",
-  "start": "2026-10-20T13:00",
-  "end": "2026-10-20T15:00",
-  "venue": "Norfolk Public Library",
-  "address": "2 Liberty Lane",
-  "city": "Norfolk, MA",
-  "lat": 42.119,
-  "lng": -71.325,
-  "price": 0,
-  "host": "Norfolk Public Library",
-  "description": "Do you enjoy painting with watercolors? This group is for adult watercolor painters, all levels welcome, to gather together while painting your own projects. Join us on Tuesday afternoons for a relaxed painting session where we can share techniques, ideas, tips and projects.…",
-  "url": "https://norfolkpl.assabetinteractive.com/calendar/watercolor-meet-up-349/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-goodnowlibrary-lunchtime-yoga-5-2026-10-20",
-  "title": "Lunchtime Yoga",
-  "category": "yoga",
-  "start": "2026-10-20T13:00",
-  "end": "2026-10-20T14:00",
-  "venue": "Goodnow Library",
-  "address": "21 Concord Rd",
-  "city": "Sudbury, MA",
-  "lat": 42.3835,
-  "lng": -71.416,
-  "price": 0,
-  "host": "Goodnow Library",
-  "description": "Take some time to relax and slow down by joining us in the Community Room during lunch for some yoga. Perfect for squeezing into your busy workday! Suitable for all levels, yoga mats provided. Instructor Info:Kirstin Wilcox, RYT-200, 6 years experience,…",
-  "url": "https://goodnowlibrary.assabetinteractive.com/calendar/lunchtime-yoga-5/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-hopkintonlibrary-kinusaiga-with-happy-arts-2026-10-20",
-  "title": "Kinusaiga with Happy Arts",
-  "category": "craft",
-  "start": "2026-10-20T17:30",
-  "end": "2026-10-20T19:00",
-  "venue": "Hopkinton Public Library",
-  "address": "13 Main Street",
-  "city": "Hopkinton, MA",
-  "lat": 42.2285,
-  "lng": -71.5225,
-  "price": 0,
-  "host": "Hopkinton Public Library",
-  "description": "Kinusaiga (絹彩画) is a traditional Japanese art often called no-sew quilting or silk painting. The process is done by using various types of fabrics like sari silk, batik, and cotton to create a three dimensional stained glass or mosaic effect using a tucking process.…",
-  "url": "https://hopkintonlibrary.assabetinteractive.com/calendar/kinusaiga-with-happy-arts/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-framinghamlibrary-mcauliffe-queer-reads-book-discussion-4-2026-10-20",
-  "title": "Queer Reads Book Discussion: Evocation",
-  "category": "book",
-  "start": "2026-10-20T19:00",
-  "end": "2026-10-20T20:00",
-  "venue": "Framingham Public Library (McAuliffe Branch)",
-  "address": "746 Water Street",
-  "city": "Framingham, MA",
-  "lat": 42.279,
-  "lng": -71.416,
-  "price": 0,
-  "host": "Framingham Public Library",
-  "description": "The Queer Reads Book Discussion celebrates queer authors, books, and themes. This discussion meets in person every third Tuesday of the month at the McAuliffe Branch. This month's title is Evocation by S. T. Gibson. \"The day David Aristarkhov's occultist father died, he bought himself an Audi, drank",
-  "url": "https://framinghamlibrary.assabetinteractive.com/calendar/mcauliffe-queer-reads-book-discussion-4/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-norwoodlibrary-anti-racism-book-club-i-know-why-the-caged-bird-sings-by-maya-angelou-2026-10-20",
-  "title": "Anti-Racism Book Club: \"I Know Why the Caged Bird Sings\" by Maya Angelou",
-  "category": "book",
-  "start": "2026-10-20T19:00",
-  "end": "2026-10-20T20:30",
-  "venue": "Morrill Memorial Library",
-  "address": "33 Walpole St.",
-  "city": "Norwood, MA",
-  "lat": 42.1945,
-  "lng": -71.1995,
-  "price": 0,
-  "host": "Morrill Memorial Library",
-  "description": "Join the First Congregational Church in partnership with the Morrill Memorial Library for the autumn session of our Anti-Racism Book Club on Tuesday, October 20 starting at 7:00pm in the Simoni Room. For this session, we are discussing I Know Why the Caged Bird Sings by Maya Angelou.…",
-  "url": "https://norwoodlibrary.assabetinteractive.com/calendar/anti-racism-book-club-i-know-why-the-caged-bird-sings-by-maya-angelou/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
   "id": "lib-norwoodlibrary-turn-the-page-book-group-the-north-woods-2026-10-21",
   "title": "Turn the Page Book Group-The North Woods",
   "category": "book",
@@ -143,6 +17,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Connect with Patty Bailey and fellow local readers for a friendly and informal conversation of The North Woods, a historical fiction novel written by Daniel Mason. When a pair of young lovers abscond from a Puritan colony, little do they know that their humble cabin in the woods will become the home",
   "url": "https://norwoodlibrary.assabetinteractive.com/calendar/turn-the-page-book-group-the-north-woods/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/norwoodlibrary/north-woods-bookcover_1935_lg.jpeg",
   "tags": [
    "free",
    "come-alone"
@@ -164,6 +39,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Block Party is a casual time to join other sewists in the MakerSpace to start and/or continue individual sewing projects. We can share ideas, tips, tricks, tools, etc. Sometimes it is just fun to be with others while you sew/quilt!",
   "url": "https://medwaylib.assabetinteractive.com/calendar/block-party-sewing-meet-up-13/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/medwaylib/april-26-8-_267_lg.jpg",
   "tags": [
    "free",
    "come-alone"
@@ -206,6 +82,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Do you enjoy knitting, crocheting, or any of the other fiber arts? Come and join us on Wednesdays. All skill levels are welcome, including beginners. Please bring your own materials. No registration. - This is a Bellingham Library program/event.",
   "url": "https://bellinghamlibrary.assabetinteractive.com/calendar/needlecraft-night-110/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/bellinghamlibrary/needlenight_220_lg.png",
   "tags": [
    "free",
    "come-alone"
@@ -248,6 +125,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Looking to relax after a stressful day at work, school or after being home with the kids? Wind down for the evening with a meditation session to calm your mind and body. We will use chairs for this class, so you don't need to bring anything! This program is best for Teens and Adults.…",
   "url": "https://norfolkpl.assabetinteractive.com/calendar/meditation-session-with-revikrishnan-balakrishnapillai/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/norfolkpl/meditation-program_1101_lg.jpg",
   "tags": [
    "free",
    "come-alone"
@@ -332,6 +210,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Welcome to Sudbury Yarn Enthusiasts! Sudbury Yarn Enthusiasts meet every Wednesday from 7PM - 8:30PM in the Old Octagon at the library. This group is open to anyone who loves to knit, crochet, embroider or do other fiber arts. All levels are welcome.…",
   "url": "https://goodnowlibrary.assabetinteractive.com/calendar/sudbury-yarn-enthusiasts-162/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/goodnowlibrary/sudbury-yarn-enthusiasts_3844_lg.png",
   "tags": [
    "free",
    "come-alone"
@@ -395,6 +274,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Enjoy an evening of crafting that is great for all skill levels. Open to adults 18+. Registration is required. This month: 3D Ghost Paintings",
   "url": "https://norfolkpl.assabetinteractive.com/calendar/no-fail-crafts-for-adults-61/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/norfolkpl/nf-oct-2_1613_lg.jpg",
   "tags": [
    "free",
    "come-alone"
@@ -416,6 +296,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Do you love to knit, crochet, embroider, or do another fiber craft? If so, bring your current WIP to our informal group where you can work on projects, socialize, and share advice. Please note that this is not a formal class. No instruction will be provided, although participants are usually willing",
   "url": "https://norfolkpl.assabetinteractive.com/calendar/fiber-art-group-159/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/norfolkpl/fiber-craft-group-1-_895_lg.png",
   "tags": [
    "free",
    "come-alone"
@@ -437,6 +318,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "This group welcomes anyone who is interested in the fiber arts which includes but not limited to knitting, crocheting, embroidery, needlepoint, and cross stitching. Stop by if you would like to spend the evening with a group of people who also love to stitch.",
   "url": "https://medwaylib.assabetinteractive.com/calendar/fiber-arts-mee-up-48/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/medwaylib/fiberarts-group_222_lg.jpg",
   "tags": [
    "free",
    "come-alone"
@@ -479,6 +361,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "The Boyden Library is hosting a book club that will meet on the fourth Tuesday of every month. All are welcome. September 22: The Book Club for Troublesome Women by Marie BostwickOctober 27: The God of the Woods by Liz Moore November 24: Good People…",
   "url": "https://boydenlibrary.assabetinteractive.com/calendar/boyden-library-book-club-54/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/boydenlibrary/bookclub_864_lg.png",
   "tags": [
    "free",
    "come-alone"
@@ -500,6 +383,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Do you enjoy painting with watercolors? This group is for adult watercolor painters, all levels welcome, to gather together while painting your own projects. Join us on Tuesday afternoons for a relaxed painting session where we can share techniques, ideas, tips and projects.…",
   "url": "https://norfolkpl.assabetinteractive.com/calendar/watercolor-meet-up-350/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/norfolkpl/watercolor_710_lg.png",
   "tags": [
    "free",
    "come-alone"
@@ -521,6 +405,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Page Turners is a book club that meets the last Tuesday of every month. This month's book: The Librarians by Sherry ThomasNext month's book: Piranesi by Susanna Clarke",
   "url": "https://norfolkpl.assabetinteractive.com/calendar/page-turners-book-club-51/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/norfolkpl/tl_1590_lg.png",
   "tags": [
    "free",
    "come-alone"
@@ -542,6 +427,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Monthly meeting of the Fiske Public Library Book Club. All are welcome to attend. No registration is required. See the titles on the Fiske Library Book Club page.",
   "url": "https://fiskelib.assabetinteractive.com/calendar/fiske-library-book-club-18/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/fiskelib/book-club-2026-2027_344_lg.png",
   "tags": [
    "free",
    "come-alone"
@@ -563,6 +449,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Join us for our next meeting of Titles on Tap. We'll meet at Napper Tandy's in Norwood, in the left-hand-side bar, on Tuesday 10/27 at 7:30 pm. Our October title will be The Devil All the Time by Donald Ray Pollock. Copies of the book are available to pick up at the library's Reference desk.…",
   "url": "https://norwoodlibrary.assabetinteractive.com/calendar/titles-on-tap-book-group-75/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/norwoodlibrary/devilallthetime_1954_lg.jpg",
   "tags": [
    "free",
    "come-alone"
@@ -605,6 +492,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Do you enjoy knitting, crocheting, or any of the other fiber arts? Come and join us on Wednesdays. All skill levels are welcome, including beginners. Please bring your own materials. No registration. - This is a Bellingham Library program/event.",
   "url": "https://bellinghamlibrary.assabetinteractive.com/calendar/needlecraft-night-111/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/bellinghamlibrary/needlenight_220_lg.png",
   "tags": [
    "free",
    "come-alone"
@@ -626,6 +514,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Join us for Hot Takes: Romance Book Discussion every third Wednesday of the month at the Main Library!",
   "url": "https://framinghamlibrary.assabetinteractive.com/calendar/main-hot-takes-romance-book-discussion-5/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/framinghamlibrary/book-group-icon_64_lg.png",
   "tags": [
    "free",
    "come-alone"
@@ -668,6 +557,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Information session provided to allow individuals to learn about yoga practices and how yoga can become part of their wellness plan. *This is not a library-sponsored program. Please contact sharon@oceanwavesyogaandwellness. com for more information.",
   "url": "https://milfordtownlibrary.assabetinteractive.com/meeting-and-study-rooms/discover-yoga-hosted-by-ocean-waves-yoga-wellness/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/milfordtownlibrary/img-6564_3_lg.jpg",
   "tags": [
    "free",
    "come-alone"
@@ -710,6 +600,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Welcome to Sudbury Yarn Enthusiasts! Sudbury Yarn Enthusiasts meet every Wednesday from 7PM - 8:30PM in the Old Octagon at the library. This group is open to anyone who loves to knit, crochet, embroider or do other fiber arts. All levels are welcome.…",
   "url": "https://goodnowlibrary.assabetinteractive.com/calendar/sudbury-yarn-enthusiasts-163/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/goodnowlibrary/sudbury-yarn-enthusiasts_3844_lg.png",
   "tags": [
    "free",
    "come-alone"
@@ -731,6 +622,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Join us for a fun, seasonal craft! Celeste Langlois will lead a group of particpants to create a season \"Thankful Frame. \" Registration is required, and limited to 20 participants. Ages 18+. This program is made possible through a Cultural Council Grant.…",
   "url": "https://bellinghamlibrary.assabetinteractive.com/calendar/make-a-thankful-frame/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/bellinghamlibrary/thankfulframe_180_lg.png",
   "tags": [
    "free",
    "come-alone"
@@ -752,6 +644,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "October’s book: The Grace YearContact: Elise, elise. dolen@gmail. com",
   "url": "https://norfolkpl.assabetinteractive.com/meeting-and-study-rooms/moms-off-duty-book-club-20/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/norfolkpl/img-1572_927_lg.jpg",
   "tags": [
    "free",
    "come-alone"
@@ -773,6 +666,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Do you love to knit, crochet, embroider, or do another fiber craft? If so, bring your current WIP to our informal group where you can work on projects, socialize, and share advice. Please note that this is not a formal class. No instruction will be provided, although participants are usually willing",
   "url": "https://norfolkpl.assabetinteractive.com/calendar/fiber-art-group-160/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/norfolkpl/fiber-craft-group-1-_895_lg.png",
   "tags": [
    "free",
    "come-alone"
@@ -794,6 +688,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "The Library Book Club meets the first Monday of each month at 11:00am for approximately one hour except for Monday holidays. Read the selected book and attend the discussion to share your thoughts or sit and listen. A no-pressure environment, attend as many or as few sessions as you like.…",
   "url": "https://hollistonlibrary.assabetinteractive.com/calendar/morning-book-club-24/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/hollistonlibrary/book-club_32_lg.png",
   "tags": [
    "free",
    "come-alone"
@@ -815,6 +710,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Join us for our next meeting of The Bookies Book Group! For our meeting on Monday, November 2nd, we will be discussing Destiny of the Republic: A Tale of Madness, Medicine and the Murder of a President by Candice Millard (non-fiction).…",
   "url": "https://goodnowlibrary.assabetinteractive.com/calendar/the-bookies-book-group-45/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/goodnowlibrary/bookies_54_lg.jpg",
   "tags": [
    "free",
    "come-alone"
@@ -836,6 +732,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "This group welcomes anyone who is interested in the fiber arts which includes but not limited to knitting, crocheting, embroidery, needlepoint, and cross stitching. Stop by if you would like to spend the evening with a group of people who also love to stitch.",
   "url": "https://medwaylib.assabetinteractive.com/calendar/fiber-arts-mee-up-49/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/medwaylib/fiberarts-group_222_lg.jpg",
   "tags": [
    "free",
    "come-alone"
@@ -857,6 +754,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "This month we will be discussing The Berry Pickers by Amanda Peters. This group usually meets on the first Monday of the month at 6:30 pm. It's hybrid, so you can come in person or virtually. If you would like to join this group, please email Suzanne! The…",
   "url": "https://bellinghamlibrary.assabetinteractive.com/calendar/book-discussion-group-for-adults-12/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/bellinghamlibrary/1-11-26-book-discussion-group-flyer_144_lg.png",
   "tags": [
    "free",
    "come-alone"
@@ -878,6 +776,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Join other foodies at Read It and Eat It where each month we will be discussing different chefs, cuisines, or regions. Come share your experiments, experiences, triumphs, and tragedies from trying different recipes. Bring your favorite dish to share with the group.…",
   "url": "https://norfolkpl.assabetinteractive.com/calendar/read-it-and-eat-it-41/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/norfolkpl/read%20it%20&%20eat%20it%20logo_298_lg.png",
   "tags": [
    "free",
    "come-alone"
@@ -920,6 +819,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Do you enjoy painting with watercolors? This group is for adult watercolor painters, all levels welcome, to gather together while painting your own projects. Join us on Tuesday afternoons for a relaxed painting session where we can share techniques, ideas, tips and projects.…",
   "url": "https://norfolkpl.assabetinteractive.com/calendar/watercolor-meet-up-351/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/norfolkpl/watercolor_710_lg.png",
   "tags": [
    "free",
    "come-alone"
@@ -941,6 +841,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Each month, we explore a new cookbook, try out new recipes at home, and come together to share our experiences making the recipe. Whether you're a kitchen novice or a seasoned home chef, this group is a delicious way to discover new flavors and connect with fellow food lovers.…",
   "url": "https://framinghamlibrary.assabetinteractive.com/calendar/mcauliffe-recipe-readers-cookbook-group-7/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/framinghamlibrary/apple-lovers-cookbook_141_lg.jpg",
   "tags": [
    "free",
    "come-alone"
@@ -962,6 +863,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Block Party is a casual time to join other sewists in the MakerSpace to start and/or continue individual sewing projects. We can share ideas, tips, tricks, tools, etc. Sometimes it is just fun to be with others while you sew/quilt!",
   "url": "https://medwaylib.assabetinteractive.com/calendar/block-party-sewing-meet-up-9/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/medwaylib/nov4_268_lg.jpg",
   "tags": [
    "free",
    "come-alone"
@@ -1004,6 +906,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "About Sound TherapySound healing dates back thousands of years, with roots in ancient Tibetan and Native American cultures. The combination of ancient wisdom with modern wellness practices makes sound therapy particularly attractive for those looking for non-invasive, effective ways to reduce stress",
   "url": "https://bellinghamlibrary.assabetinteractive.com/calendar/group-sound-bath/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/bellinghamlibrary/vibewell-deb-outside2_206_lg.jpg",
   "tags": [
    "free",
    "come-alone"
@@ -1046,6 +949,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Welcome to Sudbury Yarn Enthusiasts! Sudbury Yarn Enthusiasts meet every Wednesday from 7PM - 8:30PM in the Old Octagon at the library. This group is open to anyone who loves to knit, crochet, embroider or do other fiber arts. All levels are welcome.…",
   "url": "https://goodnowlibrary.assabetinteractive.com/calendar/sudbury-yarn-enthusiasts-164/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/goodnowlibrary/sudbury-yarn-enthusiasts_3844_lg.png",
   "tags": [
    "free",
    "come-alone"
@@ -1067,6 +971,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "All are welcome. Copies of the book are available at the library. The Ferryman and His Wife by Frode Grytten, Alison McCulloughIn the spirit of Amor Towles and George Saunders, the renowned, bestselling Norwegian author Frode Grytten takes listeners on a quietly epic ferry driver Nils Vik’s last rou",
   "url": "https://ventresslibrary.assabetinteractive.com/calendar/contemporary-book-group-103/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/ventresslibrary/the-ferryman-and-his-wife_486_lg.jpg",
   "tags": [
    "free",
    "come-alone"
@@ -1109,6 +1014,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Do you love to knit, crochet, embroider, or do another fiber craft? If so, bring your current WIP to our informal group where you can work on projects, socialize, and share advice. Please note that this is not a formal class. No instruction will be provided, although participants are usually willing",
   "url": "https://norfolkpl.assabetinteractive.com/calendar/fiber-art-group-161/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/norfolkpl/fiber-craft-group-1-_895_lg.png",
   "tags": [
    "free",
    "come-alone"
@@ -1130,6 +1036,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "This group welcomes anyone who is interested in the fiber arts which includes but not limited to knitting, crocheting, embroidery, needlepoint, and cross stitching. Stop by if you would like to spend the evening with a group of people who also love to stitch.",
   "url": "https://medwaylib.assabetinteractive.com/calendar/fiber-arts-mee-up-50/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/medwaylib/fiberarts-group_222_lg.jpg",
   "tags": [
    "free",
    "come-alone"
@@ -1172,6 +1079,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "It’s time to transition to a yoga practice that helps our body and mind get in rhythm with the shorter days and cooler, crisper air of the season. Autumn yoga is grounding, strengthening, calming, routine, and warming. The practice includes asana (poses), intentional breathing, and meditation.…",
   "url": "https://bellinghamlibrary.assabetinteractive.com/calendar/stretch-into-gratitude-november-2026/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/bellinghamlibrary/5-yoga-poses-to-show-gratitude-copy-2-_221_lg.jpg",
   "tags": [
    "free",
    "come-alone"
@@ -1193,6 +1101,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Join us on November 10 to paint leaves. These evergreens make a good bookmark, or hang them up to make a nature mobile. We will use acrylic paint to make these. It's fun and relaxing-- but dress for a mess!Open to adults. No experience necessary.…",
   "url": "https://fiskelib.assabetinteractive.com/calendar/leaf-paintiung/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/fiskelib/1000022384_362_lg.jpg",
   "tags": [
    "free",
    "come-alone"
@@ -1214,6 +1123,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Do you enjoy painting with watercolors? This group is for adult watercolor painters, all levels welcome, to gather together while painting your own projects. Join us on Tuesday afternoons for a relaxed painting session where we can share techniques, ideas, tips and projects.…",
   "url": "https://norfolkpl.assabetinteractive.com/calendar/watercolor-meet-up-352/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/norfolkpl/watercolor_710_lg.png",
   "tags": [
    "free",
    "come-alone"
@@ -1235,6 +1145,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Join us on the second Tuesday of the month for a lively discussion. This month's title is Lady Tan's Circle of Women by Lisa See. \"Sent into an arranged marriage, Tan Yunxian, forbidden to continue her work as a midwife-in-training as well as see her forever friend Meiling, is ordered to act like pr",
   "url": "https://framinghamlibrary.assabetinteractive.com/calendar/mcauliffe-evening-book-discussion-5/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/framinghamlibrary/lady-tans-circle-of-women_112_lg.jpg",
   "tags": [
    "free",
    "come-alone"
@@ -1277,6 +1188,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Do you love to knit, crochet, embroider, or do another fiber craft? If so, bring your current WIP to our informal group where you can work on projects, socialize, and share advice. Please note that this is not a formal class. No instruction will be provided, although participants are usually willing",
   "url": "https://norfolkpl.assabetinteractive.com/calendar/fiber-art-group-162/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/norfolkpl/fiber-craft-group-1-_895_lg.png",
   "tags": [
    "free",
    "come-alone"
@@ -1298,6 +1210,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Discover the beautiful Ukrainian art of egg painting! In this hands-on workshop, participants will learn the traditional wax-resist technique used to create intricate designs on eggs, known as pysanky. Explore the history and cultural significance of this art form, including the meanings behind diff",
   "url": "https://medwaylib.assabetinteractive.com/calendar/winter-pysanky-the-art-of-ukrainian-egg-decorating/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/medwaylib/pysanky-egg-decorating-event_257_lg.jpg",
   "tags": [
    "free",
    "come-alone"
@@ -1319,6 +1232,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "This group welcomes anyone who is interested in the fiber arts which includes but not limited to knitting, crocheting, embroidery, needlepoint, and cross stitching. Stop by if you would like to spend the evening with a group of people who also love to stitch.",
   "url": "https://medwaylib.assabetinteractive.com/calendar/fiber-arts-mee-up-51/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/medwaylib/fiberarts-group_222_lg.jpg",
   "tags": [
    "free",
    "come-alone"
@@ -1340,6 +1254,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "It’s time to transition to a yoga practice that helps our body and mind get in rhythm with the shorter days and cooler, crisper air of the season. Autumn yoga is grounding, strengthening, calming, routine, and warming. The practice includes asana (poses), intentional breathing, and meditation.…",
   "url": "https://bellinghamlibrary.assabetinteractive.com/calendar/stretch-into-gratitude-november-2026-2/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/bellinghamlibrary/5-yoga-poses-to-show-gratitude-copy-2-_221_lg.jpg",
   "tags": [
    "free",
    "come-alone"
@@ -1361,6 +1276,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Do you enjoy painting with watercolors? This group is for adult watercolor painters, all levels welcome, to gather together while painting your own projects. Join us on Tuesday afternoons for a relaxed painting session where we can share techniques, ideas, tips and projects.…",
   "url": "https://norfolkpl.assabetinteractive.com/calendar/watercolor-meet-up-353/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/norfolkpl/watercolor_710_lg.png",
   "tags": [
    "free",
    "come-alone"
@@ -1382,6 +1298,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Take some time to relax and slow down by joining us in the Community Room during lunch for some yoga. Perfect for squeezing into your busy workday! Suitable for all levels, yoga mats provided. Instructor Info:Kirstin Wilcox, RYT-200, 6 years experience,…",
   "url": "https://goodnowlibrary.assabetinteractive.com/calendar/lunchtime-yoga-6/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/goodnowlibrary/11-2026-lunchtime-yoga-instagram-post-_3990_lg.png",
   "tags": [
    "free",
    "come-alone"
@@ -1403,6 +1320,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Monthly meeting of the Fiske Public Library Book Club. All are welcome to attend. No registration is required. See the titles on the Fiske Library Book Club page.",
   "url": "https://fiskelib.assabetinteractive.com/calendar/fiske-library-book-club-19/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/fiskelib/book-club-2026-2027_344_lg.png",
   "tags": [
    "free",
    "come-alone"
@@ -1424,6 +1342,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "The Queer Reads Book Discussion celebrates queer authors, books, and themes. This discussion meets in person every third Tuesday of the month at the McAuliffe Branch. This month's title is Moonflow by Bitter Karella. \"I see something out there, in the woods.…",
   "url": "https://framinghamlibrary.assabetinteractive.com/calendar/mcauliffe-queer-reads-book-discussion-5/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/framinghamlibrary/moonflow_121_lg.jpg",
   "tags": [
    "free",
    "come-alone"
@@ -1445,6 +1364,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Connect with Patty Bailey and fellow local readers for a friendly and informal conversation of Hello Beautiful, a novel written by Ann Napolitano. Hello Beautiful is a compelling multi-generational family saga based on Little Women that explores themes of sibling love and found family.…",
   "url": "https://norwoodlibrary.assabetinteractive.com/calendar/turn-the-page-book-group-hello-beautiful/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/norwoodlibrary/hello-beautiful_1966_lg.jpeg",
   "tags": [
    "free",
    "come-alone"
@@ -1508,6 +1428,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Looking to relax after a stressful day at work, school or after being home with the kids? Wind down for the evening with a meditation session to calm your mind and body. We will use chairs for this class, so you don't need to bring anything! This program is best for Teens and Adults.…",
   "url": "https://norfolkpl.assabetinteractive.com/calendar/meditation-session-with-revikrishnan-balakrishnapillai-placeholder-2/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/norfolkpl/meditation-program_1101_lg.jpg",
   "tags": [
    "free",
    "come-alone"
@@ -1592,6 +1513,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Welcome to Sudbury Yarn Enthusiasts! Sudbury Yarn Enthusiasts meet every Wednesday from 7PM - 8:30PM in the Old Octagon at the library. This group is open to anyone who loves to knit, crochet, embroider or do other fiber arts. All levels are welcome.…",
   "url": "https://goodnowlibrary.assabetinteractive.com/calendar/sudbury-yarn-enthusiasts-166/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/goodnowlibrary/sudbury-yarn-enthusiasts_3844_lg.png",
   "tags": [
    "free",
    "come-alone"
@@ -1613,6 +1535,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Join us on the third Thursday of the month for a lively discussion. This month's title is Five Decembers by James Kestrel.",
   "url": "https://framinghamlibrary.assabetinteractive.com/calendar/mcauliffe-morning-book-discussion-5/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/framinghamlibrary/five-decembers_144_lg.jpg",
   "tags": [
    "free",
    "come-alone"
@@ -1634,6 +1557,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "After taking the Learn to Sew class, or if you have basic sewing skills, how about a sew-on-your-own session. You will need to bring your own machine, since the library machines are reserved for the Learn to Sew beginner class. Also, bring along a pattern and fabric for your project and guidance wil",
   "url": "https://fiskelib.assabetinteractive.com/calendar/learn-to-sew-ii-3/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/fiskelib/learn-to-sew-ii-november_376_lg.png",
   "tags": [
    "free",
    "come-alone"
@@ -1676,6 +1600,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "November’s book: The Knight and the MothContact: Elise, elise. dolen@gmail. com",
   "url": "https://norfolkpl.assabetinteractive.com/meeting-and-study-rooms/moms-off-duty-book-club-21/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/norfolkpl/img-1572_927_lg.jpg",
   "tags": [
    "free",
    "come-alone"
@@ -1697,6 +1622,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Come Join CZT Linda Evans to learn and practice this relaxed method of drawing. We could all use a little slow down and relax time. No art background is needed. Participants must bring their own supplies: 1-2H or HB pencil sharpened1-black Micron pen size 01 or whatever black pen you have1-sketchboo",
   "url": "https://boydenlibrary.assabetinteractive.com/calendar/zentangle-workshop-37/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/boydenlibrary/zentangle_788_lg.png",
   "tags": [
    "free",
    "come-alone"
@@ -1718,6 +1644,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Do you love to knit, crochet, embroider, or do another fiber craft? If so, bring your current WIP to our informal group where you can work on projects, socialize, and share advice. Please note that this is not a formal class. No instruction will be provided, although participants are usually willing",
   "url": "https://norfolkpl.assabetinteractive.com/calendar/fiber-art-group-163/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/norfolkpl/fiber-craft-group-1-_895_lg.png",
   "tags": [
    "free",
    "come-alone"
@@ -1739,6 +1666,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "September: Fall trees and foliage painting (2 mini canvases)October: Jack-o'-lanterns and/ or a spooky tree featuring a cat and a bat (1 large canvas)November: Thanksgiving gnome (1 large canvas)December: Holiday gift-giving; two mini canvas paintings of cardinals and winter trees.…",
   "url": "https://boydenlibrary.assabetinteractive.com/calendar/adult-paint-workshop-with-dimple-shah-3/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/boydenlibrary/gnomethanks_719_lg.jpeg",
   "tags": [
    "free",
    "come-alone"
@@ -1760,6 +1688,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Morrill Memorial Library is thrilled to welcome back Kashmica Sarkar for a Diwali-themed art class. Title: Diwali Art: Rangoli MatWhen: Saturday November 21, 2026 Time: 2PM- 3:30PMDiwali, the Festival of Lights, is one of the biggest festivals celebrated in India, and all over the world.…",
   "url": "https://norwoodlibrary.assabetinteractive.com/calendar/diwali-rangoli-mat/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/norwoodlibrary/img-9224_1967_lg.jpeg",
   "tags": [
    "free",
    "come-alone"
@@ -1781,6 +1710,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "This group welcomes anyone who is interested in the fiber arts which includes but not limited to knitting, crocheting, embroidery, needlepoint, and cross stitching. Stop by if you would like to spend the evening with a group of people who also love to stitch.",
   "url": "https://medwaylib.assabetinteractive.com/calendar/fiber-arts-mee-up-52/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/medwaylib/fiberarts-group_222_lg.jpg",
   "tags": [
    "free",
    "come-alone"
@@ -1802,6 +1732,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "It’s time to transition to a yoga practice that helps our body and mind get in rhythm with the shorter days and cooler, crisper air of the season. Autumn yoga is grounding, strengthening, calming, routine, and warming. The practice includes asana (poses), intentional breathing, and meditation.…",
   "url": "https://bellinghamlibrary.assabetinteractive.com/calendar/stretch-into-gratitude-november-2026-3/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/bellinghamlibrary/5-yoga-poses-to-show-gratitude-copy-2-_221_lg.jpg",
   "tags": [
    "free",
    "come-alone"
@@ -1823,6 +1754,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "The Boyden Library is hosting a book club that will meet on the fourth Tuesday of every month. All are welcome. September 22: The Book Club for Troublesome Women by Marie BostwickOctober 27: The God of the Woods by Liz Moore November 24: Good People…",
   "url": "https://boydenlibrary.assabetinteractive.com/calendar/boyden-library-book-club-55/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/boydenlibrary/bookclub_864_lg.png",
   "tags": [
    "free",
    "come-alone"
@@ -1844,6 +1776,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Do you enjoy painting with watercolors? This group is for adult watercolor painters, all levels welcome, to gather together while painting your own projects. Join us on Tuesday afternoons for a relaxed painting session where we can share techniques, ideas, tips and projects.…",
   "url": "https://norfolkpl.assabetinteractive.com/calendar/watercolor-meet-up-354/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/norfolkpl/watercolor_710_lg.png",
   "tags": [
    "free",
    "come-alone"
@@ -1865,6 +1798,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Page Turners is a book club that meets the last Tuesday of every month. This month's book: Piranesi by Susanna ClarkNext month's book: Murder Checks Out by Victoria Gilbert",
   "url": "https://norfolkpl.assabetinteractive.com/calendar/page-turners-book-club-52/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/norfolkpl/pt-11-26_1591_lg.jpg",
   "tags": [
    "free",
    "come-alone"
@@ -1907,6 +1841,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "description": "Do you love to knit, crochet, embroider, or do another fiber craft? If so, bring your current WIP to our informal group where you can work on projects, socialize, and share advice. Please note that this is not a formal class. No instruction will be provided, although participants are usually willing",
   "url": "https://norfolkpl.assabetinteractive.com/calendar/fiber-art-group-164/",
   "source": "Library",
+  "image": "https://s3.amazonaws.com/ai-assets/norfolkpl/fiber-craft-group-1-_895_lg.png",
   "tags": [
    "free",
    "come-alone"

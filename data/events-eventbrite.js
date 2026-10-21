@@ -17,115 +17,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "An Unlikely Story",
   "description": "Let your energy flow while learning the basics of Tai Chi at An Unlikely Story!",
   "url": "https://www.eventbrite.com/e/tai-chi-chai-tea-tickets-2001394285183",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191957114%2F161538226233%2F1%2Foriginal.20260826-161402?crop=focalpoint&fit=crop&h=200&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=990b9b57988980af6098a4b62f840e22"
  },
  {
-  "id": "eb-1987071491321",
-  "title": "Cooking Classes at Dante Alighieri",
+  "id": "eb-2003401292195",
+  "title": "Autumn Luxe Crystal Geode Painting",
   "category": "craft",
-  "start": "2026-10-20T17:30",
-  "end": "2026-10-20T20:30",
-  "venue": "Dante Alighieri Society of Massachusetts",
-  "address": "41 Hampshire St",
-  "city": "Cambridge, MA",
-  "lat": 42.3669,
-  "lng": -71.092,
+  "start": "2026-10-16T19:00",
+  "end": "2026-11-23T21:00",
+  "venue": "130 Bay Rd",
+  "address": "130 Bay Road",
+  "city": "Norton, MA",
+  "lat": 41.984,
+  "lng": -71.1287,
   "price": null,
   "priceNote": "Tickets & price on Eventbrite",
-  "host": "Dante Alighieri Society of Massachusetts",
-  "description": "Get ready to whip up some tasty Italian dishes and have a blast learning new cooking tricks!",
-  "url": "https://www.eventbrite.com/e/cooking-classes-at-dante-alighieri-tickets-1987071491321",
-  "source": "Eventbrite"
- },
- {
-  "id": "eb-1996214314752",
-  "title": "Halloween Edition Pottery Workshop",
-  "category": "craft",
-  "start": "2026-10-20T18:00",
-  "end": "2026-10-20T20:00",
-  "venue": "Lamplighter Brewing Co. - CX",
-  "address": "110 North First Street",
-  "city": "Cambridge, MA",
-  "lat": 42.3722,
-  "lng": -71.0753,
-  "price": null,
-  "priceNote": "Tickets & price on Eventbrite",
-  "host": "Lamplighter Brewing Co. - CX",
-  "description": "Learn to sculpt Halloween-inspired clay creations at this spooky, hands-on pottery workshop!",
-  "url": "https://www.eventbrite.com/e/halloween-edition-pottery-workshop-tickets-1996214314752",
-  "source": "Eventbrite"
- },
- {
-  "id": "eb-2002575568433",
-  "title": "Textile Workshop With Erica: Halloween Garlands",
-  "category": "craft",
-  "start": "2026-10-20T18:00",
-  "end": "2026-10-20T20:00",
-  "venue": "Fenway Community Center",
-  "address": "1282 Boylston Street",
-  "city": "Boston, MA",
-  "lat": 42.3444,
-  "lng": -71.0975,
-  "price": null,
-  "priceNote": "Tickets & price on Eventbrite",
-  "host": "Fenway Community Center",
-  "description": "Join us in crafting up a garland that you can take home at the end of the night",
-  "url": "https://www.eventbrite.com/e/textile-workshop-with-erica-halloween-garlands-tickets-2002575568433",
-  "source": "Eventbrite"
- },
- {
-  "id": "eb-2003312485572",
-  "title": "Tuesday BollyX Natick - Bollywood Dance Workout",
-  "category": "movement",
-  "start": "2026-10-20T18:30",
-  "end": "2026-10-20T19:30",
-  "venue": "Do Dance Ballet & Fitness",
-  "address": "1400 Worcester Street",
-  "city": "Natick, MA",
-  "lat": 42.2977,
-  "lng": -71.3924,
-  "price": null,
-  "priceNote": "Tickets & price on Eventbrite",
-  "host": "Do Dance Ballet & Fitness",
-  "description": "Those who say - no pain no gain, have never worked out to Bollywood music. All the benefits of a great workout AND lots of fun.",
-  "url": "https://www.eventbrite.com/e/tuesday-bollyx-natick-bollywood-dance-workout-tickets-2003312485572",
-  "source": "Eventbrite"
- },
- {
-  "id": "eb-2003021474149",
-  "title": "Evening Meditation",
-  "category": "meditation",
-  "start": "2026-10-20T19:00",
-  "end": "2026-10-20T20:00",
-  "venue": "Nourish Collaborative",
-  "address": "431 Country Club Way",
-  "city": "Kingston, MA",
-  "lat": 41.982,
-  "lng": -70.7301,
-  "price": null,
-  "priceNote": "Tickets & price on Eventbrite",
-  "host": "Nourish Collaborative",
-  "description": "Evening Meditation at Nourish Collaborative",
-  "url": "https://www.eventbrite.com/e/evening-meditation-tickets-2003021474149",
-  "source": "Eventbrite"
- },
- {
-  "id": "eb-1999735443543",
-  "title": "Zen Service - Tuesday Evening Practice",
-  "category": "meditation",
-  "start": "2026-10-20T19:00",
-  "end": "2026-10-20T22:00",
-  "venue": "64 Beacon St",
-  "address": "64 Beacon Street",
-  "city": "Boston, MA",
-  "lat": 42.3566,
-  "lng": -71.0691,
-  "price": null,
-  "priceNote": "Tickets & price on Eventbrite",
-  "host": "64 Beacon St",
-  "description": "Join GBZC's Tuesday evening practice  in person or online.",
-  "url": "https://www.eventbrite.com/e/zen-service-tuesday-evening-practice-tickets-1999735443543",
-  "source": "Eventbrite"
+  "host": "130 Bay Rd",
+  "description": "Join us for a fun, cozy night painting stunning autumn-themed crystal geodes in person!",
+  "url": "https://www.eventbrite.com/e/autumn-luxe-crystal-geode-painting-tickets-2003401292195",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193883984%2F2132026108683%2F1%2Foriginal.20260919-011618?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.505&fp-y=0.272&s=6733559fefc4bb824512eda87ff01007"
  },
  {
   "id": "eb-2002895817306",
@@ -143,7 +55,65 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "A La Carte Massage",
   "description": "A transformative Experience\nPause * Release * Reflect * Renew",
   "url": "https://www.eventbrite.com/e/transformation-retreat-tickets-2002895817306",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1181307869%2F221646972603%2F1%2Foriginal.20260402-165441?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.437&fp-y=0.878&s=3aa9ba36e840659e44bc9a10064d0993"
+ },
+ {
+  "id": "eb-1995195979885",
+  "title": "Oil Painting for All Levels (Sep 30-Nov 4)",
+  "category": "craft",
+  "start": "2026-10-21T09:00",
+  "end": "2026-10-21T12:00",
+  "venue": "Art Complex Museum",
+  "address": "189 Alden Street",
+  "city": "Duxbury, MA",
+  "lat": 42.044,
+  "lng": -70.6872,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Art Complex Museum",
+  "description": "Personalized oil painting classes for all skill levels—learn color theory, composition & technique in a relaxed, supportive setting.",
+  "url": "https://www.eventbrite.com/e/oil-painting-for-all-levels-sep-30-nov-4-tickets-1995195979885",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1189605910%2F2902982593811%2F1%2Foriginal.20260725-145819?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=dab163841d19ba3ced6f9bf9888d2686"
+ },
+ {
+  "id": "eb-2002453801224",
+  "title": "One-time Pottery Class - South Boston",
+  "category": "craft",
+  "start": "2026-10-21T10:00",
+  "end": "2026-10-21T12:00",
+  "venue": "33 A St",
+  "address": "33 A Street",
+  "city": "Boston, MA",
+  "lat": 42.3411,
+  "lng": -71.0561,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "33 A St",
+  "description": "Learn wheel throwing or hand-building with an experienced instructor in this Boston pottery class!",
+  "url": "https://www.eventbrite.com/e/one-time-pottery-class-south-boston-tickets-2002453801224",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1177718042%2F2749922349921%2F1%2Foriginal.20260217-124454?crop=focalpoint&fit=crop&w=401&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.016&fp-y=0.514&s=509977a9ed422a1697ada956ea521724"
+ },
+ {
+  "id": "eb-2002444528489",
+  "title": "One-time Pottery Class & Painting - South Boston",
+  "category": "craft",
+  "start": "2026-10-21T10:00",
+  "end": "2026-10-21T12:00",
+  "venue": "33 A St",
+  "address": "33 A Street",
+  "city": "Boston, MA",
+  "lat": 42.3411,
+  "lng": -71.0561,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "33 A St",
+  "description": "Learn wheel throwing or hand-building with an experienced instructor in this Boston pottery class! Get a painted functional crockery item!",
+  "url": "https://www.eventbrite.com/e/one-time-pottery-class-painting-south-boston-tickets-2002444528489",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1177718112%2F2749922349921%2F1%2Foriginal.20260217-124554?w=401&auto=format%2Ccompress&q=75&sharp=10&s=df040a29d7012fbf5abed604fde723d6"
  },
  {
   "id": "eb-1997844940999",
@@ -164,6 +134,25 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "source": "Eventbrite"
  },
  {
+  "id": "eb-2003258909324",
+  "title": "Kinusaiga Patchwork Workshop (No-Sew Fabric Art)",
+  "category": "craft",
+  "start": "2026-10-21T11:00",
+  "end": "2026-10-21T13:30",
+  "venue": "Weekend Craft Cafe",
+  "address": "61 Endicott Street",
+  "city": "Norwood, MA",
+  "lat": 42.1774,
+  "lng": -71.2165,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Weekend Craft Cafe",
+  "description": "Create beautiful no-sew fabric art in this relaxing kinusaiga workshop. All materials included, beginner-friendly and fun! ✂️",
+  "url": "https://www.eventbrite.com/e/kinusaiga-patchwork-workshop-no-sew-fabric-art-tickets-2003258909324",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195545636%2F302833636759%2F1%2Foriginal.20261011-134709?crop=focalpoint&fit=crop&h=200&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=43bd746017dd3f50bb461b563f965db0"
+ },
+ {
   "id": "eb-1997496146746",
   "title": "Watercolor Foundations–Loosen Up!",
   "category": "craft",
@@ -179,7 +168,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Art Complex Museum",
   "description": "Join exhibiting artist Lisa Goren for this workshop to help you relax and learn to love watercolor.",
   "url": "https://www.eventbrite.com/e/watercolor-foundationsloosen-up-tickets-1997496146746",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1190734854%2F1371725208153%2F1%2Foriginal.20260810-191136?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.551&fp-y=0.496&s=f04348aabfd9ea099605e90f8ceb43b1"
  },
  {
   "id": "eb-1977530849003",
@@ -197,7 +187,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Artisan's Asylum",
   "description": "Our FREE monthly screen printing activity, open to the public.",
   "url": "https://www.eventbrite.com/e/free-screen-print-shop-night-tickets-1977530849003",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1001288213%2F266461963872%2F1%2Foriginal.20250404-201055?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.414772727273&fp-y=0.22027972028&s=ab67c6c21fe97ffc8e9ee734ceb3fdc7"
  },
  {
   "id": "eb-2003017243495",
@@ -233,7 +224,46 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Untold Brewing - Scituate",
   "description": "Join is for a fun resin wave board class at Untold Brewing in Scituate Ma!",
   "url": "https://www.eventbrite.com/e/resin-wave-board-class-at-untold-brewing-tickets-1997693144973",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1174927538%2F637993257443%2F1%2Foriginal.20260115-055105?crop=focalpoint&fit=crop&w=200&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.51&fp-y=0.296&s=40887fb51791a47795d2fd9e49de7442"
+ },
+ {
+  "id": "eb-2002634527782",
+  "title": "Watercolor Workshop",
+  "category": "craft",
+  "start": "2026-10-21T18:00",
+  "end": "2026-10-21T20:00",
+  "venue": "Upton Community Center",
+  "address": "9 Milford Street",
+  "city": "Upton, MA",
+  "lat": 42.1737,
+  "lng": -71.6018,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Upton Community Center",
+  "description": "A guided two hour course through the basics of watercolor painting.",
+  "url": "https://www.eventbrite.com/e/watercolor-workshop-tickets-2002634527782",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194730317%2F2971906366431%2F1%2Foriginal.20260930-151348?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.437&fp-y=0.477&s=d6ad0e37b84c7b2e95f5819575289024"
+ },
+ {
+  "id": "eb-2003177940143",
+  "title": "Wicked October Candle Workshop",
+  "category": "craft",
+  "start": "2026-10-21T18:00",
+  "end": "2026-10-21T20:00",
+  "venue": "229 Harvard St",
+  "address": "229 Harvard Street",
+  "city": "Brookline, MA",
+  "lat": 42.3407,
+  "lng": -71.1206,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "229 Harvard St",
+  "description": "Get spooky and crafty by making your own wicked candles in this fun hands-on workshop!",
+  "url": "https://www.eventbrite.com/e/wicked-october-candle-workshop-tickets-2003177940143",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195414531%2F2741202595941%2F1%2Foriginal.20261008-232208?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=2f277ba29dda0b5740c4af5ea139f77a"
  },
  {
   "id": "eb-2002596770850",
@@ -251,7 +281,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Shifting The Way You Think Wellness Center",
   "description": "Chill out and unwind with some slow, deep stretches that melt away tension and leave you feeling totally refreshed.",
   "url": "https://www.eventbrite.com/e/yin-yoga-deep-release-tickets-2002596770850",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1189910499%2F2351618288723%2F1%2Foriginal.20260729-203510?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=17cc27a37230971557fdb6b542bde94f"
  },
  {
   "id": "eb-2002746650143",
@@ -269,7 +300,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Hannah's Dance Community",
   "description": "Uplifting Dance Classes with Dance Artist Andromeda! Waiver required.",
   "url": "https://www.eventbrite.com/e/world-dance-rhythms-with-andromeda-tickets-2002746650143",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191772011%2F303189153074%2F1%2Foriginal.20260824-163738?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=5d7976d83b03a44132760cddbc7b520f"
  },
  {
   "id": "eb-1995766456195",
@@ -287,7 +319,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Advaita Meditation Center",
   "description": "This course will take place in-person and online on Wednesdays from 7-9pm for 6 weeks starting 10/21/26.",
   "url": "https://www.eventbrite.com/e/nonduality-and-meditation-i-fall-registration-1995766456195",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1189818115%2F1304490335653%2F1%2Foriginal.20231128-192826?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C84%2C1000%2C500&s=26a0d8e81b5bfde30ce9e558ddcaecc1"
  },
  {
   "id": "eb-2000482858080",
@@ -323,7 +356,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Danger Wizard",
   "description": "Learn the basics of how to get started painting miniatures! Join us for an evening of fun, art, and tiny little dudes with friends and fam!",
   "url": "https://www.eventbrite.com/e/mini-paint-night--tickets-2002230492301",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1185782000%2F373231276733%2F1%2Foriginal.20260530-233940?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.574&fp-y=0.227&s=4fddb63c1dd3e354c5ff915a42f86a44"
  },
  {
   "id": "eb-1995733379261",
@@ -341,7 +375,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Advaita Meditation Center",
   "description": "This class takes place in-person and online every Wednesday night 7 - 8:15pm.",
   "url": "https://www.eventbrite.com/e/open-meditation-registration-1995733379261",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F597868439%2F1304490335653%2F1%2Foriginal.20230914-130126?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C6%2C700%2C350&s=bc92a225b3f110408e2ef3c410be25d3"
  },
  {
   "id": "eb-1984699660110",
@@ -359,7 +394,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "The Presentation School Foundation Community Center",
   "description": "Weekly LGBTQ+ meditation in Brighton, MA. A beginner-friendly space to reduce stress, build mindfulness, and connect with queer community in",
   "url": "https://www.eventbrite.com/e/lgbtq-meditation-in-brighton-rainbow-sangha-boston-tickets-1984699660110",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179301620%2F88827795261%2F1%2Foriginal.20260308-011126?crop=focalpoint&fit=crop&h=200&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.562&fp-y=0.577&s=cbc9aa76a656f72577ae1d147c37e34c"
+ },
+ {
+  "id": "eb-1995323208429",
+  "title": "Mixed Media Meetup in October",
+  "category": "craft",
+  "start": "2026-10-22T13:00",
+  "end": "2026-10-22T16:00",
+  "venue": "Art Complex Museum",
+  "address": "189 Alden Street",
+  "city": "Duxbury, MA",
+  "lat": 42.044,
+  "lng": -70.6872,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Art Complex Museum",
+  "description": "Join us in the studio to make art!",
+  "url": "https://www.eventbrite.com/e/mixed-media-meetup-in-october-tickets-1995323208429",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1189642843%2F2902982593811%2F1%2Foriginal.20260726-145306?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.451&fp-y=0.313&s=d21304649e773322ae8c60b4ee04997d"
  },
  {
   "id": "eb-1996650539512",
@@ -377,7 +432,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Franklin Senior Center",
   "description": "Free trauma-informed yoga for the military community, veterans and first responders.",
   "url": "https://www.eventbrite.com/e/warrior-yoga-for-veterans-tickets-1996650539512",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1189220955%2F1164743346733%2F1%2Foriginal.20260720-150733?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.509&fp-y=0.3&s=edc85ffbcbcd8a844dd68a8cfea12fc2"
  },
  {
   "id": "eb-1995465284382",
@@ -413,7 +469,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "GrubStreet",
   "description": "A new meditation class in the Seaport with Gen Khedrub! Launching in September, at Grubstreet, above Porter Square Books.",
   "url": "https://www.eventbrite.com/e/change-your-mind-change-your-life-tickets-2002318266837",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194387725%2F94561065173%2F1%2Foriginal.20260925-200508?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=e75a103daa9c6750c5e5f02dc0297234"
  },
  {
   "id": "eb-1997854833588",
@@ -431,7 +488,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Artisan's Asylum",
   "description": "Learn how to turn color photographs into realistic screen prints on Artisans Asylum's Riley Hopkins 250 4-color press!",
   "url": "https://www.eventbrite.com/e/four-color-screen-printing-tickets-1997854833588",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1183849453%2F266461963872%2F1%2Foriginal.20260505-193104?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=cbc854cbeb19ea8b6ac8301c0218370e"
+ },
+ {
+  "id": "eb-2002963430539",
+  "title": "Collage Studio",
+  "category": "craft",
+  "start": "2026-10-22T18:00",
+  "end": "2026-10-22T20:00",
+  "venue": "Still Life Studios",
+  "address": "187 Mount Auburn Street",
+  "city": "Cambridge, MA",
+  "lat": 42.3748,
+  "lng": -71.1286,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Still Life Studios",
+  "description": "Cut and paste a materpiece using our collection of secondhand papers and magazines, or join us in another papercraft project for the week.",
+  "url": "https://www.eventbrite.com/e/collage-studio-tickets-2002963430539",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195112569%2F1163314524503%2F1%2Foriginal.20261005-194503?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.492&fp-y=0.016&s=6edfee0cfd013f1b7a05314f92905188"
  },
  {
   "id": "eb-2002384056616",
@@ -470,6 +547,63 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "source": "Eventbrite"
  },
  {
+  "id": "eb-2003378420786",
+  "title": "GHOSTIES!! Clay Workshop",
+  "category": "craft",
+  "start": "2026-10-22T18:30",
+  "end": "2026-10-22T20:00",
+  "venue": "Rocky Pine Studios",
+  "address": "120 Elm Street",
+  "city": "Upton, MA",
+  "lat": 42.1854,
+  "lng": -71.5862,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Rocky Pine Studios",
+  "description": "Happy Halloween! It’s time to let the GHOSTIES out!! Come have some fun making simple glowing ghosts to display or share!",
+  "url": "https://www.eventbrite.com/e/ghosties-clay-workshop-tickets-2003378420786",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195732136%2F85080897297%2F1%2Foriginal.20261013-214127?crop=focalpoint&fit=crop&h=200&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=2a1a86248bf94da31ebfa5b40399ee7b"
+ },
+ {
+  "id": "eb-2002491135893",
+  "title": "Beaded Spider Suncatchers",
+  "category": "craft",
+  "start": "2026-10-22T18:30",
+  "end": "2026-10-22T20:30",
+  "venue": "Weekend Craft Cafe",
+  "address": "61 Endicott Street",
+  "city": "Norwood, MA",
+  "lat": 42.1774,
+  "lng": -71.2165,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Weekend Craft Cafe",
+  "description": "Get crafty making colorful spider suncatchers that’ll brighten up any window with cool vibes.",
+  "url": "https://www.eventbrite.com/e/beaded-spider-suncatchers-tickets-2002491135893",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194596395%2F302833636759%2F1%2Foriginal.20260929-035259?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.461&fp-y=0.397&s=68eab0b33665cfbd41a3d3a99852a6aa"
+ },
+ {
+  "id": "eb-1998932891087",
+  "title": "Create Turkish Lamps: Reverse Glass Painting & Mosaic Design",
+  "category": "craft",
+  "start": "2026-10-22T18:30",
+  "end": "2026-10-22T20:30",
+  "venue": "Wyllo",
+  "address": "65 Thayer St",
+  "city": "Boston, MA",
+  "lat": 42.3424,
+  "lng": -71.0643,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Wyllo",
+  "description": "Make your own Turkish lamp by experimenting with reverse glass painting and hand cut glass mosaic tiles.",
+  "url": "https://www.eventbrite.com/e/create-turkish-lamps-reverse-glass-painting-mosaic-design-tickets-1998932891087",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1177246688%2F559047357603%2F1%2Foriginal.20260211-040612?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.469&fp-y=0.438&s=8027d10589fe8e113f2308de1e1d923a"
+ },
+ {
   "id": "eb-2003379064712",
   "title": "Cacao Ceremony: A Heart Opening Evening",
   "category": "meditation",
@@ -485,7 +619,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "65 Cornwall St",
   "description": "An evening of ceremonial cacao, dance, meditation and real connection in Jamaica Plain, with Michael and Penny Gold.",
   "url": "https://www.eventbrite.com/e/cacao-ceremony-a-heart-opening-evening-tickets-2003379064712",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195734180%2F649583476%2F1%2Foriginal.20200221-215704?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C30%2C640%2C320&s=5462c84eadd5373380a286d9d55af1d1"
+ },
+ {
+  "id": "eb-2002651181594",
+  "title": "Candle Making and Intention Setting Workshop",
+  "category": "craft",
+  "start": "2026-10-22T19:00",
+  "end": "2026-10-22T20:30",
+  "venue": "DARK MODE at Bow Market",
+  "address": "1 Bow Market Way",
+  "city": "Somerville, MA",
+  "lat": 42.381,
+  "lng": -71.0979,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "DARK MODE at Bow Market",
+  "description": "Join us for a very witchy evening of intention setting and candle making!",
+  "url": "https://www.eventbrite.com/e/candle-making-and-intention-setting-workshop-tickets-2002651181594",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F867437739%2F68126974807%2F1%2Foriginal.20241005-162423?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=b0796104a5e4e544cee43bed7fe9ba25"
  },
  {
   "id": "eb-1977458627988",
@@ -503,7 +657,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "75 Pleasant St suite 403",
   "description": "Tai Chi Class with Mei Hung – Open Level\nEvery Friday, 10:00 AM – 11:00 AM",
   "url": "https://www.eventbrite.com/e/tai-chi-class-tickets-1977458627988",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1172335776%2F288488941899%2F1%2Foriginal.20251204-191505?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.9&fp-y=0.5&s=86007939524ac84ef36068dd2ddf70d5"
  },
  {
   "id": "eb-1997847840672",
@@ -539,7 +694,46 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Art Complex Museum",
   "description": "Tai Chi is an ancient art involving postures, breathing, and movements to enhance the flow of energy throughout and around the body.",
   "url": "https://www.eventbrite.com/e/tai-chi-september-to-october-tickets-2003518426547",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1190974531%2F1371725208153%2F1%2Foriginal.20260813-125323?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.488&fp-y=0.825&s=21f62b5ca0abaac03a776793b88ee1eb"
+ },
+ {
+  "id": "eb-2001094111355",
+  "title": "Fall Tea Blending Experience (Boston)",
+  "category": "herbal",
+  "start": "2026-10-23T11:00",
+  "end": "2026-10-23T16:00",
+  "venue": "Boston Public Market",
+  "address": "100 Hanover Street",
+  "city": "Boston, MA",
+  "lat": 42.3617,
+  "lng": -71.0575,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Boston Public Market",
+  "description": "Join Curio Spice Co. for a drop-in custom Tea Blending Experience at Boston Public Market. Create your own handmade loose-leaf tea blend!",
+  "url": "https://www.eventbrite.com/e/fall-tea-blending-experience-boston-tickets-2001094111355",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193603787%2F3011146785953%2F1%2Foriginal.20260915-221409?crop=focalpoint&fit=crop&w=200&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.406&fp-y=0.33&s=10a0da84949f2efcc7c3959afa30c703"
+ },
+ {
+  "id": "eb-2002573035858",
+  "title": "Fall Tea Blending Experience (Cambridge)",
+  "category": "herbal",
+  "start": "2026-10-23T12:00",
+  "end": "2026-10-23T17:00",
+  "venue": "2265 Massachusetts Ave",
+  "address": "2265 Massachusetts Avenue",
+  "city": "Cambridge, MA",
+  "lat": 42.3946,
+  "lng": -71.1267,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "2265 Massachusetts Ave",
+  "description": "Join Curio Spice Co. for a drop-in custom Tea Blending Experience at our Cambridge location. Create your own handmade loose-leaf tea blend!",
+  "url": "https://www.eventbrite.com/e/fall-tea-blending-experience-cambridge-tickets-2002573035858",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193603787%2F3011146785953%2F1%2Foriginal.20260915-221409?crop=focalpoint&fit=crop&w=200&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.406&fp-y=0.33&s=10a0da84949f2efcc7c3959afa30c703"
  },
  {
   "id": "eb-1492326812669",
@@ -557,7 +751,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "The Hidden Art Gallery",
   "description": "Reflective Process: A private, guided wellness experience to help you slow down, reconnect inwardly and create emotional balance.",
   "url": "https://www.eventbrite.com/e/freedom-within-meditation-watercolor-tickets-1492326812669",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F814646239%2F221646972603%2F1%2Foriginal.20240725-190620?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=166%2C0%2C998%2C499&s=c6d558262b9c5e0a51a45bf72b5d09a5"
  },
  {
   "id": "eb-1992923204954",
@@ -575,7 +770,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "New England Culinary Arts Training",
   "description": "Discover the vibrant flavors of Haiti and learn to prepare authentic, delicious Haitian dishes with Boston Chef Michelene.",
   "url": "https://www.eventbrite.com/e/haitian-cooking-class-with-chef-miche-breez-gourmet-tickets-1992923204954",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1187996964%2F561180163463%2F1%2Foriginal.20260701-124420?crop=focalpoint&fit=crop&w=367&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=61d6d192b4d0eb964db335298f506f68"
  },
  {
   "id": "eb-1999799148085",
@@ -593,7 +789,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Craft Loft (Cambridge Store)",
   "description": "Join us for a fun resin art workshop where you'll create your own beautiful sea wave serving tray!",
   "url": "https://www.eventbrite.com/e/sea-wave-resin-serving-tray-cambridge-tickets-1999799148085",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1178632673%2F2587882898501%2F1%2Foriginal.20260227-183333?w=200&auto=format%2Ccompress&q=75&sharp=10&s=092ba7248c1787289a8ac2ae07c9a95a"
  },
  {
   "id": "eb-2002821842044",
@@ -611,7 +808,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Trident Booksellers & Cafe",
   "description": "Learn to sculpt Halloween-inspired clay creations at this spooky, hands-on pottery workshop!",
   "url": "https://www.eventbrite.com/e/hocus-pocus-halloween-edition-pottery-workshop-tickets-2002821842044",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1103002603%2F2257453879843%2F1%2Foriginal.20250822-210232?crop=focalpoint&fit=crop&w=355&auto=format%2Ccompress&q=75&sharp=10&fp-x=5e-05&fp-y=5e-05&s=628b80894726224e68f3b448598568c5"
  },
  {
   "id": "eb-2002943219086",
@@ -647,7 +845,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Common Street Spiritual Center",
   "description": "The Embodiment and Movement Weekend opens with a party. Join us Friday night at Common Street Spiritual Center for two back-to-back experie",
   "url": "https://www.eventbrite.com/e/embodiment-and-movement-weekend-opening-night-reiki-dance-soundbath-and-ecstatic-dance-tickets-2003005003886",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195174848%2F157956062392%2F1%2Foriginal.20261006-133943?h=200&w=275&auto=format%2Ccompress&q=75&sharp=10&s=6f42d1478c30c9fbaa6a99586b7a8bad"
  },
  {
   "id": "eb-1982972373750",
@@ -665,7 +864,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Parkside Condominiums",
   "description": "Join us for a cozy gathering filled with music, devotion, and community vibes at Boston,1st and 3rd Saturday every month!",
   "url": "https://www.eventbrite.com/e/bhakti-yoga-experience-boston-common-tickets-1982972373750",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1177378999%2F490225954589%2F1%2Foriginal.20260212-151127?w=450&auto=format%2Ccompress&q=75&sharp=10&s=70180dcc1d2ed05233eb4872b2603eb3"
  },
  {
   "id": "eb-1983904624136",
@@ -683,7 +883,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "100 Atlantic Ave",
   "description": "Massachusetts — MA Join us for a morning of zen and good vibes with Rise & Flow, where we'll salute the sun and find our inner peace",
   "url": "https://www.eventbrite.com/e/rise-flow-sunrise-yoga-east-coast-tickets-1983904624136",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1175354454%2F2770925892701%2F1%2Foriginal.20260120-170640?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.539&fp-y=0.395&s=b92fd4338bb7924e7b1d8de47c65175e"
  },
  {
   "id": "eb-1988846023996",
@@ -701,7 +902,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Providence Zen Center",
   "description": "Find your center through breathwork and mindful movement in nature.",
   "url": "https://www.eventbrite.com/e/zen-in-motion-retreat-tickets-1988846023996",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1183833536%2F1940998138193%2F1%2Foriginal.20260505-170453?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.574&fp-y=0.109&s=2b622295b9e0f2949189ee273c9aa903"
  },
  {
   "id": "eb-2003174259133",
@@ -755,7 +957,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Modern Party Art",
   "description": "Come enjoy a gentle mat yoga practice, sound meditation, and a paint experience in a relaxed, creative space.\n\nNo experience needed.",
   "url": "https://www.eventbrite.com/e/flow-rest-and-create-tickets-2002975468545",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195708404%2F479093188943%2F1%2Foriginal.20261013-172247?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.51&fp-y=0.148&s=6091c35c8ad05a22122d2466948951f8"
  },
  {
   "id": "eb-1999413768404",
@@ -773,7 +976,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Plimoth Patuxet Museums",
   "description": "Try your hand at basket weaving in this engaging, hands-on workshop and create a useful basket of your own!",
   "url": "https://www.eventbrite.com/e/basket-weaving-workshop-tickets-1999413768404",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1192614299%2F201966129358%2F1%2Foriginal.20260903-194648?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.486&fp-y=0.573&s=d750717024560b278ea11ff5a6c6d82d"
  },
  {
   "id": "eb-2003149151034",
@@ -791,7 +995,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "116 Church St",
   "description": "Slow Burn is a yoga-inspired strength and flow class designed to help you breathe deeper, move intentionally, and find stillness - that burn",
   "url": "https://www.eventbrite.com/e/shadows-spines-ft-sugi-matcha-tickets-2003149151034",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195375322%2F2742825587911%2F1%2Foriginal.20261008-152826?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.284&fp-y=0.356&s=9f619981dbf8dc2e6453b2d35c43fa95"
  },
  {
   "id": "eb-2001883823405",
@@ -809,7 +1014,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Kadampa Meditation Center Boston",
   "description": "Be kind to yourself by taking care of your mind. Take this precious opportunity to step away from the noise and distractions of daily life.",
   "url": "https://www.eventbrite.com/e/silent-saturdays-a-beginners-day-retreat-tickets-2001883823405",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194010409%2F94561065173%2F1%2Foriginal.20260921-143013?crop=focalpoint&fit=crop&h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=d7f3c23d30eb188cc6b45a65aaa241a0"
  },
  {
   "id": "eb-1998928151912",
@@ -827,7 +1033,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Tackle Box Brewing Company",
   "description": "BARRE AT THE BAR! \n\nGet ready to barre, sweat & sip! Join us at Tackle Box Brewing Co. for a fun 60-minute, all-levels barre class!",
   "url": "https://www.eventbrite.com/e/barre-at-the-bar-tickets-1998928151912",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191896644%2F546535823669%2F1%2Foriginal.20260825-220236?crop=focalpoint&fit=crop&h=200&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.502&fp-y=0.072&s=c27a222df572982d714539f49122573f"
  },
  {
   "id": "eb-2003294727457",
@@ -845,7 +1052,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "The Atlas Hotel",
   "description": "Sip cacao, get cozy, and enjoy an in-person journey through stories and reflection.",
   "url": "https://www.eventbrite.com/e/the-cacao-reading-journey-tickets-2003294727457",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195601234%2F167957005353%2F1%2Foriginal.20261012-131834?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=bf7371cd7804afd917de43111e587b7b"
+ },
+ {
+  "id": "eb-1999735947049",
+  "title": "Mosaic Coaster Workshop",
+  "category": "craft",
+  "start": "2026-10-24T11:30",
+  "end": "2026-10-24T13:00",
+  "venue": "Wyllo",
+  "address": "65 Thayer St",
+  "city": "Boston, MA",
+  "lat": 42.3424,
+  "lng": -71.0643,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Wyllo",
+  "description": "Design your own unique pair of mosaic coasters.  Create your own geometric or floral designs or use one of our templates for guidance.",
+  "url": "https://www.eventbrite.com/e/mosaic-coaster-workshop-tickets-1999735947049",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1183593945%2F559047357603%2F1%2Foriginal.20260502-154736?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=03013426fe167dd73bc956233d6ea75b"
  },
  {
   "id": "eb-2002841343373",
@@ -863,7 +1090,46 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Travelmug Cafe",
   "description": "Sip, sculpt + unwind! Learn hand-building techniques and shape your own one-of-a-kind clay cup, perfect for coffee or tea!",
   "url": "https://www.eventbrite.com/e/ceramic-mug-making-pottery-workshop-tickets-2002841343373",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1084642623%2F2257453879843%2F1%2Foriginal.20250730-165135?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=5.38115472505e-05&fp-y=5.29225498339e-05&s=aef350a52fff5d0a52bc53ab8acaebfd"
+ },
+ {
+  "id": "eb-2003607609295",
+  "title": "Hatha Yoga with Live Music",
+  "category": "yoga",
+  "start": "2026-10-24T12:00",
+  "end": "2026-10-24T13:45",
+  "venue": "The Lilypad",
+  "address": "1353 Cambridge Street",
+  "city": "Cambridge, MA",
+  "lat": 42.3738,
+  "lng": -71.1001,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "The Lilypad",
+  "description": "Relax and rejuvenate with traditional Hatha Yoga at the Lilypad, complete with live musical accompaniment!",
+  "url": "https://www.eventbrite.com/e/hatha-yoga-with-live-music-registration-2003607609295",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1130311233%2F413282597103%2F1%2Foriginal.20250920-205547?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.499580641153&fp-y=0.523346303502&s=3f6ae61260cfa8b04b21843fd8241aa6"
+ },
+ {
+  "id": "eb-2003371417840",
+  "title": "Painting Demo with Jim Connelly",
+  "category": "craft",
+  "start": "2026-10-24T12:00",
+  "end": "2026-10-24T15:00",
+  "venue": "Copley Society of Art",
+  "address": "158 Newbury Street",
+  "city": "Boston, MA",
+  "lat": 42.3505,
+  "lng": -71.0782,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Copley Society of Art",
+  "description": "Join us for a unique acrylic-on-baseball glove painting demo by Jim Connelly from 12:00 to 3:00 PM in the gallery.",
+  "url": "https://www.eventbrite.com/e/painting-demo-with-jim-connelly-tickets-2003371417840",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195719492%2F95187562167%2F1%2Foriginal.20261013-192349?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=ff834ec3184c926845753896f2700168"
  },
  {
   "id": "eb-2000992087198",
@@ -917,7 +1183,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "CraftRoots Brewing",
   "description": "Kick off holiday season with us at this inclusive, beginner-friendly pottery workshop!",
   "url": "https://www.eventbrite.com/e/holiday-edition-pottery-workshop-tickets-1993791260331",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1143085213%2F2257453879843%2F1%2Foriginal.20251002-215036?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=589deb0e01ee48b9bbab6c70eb1e9267"
  },
  {
   "id": "eb-2003215673003",
@@ -935,7 +1202,65 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "10 Oak St",
   "description": "A 3-hour experiential workshop introducing you to the Soul 13 healing system through guided meditation and energetic transmission.",
   "url": "https://www.eventbrite.com/e/soul-13-experience-monthly-energy-healing-workshop-tickets-2003215673003",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1189489585%2F2347817479%2F1%2Foriginal.20260723-173413?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=3de7f10d46d0eb0169b33d51d612d86f"
+ },
+ {
+  "id": "eb-2002391042511",
+  "title": "Pottery Painting Session",
+  "category": "craft",
+  "start": "2026-10-24T14:00",
+  "end": "2026-10-24T16:00",
+  "venue": "Pottery with a Purpose Studio",
+  "address": "178 Crescent Road",
+  "city": "Needham, MA",
+  "lat": 42.297,
+  "lng": -71.2399,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Pottery with a Purpose Studio",
+  "description": "Our Pottery Painting Sessions are your chance to slow down, unplug, and give your pottery some personality!",
+  "url": "https://www.eventbrite.com/e/pottery-painting-session-tickets-2002391042511",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1178963425%2F2257453879843%2F1%2Foriginal.20260303-235114?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=e5650d98fe5613596d70509845e95479"
+ },
+ {
+  "id": "eb-1999794689750",
+  "title": "Pressed Floral Mini Pumpkins (Cambridge)",
+  "category": "craft",
+  "start": "2026-10-24T14:00",
+  "end": "2026-10-24T15:00",
+  "venue": "Craft Loft (Cambridge Store)",
+  "address": "100 Cambridgeside Place",
+  "city": "Cambridge, MA",
+  "lat": 42.3674,
+  "lng": -71.0766,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Craft Loft (Cambridge Store)",
+  "description": "Get crafty with us and learn how to make adorable mini pumpkins using pressed flowers - a perfect fall decor DIY!",
+  "url": "https://www.eventbrite.com/e/pressed-floral-mini-pumpkins-cambridge-tickets-1999794689750",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1100049143%2F2587882898501%2F1%2Foriginal.20250819-213605?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=a7d59ee9563e4ecaa96b849b8875b347"
+ },
+ {
+  "id": "eb-2003314832592",
+  "title": "Holiday Resin Art Workshop: Make Your Own Coasters, Board or Tray",
+  "category": "craft",
+  "start": "2026-10-24T14:00",
+  "end": "2026-10-24T15:30",
+  "venue": "Eterna Art Studio",
+  "address": "4 Yonker Place",
+  "city": "Walpole, MA",
+  "lat": 42.1013,
+  "lng": -71.2799,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Eterna Art Studio",
+  "description": "Learn to make stunning holiday inspired resin art! Walk away with your own coaster, boards & Trays - all materials included!",
+  "url": "https://www.eventbrite.com/e/holiday-resin-art-workshop-make-your-own-coasters-board-or-tray-tickets-2003314832592",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195627877%2F2968156389061%2F1%2Foriginal.20261012-184310?crop=focalpoint&fit=crop&w=355&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=988e2e6bb7d1337bc69485302506a30f"
  },
  {
   "id": "eb-1998946103606",
@@ -953,7 +1278,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Boston Modern Studio",
   "description": "Halloween puppy yoga at Boston Modern Studio in Canton: gentle all-levels movement, rescue puppies, cuddles, costumes and a good cause.",
   "url": "https://www.eventbrite.com/e/halloween-puppy-yoga-at-boston-modern-tickets-1998946103606",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1192004273%2F3005596065001%2F1%2Foriginal.20260827-031319?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.049&fp-y=0.481&s=f768df4e5c9ece70bd6830a3b1573bdc"
  },
  {
   "id": "eb-2002392558044",
@@ -971,25 +1297,46 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Pottery with a Purpose",
   "description": "Get your hands muddy and learn the basics of throwing on a pottery wheel!",
   "url": "https://www.eventbrite.com/e/pottery-wheel-throwing-workshop-tickets-2002392558044",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1178863026%2F2816705744041%2F1%2Foriginal.20260303-020609?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=842c555e5cb2a54e809b6513f0b5cc80"
  },
  {
-  "id": "eb-2003129301664",
-  "title": "Afrobeats Dance Boston Presents: Raboday Fitness with Wideline",
-  "category": "movement",
-  "start": "2026-10-24T15:00",
-  "end": "2026-10-24T17:00",
-  "venue": "Urbanity Dance Studio 1180 Washington St,",
-  "address": "Urbanity Dance Studio 1180 Washington St, Boston, MA 02118",
-  "city": "Boston, MA",
-  "lat": 42.3431,
-  "lng": -71.0662,
+  "id": "eb-1999789821188",
+  "title": "Chunky Knit Throw Blanket Making (Cambridge)",
+  "category": "craft",
+  "start": "2026-10-24T16:00",
+  "end": "2026-10-24T18:00",
+  "venue": "Craft Loft (Cambridge Store)",
+  "address": "100 Cambridgeside Place",
+  "city": "Cambridge, MA",
+  "lat": 42.3674,
+  "lng": -71.0766,
   "price": null,
   "priceNote": "Tickets & price on Eventbrite",
-  "host": "Urbanity Dance Studio 1180 Washington St,",
-  "description": "Join Wideline for Raboday Fitness! Enjoy upbeat music, a full-body workout, and a fun way to burn calories and work up a sweat.",
-  "url": "https://www.eventbrite.com/e/afrobeats-dance-boston-presents-raboday-fitness-with-wideline-tickets-2003129301664",
-  "source": "Eventbrite"
+  "host": "Craft Loft (Cambridge Store)",
+  "description": "In this fun and easy workshop, our instructor will show you how to design and make your very own Chunky Knit Throw Blanket!",
+  "url": "https://www.eventbrite.com/e/chunky-knit-throw-blanket-making-cambridge-tickets-1999789821188",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F911110583%2F354227652065%2F1%2Foriginal.20241203-234906?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=79660c71740f162d74aa1e03ecce86f2"
+ },
+ {
+  "id": "eb-1990519578643",
+  "title": "Watercolor Art Classes",
+  "category": "craft",
+  "start": "2026-10-24T17:00",
+  "end": "2026-10-24T18:30",
+  "venue": "The Hidden Art Gallery",
+  "address": "25 Myrtle Street",
+  "city": "Boston, MA",
+  "lat": 42.3594,
+  "lng": -71.0655,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "The Hidden Art Gallery",
+  "description": "Join us for fun watercolor painting sessions on Saturday evenings and let's create something magical together!",
+  "url": "https://www.eventbrite.com/e/watercolor-art-classes-tickets-1990519578643",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F864734889%2F221646972603%2F1%2Foriginal.20241002-142139?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=95c37fdb92a5abdec39c0e7458088454"
  },
  {
   "id": "eb-2002353213363",
@@ -1007,7 +1354,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Natick Mall",
   "description": "Get spooky and creative with some pottery painting fun just for adults! PRICE will VARY depending on what peice you choose. Reservation Only",
   "url": "https://www.eventbrite.com/e/halloween-pottery-painting-night-adult-only-tickets-2002353213363",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195012995%2F3015620800351%2F1%2Foriginal.20261004-162032?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.998&fp-y=0.056&s=627fbeb103511802b1ee7283a88b72f1"
+ },
+ {
+  "id": "eb-2003246070924",
+  "title": "Embodiment and Movement Weekend: Sunday Workshops",
+  "category": "breathwork",
+  "start": "2026-10-25T09:00",
+  "end": "2026-10-25T16:00",
+  "venue": "Common Street Spiritual Center",
+  "address": "13 Common St",
+  "city": "Natick, MA",
+  "lat": 42.2826,
+  "lng": -71.3465,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Common Street Spiritual Center",
+  "description": "Sunday closes the Embodiment and Movement Weekend at Common Street Spiritual Center with a morning and afternoon of yoga, voice, breath, sa",
+  "url": "https://www.eventbrite.com/e/embodiment-and-movement-weekend-sunday-workshops-tickets-2003246070924",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195525705%2F157956062392%2F1%2Foriginal.20261010-211715?h=200&w=382&auto=format%2Ccompress&q=75&sharp=10&s=ba31d297a9466a0b4001f064ec53fdb8"
  },
  {
   "id": "eb-2002730064535",
@@ -1025,7 +1392,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Perch",
   "description": "Join Monica Shields of Petite Mo Sweets for a spooky autumn cookie decorating workshop where you’ll learn to decorate your own set of season",
   "url": "https://www.eventbrite.com/e/spooky-season-a-cookie-decorating-workshop-tickets-2002730064535",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195009529%2F2984405421621%2F1%2Foriginal.20261004-150327?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.363&fp-y=0.617&s=79fba9a1eee4cdfaa094b51289174d4e"
  },
  {
   "id": "eb-2002595786907",
@@ -1043,7 +1411,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Shifting The Way You Think Wellness Center",
   "description": "This gentle practice blends slow flow, Hatha yoga, & guided breathwork to help you build strength, improve alignment, & feel more connected.",
   "url": "https://www.eventbrite.com/e/align-and-flow-gentle-yoga-w-joanna-tickets-2002595786907",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1190096926%2F2351618288723%2F1%2Foriginal.20260801-150948?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=88fcec56a823e6e8abe1bda2c42f708e"
  },
  {
   "id": "eb-2002845107632",
@@ -1061,7 +1430,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "4155 Washington St",
   "description": "Yoga en español Series\nDomingos, 11 de octubre – 1 de noviembre, 2026\n11:00 AM – 12:00 PM\n\n¡Ven a disfrutar de comunidad, tu idioma, movimie",
   "url": "https://www.eventbrite.com/e/yoga-en-espanol-tickets-2002845107632",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194948185%2F315061304442%2F1%2Foriginal.20261002-224711?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=3f1a4cdc66888ed98ef02c7172b6325c"
+ },
+ {
+  "id": "eb-2001273856979",
+  "title": "Candle Making + Exploring the SoWa Open Market",
+  "category": "craft",
+  "start": "2026-10-25T11:00",
+  "end": "2026-10-25T12:30",
+  "venue": "Wyllo",
+  "address": "65 Thayer St",
+  "city": "Boston, MA",
+  "lat": 42.3424,
+  "lng": -71.0643,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Wyllo",
+  "description": "Make your own custom soy candle and explore the SoWa Open Market - just steps away from our shop!",
+  "url": "https://www.eventbrite.com/e/candle-making-exploring-the-sowa-open-market-tickets-2001273856979",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1182436565%2F559047357603%2F1%2Foriginal.20260417-200645?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=2a00ad6819bb061f4562fed6bd30aa9a"
  },
  {
   "id": "eb-2001090441378",
@@ -1079,7 +1468,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Lamplighter Brewing Co. - CX",
   "description": "Sunday plans? Join us at our biweekly brewery yoga, where you can enjoy a gentle flow followed by a delicious craft beer.",
   "url": "https://www.eventbrite.com/e/brewery-yoga-at-lamplighter-cx-tickets-2001090441378",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F567223289%2F1079365244463%2F1%2Foriginal.20230802-171204?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C308%2C6056%2C3028&s=d68543cbf452a9306724994fa7e43d8c"
  },
  {
   "id": "eb-1302622050619",
@@ -1097,7 +1487,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "247 Walnut St",
   "description": "Effective and intentional sound therapy for creating powerful transformation in your life. This is not your typical soundbath.",
   "url": "https://www.eventbrite.com/e/sound-bath-meditation-tickets-1302622050619",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F565795009%2F877890565343%2F1%2Foriginal.20230801-004614?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C1050%2C525&s=33c80f9174f401bf0f0a89d4a8712dcb"
  },
  {
   "id": "eb-1999500237034",
@@ -1133,7 +1524,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Ula Café",
   "description": "Sculpt and decorate air-dry clay with beads, glass, and charms  to create a unique mosaic.",
   "url": "https://www.eventbrite.com/e/ula-crafternoons-clay-mosaics-tickets-2002355154168",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194556736%2F2597586209521%2F1%2Foriginal.20260928-193601?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=78f85b33add95db05f56806fa66c17f2"
  },
  {
   "id": "eb-1998827509889",
@@ -1151,7 +1543,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "395 Massachusetts Ave",
   "description": "Immerse yourself in the vibrations of Tibetan Singing Bowls as you embark on a grounding therapeutic healing and relaxation experience",
   "url": "https://www.eventbrite.com/e/reiki-energized-tibetan-bowl-sound-bath-2-sessions-3p-4pm-tickets-1998827509889",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1077144893%2F559273449243%2F1%2Foriginal.20250719-232758?h=200&w=274&auto=format%2Ccompress&q=75&sharp=10&s=cb1bbac2e8fbde71686e72239b2e34f3"
  },
  {
   "id": "eb-1999447002809",
@@ -1169,7 +1562,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Boston Yoga Union - Back Bay",
   "description": "A sound meditation of breath, sound, somatics and stillness...practiced together.",
   "url": "https://www.eventbrite.com/e/stillpoint-live-boston-yoga-union-tickets-1999447002809",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1192930547%2F3008232700150%2F1%2Foriginal.20260908-014318?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=bdbfd84b5f5914fd7739563c209ea186"
  },
  {
   "id": "eb-2002763793419",
@@ -1187,7 +1581,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Mighty Squirrel Brewing Co.",
   "description": "Get into the Halloween spirit!",
   "url": "https://www.eventbrite.com/e/halloween-scents-sips-a-candle-making-workshop-at-mighty-squirrel-tickets-2002763793419",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1196153721%2F2650349041941%2F1%2Foriginal.20261020-020715?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.484&fp-y=0.848&s=21c7d872f6d9a42b4d23cb9a1abfc77e"
  },
  {
   "id": "eb-2003432646978",
@@ -1205,7 +1600,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Watertown Center For Healing Arts",
   "description": "Ever left a yoga class wishing you’d had a chance to get to know the people around you? We have too, and that’s why we created this class!",
   "url": "https://www.eventbrite.com/e/social-yoga-a-gentle-yoga-class-with-new-friends-tickets-2003432646978",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195941051%2F1349023792883%2F1%2Foriginal.20261016-132219?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=0fc8e0d29497c5d8023dad8eb2f637a7"
+ },
+ {
+  "id": "eb-2003090940926",
+  "title": "Halloween Paint Party",
+  "category": "craft",
+  "start": "2026-10-25T17:00",
+  "end": "2026-10-25T19:00",
+  "venue": "Art Signals Studio",
+  "address": "16 Nason Street, Maynard, MA",
+  "city": "Maynard, MA",
+  "lat": 42.4326,
+  "lng": -71.4539,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Art Signals Studio",
+  "description": "A party where creativity gets a little creepy... Bwahahaha!",
+  "url": "https://www.eventbrite.com/e/halloween-paint-party-tickets-2003090940926",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195315693%2F130490134371%2F1%2Foriginal.20261007-204208?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=1.0&fp-y=0.924&s=51b07033e004a1cc0515f85500e0dd88"
  },
  {
   "id": "eb-1999860819546",
@@ -1223,7 +1638,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Upstairs at Bow",
   "description": "All levels yoga class candlelight yoga set to r&b.",
   "url": "https://www.eventbrite.com/e/upstairs-at-bow-candlelight-flow-yoga-tickets-1999860819546",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F910101863%2F65248878177%2F1%2Foriginal.20241202-200222?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.695084730321&fp-y=0.379377431907&s=704c9d27301167d20f294591115b1edf"
  },
  {
   "id": "eb-2001236316695",
@@ -1241,7 +1657,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Modern Party Art",
   "description": "One Friday, one project — this month it's [bouquets / alcohol ink / doormats], picked just for you.",
   "url": "https://www.eventbrite.com/e/tgif-paint-night-specialty-edition-tickets-2001236316695",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193664369%2F3014201371417%2F1%2Foriginal.20260916-155254?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=0c742c938b5e4a7483a0595ed790d6c7"
+ },
+ {
+  "id": "eb-1994590568082",
+  "title": "Juice Candle Workshop on Monday Afternoons",
+  "category": "craft",
+  "start": "2026-10-26T16:00",
+  "end": "2026-10-26T17:30",
+  "venue": "229 Harvard St",
+  "address": "229 Harvard Street",
+  "city": "Brookline, MA",
+  "lat": 42.3407,
+  "lng": -71.1206,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "229 Harvard St",
+  "description": "Spend a fun afternoon creating a juice-inspired candle at our cozy studio!",
+  "url": "https://www.eventbrite.com/e/juice-candle-workshop-on-monday-afternoons-tickets-1994590568082",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1189265033%2F2741202595941%2F1%2Foriginal.20260720-235454?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=9919246b9f374e4dcd2a7dfbce17acbf"
  },
  {
   "id": "eb-1999744427414",
@@ -1259,7 +1695,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "2352 Main St suite 200",
   "description": "Chill out with tasty chocolate, refreshing mocktails, and good vibes at our mindful munch & sip hangout!",
   "url": "https://www.eventbrite.com/e/chocolate-mindfulness-mocktails-tickets-1999744427414",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195246247%2F1641290266693%2F1%2Foriginal.20261007-032105?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.05&fp-y=0.61&s=a7cfb5083277618e375ba66801104b89"
  },
  {
   "id": "eb-1979985169943",
@@ -1277,7 +1714,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Eames Way School",
   "description": "[NEMBA Group Ride] Weekly Carolina Hill ride on Monday night. Minimal tech but climby!",
   "url": "https://www.eventbrite.com/e/manic-monday-ride-tickets-1979985169943",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1050252323%2F2605293827801%2F1%2Foriginal.20250610-215406?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.621212121212&fp-y=0.569395017794&s=64d5249ca860bb7b46fdb7ab8555c9f1"
  },
  {
   "id": "eb-2003019433044",
@@ -1295,7 +1733,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "60 Adams St",
   "description": "Join us in person for a chill Full Moon soundbath, deep breathwork, and a soulful release ritual!",
   "url": "https://www.eventbrite.com/e/sebukha-wellness-full-moon-soundbathbreathworkrelease-ritual-tickets-2003019433044",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195206320%2F3016747808569%2F1%2Foriginal.20261006-182345?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.486&fp-y=0.125&s=1a94fa6336e764fb3b6596c6373e3948"
  },
  {
   "id": "eb-1999796850212",
@@ -1313,7 +1752,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Craft Loft (Cambridge Store)",
   "description": "Learn to create a beautiful and sustainable arrangement that will last!",
   "url": "https://www.eventbrite.com/e/everlasting-dried-floral-arranging-cambridge-tickets-1999796850212",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F515331439%2F354227652065%2F1%2Foriginal.20230515-213908?h=200&w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C140%2C768%2C384&s=0ef64e5214b515a715f39e35bc69361c"
  },
  {
   "id": "eb-1995467701612",
@@ -1330,7 +1770,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Sonsie",
   "description": "Join us for a spooky and festive night of pumpkin painting in Sonsie's wine room!",
   "url": "https://www.eventbrite.com/e/sonsie-pumpkin-painting-night-tickets-1995467701612",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1192976484%2F815706029453%2F1%2Foriginal.20260908-153015?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.112&fp-y=0.445&s=336d8d340b90fe051e8a1b1cb05ade8f"
  },
  {
   "id": "eb-2002597113876",
@@ -1348,7 +1789,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Museum of Modern Renaissance",
   "description": "Join us for this special Monday Night Full Moon Yoga @ The Museum Of Modern Renaissance Somerville MA!",
   "url": "https://www.eventbrite.com/e/full-moon-yoga-soundscape-in-savasana-the-museum-of-modern-renaissance-tickets-2002597113876",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1111180303%2F212189647515%2F1%2Foriginal.20250902-024602?crop=focalpoint&fit=crop&h=200&w=274&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.401515151515&fp-y=0.462406015038&s=7a971965e3c565fe7b6196f2cc9a98b4"
  },
  {
   "id": "eb-1992010660509",
@@ -1369,6 +1811,44 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "source": "Eventbrite"
  },
  {
+  "id": "eb-1999797275484",
+  "title": "Beginner Watercolor (Cambridge)",
+  "category": "craft",
+  "start": "2026-10-27T18:00",
+  "end": "2026-10-27T19:30",
+  "venue": "Craft Loft (Cambridge Store)",
+  "address": "100 Cambridgeside Place",
+  "city": "Cambridge, MA",
+  "lat": 42.3674,
+  "lng": -71.0766,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Craft Loft (Cambridge Store)",
+  "description": "During this painting workshop, we will introduce the fundamentals of working with watercolor while creating beautiful paintings!",
+  "url": "https://www.eventbrite.com/e/beginner-watercolor-cambridge-tickets-1999797275484",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1099611723%2F2587882898501%2F1%2Foriginal.20250819-150145?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5093932393&fp-y=0.13326848249&s=5ed70ef5c0062fae6f2fab1755d99846"
+ },
+ {
+  "id": "eb-1999800334634",
+  "title": "Japanese Paper Marbling (Cambridge)",
+  "category": "craft",
+  "start": "2026-10-27T18:00",
+  "end": "2026-10-27T19:30",
+  "venue": "Craft Loft (Cambridge Store)",
+  "address": "100 Cambridgeside Place",
+  "city": "Cambridge, MA",
+  "lat": 42.3674,
+  "lng": -71.0766,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Craft Loft (Cambridge Store)",
+  "description": "We will be creating a floating piece of art on the surface of the water and capturing the swirling, ever morphing moments as prints.",
+  "url": "https://www.eventbrite.com/e/japanese-paper-marbling-cambridge-tickets-1999800334634",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1178646359%2F2587882898501%2F1%2Foriginal.20260227-205643?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.484&fp-y=0.341&s=db70409c16880d731ce2a0bb3b72ee48"
+ },
+ {
   "id": "eb-2002511582048",
   "title": "PILATES AFTER DARK at the Juice Mill",
   "category": "movement",
@@ -1387,6 +1867,63 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "source": "Eventbrite"
  },
  {
+  "id": "eb-2003312486575",
+  "title": "Tuesday BollyX Natick - Bollywood Dance Workout",
+  "category": "movement",
+  "start": "2026-10-27T18:30",
+  "end": "2026-10-27T19:30",
+  "venue": "Do Dance Ballet & Fitness",
+  "address": "1400 Worcester Street",
+  "city": "Natick, MA",
+  "lat": 42.2977,
+  "lng": -71.3924,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Do Dance Ballet & Fitness",
+  "description": "Those who say - no pain no gain, have never worked out to Bollywood music. All the benefits of a great workout AND lots of fun.",
+  "url": "https://www.eventbrite.com/e/tuesday-bollyx-natick-bollywood-dance-workout-tickets-2003312486575",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1088822663%2F928802461273%2F1%2Foriginal.20250805-173119?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.00585386253041&fp-y=0.000752269581598&s=5191e2a19bdef631da6ef01f6916222e"
+ },
+ {
+  "id": "eb-2002569079023",
+  "title": "Figure Drawing",
+  "category": "craft",
+  "start": "2026-10-27T18:30",
+  "end": "2026-10-27T21:30",
+  "venue": "Artisan's Asylum",
+  "address": "96 Holton Street",
+  "city": "Boston, MA",
+  "lat": 42.3599,
+  "lng": -71.1379,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Artisan's Asylum",
+  "description": "Join us for our weekly evening of figure drawing with a live nude model at Artisans Asylum.",
+  "url": "https://www.eventbrite.com/e/figure-drawing-tickets-2002569079023",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1160083923%2F2932318245921%2F1%2Foriginal.20251022-203634?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=64f0955da80329b985ed592d27533b30"
+ },
+ {
+  "id": "eb-2003181861873",
+  "title": "Aromatherapy & Essential Oil Blend Night",
+  "category": "herbal",
+  "start": "2026-10-27T18:30",
+  "end": "2026-10-27T20:00",
+  "venue": "Body, Stone and Soul, Centre Street, Jamaica Plain, MA, USA",
+  "address": "456 Centre Street",
+  "city": "Boston, MA",
+  "lat": 42.3195,
+  "lng": -71.1114,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Body, Stone and Soul, Centre Street, Jamaica Plain, MA, USA",
+  "description": "Join us in person to explore soothing scents and create a custom essential oil blend to take home.",
+  "url": "https://www.eventbrite.com/e/aromatherapy-essential-oil-blend-night-tickets-2003181861873",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195412542%2F1918979569623%2F1%2Foriginal.20261008-224536?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.498&fp-y=0.266&s=778cc45149f44c78819953326f26803e"
+ },
+ {
   "id": "eb-1998655325882",
   "title": "Live music & Yoga",
   "category": "yoga",
@@ -1402,7 +1939,46 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Temple Beth Shalom",
   "description": "A collaboration of live music and yoga...gather, move, connect.",
   "url": "https://www.eventbrite.com/e/live-music-yoga-tickets-1998655325882",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191677451%2F2599883226871%2F1%2Foriginal.20260822-233122?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.478&fp-y=0.185&s=05648abf18d977bdf3b62f2acbc3084e"
+ },
+ {
+  "id": "eb-2003021475152",
+  "title": "Evening Meditation",
+  "category": "meditation",
+  "start": "2026-10-27T19:00",
+  "end": "2026-10-27T20:00",
+  "venue": "Nourish Collaborative",
+  "address": "431 Country Club Way",
+  "city": "Kingston, MA",
+  "lat": 41.982,
+  "lng": -70.7301,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Nourish Collaborative",
+  "description": "Evening Meditation at Nourish Collaborative",
+  "url": "https://www.eventbrite.com/e/evening-meditation-tickets-2003021475152",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195209310%2F2989855870548%2F1%2Foriginal.20261006-184825?crop=focalpoint&fit=crop&w=312&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.399&fp-y=0.165&s=3ce222cfde55924633076c77ddd565d8"
+ },
+ {
+  "id": "eb-1999735444546",
+  "title": "Zen Service - Tuesday Evening Practice",
+  "category": "meditation",
+  "start": "2026-10-27T19:00",
+  "end": "2026-10-27T22:00",
+  "venue": "64 Beacon St",
+  "address": "64 Beacon Street",
+  "city": "Boston, MA",
+  "lat": 42.3566,
+  "lng": -71.0691,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "64 Beacon St",
+  "description": "Join GBZC's Tuesday evening practice  in person or online.",
+  "url": "https://www.eventbrite.com/e/zen-service-tuesday-evening-practice-tickets-1999735444546",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F905177763%2F571411505003%2F1%2Foriginal.20241123-171429?w=267&auto=format%2Ccompress&q=75&sharp=10&s=4557fb006f4607138929126477eddfdd"
  },
  {
   "id": "eb-2002948571094",
@@ -1420,7 +1996,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "The Street Chestnut Hill",
   "description": "Enjoy the fall weather on The Green with a complimentary yoga class taught by Down Under School of Yoga.",
   "url": "https://www.eventbrite.com/e/complimentary-down-under-yoga-class-on-the-green-tickets-2002948571094",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195083971%2F1400216964053%2F1%2Foriginal.20261005-151658?crop=focalpoint&fit=crop&w=450&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=6e5cb710a5b187a2f76b4680e995c38d"
  },
  {
   "id": "eb-2002629985195",
@@ -1438,7 +2015,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "145 Lincoln Rd",
   "description": "Join John Calabria for a chill Mindfulness Walk and soak in some calm vibes together!",
   "url": "https://www.eventbrite.com/e/mindfulness-walk-with-john-calabria-tickets-2002629985195",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1184417684%2F237479954050%2F1%2Foriginal.20260512-170931?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.174&fp-y=0.321&s=7138635883c885f62d432a77c00bb1b8"
+ },
+ {
+  "id": "eb-1997844942002",
+  "title": "Gentle Yoga (October)",
+  "category": "yoga",
+  "start": "2026-10-28T11:00",
+  "end": "2026-10-28T12:00",
+  "venue": "Art Complex Museum",
+  "address": "189 Alden Street",
+  "city": "Duxbury, MA",
+  "lat": 42.044,
+  "lng": -70.6872,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Art Complex Museum",
+  "description": "Unwind and stretch out with some easy, calming moves that’ll leave you feeling refreshed and chill.",
+  "url": "https://www.eventbrite.com/e/gentle-yoga-october-tickets-1997844942002",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1190973096%2F1371725208153%2F1%2Foriginal.20260813-122627?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=7acdd827fa26bdfa2b13b547a5407a9a"
  },
  {
   "id": "eb-2001010376903",
@@ -1456,7 +2053,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Boston Public Market",
   "description": "Join us in the Nook for a Flow class hosted by Soma Yoga, then recharge after class with a free smoothie from Mother Juice!",
   "url": "https://www.eventbrite.com/e/yoga-flow-at-the-boston-public-market-with-soma-yoga-and-mother-juice-tickets-2001010376903",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F966944423%2F2503708523751%2F1%2Foriginal.20250222-190244?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=621197429dee8aac89de3a7ff62599ac"
  },
  {
   "id": "eb-1999538440301",
@@ -1474,7 +2072,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "JPH at Ferry Hill",
   "description": "Join us for a beautiful yoga series led by Emma Boyle, former owner of Dragonfly Yoga Studio in Marshfield.",
   "url": "https://www.eventbrite.com/e/dragonfly-yoga-with-emma-tickets-1999538440301",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1174969347%2F572573246665%2F1%2Foriginal.20260115-170459?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=c4a3e2613e911d9f7c4d69275fd4d9b6"
  },
  {
   "id": "eb-2001906489199",
@@ -1492,7 +2091,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "wesleaf",
   "description": "Join us for Wesleaf Wellness Wednesdays and flow through Classical Mat Pilates for a strong midweek boost! Attire Palette: Earth Tones",
   "url": "https://www.eventbrite.com/e/1028-wesleaf-wellness-wednesdays-beginners-classical-mat-pilates-tickets-2001906489199",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1188663409%2F659961345103%2F1%2Foriginal.20260711-132204?crop=focalpoint&fit=crop&h=200&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.466&fp-y=0.458&s=0700005ec6e6d7d989d8066ab514cdb2"
  },
  {
   "id": "eb-2002955529908",
@@ -1510,7 +2110,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "The Grove at the Lawn on D",
   "description": "Learn to sculpt Halloween-inspired clay creations at this spooky, hands-on pottery workshop!",
   "url": "https://www.eventbrite.com/e/halloween-edition-pottery-workshop-tickets-2002955529908",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1103002603%2F2257453879843%2F1%2Foriginal.20250822-210232?crop=focalpoint&fit=crop&w=355&auto=format%2Ccompress&q=75&sharp=10&fp-x=5e-05&fp-y=5e-05&s=628b80894726224e68f3b448598568c5"
  },
  {
   "id": "eb-1997977592764",
@@ -1528,7 +2129,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Artisan's Asylum",
   "description": "Unleash your creativity and learn the art of Kintsugi, the ancient Japanese pottery repair technique, in our hands-on workshop.",
   "url": "https://www.eventbrite.com/e/intro-to-kintsugi-japanese-pottery-repair-tickets-1997977592764",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F579664309%2F266461963872%2F1%2Foriginal.20230821-151559?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C119%2C1414%2C707&s=c3850030444f7035331b0ce145f1e610"
  },
  {
   "id": "eb-2001394342354",
@@ -1546,7 +2148,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Fit Factory Berlin",
   "description": "Join the MetroWest Women's Network and Fit Factory Berlin for a fun night of disco-themed yoga & networking with the girls! ‍",
   "url": "https://www.eventbrite.com/e/disco-yoga-networking-tickets-2001394342354",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193762659%2F11752679881%2F1%2Foriginal.20260917-162423?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.004&fp-y=0.416&s=8fe8790a0376d3bf2bacc8a4c8d1a903"
  },
  {
   "id": "eb-2002747402393",
@@ -1582,7 +2185,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Mamma Mia's Restaurants",
   "description": "Get spooky and creative with friends at Mamma Mia's Marshfield paint night—fun, food, drinks and Halloween vibes!",
   "url": "https://www.eventbrite.com/e/spooky-paint-night-at-mamma-mias-marshfield-tickets-2002231226497",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194303190%2F373313717809%2F1%2Foriginal.20260924-180924?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.653&fp-y=0.718&s=5e7ac8592b02c59768118d2d3765c5e1"
  },
  {
   "id": "eb-1995245949345",
@@ -1600,7 +2204,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "First Parish Dorchester",
   "description": "Come dance with us in our movement meditation grounded in the belief that when we move, we heal.",
   "url": "https://www.eventbrite.com/e/5rhythms-emerging-waves-tickets-1995245949345",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1183517923%2F82710689173%2F1%2Foriginal.20260501-132950?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.84&fp-y=0.502&s=74b6fc3457462d9fcce87db7f1ea73da"
  },
  {
   "id": "eb-1984699661113",
@@ -1617,7 +2222,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "The Art of Living, Boston",
   "description": "Weekly LGBTQ+ meditation in Brighton, MA. A beginner-friendly space to reduce stress, build mindfulness, and connect with queer community in",
   "url": "https://www.eventbrite.com/e/lgbtq-meditation-in-brighton-rainbow-sangha-boston-tickets-1984699661113",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179301620%2F88827795261%2F1%2Foriginal.20260308-011126?crop=focalpoint&fit=crop&h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.562&fp-y=0.577&s=97b365bc852adfc2a598771aa558c05b"
  },
  {
   "id": "eb-1998476446850",
@@ -1635,7 +2241,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Vitamin Sea Brewing",
   "description": "Learn to sculpt Halloween-inspired clay creations at this spooky, hands-on pottery workshop!",
   "url": "https://www.eventbrite.com/e/halloween-edition-pottery-workshop-tickets-1998476446850",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1103002603%2F2257453879843%2F1%2Foriginal.20250822-210232?crop=focalpoint&fit=crop&w=355&auto=format%2Ccompress&q=75&sharp=10&fp-x=5e-05&fp-y=5e-05&s=628b80894726224e68f3b448598568c5"
+ },
+ {
+  "id": "eb-1999796732861",
+  "title": "Spooky Season Glassware Painting (Cambridge)",
+  "category": "craft",
+  "start": "2026-10-29T18:00",
+  "end": "2026-10-29T19:30",
+  "venue": "Craft Loft (Cambridge Store)",
+  "address": "100 Cambridgeside Place",
+  "city": "Cambridge, MA",
+  "lat": 42.3674,
+  "lng": -71.0766,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Craft Loft (Cambridge Store)",
+  "description": "Celebrate this fall season by painting your very own glasses to use for years to come!",
+  "url": "https://www.eventbrite.com/e/spooky-season-glassware-painting-cambridge-tickets-1999796732861",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F579900309%2F354227652065%2F1%2Foriginal.20230821-192736?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C602%2C1564%2C782&s=4deb6de1994d3b31a9cec4063d4bfcb9"
  },
  {
   "id": "eb-1995246025573",
@@ -1653,7 +2279,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Foundation Kitchen",
   "description": "Chocolate Truffle Workshop",
   "url": "https://www.eventbrite.com/e/in-person-class-chocolate-truffle-workshop-boston-tickets-1995246025573",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1189623876%2F79175508931%2F1%2Foriginal.20260725-235131?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=127f7653ba4ffd48d64c37059b72f875"
  },
  {
   "id": "eb-1999538948822",
@@ -1671,7 +2298,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "JPH at Ferry Hill",
   "description": "Join us in the healing barn for a Yoga Nidra practice for moms lead by Kim Spear with hands on reiki.",
   "url": "https://www.eventbrite.com/e/mothers-exhaustion-tickets-1999538948822",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F983365453%2F572573246665%2F1%2Foriginal.20250313-215111?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.420454545455&fp-y=0.438432835821&s=896a6d6f1dc3011fb23bf11d036e3571"
  },
  {
   "id": "eb-1999832144779",
@@ -1707,7 +2335,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "75 Pleasant St suite 403",
   "description": "Tai Chi Class with Mei Hung – Open Level\nEvery Friday, 10:00 AM – 11:00 AM",
   "url": "https://www.eventbrite.com/e/tai-chi-class-tickets-1977458657075",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1172335776%2F288488941899%2F1%2Foriginal.20251204-191505?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.9&fp-y=0.5&s=8fc318331fc346db93a06f44b4f73973"
  },
  {
   "id": "eb-1997847841675",
@@ -1725,7 +2354,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Art Complex Museum",
   "description": "Tai Chi is an ancient art involving postures, breathing, and movements to enhance the flow of energy throughout and around the body.",
   "url": "https://www.eventbrite.com/e/tai-chi-october-december-tickets-1997847841675",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1190975163%2F1371725208153%2F1%2Foriginal.20260813-130243?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.485&fp-y=0.812&s=0ec36f78b1db59b6da8da96ceaafdf7c"
  },
  {
   "id": "eb-1492326842759",
@@ -1743,7 +2373,46 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "The Hidden Art Gallery",
   "description": "Reflective Process: A private, guided wellness experience to help you slow down, reconnect inwardly and create emotional balance.",
   "url": "https://www.eventbrite.com/e/freedom-within-meditation-watercolor-tickets-1492326842759",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F814646239%2F221646972603%2F1%2Foriginal.20240725-190620?h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&rect=166%2C0%2C998%2C499&s=a98d0e7f215499c4fdce27598848ba63"
+ },
+ {
+  "id": "eb-1990518838429",
+  "title": "Freedom Within Meditation & Watercolor",
+  "category": "meditation",
+  "start": "2026-10-30T17:00",
+  "end": "2026-10-30T18:00",
+  "venue": "The Hidden Art Gallery",
+  "address": "25 Myrtle Street",
+  "city": "Boston, MA",
+  "lat": 42.3594,
+  "lng": -71.0655,
+  "price": 95,
+  "priceNote": "$95–$103",
+  "host": "The Hidden Art Gallery",
+  "description": "Reflective Process: A private, guided wellness experience to help you slow down, reconnect inwardly and create emotional balance.",
+  "url": "https://www.eventbrite.com/e/freedom-within-meditation-watercolor-tickets-1990518838429",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F814646239%2F221646972603%2F1%2Foriginal.20240725-190620?h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&rect=166%2C0%2C998%2C499&s=a98d0e7f215499c4fdce27598848ba63"
+ },
+ {
+  "id": "eb-2003569493289",
+  "title": "Halloween Paint Night in a Real Artist's Studio | SoWa, Boston",
+  "category": "craft",
+  "start": "2026-10-30T18:00",
+  "end": "2026-10-30T21:00",
+  "venue": "SoWa Artists Studios",
+  "address": "450 Harrison Avenue",
+  "city": "Boston, MA",
+  "lat": 42.3427,
+  "lng": -71.0646,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "SoWa Artists Studios",
+  "description": "All-levels acrylic painting night (beginners welcome!) for 6 guests in a real artist's studio in SoWa. Materials, snacks & drinks included.",
+  "url": "https://www.eventbrite.com/e/halloween-paint-night-in-a-real-artists-studio-sowa-boston-tickets-2003569493289",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1196067894%2F1320988882673%2F1%2Foriginal.20261019-031958?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=18d5fc2d08a9e7589f5110628b2ef688"
  },
  {
   "id": "eb-2002919932435",
@@ -1761,7 +2430,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "ZEST The Collective",
   "description": "Unwind with soothing sounds, seasonal mocktails, and the glow of candlelight for a magical Halloween evening.",
   "url": "https://www.eventbrite.com/e/moonlight-magic-a-halloween-candlelit-sound-bath-mocktails-tickets-2002919932435",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195026813%2F1639210469313%2F1%2Foriginal.20261004-205806?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=16f96a561467ee29c5943582a5ead357"
  },
  {
   "id": "eb-1996657640752",
@@ -1797,7 +2467,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Tackle Box Brewing Company",
   "description": "Join us for a yoga session in the taproom + a taste of fall after class, including craft beer & new cocktail offerings! Costumes welcomed!",
   "url": "https://www.eventbrite.com/e/yoga-in-the-taproom-spooky-cocktail-edition-registration-2002968198801",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195121114%2F463524013300%2F1%2Foriginal.20261005-211744?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.486&fp-y=0.374&s=e628a8ecb88b1f6098df2f3ff00f4df1"
  },
  {
   "id": "eb-2002462572459",
@@ -1815,7 +2486,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Bryantville Meeting House",
   "description": "An afternoon to slow down, reconnect and exhale with meditation, sound, nourishing food, creativity and connection before the holidays.",
   "url": "https://www.eventbrite.com/e/the-exhale-a-womens-event-for-rest-and-renewal-tickets-2002462572459",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194546123%2F344002072579%2F1%2Foriginal.20260928-180322?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.741&fp-y=0.453&s=edabfd91f8ebdaa3bc0df3b380f70a1d"
  },
  {
   "id": "eb-2003012210441",
@@ -1833,7 +2505,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "The Lilypad",
   "description": "Relax and rejuvenate with traditional Hatha Yoga at the Lilypad, complete with live musical accompaniment.",
   "url": "https://www.eventbrite.com/e/hatha-yoga-with-live-music-registration-2003012210441",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1130311233%2F413282597103%2F1%2Foriginal.20250920-205547?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.499580641153&fp-y=0.523346303502&s=3f6ae61260cfa8b04b21843fd8241aa6"
  },
  {
   "id": "eb-2000485585237",
@@ -1851,7 +2524,46 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "The Foundry (Room: The Dance Studio - 1st Floor)",
   "description": "A beginner-friendly fall yoga series exploring fascia, prana, chakras, meditation & the practice of softening, releasing, and turning inward",
   "url": "https://www.eventbrite.com/e/autumn-alchemy-yoga-pranayama-and-meditation-tickets-2000485585237",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193180591%2F570779544027%2F1%2Foriginal.20260910-164936?crop=focalpoint&fit=crop&h=200&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=ab100bfc10aa77bbcd341f28924fe886"
+ },
+ {
+  "id": "eb-1999797222325",
+  "title": "Tufting Workshop: Make Your Own Rug (Cambridge)",
+  "category": "craft",
+  "start": "2026-10-31T13:30",
+  "end": "2026-10-31T17:30",
+  "venue": "Craft Loft (Cambridge Store)",
+  "address": "100 Cambridgeside Place",
+  "city": "Cambridge, MA",
+  "lat": 42.3674,
+  "lng": -71.0766,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Craft Loft (Cambridge Store)",
+  "description": "Have you seen tufting on TikTok or IG and have been curious to try it out?  Come to our fully equipped studio and make your own masterpiece!",
+  "url": "https://www.eventbrite.com/e/tufting-workshop-make-your-own-rug-cambridge-tickets-1999797222325",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1178543880%2F2587882898501%2F1%2Foriginal.20260226-191751?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=15510b0a3cb4ea3c0b46745ae49787ef"
+ },
+ {
+  "id": "eb-1999797958527",
+  "title": "Candle Making (Cambridge)",
+  "category": "craft",
+  "start": "2026-10-31T16:00",
+  "end": "2026-10-31T17:00",
+  "venue": "Craft Loft (Cambridge Store)",
+  "address": "100 Cambridgeside Place",
+  "city": "Cambridge, MA",
+  "lat": 42.3674,
+  "lng": -71.0766,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Craft Loft (Cambridge Store)",
+  "description": "Learn about the art of candle making and practice making your own candles with deliciously scented essential oils.",
+  "url": "https://www.eventbrite.com/e/candle-making-cambridge-tickets-1999797958527",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F892546883%2F354227652065%2F1%2Foriginal.20241105-212957?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.497423102094&fp-y=0.367704280156&s=a856dac441b8d4cfa061d41e93cdace0"
  },
  {
   "id": "eb-1980886835850",
@@ -1869,7 +2581,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Park-9 Dog Bar, Waters Avenue, Everett, MA, USA",
   "description": "Enjoy a yoga class featuring adoptable puppies from Great Dog Rescue NE. Adoption meet and greet event to follow!",
   "url": "https://www.eventbrite.com/e/park-9-puppy-yoga-with-great-dog-rescue-new-england-tickets-1980886835850",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1174357801%2F1653257696373%2F1%2Foriginal.20260108-215714?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.359&fp-y=0.643&s=7371995aaa2a8a0d6f3969b2cfde61d3"
  },
  {
   "id": "eb-1998997530425",
@@ -1890,6 +2603,44 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "source": "Eventbrite"
  },
  {
+  "id": "eb-1989778674579",
+  "title": "Make Your Own Plant Pot or Vase Pottery Workshop",
+  "category": "craft",
+  "start": "2026-11-01T11:30",
+  "end": "2026-11-01T13:30",
+  "venue": "Blu Dot",
+  "address": "141 Seaport Boulevard",
+  "city": "Boston, MA",
+  "lat": 42.3505,
+  "lng": -71.0432,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Blu Dot",
+  "description": "A pottery workshop for plant and flower lovers alike! Learn pottery basics and sculpt a custom clay planter or vase from clay!",
+  "url": "https://www.eventbrite.com/e/make-your-own-plant-pot-or-vase-pottery-workshop-tickets-1989778674579",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1096854813%2F2257453879843%2F1%2Foriginal.20250815-164343?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=17d9b6850c90b0a35b2f0c2ece7f6523"
+ },
+ {
+  "id": "eb-1998492782711",
+  "title": "In-person class: Handmade Ricotta Gnocchi (Boston)",
+  "category": "craft",
+  "start": "2026-11-01T15:00",
+  "end": "2026-11-01T17:00",
+  "venue": "Democracy Brewing",
+  "address": "35 Temple Place",
+  "city": "Boston, MA",
+  "lat": 42.3551,
+  "lng": -71.0622,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Democracy Brewing",
+  "description": "Handmade Ricotta Gnocchi",
+  "url": "https://www.eventbrite.com/e/in-person-class-handmade-ricotta-gnocchi-boston-tickets-1998492782711",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173591458%2F79175508931%2F1%2Foriginal.20251228-044220?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=43fbc9bf468bd7aea3a98aa8366d2873"
+ },
+ {
   "id": "eb-2003005840388",
   "title": "Tibetan & Crystal Bowl Sound Bath @ Arlington Center Sun Nov 1st 3:30PM",
   "category": "sound",
@@ -1905,7 +2656,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "369 Massachusetts Ave",
   "description": "Got Stress Relief?? Grounding and empowering visualization followed by immersion into the vibrations of a Healing Sound Bath. Zen with Ben.",
   "url": "https://www.eventbrite.com/e/tibetan-crystal-bowl-sound-bath-arlington-center-sun-nov-1st-330pm-tickets-2003005840388",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F985976173%2F559273449243%2F1%2Foriginal.20250317-204726?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.00518939393939&fp-y=0.00453488372093&s=2aa77438b9c38b12a4ffa1ed94ab6360"
  },
  {
   "id": "eb-1980888032429",
@@ -1923,7 +2675,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "The Hidden Art Gallery",
   "description": "4 Watercolor Sessions  We meet weekly. Choose Sunday Afternoon or Monday Morning.",
   "url": "https://www.eventbrite.com/e/4-watercolor-series-4-per-build-your-portfolio-develop-your-skills-tickets-1980888032429",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1175261010%2F2962468641591%2F1%2Foriginal.20260119-180745?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.513&fp-y=0.65&s=cf82d105d0207de198e0542f66784ca7"
  },
  {
   "id": "eb-1994905955414",
@@ -1977,7 +2730,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "The Foundry",
   "description": "Connect with your physical body to unlock your creative self. Through a guided yoga practice, we create a space where creativity flourishes.",
   "url": "https://www.eventbrite.com/e/yoga-for-creativity-tickets-2003522419490",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1196183305%2F3017983560703%2F1%2Foriginal.20261020-130756?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=d0836f232da0e10041db735864df9d6f"
  },
  {
   "id": "eb-2003086909869",
@@ -1995,7 +2749,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Maxima Hive",
   "description": "Learn to paint flowers and foliage in watercolor through guided exercises, hands-on practice, and expert instruction over three creative wee",
   "url": "https://www.eventbrite.com/e/painting-nature-a-three-week-watercolor-series-tickets-2003086909869",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195306004%2F444938237240%2F1%2Foriginal.20261007-185202?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=80a5131438fc2a329f9d3cf9fa930f3c"
  },
  {
   "id": "eb-1998799791984",
@@ -2013,7 +2768,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Clover Road Brewing Company - Ashland",
   "description": "Kick off holiday season with us at this inclusive, beginner-friendly pottery workshop!",
   "url": "https://www.eventbrite.com/e/holiday-edition-pottery-workshop-tickets-1998799791984",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1143085213%2F2257453879843%2F1%2Foriginal.20251002-215036?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=589deb0e01ee48b9bbab6c70eb1e9267"
  },
  {
   "id": "eb-1964252431900",
@@ -2049,7 +2805,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Art Complex Museum",
   "description": "Unwind and stretch out with some easy, calming moves that’ll leave you feeling refreshed and chill.",
   "url": "https://www.eventbrite.com/e/gentle-yoga-november-tickets-1997845079413",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1190973423%2F1371725208153%2F1%2Foriginal.20260813-123241?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=7a5187d2847d057d112173f2564afd91"
  },
  {
   "id": "eb-1999859992071",
@@ -2067,7 +2824,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Emerald Yoga Studio",
   "description": "Chill out and recharge with soothing vibes and healing sounds that’ll melt your stress away.",
   "url": "https://www.eventbrite.com/e/sound-healing-tickets-1999859992071",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1192779503%2F174700174418%2F1%2Foriginal.20260905-171257?crop=focalpoint&fit=crop&h=200&w=275&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=c5dd0356fa6d3d73f06e8a5db62a6d77"
  },
  {
   "id": "eb-2002770025058",
@@ -2085,7 +2843,46 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Stellwagen Beer Company",
   "description": "Join is for a fun resin wave board class at Stellwagen Beer Company in Marshfield Ma!",
   "url": "https://www.eventbrite.com/e/resin-wave-board-class-at-stellwagen-beer-company-tickets-2002770025058",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194877628%2F637993257443%2F1%2Foriginal.20261002-024328?crop=focalpoint&fit=crop&w=200&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=31021ffad124348048882d1d1cd038e1"
+ },
+ {
+  "id": "eb-2003535908837",
+  "title": "KINTSUGI Pottery Workshop FALL SPECIAL",
+  "category": "craft",
+  "start": "2026-11-04T18:00",
+  "end": "2026-11-04T19:30",
+  "venue": "91 Hampshire St, Cambridge, Massachusetts, USA",
+  "address": "91 Hampshire Street",
+  "city": "Cambridge, MA",
+  "lat": 42.369,
+  "lng": -71.0948,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "91 Hampshire St, Cambridge, Massachusetts, USA",
+  "description": "Learn the art of KINTSUGI pottery, where you'll embrace imperfections and transform broken pieces into a beautiful master piece.",
+  "url": "https://www.eventbrite.com/e/kintsugi-pottery-workshop-fall-special-tickets-2003535908837",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F626978129%2F10429655085%2F1%2Foriginal.20231023-234331?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C689%2C5800%2C2900&s=084865dfbd224909da19042c1a75f858"
+ },
+ {
+  "id": "eb-2003383844007",
+  "title": "Whimsy Christmas Tree Wreath Workshop at Christina's In Pembroke",
+  "category": "craft",
+  "start": "2026-11-04T18:30",
+  "end": "2026-11-04T21:30",
+  "venue": "Christina's",
+  "address": "460 Washington Street",
+  "city": "Pembroke, MA",
+  "lat": 42.0843,
+  "lng": -70.7859,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Christina's",
+  "description": "Let's get into the holiday cheer!  Come join Bella Mae for a festive Christmas Tree Wreath Workshop at Christina's",
+  "url": "https://www.eventbrite.com/e/whimsy-christmas-tree-wreath-workshop-at-christinas-in-pembroke-tickets-2003383844007",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1147792653%2F2287657958683%2F1%2Foriginal.20251008-124006?crop=focalpoint&fit=crop&h=200&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=00b2ad7bd77ae67caed1a2b3850215e6"
  },
  {
   "id": "eb-2001378633368",
@@ -2103,7 +2900,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "JPH at Ferry Hill",
   "description": "A peaceful morning at JPH Cottage with Yoga Nidra, Reiki, and quiet time to rest, reset, and reconnect between school drop-off and pick up",
   "url": "https://www.eventbrite.com/e/mothers-reset-tickets-2001378633368",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194019241%2F572573246665%2F1%2Foriginal.20260921-160205?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=4fa0199e6ca89d808f6828e572f4b5d8"
  },
  {
   "id": "eb-2003008263636",
@@ -2121,7 +2919,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Sudbury Valley Trustees- Wolbach Farm",
   "description": "A guided interfaith meditation walk in nature on the accessible All Persons' Trail at Wolbach Farm in Sudbury.",
   "url": "https://www.eventbrite.com/e/spirit-in-nature-a-guided-meditation-walk-at-wolbach-farm-tickets-2003008263636",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195180385%2F2736427865161%2F1%2Foriginal.20261006-143349?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=64f58136d6cc5a7f2c474a2e2de4e026"
  },
  {
   "id": "eb-1996109423018",
@@ -2139,7 +2938,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Break Rock Brewing",
   "description": "Celebrate the season of gratitude with an evening of creativity, cozy fragrances, and handcrafted memories.",
   "url": "https://www.eventbrite.com/e/friendsgiving-artisan-soy-candle-making-workshop-at-break-rock-brewing-tickets-1996109423018",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1189964127%2F2660746770091%2F1%2Foriginal.20260730-151615?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.122&fp-y=0.41&s=177d784fe13ac470ebfcbb87bc727c41"
  },
  {
   "id": "eb-1997854181638",
@@ -2157,7 +2957,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Artisan's Asylum",
   "description": "This class introduces the screen printing process from start to finish, and includes tool testing to use our shop at your own discretion.",
   "url": "https://www.eventbrite.com/e/introduction-to-screen-printing-tickets-1997854181638",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F832455489%2F266461963872%2F1%2Foriginal.20240822-174130?w=400&auto=format%2Ccompress&q=75&sharp=10&s=b275578d6a55bf6d39a71cc28c6c12cf"
  },
  {
   "id": "eb-2002150806960",
@@ -2175,7 +2976,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Clover Road Brewing Company - Ashland",
   "description": "Join us for a fun Fall Succulent Planter Workshop where you can learn how to create your own beautiful plant arrangement!",
   "url": "https://www.eventbrite.com/e/fall-succulent-planter-workshop-tickets-2002150806960",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1093023263%2F1236219048683%2F1%2Foriginal.20250811-171118?crop=focalpoint&fit=crop&h=200&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.278837195108&fp-y=0.51011672558&s=e10a8e9616eaac54ee73e60e03b7ec86"
  },
  {
   "id": "eb-1999854780483",
@@ -2193,7 +2995,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Emerald Yoga Studio",
   "description": "Join us for this 7 week Restorative Yoga series focusing on a new chakra each week.",
   "url": "https://www.eventbrite.com/e/a-restorative-journey-through-the-chakras-full-7-week-series-tickets-1999854780483",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1192773015%2F174700174418%2F1%2Foriginal.20260905-144042?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=7cd505f20118c5493753b38b99f243a1"
  },
  {
   "id": "eb-1999855221803",
@@ -2211,7 +3014,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Emerald Yoga Studio",
   "description": "Week 1 of our 7 week series.  This restorative yoga workshop focuses on the root chakra.",
   "url": "https://www.eventbrite.com/e/a-restorative-journey-through-the-chakras-root-tickets-1999855221803",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1192773903%2F174700174418%2F1%2Foriginal.20260905-150114?crop=focalpoint&fit=crop&w=450&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=7ba6bc4f4b8970e2ff3fcc32ed874044"
  },
  {
   "id": "eb-1999271860955",
@@ -2229,7 +3033,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Healing With Spirit",
   "description": "Learn the original teaching of reiki as taught in Japan free from westernized influence & restore wholeness for the mind, body, spirit.",
   "url": "https://www.eventbrite.com/e/jikiden-reiki-seminar-in-shoden-level-i-training-registration-1999271860955",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1192282206%2F60832421885%2F1%2Foriginal.20190320-151550?h=200&w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C318%2C2652%2C1326&s=b4de18ddcd0da2718e62d90969c00f1c"
  },
  {
   "id": "eb-1996746392210",
@@ -2247,7 +3052,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Long Live Roxbury",
   "description": "Sip, sculpt + unwind! Learn hand-building techniques and shape your own one-of-a-kind clay cup, perfect for coffee or tea!",
   "url": "https://www.eventbrite.com/e/ceramic-mug-making-pottery-workshop-tickets-1996746392210",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1084642623%2F2257453879843%2F1%2Foriginal.20250730-165135?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=5.38115472505e-05&fp-y=5.29225498339e-05&s=aef350a52fff5d0a52bc53ab8acaebfd"
  },
  {
   "id": "eb-2001896098119",
@@ -2265,7 +3071,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Kadampa Meditation Center Boston",
   "description": "Be kind to yourself by taking care of your mind. Take this precious opportunity to step away from the noise and distractions of daily life.",
   "url": "https://www.eventbrite.com/e/death-dying-a-buddhist-perspective-tickets-2001896098119",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194034466%2F94561065173%2F1%2Foriginal.20260921-185035?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=fec4859527e91ad4bb6438a407cdb7e6"
  },
  {
   "id": "eb-1996110583489",
@@ -2301,7 +3108,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Museum of African American History: Boston Campus",
   "description": "Join Yogi Sheila Thorne of Bous Yoga for this all-levels yoga class!",
   "url": "https://www.eventbrite.com/e/saturdays-with-sheila-take-a-yoga-class-at-maah-tickets-2003084972073",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195302718%2F649350012113%2F1%2Foriginal.20261007-182104?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.481&fp-y=0.046&s=d7b1c1803e2c2a22caaca0d40f4b9710"
  },
  {
   "id": "eb-2002574057915",
@@ -2319,7 +3127,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "The Paper Mouse",
   "description": "Celebrate Fountain Pen Day with Tea & Writing! Co-hosted by Curio Spice Co and The Paper Mouse.",
   "url": "https://www.eventbrite.com/e/ink-infusion-tea-blending-event-tickets-2002574057915",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194654510%2F3011146785953%2F1%2Foriginal.20260929-182838?crop=focalpoint&fit=crop&w=200&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=b13b7cf95c5dcdd3ddfcee3c7dd25cb0"
  },
  {
   "id": "eb-2002551158422",
@@ -2337,7 +3146,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "300 Massachusetts Ave",
   "description": "Get your baby close and your feet moving in this fun dance session made for parents and little ones.",
   "url": "https://www.eventbrite.com/e/babywearing-dance-class-tickets-2002551158422",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195710323%2F180458124893%2F1%2Foriginal.20261013-174444?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.48&fp-y=0.055&s=2e932ba52efb67cf2337877bec42df02"
+ },
+ {
+  "id": "eb-2003017983709",
+  "title": "Moss Art Workshop (Cambridge)",
+  "category": "craft",
+  "start": "2026-11-07T16:30",
+  "end": "2026-11-07T17:30",
+  "venue": "Craft Loft (Cambridge Store)",
+  "address": "100 Cambridgeside Place",
+  "city": "Cambridge, MA",
+  "lat": 42.3674,
+  "lng": -71.0766,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Craft Loft (Cambridge Store)",
+  "description": "Come relax and get some zen by making your own, unique piece of moss art!",
+  "url": "https://www.eventbrite.com/e/moss-art-workshop-cambridge-tickets-2003017983709",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F658805519%2F354227652065%2F1%2Foriginal.20231214-190152?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=1%2C583%2C1048%2C524&s=edcd9d41f8ca443372fa445764db21e1"
  },
  {
   "id": "eb-2002080731362",
@@ -2355,7 +3184,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "JPH at Ferry Hill",
   "description": "An opportunity to slow down, take a deep breath, and reconnect with yourself in a supportive and peaceful environment.",
   "url": "https://www.eventbrite.com/e/breathing-room-yin-yoga-sound-meditation-tickets-2002080731362",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194115245%2F2991667388023%2F1%2Foriginal.20260922-162244?crop=focalpoint&fit=crop&h=200&w=382&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=91bdbfcb700b1179810f7fc9778a6226"
  },
  {
   "id": "eb-2003433752284",
@@ -2373,7 +3203,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Museum of Modern Renaissance",
   "description": "Join us for Sunday Yoga flow & with live Cello & Double Bass  @ the Museum of Modern Renaissance!",
   "url": "https://www.eventbrite.com/e/yoga-strings-museum-of-modern-renaissance-tickets-2003433752284",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F778226869%2F212189647515%2F1%2Foriginal.20240529-031052?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C112%2C1024%2C512&s=b700cbbfc3c33805c2ab04aba23cf643"
  },
  {
   "id": "eb-2003265797928",
@@ -2391,7 +3222,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Boston Center Of Self-Realization Fellowship",
   "description": "New to Meditation? Want to explore the teachings of Paramahansa Yognanda? Please join us at Boston Center of SRF for this Open House event.",
   "url": "https://www.eventbrite.com/e/guided-meditation-and-open-house-tickets-2003265797928",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195561041%2F255741478124%2F1%2Foriginal.20261011-202057?crop=focalpoint&fit=crop&w=450&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=f4f776bf6f713d2d536d572a626e0bcd"
  },
  {
   "id": "eb-2001083699212",
@@ -2409,7 +3241,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Plimoth Patuxet Museums",
   "description": "Slip Trail an Herb Stripping Bowl & Make 17th Century-Inspired Spice Blends",
   "url": "https://www.eventbrite.com/e/foodcraft-a-hands-on-pottery-spice-blending-workshop-tickets-2001083699212",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194123863%2F201966129358%2F1%2Foriginal.20260922-175616?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.534&fp-y=0.92&s=cb0f640e63e7ab62acf8b65e4582e170"
  },
  {
   "id": "eb-2002349752010",
@@ -2427,7 +3260,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Phoenix Rising Yoga Aerial & Cycle – Lincoln",
   "description": "A little movement. A little stillness. A few unexpected guests.",
   "url": "https://www.eventbrite.com/e/kitten-yoga-at-phoenix-rising-tickets-2002349752010",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194993695%2F2997722639136%2F1%2Foriginal.20261004-004815?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=93416d63f76de8816930375bcc38c845"
+ },
+ {
+  "id": "eb-2003551237686",
+  "title": "Fall-Themed Cake Decorating Workshop",
+  "category": "craft",
+  "start": "2026-11-08T13:00",
+  "end": "2026-11-08T15:00",
+  "venue": "AuraBead studio",
+  "address": "176 Newbury St",
+  "city": "Boston, MA",
+  "lat": 42.3505,
+  "lng": -71.0791,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "AuraBead studio",
+  "description": "2-Hour Experience includes a 3-inch cake, all decorating materials, and an artisanal iced matcha. Space is limited. Registration required.",
+  "url": "https://www.eventbrite.com/e/fall-themed-cake-decorating-workshop-tickets-2003551237686",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1196231447%2F3018088362214%2F1%2Foriginal.20261020-215722?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=f9ba89a34cf77400becda28254d91d95"
  },
  {
   "id": "eb-2003019317699",
@@ -2445,7 +3298,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Craft Loft (Cambridge Store)",
   "description": "Come join us for a fun workshop where you'll learn how to make your own beautiful mosaic project!",
   "url": "https://www.eventbrite.com/e/mosaic-workshop-cambridge-tickets-2003019317699",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F708552929%2F354227652065%2F1%2Foriginal.20240229-193843?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C822%2C1170%2C585&s=ebc8f3efb22595c307c90bfd8232792c"
  },
  {
   "id": "eb-1999306929847",
@@ -2481,7 +3335,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Healing With Spirit",
   "description": "NEW moon vibrational healing gathering with Tibetan bowls, gong bath, intuitive card pulls, and seasonal wisdom in Hingham, MA",
   "url": "https://www.eventbrite.com/e/new-moon-vibrational-healing-gathering-registration-1992569754775",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1187639634%2F60832421885%2F1%2Foriginal.20260625-140101?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=383ceba704b99063c411c065e0f7e848"
+ },
+ {
+  "id": "eb-2003217501472",
+  "title": "Terrarium Workshop at Vitamin Sea Brewing",
+  "category": "craft",
+  "start": "2026-11-10T19:00",
+  "end": "2026-11-10T21:00",
+  "venue": "Vitamin Sea Brewing Plymouth",
+  "address": "98 Water Street",
+  "city": "Plymouth, MA",
+  "lat": 41.9594,
+  "lng": -70.6648,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Vitamin Sea Brewing Plymouth",
+  "description": "Create your own lush glass terrarium with plants, moss, and stones in this hands-on creative workshop.",
+  "url": "https://www.eventbrite.com/e/terrarium-workshop-at-vitamin-sea-brewing-tickets-2003217501472",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195477684%2F102622617771%2F1%2Foriginal.20261009-195020?crop=focalpoint&fit=crop&w=266&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=a754859cab4b32cc0fd3aba88c22ab0e"
  },
  {
   "id": "eb-2002583221323",
@@ -2499,7 +3373,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "JPH at Ferry Hill",
   "description": "Join us for a beautiful yoga series led by Emma Boyle, former owner of Dragonfly Yoga Studio in Marshfield.",
   "url": "https://www.eventbrite.com/e/dragonfly-yoga-with-emma-tickets-2002583221323",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1174969347%2F572573246665%2F1%2Foriginal.20260115-170459?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=61257ee2fae3ea50a10c1da5b914f6d8"
  },
  {
   "id": "eb-2002924695682",
@@ -2517,7 +3392,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "wesleaf",
   "description": "Join us for Wesleaf Wellness Wednesdays and flow through Classical Mat Pilates for a strong midweek boost! Attire Palette: Pastels",
   "url": "https://www.eventbrite.com/e/1111-beginners-classical-mat-pilates-6pm-or-715pm-tickets-2002924695682",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1188663409%2F659961345103%2F1%2Foriginal.20260711-132204?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.466&fp-y=0.458&s=a453c10a4387f8f8fdf8524cb1f05317"
+ },
+ {
+  "id": "eb-2003327707100",
+  "title": "Resin Wave Board Class at CraftRoots Brewing",
+  "category": "craft",
+  "start": "2026-11-11T18:00",
+  "end": "2026-11-11T20:00",
+  "venue": "CraftRoots Brewing",
+  "address": "4 Industrial Road",
+  "city": "Milford, MA",
+  "lat": 42.1416,
+  "lng": -71.4923,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "CraftRoots Brewing",
+  "description": "Join is for a fun resin wave board class at CraftRoots Brewing in Milford Ma!",
+  "url": "https://www.eventbrite.com/e/resin-wave-board-class-at-craftroots-brewing-tickets-2003327707100",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194877628%2F637993257443%2F1%2Foriginal.20261002-024328?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=ed6f0909a3a9de2f7150800085ffbd73"
  },
  {
   "id": "eb-1988528810201",
@@ -2535,7 +3430,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Hannah's Brewing Co.",
   "description": "Join us for a fun and creative evening as you build your own unique terrarium with our step-by-step instruction during your workshop!",
   "url": "https://www.eventbrite.com/e/terrarium-workshop-succulent-edition-build-your-own-terrarium-tickets-1988528810201",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1183570882%2F2999292217812%2F1%2Foriginal.20260502-022819?w=400&auto=format%2Ccompress&q=75&sharp=10&s=9043c5f6913200221d9157379b622b14"
  },
  {
   "id": "eb-2002837646315",
@@ -2571,7 +3467,46 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Juliet",
   "description": "Sip, sculpt + unwind! Learn hand-building techniques and shape your own one-of-a-kind clay cup, perfect for coffee or tea!",
   "url": "https://www.eventbrite.com/e/ceramic-mug-making-pottery-workshop-tickets-1998675173246",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1084642623%2F2257453879843%2F1%2Foriginal.20250730-165135?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=5.38115472505e-05&fp-y=5.29225498339e-05&s=aef350a52fff5d0a52bc53ab8acaebfd"
+ },
+ {
+  "id": "eb-2003213824474",
+  "title": "Terrarium Workshop at Break Rock Brewing",
+  "category": "craft",
+  "start": "2026-11-12T19:00",
+  "end": "2026-11-12T21:30",
+  "venue": "Break Rock Brewing",
+  "address": "534 Victory Road",
+  "city": "Quincy, MA",
+  "lat": 42.2994,
+  "lng": -71.0311,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Break Rock Brewing",
+  "description": "Create your own miniature garden in a glass vessel at this hands-on terrarium-making workshop.",
+  "url": "https://www.eventbrite.com/e/terrarium-workshop-at-break-rock-brewing-tickets-2003213824474",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195467976%2F102622617771%2F1%2Foriginal.20261009-175144?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=065a7d5f8c0eafaef06fe7add9f9b7e0"
+ },
+ {
+  "id": "eb-1492326872849",
+  "title": "Freedom Within Meditation & Watercolor",
+  "category": "craft",
+  "start": "2026-11-13T15:00",
+  "end": "2026-11-13T16:00",
+  "venue": "The Hidden Art Gallery",
+  "address": "25 Myrtle Street",
+  "city": "Boston, MA",
+  "lat": 42.3594,
+  "lng": -71.0655,
+  "price": 95,
+  "priceNote": "$95–$103",
+  "host": "The Hidden Art Gallery",
+  "description": "Reflective Process: A private, guided wellness experience to help you slow down, reconnect inwardly and create emotional balance.",
+  "url": "https://www.eventbrite.com/e/freedom-within-meditation-watercolor-tickets-1492326872849",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F814646239%2F221646972603%2F1%2Foriginal.20240725-190620?h=230&w=460&auto=format%2Ccompress&q=75&sharp=10&rect=166%2C0%2C998%2C499&s=a98d0e7f215499c4fdce27598848ba63"
  },
  {
   "id": "eb-1999272083621",
@@ -2589,7 +3524,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Healing With Spirit",
   "description": "This training is recommended for people that want to learn more about Reiki and deepen their practice. Pre-requisites required.",
   "url": "https://www.eventbrite.com/e/jikiden-reiki-in-okuden-level-ii-registration-1999272083621",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F519925159%2F60832421885%2F1%2Foriginal.20230522-162316?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=46%2C0%2C624%2C312&s=04dccfc887b1e7008973b066eae6b5a6"
  },
  {
   "id": "eb-1996749022076",
@@ -2607,7 +3543,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Long Live Roxbury",
   "description": "Kick off holiday season with us at this inclusive, beginner-friendly pottery workshop!",
   "url": "https://www.eventbrite.com/e/holiday-edition-pottery-workshop-tickets-1996749022076",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1143085213%2F2257453879843%2F1%2Foriginal.20251002-215036?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=589deb0e01ee48b9bbab6c70eb1e9267"
  },
  {
   "id": "eb-2002583648601",
@@ -2625,7 +3562,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "JPH at Ferry Hill",
   "description": "A gentle, deeply relaxing restorative yoga class designed to calm the mind, release tension, and support full‑body rest.",
   "url": "https://www.eventbrite.com/e/reset-and-recenter-restorative-yoga-tickets-2002583648601",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195474975%2F572573246665%2F1%2Foriginal.20261009-191841?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=c027dfb4765fc04b64824005ecb7c1e9"
  },
  {
   "id": "eb-2003407440585",
@@ -2643,7 +3581,103 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Deep Cuts - Eatery | Brewery | Live Music",
   "description": "All Levels Vinyasa to the sound of New Wave, Dark Wave + Post-Punk",
   "url": "https://www.eventbrite.com/e/goth-yoga-at-deep-cuts-tickets-2003407440585",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195782009%2F83581234631%2F1%2Foriginal.20261014-142534?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=5cd7957af01ed9db84d9f6b044221cfd"
+ },
+ {
+  "id": "eb-2003018639671",
+  "title": "Fresh Floral Arranging (Cambridge)",
+  "category": "craft",
+  "start": "2026-11-14T11:30",
+  "end": "2026-11-14T12:30",
+  "venue": "Craft Loft (Cambridge Store)",
+  "address": "100 Cambridgeside Place",
+  "city": "Cambridge, MA",
+  "lat": 42.3674,
+  "lng": -71.0766,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Craft Loft (Cambridge Store)",
+  "description": "Get your hands dirty and create stunning flower arrangements in a fun, laid-back workshop you won’t forget!",
+  "url": "https://www.eventbrite.com/e/fresh-floral-arranging-cambridge-tickets-2003018639671",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F580808879%2F354227652065%2F1%2Foriginal.20230822-192051?h=200&w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C1240%2C3024%2C1512&s=6f9c2f10e63b3ad840d82431b7bdb30d"
+ },
+ {
+  "id": "eb-2003357067919",
+  "title": "Pressed Flower Coaster Workshop",
+  "category": "craft",
+  "start": "2026-11-14T11:30",
+  "end": "2026-11-14T13:30",
+  "venue": "Wyllo",
+  "address": "65 Thayer Street",
+  "city": "Boston, MA",
+  "lat": 42.3424,
+  "lng": -71.0643,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Wyllo",
+  "description": "A little crafting, a little sipping, and something pretty to bring home with you.",
+  "url": "https://www.eventbrite.com/e/pressed-flower-coaster-workshop-tickets-2003357067919",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1182232238%2F56046412705%2F1%2Foriginal.20260415-143720?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.565&fp-y=0.909&s=6c6449ff57bd70298af09bdefa1e84bd"
+ },
+ {
+  "id": "eb-2003204243818",
+  "title": "Historic Figure and Portrait Drawing Workshop",
+  "category": "craft",
+  "start": "2026-11-14T12:00",
+  "end": "2026-11-14T15:00",
+  "venue": "Loring Greenough House",
+  "address": "12 South Street",
+  "city": "Boston, MA",
+  "lat": 42.3096,
+  "lng": -71.1149,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Loring Greenough House",
+  "description": "Historically dressed models in a centuries-old setting!",
+  "url": "https://www.eventbrite.com/e/historic-figure-and-portrait-drawing-workshop-tickets-2003204243818",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195446545%2F20247531488%2F1%2Foriginal.20261009-131852?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=d7e34c7c77c374edd3561b1c1493f5a9"
+ },
+ {
+  "id": "eb-2003375054718",
+  "title": "Keepsake Resin Necklace (Cambridge)",
+  "category": "craft",
+  "start": "2026-11-14T13:00",
+  "end": "2026-11-14T14:00",
+  "venue": "Craft Loft (Cambridge Store)",
+  "address": "100 Cambridgeside Place",
+  "city": "Cambridge, MA",
+  "lat": 42.3674,
+  "lng": -71.0766,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Craft Loft (Cambridge Store)",
+  "description": "Create a custom one-of-a-kind keepsake necklace with fast-setting resin so you can take it home on the same day!",
+  "url": "https://www.eventbrite.com/e/keepsake-resin-necklace-cambridge-tickets-2003375054718",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195725200%2F2587882898501%2F1%2Foriginal.20261013-202222?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.486&fp-y=0.359&s=889a9ee09bdb3d98df928216e8f7d8c1"
+ },
+ {
+  "id": "eb-2003322938838",
+  "title": "Mini Candles Advent Calendar",
+  "category": "craft",
+  "start": "2026-11-14T14:00",
+  "end": "2026-11-14T16:30",
+  "venue": "Foundation Kitchen",
+  "address": "32 Cambridge St",
+  "city": "Charlestown, MA",
+  "lat": 42.3833,
+  "lng": -71.074,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Foundation Kitchen",
+  "description": "Get ready to light up your holiday season by making your own mini candle advent calendar!",
+  "url": "https://www.eventbrite.com/e/mini-candles-advent-calendar-tickets-2003322938838",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195654552%2F1431368217023%2F1%2Foriginal.20261013-010002?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.552&fp-y=0.396&s=b76ff9d27d5178150abe70613d883141"
  },
  {
   "id": "eb-2003019035856",
@@ -2661,7 +3695,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Craft Loft (Cambridge Store)",
   "description": "Make a lovely framed art using fresh pressed real flowers and foliage!",
   "url": "https://www.eventbrite.com/e/pressed-flower-frame-cambridge-tickets-2003019035856",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1178547589%2F2587882898501%2F1%2Foriginal.20260226-194937?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.528&fp-y=0.632&s=db051386a486b5345d13786b5e4b56ce"
  },
  {
   "id": "eb-2003304257963",
@@ -2679,7 +3714,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "StyleMe Dance Studio",
   "description": "Straight from Japan to Boston!  Join Japanese choreographer LIN for two exclusive Open Choreography master workshops at StyleMe Dance Studio",
   "url": "https://www.eventbrite.com/e/nov-14-master-workshop-with-lin-boston-exclusive-tickets-2003304257963",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195655514%2F321316855911%2F1%2Foriginal.20261013-011800?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.501&fp-y=0.386&s=ca5bca21fde6d71a87950609aa3e6cfc"
  },
  {
   "id": "eb-2003448447237",
@@ -2697,7 +3733,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Open Doors Yoga Studios - Dorchester",
   "description": "A sultry, sensual and seductive playlist inspired by SADE, SZA, SAILORR, SNOH AALEGRA & PLENTY MORE...",
   "url": "https://www.eventbrite.com/e/hot-body-yoga-discover-the-s-in-asana-tickets-2003448447237",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195917732%2F20948379320%2F1%2Foriginal.20261016-025436?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=4c9378d9148dae3bd86d44f3547db65d"
  },
  {
   "id": "eb-2003556641850",
@@ -2715,7 +3752,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Museum of Modern Renaissance",
   "description": "A day of yoga, Pilates, somatic movement, sound healing, and connection inside Somerville’s Museum of Modern Renaissance.",
   "url": "https://www.eventbrite.com/e/the-fall-flow-registration-2003556641850",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195969476%2F2838520969101%2F1%2Foriginal.20261016-194255?crop=focalpoint&fit=crop&w=275&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.27&fp-y=0.463&s=f0e59c8a354fd4585fb4ee45a07c3739"
  },
  {
   "id": "eb-2002965174756",
@@ -2733,7 +3771,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "RADIO FACTORY Blush & Bloom Floral Studio: 99 Washington S. Melrose, MA",
   "description": "Join us for a fun hands-on Flower Workshop and create your own beautiful arrangement- perfect time for the holiday season!",
   "url": "https://www.eventbrite.com/e/flower-workshop-tickets-2002965174756",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195115271%2F520396762149%2F1%2Foriginal.20261005-201211?crop=focalpoint&fit=crop&h=200&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.409&fp-y=0.287&s=d80dff07f5e4be4465df21ebc9458624"
  },
  {
   "id": "eb-1989779201154",
@@ -2751,7 +3790,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Blu Dot",
   "description": "Kick off holiday season with us at this inclusive, beginner-friendly pottery workshop!",
   "url": "https://www.eventbrite.com/e/holiday-edition-pottery-workshop-tickets-1989779201154",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1143085213%2F2257453879843%2F1%2Foriginal.20251002-215036?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=8ecf554493f930f91a47457135698a26"
  },
  {
   "id": "eb-1997154843900",
@@ -2769,7 +3809,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Art Complex Museum",
   "description": "Turn fabric scraps into soft stone sculptures with artist Danielle Krcmar in this hands-on workshop exploring memory & nature.",
   "url": "https://www.eventbrite.com/e/sewing-stones-with-danielle-krcmar-tickets-1997154843900",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1190553074%2F1371725208153%2F1%2Foriginal.20260807-155540?crop=focalpoint&fit=crop&h=200&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=695a6a2d5a37f6cd473f9c9317bccc8e"
  },
  {
   "id": "eb-1990447890221",
@@ -2787,7 +3828,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "CraftRoots Brewing",
   "description": "Join us for a cozy and creative afternoon of candle making at CraftRoots Brewing Company!",
   "url": "https://www.eventbrite.com/e/wicks-brews-artisan-soy-wax-candle-making-at-craftroots-brewing-co-tickets-1990447890221",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1185475904%2F2660746770091%2F1%2Foriginal.20260526-213210?crop=focalpoint&fit=crop&h=200&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=822f5c95e09d03f4097a1e28df104573"
  },
  {
   "id": "eb-2001072410447",
@@ -2805,7 +3847,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Fenway Community Center",
   "description": "Join us for slow flow hour long yoga class led by an instructor here at the Center with neighbors and friends! No experience required!",
   "url": "https://www.eventbrite.com/e/instructed-slow-flow-yoga-tickets-2001072410447",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193572090%2F195710045186%2F1%2Foriginal.20260915-163731?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=0d7344d450ef24839fa2df81d5606c54"
  },
  {
   "id": "eb-1995469797882",
@@ -2823,7 +3866,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Sonsie",
   "description": "Join us for a a fun night of Cornucopia making at Sonsie!",
   "url": "https://www.eventbrite.com/e/create-your-own-harvest-flower-bouquet-at-sonsie-tickets-1995469797882",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1192977654%2F815706029453%2F1%2Foriginal.20260908-154233?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.087&fp-y=0.497&s=8feb91484e907ae20416f527d77cca28"
  },
  {
   "id": "eb-2002762797440",
@@ -2841,7 +3885,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Stellwagen Beer Company",
   "description": "Kick off holiday season with us at this inclusive, beginner-friendly pottery workshop!",
   "url": "https://www.eventbrite.com/e/holiday-edition-pottery-workshop-tickets-2002762797440",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1143085213%2F2257453879843%2F1%2Foriginal.20251002-215036?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=8ecf554493f930f91a47457135698a26"
  },
  {
   "id": "eb-2003470125076",
@@ -2859,7 +3904,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Forge Performance LLC",
   "description": "Sunset Sweat Sessions offer a space to dance out the stress, stretch away the tension, and settle into a more mindful state of being.",
   "url": "https://www.eventbrite.com/e/soulwave-sunset-sweat-sessions-tickets-2003470125076",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195883598%2F36222055848%2F1%2Foriginal.20261015-173024?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.572&fp-y=0.127&s=2fd6096d97945d035b27ebb5f8ab97c0"
+ },
+ {
+  "id": "eb-2003535854675",
+  "title": "Pressed Flower Ornament Workshop - Make Two Ornaments!",
+  "category": "craft",
+  "start": "2026-11-16T18:30",
+  "end": "2026-11-16T20:30",
+  "venue": "Wyllo",
+  "address": "65 Thayer St",
+  "city": "Boston, MA",
+  "lat": 42.3424,
+  "lng": -71.0643,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Wyllo",
+  "description": "In this workshop you’ll be making two pressed flower ornaments - one to keep and one to gift!",
+  "url": "https://www.eventbrite.com/e/pressed-flower-ornament-workshop-make-two-ornaments-tickets-2003535854675",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195985951%2F559047357603%2F1%2Foriginal.20261017-011917?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=1660b5878aa46c60324b6ef2827c1560"
  },
  {
   "id": "eb-1998123642603",
@@ -2877,7 +3942,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Summer Shack",
   "description": "Sip, sculpt + unwind! Learn hand-building techniques and shape your own one-of-a-kind clay cup, perfect for coffee or tea!",
   "url": "https://www.eventbrite.com/e/ceramic-mug-making-pottery-workshop-tickets-1998123642603",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1084642623%2F2257453879843%2F1%2Foriginal.20250730-165135?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=5.38115472505e-05&fp-y=5.29225498339e-05&s=aef350a52fff5d0a52bc53ab8acaebfd"
+ },
+ {
+  "id": "eb-2003368256384",
+  "title": "Winter Resin Art Workshop @ The Lost Shoe",
+  "category": "craft",
+  "start": "2026-11-18T18:00",
+  "end": "2026-11-18T20:00",
+  "venue": "Lost Shoe Brewing and Roasting Company",
+  "address": "19 Weed Street",
+  "city": "Marlborough, MA",
+  "lat": 42.3463,
+  "lng": -71.5473,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Lost Shoe Brewing and Roasting Company",
+  "description": "Join us for a fun winter inspired resin art workshop at the Lost Shoe Brew in Marlborough Ma! Choose a frame or 4 Ornaments!",
+  "url": "https://www.eventbrite.com/e/winter-resin-art-workshop-the-lost-shoe-tickets-2003368256384",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195194658%2F637993257443%2F1%2Foriginal.20261006-163853?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.51&fp-y=0.376&s=0949770cb09ad002d6fd0124c18258c0"
  },
  {
   "id": "eb-2001379315408",
@@ -2895,7 +3980,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "JPH at Ferry Hill",
   "description": "A peaceful morning at JPH Cottage with Yoga Nidra, Reiki, and quiet time to rest, reset, and reconnect between school drop-off and pick up",
   "url": "https://www.eventbrite.com/e/mothers-reset-tickets-2001379315408",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194019607%2F572573246665%2F1%2Foriginal.20260921-160627?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=94c6b6a26bd0215e1fca0a1243ea5740"
  },
  {
   "id": "eb-2003188663216",
@@ -2913,7 +3999,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "THE FIRST CONGREGATIONAL CHURCH",
   "description": "Get into the holiday spirit! Create your own beautiful fresh evergreen wreath with all supplies and step-by-step instruction included.",
   "url": "https://www.eventbrite.com/e/fresh-evergreen-wreath-making-workshop-holiday-diy-experience-tickets-2003188663216",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195434842%2F10605588055%2F1%2Foriginal.20261009-091544?crop=focalpoint&fit=crop&h=200&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.218&fp-y=0.497&s=4977dc63d886bfa9988910f4f252ab4d"
  },
  {
   "id": "eb-1999855382283",
@@ -2934,6 +4021,25 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "source": "Eventbrite"
  },
  {
+  "id": "eb-2003535923882",
+  "title": "Snow Globe & Wreath Momento Ornament Workshop - Make 3 ornaments!",
+  "category": "craft",
+  "start": "2026-11-20T18:30",
+  "end": "2026-11-20T20:00",
+  "venue": "Wyllo",
+  "address": "65 Thayer St",
+  "city": "Boston, MA",
+  "lat": 42.3424,
+  "lng": -71.0643,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Wyllo",
+  "description": "In this workshop you’ll be making three ornaments - two snow globe ornaments and one wreath style ornament.",
+  "url": "https://www.eventbrite.com/e/snow-globe-wreath-momento-ornament-workshop-make-3-ornaments-tickets-2003535923882",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195986342%2F559047357603%2F1%2Foriginal.20261017-013206?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=71061e6f536faaf25703e1dc544530b1"
+ },
+ {
   "id": "eb-2003147970503",
   "title": "Sound Bath Immersion with Tatiana Tremblay from \"Purrfect Sound Bath\"",
   "category": "sound",
@@ -2949,7 +4055,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "CM Creative Studio",
   "description": "Lie back with singing bowls and chimes as their vibrations move through the room and through you.",
   "url": "https://www.eventbrite.com/e/sound-bath-immersion-with-tatiana-tremblay-from-purrfect-sound-bath-tickets-2003147970503",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191598263%2F3002193014236%2F1%2Foriginal.20260821-145818?crop=focalpoint&fit=crop&h=200&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=d430309776c5202777749cf8fcb95da9"
  },
  {
   "id": "eb-1981075581393",
@@ -2967,7 +4074,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Providence Zen Center",
   "description": "This retreat brings together Christian as well as Korean and Japanese Zen traditions.",
   "url": "https://www.eventbrite.com/e/christian-buddhist-retreat-in-person-tickets-1981075581393",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1175411822%2F1940998138193%2F1%2Foriginal.20260121-030741?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.482&fp-y=0.045&s=99e11db96bdf50755d215978c6f54a07"
  },
  {
   "id": "eb-2001937224128",
@@ -2985,7 +4093,84 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Kadampa Meditation Center Boston",
   "description": "Be kind to yourself by taking care of your mind. Take this precious opportunity to step away from the noise and distractions of daily life.",
   "url": "https://www.eventbrite.com/e/vajrasattva-empowerment-the-buddha-of-purification-tickets-2001937224128",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194047208%2F94561065173%2F1%2Foriginal.20260921-210050?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=c2d50fa7d5c82d8bcb56853cc88ea371"
+ },
+ {
+  "id": "eb-2003586003672",
+  "title": "Cooking Class - Thanksgiving Desserts",
+  "category": "craft",
+  "start": "2026-11-21T10:00",
+  "end": "2026-11-21T13:00",
+  "venue": "The Westin Copley Place, Boston",
+  "address": "10 Huntington Avenue",
+  "city": "Boston, MA",
+  "lat": 42.3483,
+  "lng": -71.0775,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "The Westin Copley Place, Boston",
+  "description": "What's more classic than Apple and Pumpkin for Thanksgiving? We'll make an all-butter Pie Crust for our Apple Pie and a Pumpkin Swiss Roll.",
+  "url": "https://www.eventbrite.com/e/cooking-class-thanksgiving-desserts-tickets-2003586003672",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1196064342%2F767285119213%2F1%2Foriginal.20261019-013550?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=d9a5c7f46b77c4ba64fccbf866738b61"
+ },
+ {
+  "id": "eb-2003009122204",
+  "title": "Wreath Making Class",
+  "category": "craft",
+  "start": "2026-11-21T12:00",
+  "end": "2026-11-21T14:00",
+  "venue": "Pazza on Porter",
+  "address": "107 Porter Street",
+  "city": "Boston, MA",
+  "lat": 42.373,
+  "lng": -71.0361,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Pazza on Porter",
+  "description": "Create your own festive wreath at our holiday Wreath Making Class! Join us Saturday, November 21st, 12–2 PM. $100/ticket.",
+  "url": "https://www.eventbrite.com/e/wreath-making-class-tickets-2003009122204",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195288867%2F83693368109%2F1%2Foriginal.20261007-155437?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=ebbc40a9481b2a9d87e92027b13722aa"
+ },
+ {
+  "id": "eb-1998389445627",
+  "title": "Screen Print a Tote Bag",
+  "category": "craft",
+  "start": "2026-11-21T13:00",
+  "end": "2026-11-21T16:00",
+  "venue": "Artisan's Asylum",
+  "address": "96 Holton Street",
+  "city": "Boston, MA",
+  "lat": 42.3599,
+  "lng": -71.1379,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Artisan's Asylum",
+  "description": "Want to make your own unique tote bag? In this class we will learn the basics of screen printing on paper and fabric.",
+  "url": "https://www.eventbrite.com/e/screen-print-a-tote-bag-tickets-1998389445627",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191969793%2F2893198501251%2F1%2Foriginal.20260826-183345?crop=focalpoint&fit=crop&w=267&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=627686ba0079b699f9b0f8a7df3a9f7c"
+ },
+ {
+  "id": "eb-2003434235730",
+  "title": "Autumn Bouquet Floral Workshop",
+  "category": "craft",
+  "start": "2026-11-21T14:00",
+  "end": "2026-11-21T16:00",
+  "venue": "InHouze Shops",
+  "address": "2287 Dorchester Ave",
+  "city": "Boston, MA",
+  "lat": 42.2726,
+  "lng": -71.0682,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "InHouze Shops",
+  "description": "Join us for a seasonal Floral Workshop to create your own arrangement to take home - just in time to decorate your Thanksgiving table!",
+  "url": "https://www.eventbrite.com/e/autumn-bouquet-floral-workshop-tickets-2003434235730",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195824933%2F145370481734%2F1%2Foriginal.20261014-223657?crop=focalpoint&fit=crop&h=200&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.502&fp-y=0.442&s=2b8f79a0afad8879a7fffc00ca14e6f1"
  },
  {
   "id": "eb-2003504802798",
@@ -3003,7 +4188,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Medusa Brewing Company",
   "description": "A brewery yoga class that gives back to local veterans and first responders at inside Medusa's taproom",
   "url": "https://www.eventbrite.com/e/brew-good-yoga-with-medusa-tickets-2003504802798",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1103415213%2F1164743346733%2F1%2Foriginal.20250823-180616?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.498069498069&fp-y=0.418918918919&s=4e0107a7525a36c9ba34a8a5f24a4e86"
  },
  {
   "id": "eb-2002550759228",
@@ -3021,7 +4207,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "JPH at Ferry Hill",
   "description": "Welcome the day with intention and softness. The Dragonfly Experience offers a peaceful sanctuary.",
   "url": "https://www.eventbrite.com/e/dragonfly-experience-yoga-sound-reiki-tickets-2002550759228",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1085455323%2F572573246665%2F1%2Foriginal.20250731-153711?crop=focalpoint&fit=crop&h=200&w=275&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=f580561fc47111fc8eebe1782a5cd06b"
+ },
+ {
+  "id": "eb-2003514078542",
+  "title": "DIY Terrarium Workshop",
+  "category": "craft",
+  "start": "2026-11-22T11:00",
+  "end": "2026-11-22T12:00",
+  "venue": "Bow Market",
+  "address": "1 Bow Market Way",
+  "city": "Somerville, MA",
+  "lat": 42.3809,
+  "lng": -71.0983,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Bow Market",
+  "description": "Create your own miniature world and bring home a living piece of nature.",
+  "url": "https://www.eventbrite.com/e/diy-terrarium-workshop-tickets-2003514078542",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195955131%2F3007673719485%2F1%2Foriginal.20261016-162257?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=aae796a3688bb5aad7dafbe022073855"
  },
  {
   "id": "eb-2003025087958",
@@ -3039,7 +4245,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Craft Loft (Cambridge Store)",
   "description": "Celebrate the seasons with a beautiful Seaglass Wreath or Chrsitmas Tree set in resin!",
   "url": "https://www.eventbrite.com/e/holiday-resin-sea-glass-frame-cambridge-tickets-2003025087958",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1170720580%2F2587882898501%2F1%2Foriginal.20251111-193123?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=a5a01ed96a8d99e91ed7658add689d69"
  },
  {
   "id": "eb-2002841418598",
@@ -3057,7 +4264,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Dear Annie",
   "description": "Half-day yoga retreat, a practice centered around gratitude and preparing the body and mind for the holiday season!",
   "url": "https://www.eventbrite.com/e/golden-hour-yoga-with-shireen-damghani-tickets-2002841418598",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194945148%2F276864771330%2F1%2Foriginal.20261002-215429?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.671&fp-y=0.175&s=5248ff862158eda0e4fda0f8b13149f3"
  },
  {
   "id": "eb-1989112245271",
@@ -3075,7 +4283,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Levitate Backyard & Rexicana Surf Cantina",
   "description": "Come learn how to make your own delicious sourdough bread from scratch at our fun and interactive workshop for beginners!",
   "url": "https://www.eventbrite.com/e/sourdough-workshop-for-beginners-tickets-1989112245271",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1151774463%2F60128184491%2F1%2Foriginal.20251013-132432?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.501&fp-y=0.459&s=363d10a212576d3902a18baacc88afaa"
  },
  {
   "id": "eb-1993704075559",
@@ -3093,7 +4302,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Trillium - Canton",
   "description": "Join us to cozy up and craft your own festive Trillium candle this Thanksgiving!",
   "url": "https://www.eventbrite.com/e/gather-glow-a-trillium-thanksgiving-candle-workshop-tickets-1993704075559",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1188624744%2F545134581155%2F1%2Foriginal.20260710-171724?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=2cf461e1b66fb57958c7e516a575c743"
  },
  {
   "id": "eb-1999399216880",
@@ -3111,7 +4321,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Long Live Roxbury",
   "description": "This artisan goat’s milk soap-making experience is the perfect way to celebrate friendship, enjoy a night out, and create something great!",
   "url": "https://www.eventbrite.com/e/friendsgiving-goats-milk-soap-making-workshop-at-long-live-roxbury-tickets-1999399216880",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1192379033%2F2660746770091%2F1%2Foriginal.20260901-162402?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.172&fp-y=0.438&s=412f4f8422ada33d6c0bdd82993d79c2"
  },
  {
   "id": "eb-2003049951325",
@@ -3129,7 +4340,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "wesleaf",
   "description": "Join us for Wesleaf Wellness Wednesdays and flow through Classical Mat Pilates for a strong midweek boost! Attire Palette: Something Blue",
   "url": "https://www.eventbrite.com/e/1125-beginners-classical-mat-pilates-6pm-or-715pm-tickets-2003049951325",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1188663409%2F659961345103%2F1%2Foriginal.20260711-132204?crop=focalpoint&fit=crop&h=200&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.466&fp-y=0.458&s=0700005ec6e6d7d989d8066ab514cdb2"
  },
  {
   "id": "eb-2002674996826",
@@ -3147,7 +4359,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "111 Park Street, West Roxbury, MA, USA",
   "description": "Come join us on November 29th at 3:00pm for our Annual Wreath Making Workshop!",
   "url": "https://www.eventbrite.com/e/annual-holiday-wreath-making-workshop-november-29th-300pm-tickets-2002674996826",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1124489993%2F266241149919%2F1%2Foriginal.20250915-160333?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=5e-09&fp-y=5e-09&s=b35f37b0ab6c0c358eb2c44ba909a077"
+ },
+ {
+  "id": "eb-2003266820988",
+  "title": "Winter Wreath Making Workshop at Aeronaut",
+  "category": "craft",
+  "start": "2026-11-30T19:00",
+  "end": "2026-11-30T21:00",
+  "venue": "Aeronaut Brewing Company, Tyler Street, Somerville, MA, USA",
+  "address": "14 Tyler Street",
+  "city": "Somerville, MA",
+  "lat": 42.382,
+  "lng": -71.1063,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Aeronaut Brewing Company, Tyler Street, Somerville, MA, USA",
+  "description": "'tis the season! Wreath making at Aeronaut & your first pour on us!",
+  "url": "https://www.eventbrite.com/e/winter-wreath-making-workshop-at-aeronaut-tickets-2003266820988",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195562488%2F1876307360563%2F1%2Foriginal.20261011-204832?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=9960291b050c9a5bae9cdcb9faf0748f"
  },
  {
   "id": "eb-1993763763086",
@@ -3165,7 +4397,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Clover Road Brewing Company",
   "description": "Kick off holiday season with us at this inclusive, beginner-friendly pottery workshop!",
   "url": "https://www.eventbrite.com/e/holiday-edition-pottery-workshop-tickets-1993763763086",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1143085213%2F2257453879843%2F1%2Foriginal.20251002-215036?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=589deb0e01ee48b9bbab6c70eb1e9267"
  },
  {
   "id": "eb-2003014287654",
@@ -3183,7 +4416,65 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Untold Brewing - Scituate",
   "description": "Join us for a fun winter inspired resin art workshop at the Untold Brewing in Scituate Ma! Choose a frame or 4 Ornaments!",
   "url": "https://www.eventbrite.com/e/winter-resin-art-workshop-untold-brewing-in-scituate-tickets-2003014287654",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195194658%2F637993257443%2F1%2Foriginal.20261006-163853?crop=focalpoint&fit=crop&w=200&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.51&fp-y=0.376&s=ec93aac999c8ff1e6b0ef6037a9e6903"
+ },
+ {
+  "id": "eb-2003432777368",
+  "title": "Fresh Wreath Decorating Workshop",
+  "category": "craft",
+  "start": "2026-12-02T18:00",
+  "end": "2026-12-02T19:30",
+  "venue": "Triple Decker Candle Co.",
+  "address": "2258 Dorchester Avenue",
+  "city": "Boston, MA",
+  "lat": 42.2733,
+  "lng": -71.0676,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Triple Decker Candle Co.",
+  "description": "Learn to Decorate a Fresh Wreath with Us!",
+  "url": "https://www.eventbrite.com/e/fresh-wreath-decorating-workshop-tickets-2003432777368",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195821322%2F145370481734%2F1%2Foriginal.20261014-214811?crop=focalpoint&fit=crop&h=200&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.494&fp-y=0.411&s=e882723a7d2ce24ea3066dcdd950dcfa"
+ },
+ {
+  "id": "eb-2003191406421",
+  "title": "Fresh Evergreen Wreath-Making Workshop | Holiday DIY Experience",
+  "category": "craft",
+  "start": "2026-12-02T18:00",
+  "end": "2026-12-02T20:30",
+  "venue": "Grille 151",
+  "address": "151 Main Street",
+  "city": "Weymouth, MA",
+  "lat": 42.2022,
+  "lng": -70.9565,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Grille 151",
+  "description": "Get into the holiday spirit! Create your own beautiful fresh evergreen wreath with all supplies and step-by-step instruction included.",
+  "url": "https://www.eventbrite.com/e/fresh-evergreen-wreath-making-workshop-holiday-diy-experience-tickets-2003191406421",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195434286%2F10605588055%2F1%2Foriginal.20261009-090357?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.176&fp-y=0.503&s=12123186a00a8fdc82b5582d38c31ae5"
+ },
+ {
+  "id": "eb-2003670310837",
+  "title": "Holiday Watercolor Greeting Card (Cambridge)",
+  "category": "craft",
+  "start": "2026-12-03T18:00",
+  "end": "2026-12-03T19:30",
+  "venue": "Craft Loft (Cambridge Store)",
+  "address": "100 Cambridgeside Place",
+  "city": "Cambridge, MA",
+  "lat": 42.3674,
+  "lng": -71.0766,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Craft Loft (Cambridge Store)",
+  "description": "Get ready to unleash your inner artist and create beautiful holiday watercolor cards at this beginner-friendly workshop!",
+  "url": "https://www.eventbrite.com/e/holiday-watercolor-greeting-card-cambridge-tickets-2003670310837",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1170437621%2F2587882898501%2F1%2Foriginal.20251107-194427?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=1da21bfc69c2fc4efb1c269dde18d22d"
  },
  {
   "id": "eb-2002675179372",
@@ -3201,7 +4492,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "111 Park Street, West Roxbury, MA, USA",
   "description": "Come join us on December 3rd at 6:30pm for our Annual Wreath Making Workshop!",
   "url": "https://www.eventbrite.com/e/annual-holiday-wreath-making-workshop-december-3-630pm-tickets-2002675179372",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1124490383%2F266241149919%2F1%2Foriginal.20250915-160350?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.545454545455&fp-y=0.491150442478&s=d12eabc6c5a44d3700dec5f867ae35dd"
+ },
+ {
+  "id": "eb-2003618683418",
+  "title": "Evergreen Winter Wreath Decorating (Cambridge)",
+  "category": "craft",
+  "start": "2026-12-04T18:00",
+  "end": "2026-12-04T19:30",
+  "venue": "Craft Loft (Cambridge Store)",
+  "address": "100 Cambridgeside Place",
+  "city": "Cambridge, MA",
+  "lat": 42.3674,
+  "lng": -71.0766,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Craft Loft (Cambridge Store)",
+  "description": "Join us for a cozy evening of crafting beautiful winter wreaths using evergreen foliage, where creativity and holiday cheer come together!",
+  "url": "https://www.eventbrite.com/e/evergreen-winter-wreath-decorating-cambridge-tickets-2003618683418",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1196111500%2F2587882898501%2F1%2Foriginal.20261019-170549?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.499&fp-y=0.652&s=917a0b5e9109212af271dbefa8980a69"
  },
  {
   "id": "eb-1978042707987",
@@ -3219,7 +4530,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Providence Zen Center",
   "description": "Join us for an accessible introduction to Buddhism, Zen, and meditation practice",
   "url": "https://www.eventbrite.com/e/foundations-of-zen-workshop-tickets-1978042707987",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173028841%2F1940998138193%2F1%2Foriginal.20251216-015029?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.525&fp-y=0.045&s=d274d6f0e11c9077b5a91c3bb772b518"
+ },
+ {
+  "id": "eb-2003620088621",
+  "title": "Holiday Centerpiece Workshop with Evergreen Foliage (Cambridge)",
+  "category": "craft",
+  "start": "2026-12-05T13:30",
+  "end": "2026-12-05T14:30",
+  "venue": "Craft Loft (Cambridge Store)",
+  "address": "100 Cambridgeside Place",
+  "city": "Cambridge, MA",
+  "lat": 42.3674,
+  "lng": -71.0766,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Craft Loft (Cambridge Store)",
+  "description": "This holiday season, join us in making a lovely seasonal centerpiece using fresh evergreen branches and natural ornaments!",
+  "url": "https://www.eventbrite.com/e/holiday-centerpiece-workshop-with-evergreen-foliage-cambridge-tickets-2003620088621",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F607144449%2F354227652065%2F1%2Foriginal.20230926-231344?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C219%2C1558%2C779&s=dc2e977be24ff30c0f73746984a68373"
  },
  {
   "id": "eb-2003011670827",
@@ -3237,7 +4568,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Boston Bonbon Headquarters",
   "description": "Join us for a fun Advanced Macaron Decorating Hands-on Class where you'll learn the secrets to creating bakery worthy macarons!",
   "url": "https://www.eventbrite.com/e/advanced-macaron-decorating-class-tickets-2003011670827",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1187850049%2F125472986467%2F1%2Foriginal.20260629-155415?h=200&w=400&auto=format%2Ccompress&q=75&sharp=10&s=963551020e969270961ec50907a287c4"
+ },
+ {
+  "id": "eb-2003433782374",
+  "title": "Fresh Wreath Decorating Workshop",
+  "category": "craft",
+  "start": "2026-12-06T14:00",
+  "end": "2026-12-06T16:00",
+  "venue": "Boston House of Plants",
+  "address": "2287 Dorchester Ave",
+  "city": "Boston, MA",
+  "lat": 42.2726,
+  "lng": -71.0682,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Boston House of Plants",
+  "description": "Learn to Decorate a Fresh Wreath with Us!",
+  "url": "https://www.eventbrite.com/e/fresh-wreath-decorating-workshop-tickets-2003433782374",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195821322%2F145370481734%2F1%2Foriginal.20261014-214811?crop=focalpoint&fit=crop&h=200&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.494&fp-y=0.411&s=e882723a7d2ce24ea3066dcdd950dcfa"
  },
  {
   "id": "eb-1998445857356",
@@ -3273,7 +4624,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Trillium - Canton",
   "description": "Kick off holiday season with us at this inclusive, beginner-friendly pottery workshop!",
   "url": "https://www.eventbrite.com/e/holiday-edition-pottery-workshop-tickets-1990592466653",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1129435273%2F2257453879843%2F1%2Foriginal.20250919-162555?w=355&auto=format%2Ccompress&q=75&sharp=10&s=cb43074aafbfec61a63cf8870a14efb2"
+ },
+ {
+  "id": "eb-1998445175316",
+  "title": "Cookbook Addiction: Six Seasons of Pasta (Dec. 10 @ 10:30 AM)",
+  "category": "craft",
+  "start": "2026-12-10T10:30",
+  "end": "2026-12-10T13:30",
+  "venue": "Joyful Kitchen Cooking School",
+  "address": "12 Greenwood Rd",
+  "city": "Wellesley, MA",
+  "lat": 42.3137,
+  "lng": -71.2829,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Joyful Kitchen Cooking School",
+  "description": "Six Seasons of Pasta: A New Way with Everyone's Favorite Food, Featuring the cookbook by Joshua McFadden",
+  "url": "https://www.eventbrite.com/e/cookbook-addiction-six-seasons-of-pasta-dec-10-1030-am-tickets-1998445175316",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191456490%2F13225417381%2F1%2Foriginal.20260819-194212?w=400&auto=format%2Ccompress&q=75&sharp=10&s=166b86745e723e14119f81a34f7cfcca"
  },
  {
   "id": "eb-2002673374975",
@@ -3291,7 +4662,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "111 Park Street, West Roxbury, MA, USA",
   "description": "Come join us on December 11th at 6:30pm for our Annual Wreath Making Workshop!",
   "url": "https://www.eventbrite.com/e/annual-holiday-wreath-making-workshop-december-11th-630pm-tickets-2002673374975",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F626787279%2F266241149919%2F1%2Foriginal.20231023-195023?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C83%2C772%2C386&s=a44a5411b2eb2480bb94df4ddbf94d84"
  },
  {
   "id": "eb-1999415151541",
@@ -3309,7 +4681,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Plimoth Patuxet Museums",
   "description": "Join us for our annual festive workshop and make handmade wreaths!",
   "url": "https://www.eventbrite.com/e/holiday-wreath-making-tickets-1999415151541",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1192615831%2F201966129358%2F1%2Foriginal.20260903-195835?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=a0c7be2864631930e2ec6a463cc90062"
  },
  {
   "id": "eb-1999274680388",
@@ -3327,7 +4700,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "At a private home in Milton, MA",
   "description": "Once again we are hosting Adam Bauer, world renowned kirtan wallah at our place in MIlton, MA.",
   "url": "https://www.eventbrite.com/e/kirtan-with-adam-bauer-tickets-1999274680388",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1192284655%2F176021977723%2F1%2Foriginal.20260831-155546?crop=focalpoint&fit=crop&h=200&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=258ab3c5490483b05b223be64a51a2f4"
  },
  {
   "id": "eb-2002966034327",
@@ -3345,7 +4719,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "RADIO FACTORY Blush & Bloom Floral Studio: 99 Washington S. Melrose, MA",
   "description": "Join us for a fun hands-on Flower Workshop and create your own wreath!",
   "url": "https://www.eventbrite.com/e/wreath-workshop-tickets-2002966034327",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195116688%2F520396762149%2F1%2Foriginal.20261005-202755?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.498&fp-y=0.526&s=a5cf30b01a82a04c00e0407868027b1d"
  },
  {
   "id": "eb-1999447631690",
@@ -3363,7 +4738,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "ZEST The Collective",
   "description": "Unwind with cacao, deep yoga nidra, and soothing sounds for ultimate rest and renewal",
   "url": "https://www.eventbrite.com/e/rest-before-renewal-a-cacao-yoga-nidra-sound-experience-tickets-1999447631690",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1192437231%2F1639210469313%2F1%2Foriginal.20260902-023018?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=6efc213a669df8f84c0d5d754b3ea0da"
  },
  {
   "id": "eb-2003037979517",
@@ -3381,7 +4757,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Untold Brewing - Plymouth",
   "description": "Join us for a fun winter inspired resin art workshop at the Untold Brewing in Plymouth Ma! Choose a frame or 4 Ornaments!",
   "url": "https://www.eventbrite.com/e/winter-resin-art-workshop-untold-brewing-in-plymouth-ma-tickets-2003037979517",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195196302%2F637993257443%2F1%2Foriginal.20261006-165422?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.492&fp-y=0.516&s=c722d23f261965c9f3e9ccb3e0a2e8f9"
  },
  {
   "id": "eb-1998676172234",
@@ -3399,7 +4776,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Juliet",
   "description": "Kick off holiday season with us at this inclusive, beginner-friendly pottery workshop!",
   "url": "https://www.eventbrite.com/e/holiday-edition-pottery-workshop-tickets-1998676172234",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1143085213%2F2257453879843%2F1%2Foriginal.20251002-215036?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=8ecf554493f930f91a47457135698a26"
  },
  {
   "id": "eb-1999399963112",
@@ -3417,7 +4795,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Long Live Roxbury",
   "description": "Join us at Long Live Roxbury for a festive Holiday Get-Together, where creativity, connection, craft beer, and seasonal cheer come together!",
   "url": "https://www.eventbrite.com/e/holiday-goats-milk-soap-making-workshop-at-long-live-roxbury-tickets-1999399963112",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1192379033%2F2660746770091%2F1%2Foriginal.20260901-162402?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.172&fp-y=0.438&s=412f4f8422ada33d6c0bdd82993d79c2"
  },
  {
   "id": "eb-2002649591839",
@@ -3435,7 +4814,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Plimoth Patuxet Museums",
   "description": "Bring a taste of an Elizabethan Christmas to your own holiday table!",
   "url": "https://www.eventbrite.com/e/whats-cooking-take-bake-mincemeat-pie-tickets-2002649591839",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194838362%2F201966129358%2F1%2Foriginal.20261001-174730?crop=focalpoint&fit=crop&h=200&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.589&fp-y=0.502&s=21b255aeda4ad2b1090b7573f96bc060"
  },
  {
   "id": "eb-1977997350321",
@@ -3453,7 +4833,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Providence Zen Center",
   "description": "Find sanctuary at a traditional Buddhist Temple. Turn off the noise, breathe deeply, and tune in to your inner voice.",
   "url": "https://www.eventbrite.com/e/new-years-eve-zen-practice-and-new-years-self-guided-retreat-tickets-1977997350321",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173011642%2F1940998138193%2F1%2Foriginal.20251215-205818?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.498&fp-y=0.099&s=f42c0874fd141075021955cb0f5ca205"
  },
  {
   "id": "eb-2000486206094",
@@ -3471,7 +4852,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "ZEST The Collective",
   "description": "Dive into 2024 with Reiki energy and soothing vibrations to refresh your mind and soul for the New Year",
   "url": "https://www.eventbrite.com/e/the-winter-current-a-water-inspired-reiki-sound-bath-experience-tickets-2000486206094",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193184244%2F1639210469313%2F1%2Foriginal.20260910-172548?crop=focalpoint&fit=crop&h=200&w=274&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=a555416806caf2424c944d15d4685605"
+ },
+ {
+  "id": "eb-1998641126411",
+  "title": "Make Your Own Oyster Plate Pottery Workshop",
+  "category": "craft",
+  "start": "2027-01-20T18:00",
+  "end": "2027-01-20T20:30",
+  "venue": "Summer Shack",
+  "address": "149 Alewife Brook Parkway",
+  "city": "Cambridge, MA",
+  "lat": 42.3937,
+  "lng": -71.1412,
+  "price": null,
+  "priceNote": "Tickets & price on Eventbrite",
+  "host": "Summer Shack",
+  "description": "Craft from clay and paint your own oyster plate in this beginner-friendly pottery class—perfect for seafood lovers and creative souls!",
+  "url": "https://www.eventbrite.com/e/make-your-own-oyster-plate-pottery-workshop-tickets-1998641126411",
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1057571303%2F2257453879843%2F1%2Foriginal.20250620-212051?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=077c918001b40e0245cae8aeddf3d3fe"
  },
  {
   "id": "eb-2002574641661",
@@ -3489,7 +4890,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Plimoth Patuxet Museums",
   "description": "Smell the smoke, feel the warmth, and savor the flavor of history - one bite at a time!",
   "url": "https://www.eventbrite.com/e/whats-cooking-cheate-bread-tickets-2002574641661",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194752755%2F201966129358%2F1%2Foriginal.20260930-185524?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=ca36f1217f6b57b3a8e6c8e314d19d35"
  },
  {
   "id": "eb-1993764092070",
@@ -3507,7 +4909,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Clover Road Brewing Company",
   "description": "Grab your Pal, Gal, or Val and join us for a beginner-friendly pottery workshop where you'll create unique handmade gifts or décor!",
   "url": "https://www.eventbrite.com/e/clay-date-pottery-workshop-tickets-1993764092070",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1175375748%2F2257453879843%2F1%2Foriginal.20260120-200252?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=38011504122b1a2740f77f60f12b5355"
  },
  {
   "id": "eb-2000533019113",
@@ -3525,7 +4928,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "ZEST The Collective",
   "description": "Join us for The Heart in Motion: Cacao, Movement and Sound – a chill day of good vibes, flow, and rhythm!",
   "url": "https://www.eventbrite.com/e/the-heart-in-motion-cacao-movement-and-sound-tickets-2000533019113",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193223750%2F1639210469313%2F1%2Foriginal.20260911-015524?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=de2606886e6d92a47eb19e077e28f41d"
  },
  {
   "id": "eb-1998128329622",
@@ -3543,6 +4947,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Summer Shack",
   "description": "Grab your Pal, Gal, or Val and join us for a beginner-friendly pottery workshop where you'll create unique handmade gifts or décor!",
   "url": "https://www.eventbrite.com/e/clay-date-pottery-workshop-tickets-1998128329622",
-  "source": "Eventbrite"
+  "source": "Eventbrite",
+  "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1175375748%2F2257453879843%2F1%2Foriginal.20260120-200252?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=696855b935e57bf3d2a0224c48c72ef4"
  }
 ]);

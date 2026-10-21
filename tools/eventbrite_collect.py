@@ -43,7 +43,8 @@ for t in towns:
                     venue=v.get("name", ""), street=a.get("address_1", ""), city=a.get("city", ""), region=a.get("region", ""),
                     lat=a.get("latitude"), lng=a.get("longitude"), is_free=ta.get("is_free"),
                     min_price=mn, max_price=mx, sold_out=ta.get("is_sold_out"),
-                    organizer=(e.get("primary_organizer") or {}).get("name", ""), url=u, terms={q})
+                    organizer=(e.get("primary_organizer") or {}).get("name", ""), url=u, terms={q},
+                    image=((e.get("image") or {}).get("url") or ""))
             print(f"{t}/{q} p{page}: +{len(found)-n0} = {len(found)}", file=sys.stderr)
             time.sleep(0.6)
             if len(found) == n0: break

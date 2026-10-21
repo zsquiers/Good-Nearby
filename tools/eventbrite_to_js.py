@@ -22,7 +22,8 @@ RULES = [("walk", r"\bwalk"), ("tai-chi", r"tai chi|qigong"), ("sound", r"sound 
          ("meditation", r"meditat|zen|mindful|dharma|retreat|nidra|mantra|buddh|vajrasattva|nondual|whirling|dervish|cacao|stillpoint|tangle")]
 # Brand pop-ups, spas and anything that isn't really about feeling good.
 WELL_SKIP = [r"lululemon", r"vuori", r"corepower", r"yogasix", r"med ?spa", r"glowtox", r"botox", r"reunion", r"boxing",
-             r"gala", r"banquet", r"\bsip\b", r"date night", r"goat yoga", r"psychic", r"medium\b", r"a conversation on"]
+             r"gala", r"banquet", r"\bsip\b", r"date night", r"goat yoga", r"psychic", r"medium\b", r"a conversation on",
+             r"brunch", r"pinot", r"\btour\b", r"presents:", r"brahma kumaris"]
 MAKE = "--make" in sys.argv or "--herbal" in sys.argv   # both are hands-on classes
 HERBAL = "--herbal" in sys.argv
 # Creative classes: no chains, nothing for kids, nothing without a real place, and only near our towns.
@@ -33,7 +34,7 @@ MAKE_SKIP = [r"pinot'?s palette", r"paint ?nite", r"yaymaker", r"muse paintbar",
              r"no.school.day", r"high school", r"storytime", r"release party", r"festival", r"\bfest\b", r"\bfair\b", r"restaurant week",
              r"template", r"3d print", r"plasma", r"sandblast", r"metalwork", r"\bcnc\b", r"\bai\b", r"photography", r"sold out",
              r"halloween after dark", r"stein", r"pro.range", r"steam", r"bootcamp", r"tavern",
-             r"building romance", r"paint the block", r"paint-a-ghost", r"drop in crafternoon"]
+             r"building romance", r"paint the block", r"paint-a-ghost", r"drop in crafternoon", r"pinot", r"\btour\b", r"presents:", r"brunch"]
 HERBAL_ONLY = (r"herbal|herbalism|\bherbs?\b|tea blend|salve|tincture|forag|apothecary|plant medicine|plant walk|"
                r"aromatherapy|flower essence|medicinal|wild edible|mushroom walk")
 HERBAL_SKIP = [r"tea blending series with the boston school", r"essential oils? (party|business)", r"doterra", r"young living", r"cannabis", r"\bcbd\b", r"psilocybin", r"ayahuasca"]
@@ -53,20 +54,22 @@ norm = lambda t: re.sub(r"[^a-z]", "", t.lower())
 # Regular sessions we already list (weekly sits, monthly groups) — skip Eventbrite copies of those exact sessions
 # (same host, weekday and start time). Special one-off events from the same places are still welcome.
 import subprocess
+# "Providence Zen Center · Main Hall" ≈ "Providence Zen Center"; "99 Pound Rd" ≈ "99 Pound Road"
+_key = lambda h: (re.sub(r"[^a-z0-9]", "", (h or "").lower())[:8] if re.match(r"\s*\d", h or "") else norm(h or "")[:15])
 _js = ("global.window={};const fs=require('fs'),d=process.argv[1];for(const f of fs.readdirSync(d))"
        "if(f!=='" + os.path.basename(out) + "')require(require('path').resolve(d,f));"
        "console.log(JSON.stringify((window.GOOD_NEARBY_EVENTS||[]).filter(e=>e.weekly||e.monthly)"
-       ".flatMap(e=>[e.host,e.venue].map(h=>[h,(e.weekly||e.monthly).day,(e.weekly||e.monthly).time]))))")
+       ".flatMap(e=>[e.host,e.venue,e.address].map(h=>[h,(e.weekly||e.monthly).day,(e.weekly||e.monthly).time]))))")
 try:
-    regular = {(norm(h or ""), d, t) for h, d, t in json.loads(subprocess.run(
+    regular = {(_key(h), d, t) for h, d, t in json.loads(subprocess.run(
         ["node", "-e", _js, os.path.dirname(out) or "."], capture_output=True, text=True, check=True).stdout)}
 except Exception as _e:
     print("note: couldn't read regular sessions:", _e, file=sys.stderr); regular = set()
 _DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 def is_regular(host, start):
-    if len(start) < 16: return False
+    if len(start) < 16 or not host: return False
     d = datetime.date.fromisoformat(start[:10])
-    return (norm(host or ""), _DAYS[d.weekday()], start[11:16]) in regular
+    return (_key(host), _DAYS[d.weekday()], start[11:16]) in regular
 hand = [(norm(t), dt) for t, dt in re.findall(r'"?title"?: "([^"]+)",[\s\S]{0,200}?"?start"?: "(\d{4}-\d{2}-\d{2})', main)]
 def dup(name, date):
     n = norm(name)
@@ -79,7 +82,7 @@ for e in sorted(d, key=lambda x: (x["start_date"], x["start_time"] or "")):
     if not near_us(float(e["lat"]), float(e["lng"]), 6 if MAKE else 8): continue   # only our four areas
     # Skip events at places we already list by hand with their regular schedule (e.g. weekly sits).
     _st = f'{e["start_date"]}T{e["start_time"]}' if e.get("start_time") else e["start_date"]
-    if is_regular(e.get("organizer"), _st) or is_regular(e.get("venue"), _st): continue
+    if is_regular(e.get("organizer"), _st) or is_regular(e.get("venue"), _st) or is_regular(e.get("street"), _st): continue
     if MAKE:
         if e.get("online") or not e.get("lat") or not near_us(float(e["lat"]), float(e["lng"])): continue
         if any(re.search(p, (name + " " + (e["venue"] or "") + " " + (e["organizer"] or "")).lower()) for p in MAKE_SKIP): continue
@@ -112,7 +115,7 @@ for e in sorted(d, key=lambda x: (x["start_date"], x["start_time"] or "")):
         "price": price, **({"priceNote": note} if note else {}),
         "host": e["organizer"] or e["venue"] or "See event page",
         "description": (e["summary"] or "See the event page for details.").strip(),
-        "url": e["url"], "source": "Eventbrite",
+        "url": e["url"], "source": "Eventbrite", **({"image": e["image"]} if e.get("image") else {}),
     })
 # Merge with what's already listed: keep upcoming events, drop past ones, add new finds.
 existing = []
@@ -121,10 +124,15 @@ if os.path.exists(out):
     existing = json.loads(txt[txt.index(".concat(") + 8: txt.rindex(");")])
 def upcoming(r): return (r.get("end") or r["start"])[:10] >= today
 KIDS = r"\bages? \d|\bkids?\b|children|toddler|grades? \d|families"
+_skipped = lambda r: any(re.search(p, (r["title"] + " " + r.get("host", "")).lower()) for p in (MAKE_SKIP if r["category"] in ("craft", "herbal") else WELL_SKIP + SKIP))
 kept = [r for r in existing if upcoming(r) and not dup(r["title"], r["start"][:10]) and not is_regular(r.get("host"), r["start"]) and not is_regular(r.get("venue"), r["start"])
+        and not is_regular(r.get("address"), r["start"]) and not _skipped(r)
         and not (r["category"] in ("craft", "herbal") and re.search(KIDS, (r["title"] + " " + r["description"]).lower())
                  and not re.search(r"adults? only|\b18\+|\b21\+", (r["title"] + " " + r["description"]).lower()))]
 have = {r["id"] for r in kept}
+fresh_img = {r["id"]: r["image"] for r in rows if r.get("image")}
+for r in kept:
+    if r["id"] in fresh_img: r["image"] = fresh_img[r["id"]]
 new = [r for r in rows if r["id"] not in have and upcoming(r)]
 merged = sorted(kept + new, key=lambda r: r["start"])
 hdr = ("// Wellness events found on Eventbrite across Greater Boston, MetroWest, the South Shore and the Franklin area.\n"

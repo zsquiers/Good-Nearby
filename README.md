@@ -8,15 +8,20 @@ The first screen says **"Find what makes you feel good."** and offers two ways i
 
 **1. By feeling (one good thing at a time)** — except **Wander somewhere cozy**, which opens an organized list of cafés, bakeries and little shops by area, grouped (coffee + a wander, cozy cafés, little shops) with what's open now at the top.
 - "What would feel good right now?" — Move my body, Quiet my mind, Be cared for, Make something good (pottery, painting, flowers, cooking), Wander somewhere cozy (independent cafés, bakeries and little shops), Be with good people (classes, circles and book groups), or ✨ Surprise me.
-- Then one event at a time, soonest first (or closest first with "Show what's closest to me first"), with plain-language times ("Saturday · 10 AM — in 5 days").
-- Three buttons: ♡ Save, I'm in, Next. "I'm in" reveals Add to my calendar (with a 2-hour reminder), Directions, Sign up and Call.
+- **Where are you?** is asked once, above the feelings (type a town or tap "Use my location"). It's remembered on the device, sorts things closest first and shows "~12 min away". Skipping it is fine.
+- Then **just 3** picks, one at a time, with dots showing where you are. Picks are ranked: soon, free, come-alone-friendly, hand-checked and close count in their favor, and the same host never shows twice in a row. After three: "That's your 3 for now", with "Show me 3 more" if you want.
+- Three buttons: ♡ Save, I'm in, Next. "I'm in" reveals Add to my calendar (with a 2-hour reminder), Directions, Sign up, Call and 💬 Send to a friend (shares a link that opens that one listing, `#/e/<id>`). Cafés and shops instead show their hours, Menu, Directions and "Reviews, photos & map" straight away.
 
 **2. Browse by area & day**
 - Pick an area — Franklin & nearby, MetroWest, Boston area, South Shore, or Everywhere — and a day from a 14-day grid that shows how many things are on each day (or any other date). The area is remembered.
 - See everything that day grouped into Morning, Afternoon and Evening, with ‹ › to move day by day. Empty days offer the next day with something on, and a link to what's on elsewhere. Classes and practitioners without fixed dates sit in a collapsed "Also open most days" section.
 - Tap anything to open it as a card; Next steps through the rest of that day.
 
-Shareable links: `#/day/franklin-area/2026-10-17` opens that day in Franklin & nearby.
+Shareable links: `#/day/franklin-area/2026-10-17` opens that day in Franklin & nearby; `#/wander/metrowest` opens the cozy list for MetroWest.
+
+**Areas** are about 30 minutes across: a place only shows under an area if it's within ~15 miles of that area's nearest town (`AREA_CAP_MILES` in `app.js`). Farther places still show under Everywhere.
+
+**App icon:** `manifest.webmanifest` and the icons in `assets/` let people add Good Nearby to their phone's home screen with the sunflower icon.
 
 Design rules: one decision per screen, no menus, big tap targets, plain language, gentle motion (none for visitors who prefer reduced motion). Keyboard: → next card / next day, ← back, S save. On phones, swipe left/right.
 
@@ -35,6 +40,7 @@ Design rules: one decision per screen, no menus, big tap targets, plain language
 | `data/events-herbal.js` | Herbal classes, tea nights and herbal shops |
 | `data/events-meditation.js` | Meditation centers' regular sits, beginner classes and short courses |
 | `data/events-calendars.js` | Classes read straight from venues' own calendars, e.g. Common Street Spiritual Center in Natick and Mount Auburn (made by `tools/calendar_collect.py`) |
+| `data/events-meetup.js` | In-person meditation, yoga, sound, walking and book groups found on Meetup (made by `tools/meetup_collect.py`) |
 | `data/events-cafes.js` | Cozy independent cafés, bakeries and garden-center / farm cafés (no chains) |
 | `sources/` | The list of every source we check, and the monthly report (see `sources/README.md`) |
 | `tools/` | Small scripts that check sources and pull in Eventbrite events |
@@ -56,15 +62,16 @@ Open `data/events.js` and copy an existing entry that matches the kind of listin
 - **Weekly series:** `weekly: { day: "Saturday", time: "10:00", endTime: "11:00", from: "2026-09-19", until: "2026-10-17", skip: [] }`
 - **Monthly (e.g. every 2nd Monday):** `monthly: { week: 2, day: "Monday", time: "19:00", endTime: "20:30" }` — shows the next few months automatically
 - **Ongoing class or practitioner:** no dates, just a `schedule` note such as `"Classes daily"` or `"By appointment"`
+- **Photo:** add `image: "https://…"` to use the event's own photo instead of the category photo.
 - **Café, bakery or shop:** add `hours: { mon: "07:00-15:00", tue: …, sun: null }` (null = closed) and, if they have one, `menu: "https://…"`. The site then shows "Open now · until 3 PM", the week's hours, and Menu / Directions / Reviews buttons. Only use hours from the place's own website — leave `hours` out if unsure, and the card points people to Google Maps instead.
 
-Feelings map to categories in `app.js` (`MOODS`). An event's browse area comes from its town in `data/towns.js` (or the nearest listed town). Categories: `yoga`, `sound`, `meditation`, `massage`, `breathwork`, `reiki`, `tai-chi`, `acupuncture`, `salt`, `run`, `walk`, `hike`, `movement`, `shop`, `cafe`, `bakery`, `craft`, `herbal`, `book`, `workshop`, `expo`. Optional `tags`: `free`, `come-alone`, `beginner`, `women`, `all-paces`, `outdoors`, `gluten-free` — shown as friendly chips. A `weekly` listing with no `from`/`until` is an ongoing weekly meetup and repeats for the next four months. Add `lat`/`lng` so "Near me" can sort by distance (approximate is fine). Past events and finished series hide themselves automatically.
+Feelings map to categories in `app.js` (`MOODS`). An event's browse area comes from its town in `data/towns.js` (or the nearest listed town). Categories: `yoga`, `sound`, `meditation`, `massage`, `breathwork`, `reiki`, `tai-chi`, `acupuncture`, `salt`, `run`, `walk`, `hike`, `movement`, `shop`, `cafe`, `bakery`, `craft`, `herbal`, `book`, `workshop`, `expo`. Optional `tags`: `free`, `come-alone`, `beginner`, `women`, `all-paces`, `outdoors`, `gluten-free` — shown as friendly chips. A `weekly` listing with no `from`/`until` is an ongoing weekly meetup and repeats for the next four months. Add `lat`/`lng` so "Where are you?" can sort by distance (approximate is fine). Past events and finished series hide themselves automatically.
 
 The current listings came from public event pages and directories in early October 2026. Every source is listed in `sources/sources.csv`, and a monthly search checks them for new events. See `sources/README.md` for how it works. Coordinates are approximate. Good places to find more events: the Natural Awakenings Boston calendar, Eventbrite, boston.gov's Parks Fitness Series, local library calendars, and studio websites.
 
 ## Photos
 
-Photos load from Unsplash. Each event uses a photo for its category, set in the `CATEGORY` list at the top of `app.js`. The background photo is set as `--hero` in `styles.css`. If a photo fails to load, a warm gradient shows instead. Before a big launch, consider downloading your favorite photos into `assets/` so they never depend on another site.
+Photos load from Unsplash. Each event uses a photo for its category, set in the `CATEGORY` list at the top of `app.js`. The background photo is set as `--hero` in `styles.css`; the sunflowers in its corner are `assets/sunflowers.svg` (hidden on phones, where the card covers that corner). Events with their own photo (`image`) use it instead. If a photo fails to load, a warm gradient shows instead. Before a big launch, consider downloading your favorite photos into `assets/` so they never depend on another site.
 
 ## Listing events (for hosts)
 
@@ -95,6 +102,4 @@ After changing `styles.css`, `app.js` or `data/events.js`, bump the `?v=` number
 
 - Move events into a real database (e.g. Supabase or Airtable) so hosts can submit without editing code
 - A map view of events
-- Event images and host profiles
-- Recurring events (e.g. "every Tuesday")
-- A custom domain like `goodnearby.com`
+- Host profiles

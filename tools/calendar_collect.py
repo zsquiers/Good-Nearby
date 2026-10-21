@@ -86,6 +86,7 @@ def to_listing(sid, site, e):
         "host": site["venue"],
         "description": (desc[:300] + ("…" if len(desc) > 300 else "")) or "See the event page for details.",
         "url": e["url"], "source": "Venue calendar",
+        **({"image": e["image"]["url"]} if isinstance(e.get("image"), dict) and e["image"].get("url") else {}),
         **({"tags": ["free"]} if price == 0 else {}),
     }
 

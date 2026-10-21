@@ -81,10 +81,12 @@ def collect(today):
                     when = clean((re.search(r'class="event-time">(.*?)</span>', block, re.S) or [None, ""])[1])
                     room = clean((re.search(r'class="event-location-location">(.*?)</span>', block, re.S) or [None, ""])[1])
                     addr = clean((re.search(r'class="event-location-address">(.*?)</span>', block, re.S) or [None, ""])[1])
+                    img = (re.search(r'<img src="([^"]+)"', block) or [None, ""])[1]
                     desc = clean((re.search(r'class="event-description-excerpt">(.*?)<a [^>]*event-description-excerpt-more', block, re.S)
                                   or re.search(r'class="event-description-excerpt">(.*?)</div>', block, re.S) or [None, ""])[1])
                     found[(link, day)] = dict(lib=lib, library=name, town=town, lat=lat, lng=lng, date=day, when=when,
-                                             room=room, address=addr, title=title, desc=desc, url=link, cls=cls)
+                                             room=room, address=addr, title=title, desc=desc, url=link, cls=cls,
+                                             img=img.replace("_sm.", "_lg.") if img else "")
             time.sleep(0.5)
         print(f"{name}: {sum(1 for v in found.values() if v['lib'] == lib)} events", file=sys.stderr)
     return list(found.values())
@@ -111,7 +113,7 @@ def to_listing(e):
         "lat": e["lat"], "lng": e["lng"],
         "price": 0, "host": e["library"],
         "description": (e["desc"][:300] or "See the library's page for details."),
-        "url": e["url"], "source": "Library",
+        "url": e["url"], "source": "Library", **({"image": e["img"]} if e.get("img") else {}),
         "tags": ["free", "come-alone"],
     }
 

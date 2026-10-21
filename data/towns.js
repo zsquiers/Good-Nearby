@@ -15,6 +15,11 @@ window.GOOD_NEARBY_TOWNS = [
     { id: "mansfield",    name: "Mansfield",    lat: 42.0334, lng: -71.2190 },
     { id: "milford",      name: "Milford",      lat: 42.1398, lng: -71.5162 },
     { id: "medfield",     name: "Medfield",     lat: 42.1876, lng: -71.3062 },
+    { id: "millis",       name: "Millis",       lat: 42.1676, lng: -71.3578 },
+    { id: "sharon",       name: "Sharon",       lat: 42.1237, lng: -71.1787 },
+    { id: "plainville",   name: "Plainville",   lat: 42.0040, lng: -71.3328 },
+    { id: "westwood",     name: "Westwood",     lat: 42.2140, lng: -71.2245 },
+    { id: "norwood",      name: "Norwood",      lat: 42.1945, lng: -71.1995 },
   ]},
   { id: "metrowest", area: "MetroWest", towns: [
     { id: "framingham",   name: "Framingham",   lat: 42.2793, lng: -71.4162 },
@@ -37,7 +42,6 @@ window.GOOD_NEARBY_TOWNS = [
     { id: "jamaica-plain",name: "Jamaica Plain",lat: 42.3097, lng: -71.1151 },
     { id: "dorchester",   name: "Dorchester",   lat: 42.3016, lng: -71.0676 },
     { id: "dedham",       name: "Dedham",       lat: 42.2418, lng: -71.1662 },
-    { id: "norwood",      name: "Norwood",      lat: 42.1945, lng: -71.1995 },
   ]},
   { id: "south-shore", area: "South Shore", towns: [
     { id: "quincy",       name: "Quincy",       lat: 42.2529, lng: -71.0023 },
