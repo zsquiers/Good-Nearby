@@ -88,6 +88,8 @@ After changing `styles.css`, `app.js` or `data/events.js`, bump the `?v=` number
 2. Under **Build and deployment**, choose **Deploy from a branch**, pick `main` and `/ (root)`, then **Save**.
 3. After a minute your site is live at `https://zsquiers.github.io/Good-Nearby/`.
 
+**Custom domain:** the site lives at **https://findgoodnearby.com** (registered at Porkbun). The `CNAME` file in this repo tells GitHub Pages to use it, and Porkbun's DNS has four `A` records (185.199.108–111.153) plus a `www` CNAME pointing to `zsquiers.github.io`. The old github.io address forwards automatically. Keep Porkbun's MX and TXT records — they handle email forwarding.
+
 ## Ideas for next steps
 
 - Move events into a real database (e.g. Supabase or Airtable) so hosts can submit without editing code
