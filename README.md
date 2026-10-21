@@ -6,7 +6,7 @@ A warm, calm, ADHD-friendly way to find restorative events across Greater Boston
 
 The first screen says **"Find what makes you feel good."** and offers two ways in:
 
-**1. By feeling (one good thing at a time)**
+**1. By feeling (one good thing at a time)** — except **Wander somewhere cozy**, which opens an organized list of cafés, bakeries and little shops by area, grouped (coffee + a wander, cozy cafés, little shops) with what's open now at the top.
 - "What would feel good right now?" — Move my body, Quiet my mind, Be cared for, Make something good (pottery, painting, flowers, cooking), Wander somewhere cozy (independent cafés, bakeries and little shops), Be with good people (classes, circles and book groups), or ✨ Surprise me.
 - Then one event at a time, soonest first (or closest first with "Show what's closest to me first"), with plain-language times ("Saturday · 10 AM — in 5 days").
 - Three buttons: ♡ Save, I'm in, Next. "I'm in" reveals Add to my calendar (with a 2-hour reminder), Directions, Sign up and Call.
@@ -56,6 +56,7 @@ Open `data/events.js` and copy an existing entry that matches the kind of listin
 - **Weekly series:** `weekly: { day: "Saturday", time: "10:00", endTime: "11:00", from: "2026-09-19", until: "2026-10-17", skip: [] }`
 - **Monthly (e.g. every 2nd Monday):** `monthly: { week: 2, day: "Monday", time: "19:00", endTime: "20:30" }` — shows the next few months automatically
 - **Ongoing class or practitioner:** no dates, just a `schedule` note such as `"Classes daily"` or `"By appointment"`
+- **Café, bakery or shop:** add `hours: { mon: "07:00-15:00", tue: …, sun: null }` (null = closed) and, if they have one, `menu: "https://…"`. The site then shows "Open now · until 3 PM", the week's hours, and Menu / Directions / Reviews buttons. Only use hours from the place's own website — leave `hours` out if unsure, and the card points people to Google Maps instead.
 
 Feelings map to categories in `app.js` (`MOODS`). An event's browse area comes from its town in `data/towns.js` (or the nearest listed town). Categories: `yoga`, `sound`, `meditation`, `massage`, `breathwork`, `reiki`, `tai-chi`, `acupuncture`, `salt`, `run`, `walk`, `hike`, `movement`, `shop`, `cafe`, `bakery`, `craft`, `herbal`, `book`, `workshop`, `expo`. Optional `tags`: `free`, `come-alone`, `beginner`, `women`, `all-paces`, `outdoors`, `gluten-free` — shown as friendly chips. A `weekly` listing with no `from`/`until` is an ongoing weekly meetup and repeats for the next four months. Add `lat`/`lng` so "Near me" can sort by distance (approximate is fine). Past events and finished series hide themselves automatically.
 

@@ -208,6 +208,36 @@
   const hourFmt = new Intl.DateTimeFormat(undefined, { hour: "numeric" });
   const shortTime = (d) => (d.getMinutes() ? timeFmt : hourFmt).format(d);   // "10 AM", "5:30 PM"
 
+  // ---------- opening hours (cafés & shops) ----------
+  // e.hours = { mon: "07:00-15:00", ..., sun: null }  (null = closed that day)
+  const DKEYS = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+  const toMin = (t) => { const [h, m] = t.split(":").map(Number); return h * 60 + m; };
+  const clock = (t) => { const [h, m] = t.split(":").map(Number); return shortTime(new Date(2000, 0, 1, h, m)); };
+  const span = (h) => { const [a, b] = h.split("-"); return `${clock(a)} – ${clock(b)}`; };
+  function openStatus(e) {
+    if (!e.hours) return null;
+    const mins = now.getHours() * 60 + now.getMinutes();
+    const today = e.hours[DKEYS[now.getDay()]];
+    if (today) {
+      const [a, b] = today.split("-");
+      if (mins >= toMin(a) && mins < toMin(b)) return { open: true, text: `Open now · until ${clock(b)}` };
+      if (mins < toMin(a)) return { open: false, text: `Opens today at ${clock(a)}` };
+    }
+    for (let k = 1; k <= 7; k++) {
+      const h = e.hours[DKEYS[(now.getDay() + k) % 7]];
+      if (h) return { open: false, text: `Closed now · opens ${k === 1 ? "tomorrow" : DAYS[(now.getDay() + k) % 7]} at ${clock(h.split("-")[0])}` };
+    }
+    return { open: false, text: "Closed" };
+  }
+  function hoursTable(e) {
+    const order = [1, 2, 3, 4, 5, 6, 0];
+    return `<table class="hours">${order.map((i) => {
+      const h = e.hours[DKEYS[i]];
+      return `<tr${i === now.getDay() ? ' class="today"' : ""}><th>${DAYS[i]}</th><td>${h ? span(h) : "Closed"}</td></tr>`;
+    }).join("")}</table>`;
+  }
+  const isPlace = (e) => ["cafe", "bakery", "shop"].includes(e.category);
+
   // "Today", "Tomorrow", "Saturday" (within a week), otherwise "Sat, Oct 17"
   function dayWord(d) {
     const diff = Math.round((startOfDay(d) - startOfDay(now)) / DAY_MS);
@@ -235,7 +265,10 @@
   const sessionFor = (e) => (state.day && sessionOn(e, state.day)) || e.next;
 
   function whenBig(e) {
-    if (!e.sessions) return escapeHtml(e.schedule || "Ongoing");
+    if (!e.sessions) {
+      const st = openStatus(e);
+      return st ? `<span class="${st.open ? "is-open" : "is-closed"}">${escapeHtml(st.text)}</span>` : escapeHtml(e.schedule || "Ongoing");
+    }
     const s = sessionFor(e);
     if (e.allDay) {
       const lastDay = addDays(s.end, -1);
@@ -245,7 +278,11 @@
   }
 
   function whenSmall(e) {
-    if (!e.sessions) return "Whenever works for you — check their schedule";
+    if (!e.sessions) {
+      if (e.hours) { const h = e.hours[DKEYS[now.getDay()]]; return `Today: ${h ? span(h) : "closed"}`; }
+      if (isPlace(e)) return e.schedule && !/check/i.test(e.schedule) ? e.schedule : "Hours: see Google Maps below";
+      return "Whenever works for you — check their schedule";
+    }
     const s = sessionFor(e);
     const parts = [countdown(s)];
     if (e.weekly) parts.push(`every ${e.weekly.day} until ${mdFmt.format(e.sessions[e.sessions.length - 1].start)}`);
@@ -378,7 +415,7 @@
 
   // ---------- rendering ----------
   const $ = (id) => document.getElementById(id);
-  const screens = { start: $("screenStart"), browse: $("screenBrowse"), day: $("screenDay"), weekend: $("screenWeekend"), submit: $("screenSubmit"), pick: $("screenPick"), saved: $("screenSaved") };
+  const screens = { start: $("screenStart"), browse: $("screenBrowse"), day: $("screenDay"), weekend: $("screenWeekend"), submit: $("screenSubmit"), pick: $("screenPick"), saved: $("screenSaved"), wander: $("screenWander") };
   const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // base: the URL prefix for the current deck; day: the chosen day when browsing by day
@@ -445,8 +482,11 @@
       `${state.index > 0 ? '<button type="button" class="quiet-link" data-act="prev">‹ Back</button>' : ""}` +
       `<span>${state.index + 1} of ${total}</span>`;
 
-    const where = [e.venue, e.city.replace(/, MA$/, ""), milesText(e)].filter(Boolean).map(escapeHtml).join(" · ");
-    const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent([e.venue, e.address, e.city].filter(Boolean).join(", "))}`;
+    const where = [e.venue && e.venue !== e.title && !e.title.startsWith(e.venue) ? e.venue : "", e.city.replace(/, MA$/, ""), milesText(e)].filter(Boolean).map(escapeHtml).join(" · ");
+    const placeQuery = encodeURIComponent([e.venue, e.address, e.city].filter(Boolean).join(", "));
+    const mapUrl = `https://www.google.com/maps/search/?api=1&query=${placeQuery}`;
+    const dirUrl = `https://www.google.com/maps/dir/?api=1&destination=${placeQuery}`;
+    const place = !e.sessions && isPlace(e);
 
     card.innerHTML = `
       <div class="pick-image">${photo(e, 1100)}<span class="pick-tag">${escapeHtml(catLabel(e.category))}</span></div>
@@ -459,22 +499,25 @@
         ${e.tags && e.tags.length ? `<p class="tags">${tagChips(e)}</p>` : ""}
         <p class="desc">${escapeHtml(e.description)}</p>
 
-        <div class="go-panel" id="goPanel" hidden>
-          <p class="go-title">Nice. Here's what you need:</p>
+        <div class="go-panel${place ? " visit" : ""}" id="goPanel"${place ? "" : " hidden"}>
+          <p class="go-title">${place ? "Plan your visit" : "Nice. Here's what you need:"}</p>
+          ${place && e.hours ? `<details class="hours-box"><summary>All hours</summary>${hoursTable(e)}</details>` : ""}
           <div class="go-actions">
             ${e.sessions ? '<button type="button" class="go-btn" data-act="calendar"><span aria-hidden="true">📅</span> Add to my calendar</button>' : ""}
-            <a class="go-btn" href="${mapUrl}" target="_blank" rel="noopener"><span aria-hidden="true">📍</span> Directions</a>
-            ${e.url ? `<a class="go-btn" href="${escapeHtml(e.url)}" target="_blank" rel="noopener"><span aria-hidden="true">🎟️</span> ${e.sessions ? "Sign up / details" : "Book / see schedule"}</a>` : ""}
+            <a class="go-btn" href="${dirUrl}" target="_blank" rel="noopener"><span aria-hidden="true">📍</span> Directions</a>
+            ${place ? `<a class="go-btn" href="${mapUrl}" target="_blank" rel="noopener"><span aria-hidden="true">⭐</span> Reviews, photos &amp; map</a>` : ""}
+            ${e.menu ? `<a class="go-btn" href="${escapeHtml(e.menu)}" target="_blank" rel="noopener"><span aria-hidden="true">🍽️</span> Menu</a>` : ""}
+            ${e.url ? `<a class="go-btn" href="${escapeHtml(e.url)}" target="_blank" rel="noopener"><span aria-hidden="true">${place ? "🌐" : "🎟️"}</span> ${e.sessions ? "Sign up / details" : place ? "Website" : "Book / see schedule"}</a>` : ""}
             ${e.phone ? `<a class="go-btn" href="tel:${escapeHtml(e.phone.replace(/[^\d+]/g, ""))}"><span aria-hidden="true">📞</span> Call ${escapeHtml(e.phone)}</a>` : ""}
           </div>
           <p class="confirm">Details can change — a quick check with the host is always a good idea.</p>
         </div>
       </div>
-      <div class="pick-actions">
+      <div class="pick-actions${place ? " two" : ""}">
         <button type="button" class="act ${isSaved ? "on" : ""}" data-act="save" aria-pressed="${isSaved}">
           <span aria-hidden="true">${isSaved ? "♥" : "♡"}</span> ${isSaved ? "Saved" : "Save"}
         </button>
-        <button type="button" class="act" data-act="go" aria-expanded="false" aria-controls="goPanel">I'm in</button>
+        ${place ? "" : `<button type="button" class="act" data-act="go" aria-expanded="false" aria-controls="goPanel">I'm in</button>`}
         <button type="button" class="act act-next" data-act="next">${state.index + 1 < total ? "Next" : "Done"} <span aria-hidden="true">→</span></button>
       </div>`;
     afterRender(focusTitle);
@@ -588,6 +631,45 @@
   }
 
   // The day's events (then ongoing places) as a one-at-a-time deck.
+  // ---------- Wander somewhere cozy: an organized list of places ----------
+  let wanderArea = "all";
+  const WANDER_GROUPS = [
+    { title: "Coffee + a little wander", note: "garden centers, farms, harbors & brooks", test: (e) => e.category !== "shop" && (e.tags || []).includes("outdoors") },
+    { title: "Cozy cafés & bakeries", note: "", test: (e) => e.category !== "shop" && !(e.tags || []).includes("outdoors") },
+    { title: "Little shops", note: "crystals, books & herbs", test: (e) => e.category === "shop" },
+  ];
+  function wanderList(areaId) {
+    const places = events.filter((e) => !e.sessions && isPlace(e) && inArea(e, areaId));
+    const rank = (e) => { const st = openStatus(e); return st ? (st.open ? 0 : 1) : 2; };
+    const order = (a, b) => rank(a) - rank(b) || (origin ? distanceMiles(origin, a) - distanceMiles(origin, b) : a.title.localeCompare(b.title));
+    return WANDER_GROUPS.map((g) => ({ ...g, items: places.filter(g.test).sort(order) })).filter((g) => g.items.length);
+  }
+  const wanderDeck = (areaId) => wanderList(areaId).flatMap((g) => g.items.map((e) => e.id));
+
+  function renderWander(areaId) {
+    wanderArea = areaId;
+    $("wanderAreas").innerHTML = AREAS.map((a) =>
+      `<button type="button" class="chip${a.id === areaId ? " on" : ""}" data-wanderarea="${a.id}" aria-pressed="${a.id === areaId}">${escapeHtml(a.id === "all" ? "Everywhere" : a.area)}</button>`).join("");
+    const groups = wanderList(areaId);
+    let i = 0;
+    $("wanderList").innerHTML = groups.map((g, gi) => `<section class="slot"><h3>${escapeHtml(g.title)}${g.note ? ` <span>${escapeHtml(g.note)}</span>` : ""}</h3><ul class="rows">${
+      g.items.map((e, k) => {
+        const st = openStatus(e);
+        const status = st ? `<span class="row-time small ${st.open ? "is-open" : "is-closed"}">${st.open ? "Open now" : "Closed"}${st.open ? `<br><span class="sub">${escapeHtml(st.text.replace("Open now · ", ""))}</span>` : ""}</span>`
+          : `<span class="row-time small is-unknown">See hours</span>`;
+        const meta = [e.city.replace(/, MA$/, ""), milesText(e)].filter(Boolean).map(escapeHtml).join(" · ");
+        return `<li${k >= 5 ? ' class="more" hidden' : ""}><button type="button" class="row" data-wanderopen="${i++}">
+          ${status}
+          <span class="row-main">
+            <span class="row-title">${escapeHtml(e.title)}${saved.has(e.id) ? ' <span class="row-saved" aria-label="saved">♥</span>' : ""}</span>
+            <span class="row-meta">${meta}</span>
+            <span class="row-cat">${escapeHtml(catLabel(e.category))}${e.menu ? " · menu" : ""}</span>
+          </span>
+          <span class="row-arrow" aria-hidden="true">›</span>
+        </button></li>`;
+      }).join("")}</ul>${g.items.length > 5 ? `<button type="button" class="show-more" data-showmore>Show ${g.items.length - 5} more</button>` : ""}</section>`).join("") || `<div class="nothing"><p class="nothing-title">No cozy spots listed here yet.</p><p><a class="inline-link" href="#/wander/all">See everywhere →</a></p></div>`;
+  }
+
   const dayDeck = (areaId, day) => [...eventsOn(areaId, day).map((x) => x.e.id), ...ongoingIn(areaId).map((e) => e.id)];
   const goDay = (areaId, d) => { location.hash = `#/day/${areaId}/${ymd(d)}`; };
 
@@ -771,7 +853,27 @@
       renderPick(true);
       return;
     }
+    if (kind === "p" && areaById.has(arg)) {
+      const key = `p:${arg}`;
+      if (state.mood !== key || !state.deck.length) { state.mood = key; state.deck = wanderDeck(arg); }
+      state.day = null;
+      state.base = `#/p/${arg}`;
+      state.back = { href: `#/wander/${arg}`, label: "← Back to cozy places" };
+      setPickBack();
+      state.index = Math.min(Math.max(parseInt(parts[2], 10) || 0, 0), state.deck.length);
+      showScreen("pick");
+      renderPick(true);
+      return;
+    }
     state.day = null;
+    if (kind === "wander") {
+      const areaId = areaById.has(arg) ? arg : (browseArea || "all");
+      renderWander(areaId);
+      showScreen("wander");
+      $("wanderTitle").focus({ preventScroll: true });
+      updateSavedPill();
+      return;
+    }
     if (kind === "submit") {
       renderSubmit();
       showScreen("submit");
@@ -861,6 +963,16 @@
       location.hash = `#/m/weekend/${weekOpen.dataset.weekopen}`;
       return;
     }
+    const more = ev.target.closest("[data-showmore]");
+    if (more) { more.closest(".slot").querySelectorAll("li.more").forEach((li) => { li.hidden = false; }); more.remove(); return; }
+    const wArea = ev.target.closest("[data-wanderarea]");
+    if (wArea) { location.hash = `#/wander/${wArea.dataset.wanderarea}`; return; }
+    const wOpen = ev.target.closest("[data-wanderopen]");
+    if (wOpen) {
+      state.deck = [];
+      location.hash = `#/p/${wanderArea}/${wOpen.dataset.wanderopen}`;
+      return;
+    }
     const dayOpen = ev.target.closest("[data-dayopen]");
     if (dayOpen) {
       state.deck = [];
@@ -871,7 +983,7 @@
     const mood = ev.target.closest("[data-mood]");
     if (mood) {
       state.deck = [];                       // always build a fresh deck from the start screen
-      location.hash = `#/m/${mood.dataset.mood}/0`;
+      location.hash = mood.dataset.mood === "wander" ? "#/wander" : `#/m/${mood.dataset.mood}/0`;
       return;
     }
 

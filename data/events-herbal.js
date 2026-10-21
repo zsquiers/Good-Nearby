@@ -69,6 +69,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
     title: "Cambridge Naturals",
     category: "shop",
     schedule: "Open daily — check hours before you go",
+    hours: { mon: "09:00-19:30", tue: "09:00-19:30", wed: "09:00-19:30", thu: "09:00-19:30", fri: "09:00-19:30", sat: "09:00-19:30", sun: "10:00-19:30" },
     venue: "Cambridge Naturals", address: "23 White St (Porter Square)", city: "Cambridge, MA",
     lat: 42.3886, lng: -71.1197,
     price: null,

@@ -266,7 +266,7 @@ h3.ask { display: flex; align-items: center; }
 .other-day input { min-height: 46px; padding: 0 14px; border: 1.5px solid var(--line); border-radius: 14px; background: #fff; }
 
 /* Step 3: the day */
-.dayview { width: min(720px, 100%); margin: 0 auto; }
+.dayview, .wanderview { width: min(720px, 100%); margin: 0 auto; }
 .day-card { padding: clamp(18px, 3.5vw, 32px); border-radius: var(--radius); background: var(--paper); box-shadow: var(--shadow); }
 .day-head { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 12px; }
 .day-head-text { text-align: center; }
@@ -392,7 +392,7 @@ h3.ask { display: flex; align-items: center; }
 
 /* Pick: one event at a time */
 .pick, .saved { width: min(640px, 100%); margin: 0 auto; }
-.dayview .pick-nav { width: 100%; }
+.dayview .pick-nav, .wanderview .pick-nav { width: 100%; }
 .pick-nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; min-height: 40px; }
 .progress { display: flex; align-items: center; gap: 14px; margin: 0; color: var(--ink-soft); font-size: .92rem; font-weight: 600; }
 .quiet-link {
@@ -571,3 +571,23 @@ h3.ask { display: flex; align-items: center; }
 
 /* Anything marked hidden stays hidden, whatever its display style. */
 [hidden] { display: none !important; }
+
+/* Wander somewhere cozy: area chips, open/closed, hours */
+.wanderview h2 { font-family: "DM Serif Display", Georgia, serif; font-weight: 400; font-size: 2rem; margin: 0 0 6px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 6px; }
+.chip { border: 1.5px solid var(--line); background: #fff; color: var(--ink); border-radius: 999px; padding: 8px 14px; font: inherit; font-weight: 600; font-size: .9rem; cursor: pointer; }
+.chip.on { background: var(--ink); border-color: var(--ink); color: #fff; }
+.is-open { color: #3f7a3a; }
+.is-closed { color: var(--ink-soft); }
+.row-time.is-unknown { color: var(--ink-soft); font-weight: 500; }
+.row-time .sub { font-weight: 500; color: var(--ink-soft); font-size: .78rem; }
+.go-panel.visit { margin-top: 14px; }
+.hours-box { margin: 0 0 12px; }
+.hours-box summary { cursor: pointer; font-weight: 600; color: var(--clay); }
+table.hours { border-collapse: collapse; margin-top: 8px; font-size: .95rem; }
+table.hours th { text-align: left; font-weight: 500; padding: 3px 18px 3px 0; color: var(--ink-soft); }
+table.hours td { padding: 3px 0; }
+table.hours tr.today th, table.hours tr.today td { color: var(--ink); font-weight: 700; }
+.pick-actions.two { grid-template-columns: 1fr 1.4fr; }
+.show-more { margin-top: 10px; width: 100%; padding: 12px; border-radius: 14px; border: 1.5px dashed var(--line); background: transparent; color: var(--clay); font: inherit; font-weight: 700; cursor: pointer; }
+.show-more:hover { border-color: var(--clay); }
