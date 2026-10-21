@@ -71,7 +71,7 @@ The current listings came from public event pages and directories in early Octob
 
 ## Photos
 
-Photos load from Unsplash. Each event uses a photo for its category, set in the `CATEGORY` list at the top of `app.js`. The background photo is set as `--hero` in `styles.css`; the sunflowers in its corner are `assets/sunflowers.svg` (hidden on phones, where the card covers that corner). Events with their own photo (`image`) use it instead. If a photo fails to load, a warm gradient shows instead. Before a big launch, consider downloading your favorite photos into `assets/` so they never depend on another site.
+Photos load from Unsplash. Each event uses a photo for its category, set in the `CATEGORY` list at the top of `app.js`. The background photo is set as `--hero` in `styles.css`. Events with their own photo (`image`) use it instead. If a photo fails to load, a warm gradient shows instead. Before a big launch, consider downloading your favorite photos into `assets/` so they never depend on another site.
 
 ## Listing events (for hosts)
 

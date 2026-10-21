@@ -57,17 +57,6 @@ h1, h2 {
   transition: opacity .6s ease, filter .6s ease;
 }
 body:not([data-screen="start"]):not([data-screen="browse"]) .backdrop { opacity: .28; filter: blur(14px) saturate(1.1); }
-.backdrop::after {
-  content: "";
-  position: absolute;
-  right: -1vw;
-  bottom: -2vh;
-  width: min(30vw, 46vh);
-  aspect-ratio: 420 / 640;
-  background: url("assets/sunflowers.svg") bottom right / contain no-repeat;
-  filter: drop-shadow(0 10px 24px rgba(57, 49, 31, .25));
-  pointer-events: none;
-}
 
 /* ---------- Top bar: logo + saved, nothing else ---------- */
 .topbar {
@@ -541,7 +530,6 @@ h3.ask { display: flex; align-items: center; }
       var(--hero) 62% center / cover no-repeat,
       linear-gradient(160deg, #f6e3c8, #e3b98f 60%, #b98c62);
   }
-  .backdrop::after { display: none; }
   .topbar { padding-top: 14px; }
   .start { align-items: flex-start; min-height: 0; padding-top: 8px; }
   .start-card { background: rgba(251, 247, 239, .9); }
