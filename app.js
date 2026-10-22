@@ -27,6 +27,9 @@
   // form explains that online submissions are being set up, and nothing is sent.
   const SUBMISSIONS = { formspreeId: "" };
 
+  // Care listings get a gentle "not medical advice" line on their card.
+  const CARE_NOTE = ["massage", "reiki", "acupuncture", "herbal", "breathwork", "salt"];
+
   // ---------- photos & moods ----------
   // A category photo is an Unsplash photo id, or a full image URL.
   const unsplash = (id, w) => (id.startsWith("http") ? id : `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`);
@@ -573,6 +576,7 @@
         <p class="price ${e.price === 0 ? "free" : ""}">${priceLabel(e)}${e.priceNote ? ` <span>· ${escapeHtml(e.priceNote)}</span>` : ""}</p>
         ${e.tags && e.tags.length ? `<p class="tags">${tagChips(e)}</p>` : ""}
         <p class="desc">${escapeHtml(e.description)}</p>
+        ${CARE_NOTE.includes(e.category) ? '<p class="care-note">Not medical advice. If you have a health condition or are pregnant, check with your doctor first.</p>' : ""}
 
         <div class="go-panel${place ? " visit" : ""}" id="goPanel"${place ? "" : " hidden"}>
           <p class="go-title">${place ? "Plan your visit" : "Nice. Here's what you need:"}</p>
@@ -1379,7 +1383,7 @@
     ev.target.textContent = "Finding you…";
     navigator.geolocation.getCurrentPosition(
       (pos) => {
-        const o = { lat: +pos.coords.latitude.toFixed(3), lng: +pos.coords.longitude.toFixed(3) };
+        const o = { lat: +pos.coords.latitude.toFixed(2), lng: +pos.coords.longitude.toFixed(2) };
         const near = allTowns.reduce((b, t) => (distanceMiles(o, t) < distanceMiles(o, b) ? t : b), allTowns[0]);
         setOrigin({ ...o, name: near ? near.name : "you" });
       },

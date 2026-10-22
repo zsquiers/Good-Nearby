@@ -528,6 +528,8 @@ h3.ask { display: flex; align-items: center; }
   font-size: .85rem; color: var(--ink-soft);
 }
 .footer a { color: var(--ink); }
+.footer .fine { flex-basis: 100%; margin: 4px 0 0; text-align: center; font-size: .8rem; }
+.care-note { margin: 4px 0 10px; font-size: .85rem; color: var(--ink-soft); font-style: italic; }
 .footer .insta { display: inline-flex; align-items: center; gap: 6px; }
 .footer .insta svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.8; }
 
