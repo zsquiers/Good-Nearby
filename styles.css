@@ -144,10 +144,10 @@ main { flex: 1; width: min(1120px, calc(100% - 32px)); margin: 0 auto; padding: 
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   width: 100%;
-  min-height: 72px;
-  padding: 10px 12px;
+  min-height: 98px;
+  padding: 10px 12px 10px 10px;
   border: 1px solid var(--line);
   border-radius: 22px;
   background: rgba(255,255,255,.75);
@@ -157,14 +157,18 @@ main { flex: 1; width: min(1120px, calc(100% - 32px)); margin: 0 auto; padding: 
 .mood:hover { transform: translateY(-2px); background: #fff; box-shadow: 0 12px 30px rgba(57,49,31,.12); }
 .mood .mood-arrow { display: none; }
 .mood-icon {
-  width: 46px; height: 46px; border-radius: 50%;
+  width: 40px; height: 40px; border-radius: 50%;
   display: grid; place-items: center;
   background: var(--tone); color: var(--icon);
 }
-.mood-icon svg { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.mood-icon svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .mood-text { display: flex; flex-direction: column; }
 .mood-label { font-size: 1.02rem; font-weight: 700; line-height: 1.25; }
-.mood-hint { font-size: .8rem; line-height: 1.35; color: var(--ink-soft); }
+/* The little description under each feeling appears when you hover (or tab to) the tile. */
+.mood-hint { font-size: .8rem; line-height: 1.35; color: var(--ink-soft); max-height: 0; opacity: 0; overflow: hidden;
+  transition: max-height .25s ease, opacity .2s ease; }
+.mood:hover .mood-hint, .mood:focus-visible .mood-hint { max-height: 5em; opacity: 1; }
+@media (hover: none) { .mood-hint { display: none; } }
 .mood-arrow { font-size: 1.3rem; color: var(--ink-soft); transition: transform .2s ease; }
 .mood:hover .mood-arrow { transform: translateX(3px); color: var(--ink); }
 
@@ -639,7 +643,7 @@ table.hours tr.today th, table.hours tr.today td { color: var(--ink); font-weigh
 .dots i { width: 8px; height: 8px; border-radius: 50%; background: var(--line); display: block; }
 .dots i.on { background: var(--clay); }
 
-/* Phones: icon above the words, so the name and its little description get the tile's full width. */
+/* Phones: icon above the words, so long words like "somewhere" fit in the tile. */
 @media (max-width: 640px) {
   .mood { grid-template-columns: 1fr; justify-items: start; align-content: start; gap: 6px; padding: 10px 12px; }
 }
