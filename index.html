@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Jost:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=54" />
+  <link rel="stylesheet" href="styles.css?v=55" />
 </head>
 <body>
   <div class="backdrop" aria-hidden="true"></div>
@@ -65,10 +65,13 @@
 
         <div class="news-box">
           <p class="news-title"><span aria-hidden="true">💌</span> Weekend Favorites</p>
-          <p class="news-sub">A few good things near you, in your inbox every Thursday. Free, calm, unsubscribe anytime.</p>
+          <p class="news-sub">A few good things in your area, in your inbox every Thursday. Free, calm, unsubscribe anytime.</p>
           <form class="signup" data-signup method="post" target="_blank">
             <label class="visually-hidden" for="startEmail">Email address</label>
             <input id="startEmail" name="email" type="email" placeholder="Your email address" autocomplete="email" required>
+            <label class="visually-hidden" for="startArea">Your area</label>
+            <select id="startArea" name="tag" class="area-pick" required></select>
+            
             <input type="hidden" name="embed" value="1">
             <button type="submit" class="btn btn-dark">Sign me up</button>
           </form>
@@ -166,6 +169,9 @@
         <form class="signup" id="signupForm" data-signup method="post" target="_blank">
           <label class="visually-hidden" for="signupEmail">Email address</label>
           <input id="signupEmail" name="email" type="email" placeholder="Your email address" autocomplete="email" required>
+          <label class="visually-hidden" for="signupArea">Your area</label>
+          <select id="signupArea" name="tag" class="area-pick" required></select>
+          
           <input type="hidden" name="embed" value="1">
           <button type="submit" class="btn btn-dark">Send me the favorites</button>
         </form>
@@ -361,19 +367,19 @@
     <p class="fine">We don't run these events, and details can change, so check with the host before you go. Listings are for information only and aren't medical advice.</p>
   </footer>
 
-  <script src="data/events.js?v=54"></script>
-  <script src="data/events-eventbrite.js?v=54"></script>
-  <script src="data/events-move-shops.js?v=54"></script>
-  <script src="data/events-venues.js?v=54"></script>
-  <script src="data/events-cafes.js?v=54"></script>
-  <script src="data/events-libraries.js?v=54"></script>
-  <script src="data/events-herbal.js?v=54"></script>
-  <script src="data/events-meditation.js?v=54"></script>
-  <script src="data/events-calendars.js?v=54"></script>
-  <script src="data/events-meetup.js?v=54"></script>
-  <script src="data/events-trails.js?v=54"></script>
-  <script src="data/collections.js?v=54"></script>
-  <script src="data/towns.js?v=54"></script>
-  <script src="app.js?v=54"></script>
+  <script src="data/events.js?v=55"></script>
+  <script src="data/events-eventbrite.js?v=55"></script>
+  <script src="data/events-move-shops.js?v=55"></script>
+  <script src="data/events-venues.js?v=55"></script>
+  <script src="data/events-cafes.js?v=55"></script>
+  <script src="data/events-libraries.js?v=55"></script>
+  <script src="data/events-herbal.js?v=55"></script>
+  <script src="data/events-meditation.js?v=55"></script>
+  <script src="data/events-calendars.js?v=55"></script>
+  <script src="data/events-meetup.js?v=55"></script>
+  <script src="data/events-trails.js?v=55"></script>
+  <script src="data/collections.js?v=55"></script>
+  <script src="data/towns.js?v=55"></script>
+  <script src="app.js?v=55"></script>
 </body>
 </html>
