@@ -62,6 +62,8 @@
   const catLabel = (k) => (CATEGORY[k] ? CATEGORY[k].label : k);
 
   const ICONS = {
+    outside:  '<path d="M16 4 8 15h4l-5 7h18l-5-7h4Z M16 22v6"/>',
+    surprise: '<path d="M16 5l2.2 6.3L24.5 13.5 18.2 15.7 16 22l-2.2-6.3L7.5 13.5l6.3-2.2Z M25 21l1 2.5 2.5 1-2.5 1L25 28l-1-2.5-2.5-1 2.5-1Z"/>',
     move:   '<path d="M16 25c-5 0-9-3-10-7 3 0 6 1 8 3M16 25c5 0 9-3 10-7-3 0-6 1-8 3M16 25c-3-3-4-7-3-12 2 1 3 3 3 5 0-2 1-4 3-5 1 5 0 9-3 12Z"/>',
     calm:   '<path d="M5 14v4M9 11v10M13 8v16M17 11v10M21 7v18M25 12v8"/>',
     care:   '<path d="M7 26v-7l-2-6c-.4-1.2 1.4-2 2-.8L9 16V8.5c0-1.4 2-1.4 2 0V15M25 26v-7l2-6c.4-1.2-1.4-2-2-.8L23 16V8.5c0-1.4-2-1.4-2 0V15M11 15c0 3 1 5 2 6M21 15c0 3-1 5-2 6"/>',
@@ -464,9 +466,14 @@
     $("savedCount").textContent = saved.size;
   }
 
+  // Two extra tiles beside the feelings: they open a list (Get outside) or a random few (Surprise me).
+  const EXTRA_TILES = [
+    { id: "outside",  label: "Get outside", hint: "Trails · rail trails · bike paths", tone: "#a9bf95", ink: "#304022" },
+    { id: "surprise", label: "Surprise me", hint: "A few good things, any kind",       tone: "#f1e3c6", ink: "#a15e3d" },
+  ];
   function renderStart() {
-    $("moods").innerHTML = MOODS.map((m) => `
-      <button type="button" class="mood" data-mood="${m.id}">
+    $("moods").innerHTML = [...MOODS, ...EXTRA_TILES].map((m) => `
+      <button type="button" class="mood" data-mood="${m.id}" title="${m.hint}">
         <span class="mood-icon" style="--tone:${m.tone};--icon:${m.ink}">
           <svg viewBox="0 0 32 32" aria-hidden="true">${ICONS[m.id]}</svg>
         </span>
@@ -825,7 +832,8 @@
     link.hidden = n < 3;
     if (link.hidden) return;
     link.href = `#/find/${c.id}`;
-    link.innerHTML = `<span aria-hidden="true">${c.emoji}</span><span><strong>${escapeHtml(c.title)}</strong> — ${n} things coming up</span><span aria-hidden="true">→</span>`;
+    link.innerHTML = `<span aria-hidden="true">${c.emoji}</span> ${escapeHtml(c.title.split(" & ")[0])} · ${n} things`;
+    link.title = `${c.title}: ${n} things coming up`;
   }
 
   // ---------- Get outside: trails, rail trails & bike paths (listings with a `trail` field) ----------
@@ -1246,7 +1254,8 @@
     const mood = ev.target.closest("[data-mood]");
     if (mood) {
       state.deck = [];                       // always build a fresh deck from the start screen
-      location.hash = mood.dataset.mood === "wander" ? "#/wander" : `#/m/${mood.dataset.mood}/0`;
+      const id = mood.dataset.mood;
+      location.hash = id === "wander" ? "#/wander" : id === "outside" ? "#/outside" : `#/m/${id}/0`;
       return;
     }
 
@@ -1413,13 +1422,13 @@
         <button type="button" class="inline-link" id="whereChange">change</button></p>`;
       return;
     }
-    box.innerHTML = `<label class="where-ask" for="whereTown">Where are you? <span>So we can show what's close</span></label>
+    box.innerHTML = `<label class="visually-hidden" for="whereTown">Where are you?</label>
       <div class="where-row">
-        <input id="whereTown" list="whereTowns" placeholder="Your town, e.g. Franklin" autocomplete="address-level2">
-        <button type="button" class="where-btn" id="whereGeo">📍 Use my location</button>
+        <input id="whereTown" list="whereTowns" placeholder="📍 Your town" autocomplete="address-level2">
+        <button type="button" class="where-btn" id="whereGeo" aria-label="Use my location">Near me</button>
       </div>
       <datalist id="whereTowns">${allTowns.map((t) => `<option value="${escapeHtml(t.name)}">`).join("")}</datalist>
-      <p class="hint">${note || "Stays on this device. You can skip this."}</p>`;
+      ${note ? `<p class="hint">${note}</p>` : ""}`;
   }
   function setOrigin(o) {
     origin = o; store("goodNearby.origin", o);
