@@ -226,7 +226,9 @@
     $("subject").textContent = show.length
       ? `Weekend Favorites: ${show.length} good thing${show.length === 1 ? "" : "s"} ${where}, ${md.format(friday)}–${sun.getDate()}`
       : `Weekend Favorites, ${md.format(friday)}–${sun.getDate()}`;
-    $("sendto").innerHTML = `📬 In Buttondown, send this edition to subscribers tagged <strong>${esc(areaName())}</strong>.`;
+    $("sendto").innerHTML = $("area").value === "all"
+      ? "📬 In Buttondown, send this to all subscribers."
+      : `📬 In Buttondown, send this edition to subscribers tagged <strong>${esc(areaName())}</strong> (needs tags, a paid plan).`;
 
     const groups = new Map();
     for (const x of show) {
@@ -298,7 +300,8 @@ ${button(`${SITE}#/day/${$("area").value}/${ymd(friday)}`, "📅 See the full ca
   const today = new Date(); today.setHours(0, 0, 0, 0);
   const dow = today.getDay();
   $("friday").value = ymd(addDays(today, dow === 0 ? -2 : dow === 6 ? -1 : 5 - dow));
-  $("area").innerHTML = AREAS.map((a) => `<option value="${a.id}">${esc(a.area)}</option>`).join("") + `<option value="all">A bit of everywhere</option>`;
+  // One edition for everyone until Buttondown tags are on (see NEWSLETTER.askArea in app.js); then pick an area per edition.
+  $("area").innerHTML = `<option value="all">Everyone (one edition)</option>` + AREAS.map((a) => `<option value="${a.id}">${esc(a.area)} only</option>`).join("");
   $("friday").addEventListener("change", build);
   $("area").addEventListener("change", build);
   $("intro").addEventListener("input", build);

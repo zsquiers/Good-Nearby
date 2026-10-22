@@ -20,7 +20,9 @@
   // Weekend Favorites sign-ups go to Buttondown (buttondown.com). Put your Buttondown
   // username here once your account exists — until then the form says sign-ups open soon
   // and nothing is collected.
-  const NEWSLETTER = { buttondownUsername: "goodnearby" };
+  // askArea: show "Your area" on the sign-up forms and send it to Buttondown as a tag.
+  // Tags need a paid Buttondown plan (Basic, $9/mo), so this stays off until you upgrade.
+  const NEWSLETTER = { buttondownUsername: "goodnearby", askArea: false };
 
   // ---------- event submissions ----------
   // "Share something good" sends each submission to Formspree (formspree.io), which emails it
@@ -1394,6 +1396,7 @@
   function fillAreaPicks() {
     const near = browseArea && browseArea !== "all" ? browseArea : "";
     document.querySelectorAll("select.area-pick").forEach((sel) => {
+      if (!NEWSLETTER.askArea) { sel.remove(); return; }
       const chosen = sel.value || (near && areaById.get(near).area) || "";
       sel.innerHTML = `<option value="" disabled ${chosen ? "" : "selected"}>Your area…</option>` +
         AREAS.filter((a) => a.id !== "all").map((a) => `<option ${a.area === chosen ? "selected" : ""}>${escapeHtml(a.area)}</option>`).join("") +
