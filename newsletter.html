@@ -48,6 +48,10 @@
   <p><label for="intro">Your note at the top <span style="font-weight:400;color:#5a5e4e;">(optional — a line or two in your own voice)</span></label></p>
   <textarea id="intro" rows="3" placeholder="e.g. The leaves are turning and I'm craving slow mornings. Here's what I'd do this weekend…"></textarea>
 
+  <p><label for="quote">Quote of the week <span style="font-weight:400;color:#5a5e4e;">(chosen for you each week — edit it, type your own, or clear it to leave it out)</span></label></p>
+  <textarea id="quote" rows="2"></textarea>
+  <p style="margin:6px 0 14px;"><button type="button" class="soft" id="nextQuote">Another quote</button></p>
+
   <p><label for="spotlight">Seasonal spotlight <span style="font-weight:400;color:#5a5e4e;">(a box with a button to every listing for the season — e.g. all Halloween events)</span></label></p>
   <select id="spotlight"></select>
 
@@ -75,6 +79,7 @@
 <script src="data/events-meetup.js"></script>
 <script src="data/events-trails.js"></script>
 <script src="data/collections.js"></script>
+<script src="data/quotes.js"></script>
 <script src="data/towns.js"></script>
 <script>
 (function () {
@@ -204,6 +209,24 @@
     return (window.GOOD_NEARBY_EVENTS || []).filter((e) => inArea(e) && c.match.test(`${e.title} ${e.description || ""}`)
       && sessions(e).some((s) => (s.end || s.start) >= from && s.start < end)).length;
   }
+  // Quote of the week: rotates through data/quotes.js by week (seasonal ones only in their months).
+  const QUOTES = window.GOOD_NEARBY_QUOTES || [];
+  const quoteText = (q) => `“${q.text}” — ${q.by}`;
+  let quoteFor = "", quoteTurn = 0;
+  function fillQuote(friday) {
+    if (quoteFor === $("friday").value) return;                 // keep edits for this weekend
+    quoteFor = $("friday").value; quoteTurn = 0;
+    setQuote(friday);
+  }
+  function setQuote(friday) {
+    const ok = QUOTES.filter((q) => !q.months || q.months.includes(friday.getMonth() + 1));
+    const seasonal = ok.filter((q) => q.months);
+    const week = Math.floor(friday.getTime() / (7 * 86400000));
+    const pool = quoteTurn === 0 && seasonal.length ? seasonal : ok;   // a seasonal one first, when there is one
+    const q = pool.length ? pool[(week + quoteTurn) % pool.length] : null;
+    $("quote").value = q ? quoteText(q) : "";
+  }
+
   let spotlightFor = "";
   function fillSpotlight(friday) {
     if (spotlightFor === key()) return;          // keep the owner's choice for this weekend
@@ -224,6 +247,7 @@
     const picked = chosen.get(key());
     const sun = addDays(friday, 2);
     fillSpotlight(friday);
+    fillQuote(friday);
 
     // The picker
     $("pickSummary").textContent = `Choose this week's favorites (${picked.size} of ${list.length} picked)`;
@@ -253,6 +277,7 @@
     const intro = $("intro").value.trim();
     let html = `<p style="font-family:Georgia,serif;font-size:22px;margin:0 0 8px;color:#304022;">🌻 This weekend, ${md.format(friday)}–${sun.getDate()}</p>
 ${intro ? `<p style="margin:0 0 14px;">${esc(intro).replace(/\n/g, "<br>")}</p>` : ""}
+${$("quote").value.trim() ? `<p style="margin:4px 0 18px;padding:12px 16px;border-left:3px solid #e6c27a;background:#fbf3e6;font-family:Georgia,serif;font-style:italic;color:#304022;">${esc($("quote").value.trim()).replace(/ — ([^—]+)$/, '<br><span style="font-style:normal;font-family:inherit;font-size:13px;color:#5a5e4e;">— $1</span>')}</p>` : ""}
 <p style="margin:0 0 18px;color:#5a5e4e;">${everyone ? "A few good things happening this weekend, sorted by area. Scroll to yours, pick one, and go easy on yourself."
   : `A few good things happening ${esc(inWords())} this weekend, ${md.format(friday)}–${sun.getDate()}. Pick one, and go easy on yourself.`}</p>`;
     if (!show.length) html += `<p>Nothing picked yet — tick a few favorites above.</p>`;
@@ -329,6 +354,8 @@ ${button(`${SITE}#/day/${$("area").value}/${ymd(friday)}`, "📅 See the full ca
   $("area").addEventListener("change", build);
   $("intro").addEventListener("input", build);
   $("spotlight").addEventListener("change", build);
+  $("quote").addEventListener("input", build);
+  $("nextQuote").addEventListener("click", () => { quoteTurn += 1; setQuote(parseLocal($("friday").value)); build(); });
   $("pickList").addEventListener("change", (ev) => {
     const id = ev.target.dataset.id; if (!id) return;
     const set = chosen.get(key()); ev.target.checked ? set.add(id) : set.delete(id); build();
