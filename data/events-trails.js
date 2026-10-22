@@ -1,0 +1,342 @@
+// Places to walk, run, hike and bike: rail trails, bike paths, woods and easy loops.
+// Shown on the "Get outside" list (#/outside). `trail` sets the group:
+//   rail = rail trails & bike paths · woods = woods, hills & longer hikes · loop = easy loops, ponds & gardens
+// `miles` and `surface` are optional. Checked against each place's own page (or TrailLink) in Oct 2026.
+// State parks (mass.gov) block automated checks, so their addresses are left as the park name
+// and hours point to the park's page.
+
+window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
+
+  // ---------- Franklin & nearby ----------
+  {
+    id: "trail-snett",
+    title: "SNETT Rail Trail",
+    category: "trail", trail: "rail", miles: 21.8, surface: "Crushed stone",
+    schedule: "Open daily",
+    venue: "Southern New England Trunkline Trail", address: "234 Grove St (Franklin trailhead)", city: "Franklin, MA",
+    lat: 42.0573, lng: -71.4241,
+    price: 0,
+    host: "Mass. DCR",
+    description: "A long, flat former railroad from Franklin through Bellingham toward Douglas: 21.8 miles of crushed stone, mostly through quiet woods. Walk a mile out and back, run, or bike as far as you like.",
+    url: "https://www.traillink.com/trail/southern-new-england-trunkline-trail/",
+    tags: ["free", "come-alone", "beginner", "outdoors"]
+  },
+  {
+    id: "trail-franklin-state-forest",
+    title: "Franklin State Forest",
+    category: "hike", trail: "woods", surface: "Woods trails",
+    schedule: "Open daily — see the park page for hours",
+    venue: "Franklin State Forest", address: "Franklin State Forest, Grove St", city: "Franklin, MA",
+    lat: 42.0545, lng: -71.4300,
+    price: 0,
+    host: "Mass. DCR",
+    description: "Woodland trails right beside the SNETT trailhead, shared by walkers, mountain bikers and horseback riders. Good for a quiet loop in the trees.",
+    url: "https://www.mass.gov/locations/franklin-state-forest",
+    tags: ["free", "come-alone", "outdoors"]
+  },
+  {
+    id: "trail-delcarte",
+    title: "DelCarte Conservation Area",
+    category: "walk", trail: "loop", miles: 1.2, surface: "Dirt paths",
+    schedule: "Open daily",
+    venue: "DelCarte Conservation Area", address: "459 Pleasant St", city: "Franklin, MA",
+    lat: 42.1046, lng: -71.4180,
+    price: 0,
+    host: "Town of Franklin",
+    description: "A 136-acre town conservation area around a chain of ponds, with short marked loops (the Circle Trail is 1.2 miles), a canoe launch and lots of birds. Very local and very calm.",
+    url: "https://franklinma.gov/350/Recreational-Opportunities",
+    tags: ["free", "come-alone", "beginner", "outdoors"]
+  },
+  {
+    id: "trail-f-gilbert-hills",
+    title: "F. Gilbert Hills State Forest",
+    category: "hike", trail: "woods", surface: "Woods trails",
+    schedule: "Open daily — see the park page for hours",
+    venue: "F. Gilbert Hills State Forest", address: "F. Gilbert Hills State Forest", city: "Foxborough, MA",
+    lat: 42.0470, lng: -71.2750,
+    price: 0,
+    host: "Mass. DCR",
+    description: "Hilly, quiet woods with miles of trails. The long-distance Warner Trail passes through on its way between Canton and Rhode Island.",
+    url: "https://www.mass.gov/locations/f-gilbert-hills-state-forest",
+    tags: ["free", "come-alone", "outdoors"]
+  },
+  {
+    id: "trail-wrentham-state-forest",
+    title: "Wrentham State Forest",
+    category: "hike", trail: "woods", surface: "Woods trails",
+    schedule: "Open daily — see the park page for hours",
+    venue: "Wrentham State Forest", address: "Wrentham State Forest", city: "Wrentham, MA",
+    lat: 42.0330, lng: -71.3330,
+    price: 0,
+    host: "Mass. DCR",
+    description: "Rolling woods and old cart roads near Wrentham, crossed by the Warner Trail. Good for a longer, quieter walk.",
+    url: "https://www.mass.gov/locations/wrentham-state-forest",
+    tags: ["free", "come-alone", "outdoors"]
+  },
+  {
+    id: "trail-noon-hill",
+    title: "Noon Hill",
+    category: "hike", trail: "woods", surface: "Woods trails",
+    schedule: "Open daily, sunrise to sunset",
+    venue: "Noon Hill Reservation", address: "Noon Hill Reservation", city: "Medfield, MA",
+    lat: 42.1690, lng: -71.3200,
+    price: 0,
+    host: "The Trustees",
+    description: "A short climb through the woods to a quiet lookout, with a loop around Noon Hill Pond. 204 acres, free, and rarely crowded.",
+    url: "https://thetrustees.org/place/noon-hill/",
+    tags: ["free", "come-alone", "outdoors"]
+  },
+  {
+    id: "trail-rocky-woods",
+    title: "Rocky Woods",
+    category: "walk", trail: "loop", miles: 6.5, surface: "Woods trails",
+    schedule: "Open daily, sunrise to sunset",
+    venue: "Rocky Woods", address: "Rocky Woods, Hartford St", city: "Medfield, MA",
+    lat: 42.2070, lng: -71.2750,
+    price: 8, priceNote: "$8 parking for non-members · Trustees members free",
+    host: "The Trustees",
+    description: "Six and a half miles of trails through 491 acres of ponds and woods, home to songbirds, beavers and painted turtles. Easy loops around the ponds or longer rambles.",
+    url: "https://thetrustees.org/place/rocky-woods/",
+    tags: ["come-alone", "beginner", "outdoors"]
+  },
+  {
+    id: "trail-moose-hill",
+    title: "Moose Hill Wildlife Sanctuary",
+    category: "hike", trail: "woods", miles: 20, surface: "Woods trails",
+    schedule: "Trails open daily, dawn to dusk",
+    venue: "Mass Audubon Moose Hill Wildlife Sanctuary", address: "Moose Hill Wildlife Sanctuary", city: "Sharon, MA",
+    lat: 42.1230, lng: -71.2080,
+    price: 4, priceNote: "$4 adults · Mass Audubon members free",
+    host: "Mass Audubon",
+    description: "Nearly 2,000 acres of woods, fields and boardwalk with about 20 miles of trails, from short nature loops to a hilltop view.",
+    url: "https://www.massaudubon.org/places-to-explore/wildlife-sanctuaries/moose-hill",
+    tags: ["come-alone", "beginner", "outdoors"]
+  },
+  {
+    id: "trail-borderland",
+    title: "Borderland State Park",
+    category: "walk", trail: "loop", surface: "Wide paths & woods trails",
+    schedule: "Open daily — see the park page for hours",
+    venue: "Borderland State Park", address: "259 Massapoag Ave", city: "North Easton, MA",
+    lat: 42.0630, lng: -71.1630,
+    price: null, priceNote: "See the park page for parking fees",
+    host: "Mass. DCR",
+    description: "Wide, gentle paths around a chain of ponds, past a historic stone mansion, plus woodland trails for longer hikes. A lovely, easy walk any season.",
+    url: "https://www.mass.gov/locations/borderland-state-park",
+    tags: ["come-alone", "beginner", "outdoors"]
+  },
+
+  // ---------- MetroWest ----------
+  {
+    id: "trail-upper-charles",
+    title: "Upper Charles Rail Trail",
+    category: "trail", trail: "rail", miles: 13.9, surface: "Paved & crushed stone",
+    schedule: "Open daily",
+    venue: "Upper Charles Trail", address: "480 Cedar St (Milford trailhead)", city: "Milford, MA",
+    lat: 42.1480, lng: -71.5330,
+    price: 0,
+    host: "Upper Charles Trail towns",
+    description: "13.9 miles of rail trail through Milford, Hopkinton, Holliston and Sherborn. The Milford section winds past Louisa Lake and through boulder-strewn woods.",
+    url: "https://www.traillink.com/trail/upper-charles-trail/",
+    tags: ["free", "come-alone", "beginner", "outdoors"]
+  },
+  {
+    id: "trail-cochituate",
+    title: "Cochituate Rail Trail",
+    category: "trail", trail: "rail", miles: 3.3, surface: "Paved & boardwalk",
+    schedule: "Open daily",
+    venue: "Cochituate Rail Trail", address: "Cochituate Rail Trail", city: "Natick, MA",
+    lat: 42.2990, lng: -71.3880,
+    price: 0,
+    host: "Natick & Framingham",
+    description: "A smooth, paved 3.3-mile path between Natick Center and Saxonville, crossing Lake Cochituate. Great for strollers, scooters and an easy run.",
+    url: "https://www.traillink.com/trail/cochituate-rail-trail/",
+    tags: ["free", "come-alone", "beginner", "outdoors"]
+  },
+  {
+    id: "trail-assabet-river",
+    title: "Assabet River Rail Trail",
+    category: "trail", trail: "rail", miles: 10.4, surface: "Paved",
+    schedule: "Open daily",
+    venue: "Assabet River Rail Trail", address: "157 Washington St (Hudson parking)", city: "Hudson, MA",
+    lat: 42.3920, lng: -71.5670,
+    price: 0,
+    host: "Assabet River Rail Trail, Inc.",
+    description: "10.4 paved miles in two sections, Marlborough–Hudson and Stow–Maynard–Acton, following the river through town centers and woods.",
+    url: "https://arrtinc.org/",
+    tags: ["free", "come-alone", "beginner", "outdoors"]
+  },
+  {
+    id: "trail-callahan",
+    title: "Callahan State Park",
+    category: "hike", trail: "woods", surface: "Meadows & woods trails",
+    schedule: "Open daily — see the park page for hours",
+    venue: "Callahan State Park", address: "Callahan State Park", city: "Framingham, MA",
+    lat: 42.3330, lng: -71.4800,
+    price: 0,
+    host: "Mass. DCR",
+    description: "Rolling meadows, a pond and wooded hills on the Framingham–Marlborough line, a local favorite for long walks with the dog.",
+    url: "https://www.mass.gov/locations/callahan-state-park",
+    tags: ["free", "come-alone", "outdoors"]
+  },
+  {
+    id: "trail-hopkinton-state-park",
+    title: "Hopkinton State Park",
+    category: "walk", trail: "loop", surface: "Woods trails",
+    schedule: "Open daily — see the park page for hours",
+    venue: "Hopkinton State Park", address: "Hopkinton State Park", city: "Hopkinton, MA",
+    lat: 42.2560, lng: -71.5180,
+    price: null, priceNote: "See the park page for parking fees",
+    host: "Mass. DCR",
+    description: "Trails along the shore of the Hopkinton Reservoir, with picnic groves and a beach in summer.",
+    url: "https://www.mass.gov/locations/hopkinton-state-park",
+    tags: ["come-alone", "outdoors"]
+  },
+
+  // ---------- Boston area ----------
+  {
+    id: "trail-blue-hills",
+    title: "Blue Hills Reservation",
+    category: "hike", trail: "woods", miles: 125, surface: "Rocky woods trails",
+    schedule: "Open daily, dawn to dusk",
+    venue: "Blue Hills Reservation", address: "Blue Hills Reservation Headquarters, Hillside St", city: "Milton, MA",
+    lat: 42.2120, lng: -71.1150,
+    price: 0,
+    host: "Mass. DCR",
+    description: "Over 7,000 acres and 125 miles of trails just south of Boston. Climb Great Blue Hill to the stone Eliot Tower for views of the city, or keep to the flat paths around Houghton's Pond.",
+    url: "https://www.mass.gov/locations/blue-hills-reservation",
+    tags: ["free", "come-alone", "outdoors"]
+  },
+  {
+    id: "trail-minuteman",
+    title: "Minuteman Bikeway",
+    category: "trail", trail: "rail", miles: 10.1, surface: "Paved",
+    schedule: "Open daily",
+    venue: "Minuteman Bikeway", address: "Minuteman Bikeway, Arlington Center", city: "Arlington, MA",
+    lat: 42.4150, lng: -71.1560,
+    price: 0,
+    host: "Arlington, Lexington & Bedford",
+    description: "One of the country's best-loved rail trails: 10.1 paved miles from Alewife in Cambridge through Arlington and Lexington to Bedford, with coffee stops along the way.",
+    url: "https://www.minutemanbikeway.org/",
+    tags: ["free", "come-alone", "beginner", "outdoors"]
+  },
+  {
+    id: "trail-charles-river-paths",
+    title: "Charles River Esplanade & River Paths",
+    category: "trail", trail: "rail", miles: 14, surface: "Paved",
+    schedule: "Open daily",
+    venue: "Charles River Esplanade", address: "Charles River Esplanade", city: "Boston, MA",
+    lat: 42.3560, lng: -71.0780,
+    price: 0,
+    host: "Esplanade Association & Mass. DCR",
+    description: "A 14-mile paved loop along both banks of the Charles, from the Museum of Science to Watertown, passing the Esplanade's lagoons and docks. Walk any piece of it.",
+    url: "https://esplanade.org/",
+    tags: ["free", "come-alone", "beginner", "outdoors"]
+  },
+  {
+    id: "trail-neponset-greenway",
+    title: "Neponset River Greenway",
+    category: "trail", trail: "rail", surface: "Paved",
+    schedule: "Open daily",
+    venue: "Neponset River Greenway", address: "Neponset River Greenway", city: "Milton, MA",
+    lat: 42.2700, lng: -71.0700,
+    price: 0,
+    host: "Mass. DCR",
+    description: "A paved path following the Neponset River through Dorchester, Mattapan and Milton, with marsh views and wide, easy stretches.",
+    url: "https://www.mass.gov/locations/neponset-river-reservation",
+    tags: ["free", "come-alone", "beginner", "outdoors"]
+  },
+  {
+    id: "trail-jamaica-pond",
+    title: "Jamaica Pond Loop",
+    category: "walk", trail: "loop", miles: 1.5, surface: "Paved & packed path",
+    schedule: "Open daily",
+    venue: "Jamaica Pond", address: "Jamaica Pond, Jamaicaway", city: "Jamaica Plain, MA",
+    lat: 42.3166, lng: -71.1206,
+    price: 0,
+    host: "Emerald Necklace Conservancy",
+    description: "An easy, shady 1.5-mile loop around one of Boston's prettiest ponds. Busy and friendly, with a boathouse and benches along the water.",
+    url: "https://www.emeraldnecklace.org/park-overview/jamaica-pond/",
+    tags: ["free", "come-alone", "beginner", "outdoors"]
+  },
+  {
+    id: "trail-arnold-arboretum",
+    title: "Arnold Arboretum",
+    category: "walk", trail: "loop", surface: "Paved & grass paths",
+    schedule: "Open daily, sunrise to sunset",
+    venue: "Arnold Arboretum of Harvard University", address: "125 Arborway", city: "Jamaica Plain, MA",
+    lat: 42.3070, lng: -71.1220,
+    price: 0,
+    host: "Arnold Arboretum",
+    description: "A free, 281-acre living museum of trees on Boston's Emerald Necklace. Wander paved paths up to Peters Hill for a skyline view, and see whatever's blooming or turning.",
+    url: "https://arboretum.harvard.edu/",
+    tags: ["free", "come-alone", "beginner", "outdoors"]
+  },
+  {
+    id: "trail-cutler-park",
+    title: "Cutler Park Reservation",
+    category: "walk", trail: "loop", surface: "Woods trails & boardwalk",
+    schedule: "Open daily — see the park page for hours",
+    venue: "Cutler Park Reservation", address: "Cutler Park Reservation", city: "Needham, MA",
+    lat: 42.2980, lng: -71.2120,
+    price: 0,
+    host: "Mass. DCR",
+    description: "A flat loop around Kendrick Pond and along the Charles River marshes, with boardwalks and lots of birds. An easy, peaceful walk close to Route 128.",
+    url: "https://www.mass.gov/locations/cutler-park-reservation",
+    tags: ["free", "come-alone", "beginner", "outdoors"]
+  },
+
+  // ---------- South Shore ----------
+  {
+    id: "trail-worlds-end",
+    title: "World's End",
+    category: "walk", trail: "loop", surface: "Carriage paths",
+    schedule: "Open daily, 8 AM to sunset",
+    venue: "World's End", address: "World's End, Martins Ln", city: "Hingham, MA",
+    lat: 42.2590, lng: -70.8730,
+    price: 15, priceNote: "$15 per car for non-members · Trustees members free · advance parking pass needed on weekends",
+    host: "The Trustees",
+    description: "Wide, tree-lined carriage paths over rolling drumlins with ocean and Boston skyline views on every side. Book parking ahead for weekends.",
+    url: "https://thetrustees.org/place/worlds-end/",
+    tags: ["come-alone", "beginner", "outdoors"]
+  },
+  {
+    id: "trail-wompatuck",
+    title: "Wompatuck State Park",
+    category: "hike", trail: "woods", surface: "Paved bike paths & woods trails",
+    schedule: "Open daily — see the park page for hours",
+    venue: "Wompatuck State Park", address: "204 Union St", city: "Hingham, MA",
+    lat: 42.2100, lng: -70.8600,
+    price: null, priceNote: "See the park page for parking fees",
+    host: "Mass. DCR",
+    description: "3,500 acres of forest, streams and ponds, with miles of paved bike paths and quieter woods trails. Fill a bottle at Mount Blue Spring.",
+    url: "https://www.mass.gov/locations/wompatuck-state-park",
+    tags: ["come-alone", "beginner", "outdoors"]
+  },
+  {
+    id: "trail-myles-standish",
+    title: "Myles Standish State Forest",
+    category: "hike", trail: "woods", surface: "Paved bike paths & sandy trails",
+    schedule: "Open daily — see the park page for hours",
+    venue: "Myles Standish State Forest", address: "Myles Standish State Forest", city: "Carver, MA",
+    lat: 41.8650, lng: -70.7050,
+    price: null, priceNote: "See the park page for parking fees",
+    host: "Mass. DCR",
+    description: "Pine woods and clear kettle ponds in Plymouth and Carver, with long paved bike paths and sandy trails. Feels like a different world.",
+    url: "https://www.mass.gov/locations/myles-standish-state-forest",
+    tags: ["come-alone", "outdoors"]
+  },
+  {
+    id: "trail-ames-nowell",
+    title: "Ames Nowell State Park",
+    category: "walk", trail: "loop", surface: "Woods trails",
+    schedule: "Open daily — see the park page for hours",
+    venue: "Ames Nowell State Park", address: "Ames Nowell State Park", city: "Abington, MA",
+    lat: 42.1220, lng: -70.9620,
+    price: null, priceNote: "See the park page for parking fees",
+    host: "Mass. DCR",
+    description: "Easy woodland trails around Cleveland Pond: a quiet, shady loop on the South Shore.",
+    url: "https://www.mass.gov/locations/ames-nowell-state-park",
+    tags: ["come-alone", "beginner", "outdoors"]
+  }
+]);
