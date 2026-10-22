@@ -14,6 +14,7 @@ Community Kangaroo's team checks over 2,000 websites by hand every month. Good N
 | `../tools/eventbrite_collect.py` + `eventbrite_to_js.py` | Searches Eventbrite for wellness events (and, with `--make`, creative classes) and merges new ones into `data/events-eventbrite.js`. Events that have passed drop off. Chains, kids' events and bar nights are skipped. |
 | `../tools/calendar_collect.py` | Reads venues' own calendars (any site using the WordPress "Events Calendar") and turns repeating classes into weekly listings (`data/events-calendars.js`). Add a venue to its `SITES` list. |
 | `../tools/meetup_collect.py` | Searches Meetup around 8 towns for in-person meditation, yoga, sound, breathwork, tai chi, hiking and book groups (`data/events-meetup.js`). Only real places in our towns; skips anything another file already lists. |
+| `../tools/collector_health.py` | The alarm. Run it after the collectors: it compares each file with last month (`collector-counts.json`) and writes `health.md`, warning if a collector found nothing new, a file shrank a lot, the next two weeks look thin, or Eventbrite/Meetup photos stopped loading. |
 | `../tools/library_collect.py` | Reads 13 local library calendars at once and keeps the adult book groups, creative classes and wellness programs (`data/events-libraries.js`). Add a library to its `LIBRARIES` list. |
 
 ## The columns in `sources.csv`
