@@ -73,8 +73,8 @@
   };
 
   const MOODS = [
-    { id: "move",   label: "Move my body",          hint: "Yoga · runs · walks · trails",                         tone: "#d98a68", ink: "#fff",
-      match: (e) => ["yoga", "tai-chi", "run", "walk", "hike", "trail", "movement"].includes(e.category) },
+    { id: "move",   label: "Move my body",          hint: "Yoga · runs · walks · hikes",                         tone: "#d98a68", ink: "#fff",
+      match: (e) => ["yoga", "tai-chi", "run", "walk", "hike", "movement"].includes(e.category) },
     { id: "calm",   label: "Quiet my mind",         hint: "Meditation · sound baths · salt caves",  tone: "#c3cab0", ink: "#304022",
       match: (e) => ["meditation", "sound", "breathwork", "salt"].includes(e.category) },
     { id: "care",   label: "Be cared for",          hint: "Massage · reiki · acupuncture · herbalism",   tone: "#f0d3c4", ink: "#9a5236",
@@ -349,15 +349,17 @@
   function buildDeck(moodId) {
     if (moodId === "saved") return events.filter((e) => saved.has(e.id)).sort(bySoonest).map((e) => e.id);
     if (moodId === "weekend") return weekendPicks().map((x) => x.e.id);
+    // Trails and parks live on the Get outside list, not in the feelings.
+    const pool = events.filter((e) => !e.trail);
     if (moodId === "surprise") {
       // Something soon first, then everything else — all in a fresh order.
-      const soon = events.filter((e) => e.next && e.next.start - now < 14 * DAY_MS);
-      const rest = events.filter((e) => !soon.includes(e));
+      const soon = pool.filter((e) => e.next && e.next.start - now < 14 * DAY_MS);
+      const rest = pool.filter((e) => !soon.includes(e));
       return [...shuffle(soon), ...shuffle(rest)].map((e) => e.id);
     }
     const mood = MOODS.find((m) => m.id === moodId);
     if (!mood) return [];
-    return bestFirst(events.filter(mood.match)).map((e) => e.id);
+    return bestFirst(pool.filter(mood.match)).map((e) => e.id);
   }
 
   // The best few first: soon, close, hand-checked, free or come-alone — and not the same host twice in a row.
@@ -473,7 +475,7 @@
   ];
   function renderStart() {
     $("moods").innerHTML = [...MOODS, ...EXTRA_TILES].map((m) => `
-      <button type="button" class="mood" data-mood="${m.id}" title="${m.hint}">
+      <button type="button" class="mood" data-mood="${m.id}">
         <span class="mood-icon" style="--tone:${m.tone};--icon:${m.ink}">
           <svg viewBox="0 0 32 32" aria-hidden="true">${ICONS[m.id]}</svg>
         </span>

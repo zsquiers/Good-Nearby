@@ -21,7 +21,7 @@ Shareable links: `#/day/franklin-area/2026-10-17` opens that day in Franklin & n
 
 **Areas** are about 30 minutes across: a place only shows under an area if it's within ~15 miles of that area's nearest town (`AREA_CAP_MILES` in `app.js`). Farther places still show under Everywhere.
 
-**Get outside:** `#/outside` lists rail trails, bike paths, woods and easy loops by area, grouped by kind. They live in `data/events-trails.js`; any listing with a `trail` field (`rail`, `loop` or `woods`) shows there, with optional `miles` and `surface`. Trails also turn up in Move my body.
+**Get outside:** `#/outside` lists rail trails, bike paths, woods and easy loops by area, grouped by kind. They live in `data/events-trails.js`; any listing with a `trail` field (`rail`, `loop` or `woods`) shows there, with optional `miles` and `surface`. They stay out of the feelings (Move my body etc.), so those show classes and events.
 
 **Seasonal collections:** `#/find/halloween` gathers every upcoming listing about a theme into one page, by day, with area chips. The seasons (Halloween, Thanksgiving, holidays, New Year, Valentine's, Mother's Day) live in `data/collections.js`, each with its dates and the words it looks for. Add one by copying an entry. Any word works too: `#/find/pottery`. Link to it from the newsletter (the spotlight does this) or Instagram.
 

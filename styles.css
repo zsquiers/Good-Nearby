@@ -164,7 +164,7 @@ main { flex: 1; width: min(1120px, calc(100% - 32px)); margin: 0 auto; padding: 
 .mood-icon svg { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .mood-text { display: flex; flex-direction: column; }
 .mood-label { font-size: 1.02rem; font-weight: 700; line-height: 1.25; }
-.mood-hint { display: none; }
+.mood-hint { font-size: .8rem; line-height: 1.35; color: var(--ink-soft); }
 .mood-arrow { font-size: 1.3rem; color: var(--ink-soft); transition: transform .2s ease; }
 .mood:hover .mood-arrow { transform: translateX(3px); color: var(--ink); }
 
@@ -637,7 +637,7 @@ table.hours tr.today th, table.hours tr.today td { color: var(--ink); font-weigh
 .dots i { width: 8px; height: 8px; border-radius: 50%; background: var(--line); display: block; }
 .dots i.on { background: var(--clay); }
 
-/* Small phones: icon above the words, so long words like "somewhere" fit in the tile. */
-@media (max-width: 380px) {
+/* Phones: icon above the words, so the name and its little description get the tile's full width. */
+@media (max-width: 640px) {
   .mood { grid-template-columns: 1fr; justify-items: start; align-content: start; gap: 6px; padding: 10px 12px; }
 }
