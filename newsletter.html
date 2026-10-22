@@ -205,7 +205,7 @@
       groups.get(label).push(x);
     }
     const intro = $("intro").value.trim();
-    let html = `<p style="font-family:Georgia,serif;font-size:22px;margin:0 0 8px;color:#304022;">🌻 Weekend Favorites</p>
+    let html = `<p style="font-family:Georgia,serif;font-size:22px;margin:0 0 8px;color:#304022;">🌻 This weekend, ${md.format(friday)}–${sun.getDate()}</p>
 ${intro ? `<p style="margin:0 0 14px;">${esc(intro).replace(/\n/g, "<br>")}</p>` : ""}
 <p style="margin:0 0 18px;color:#5a5e4e;">A few good things happening near you this weekend, ${md.format(friday)}–${sun.getDate()}. Pick one, and go easy on yourself.</p>`;
     if (!show.length) html += `<p>Nothing picked yet — tick a few favorites above.</p>`;
