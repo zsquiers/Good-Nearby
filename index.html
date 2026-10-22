@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Jost:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=43" />
+  <link rel="stylesheet" href="styles.css?v=45" />
 </head>
 <body>
   <div class="backdrop" aria-hidden="true"></div>
@@ -68,6 +68,11 @@
         <a href="#/weekend" class="weekend-link">
           <span aria-hidden="true">💌</span>
           <span><strong>Weekend Favorites</strong> — our picks in your inbox every Thursday</span>
+          <span aria-hidden="true">→</span>
+        </a>
+        <a href="#/outside" class="weekend-link">
+          <span aria-hidden="true">🌲</span>
+          <span><strong>Get outside</strong> — trails, rail trails &amp; bike paths near you</span>
           <span aria-hidden="true">→</span>
         </a>
         <a href="#/" class="weekend-link" id="seasonLink" hidden></a>
@@ -123,6 +128,18 @@
         <p class="lede">Independent cafés, bakeries and little shops. What's open right now is at the top.</p>
         <div class="chips" id="wanderAreas" role="group" aria-label="Area"></div>
         <div id="wanderList"></div>
+      </div>
+    </section>
+
+    <section class="screen wanderview" id="screenOutside" hidden aria-labelledby="outsideTitle">
+      <div class="pick-nav">
+        <a href="#/" class="quiet-link">← Start over</a>
+      </div>
+      <div class="day-card">
+        <h2 id="outsideTitle" tabindex="-1">Get outside</h2>
+        <p class="lede">Rail trails, bike paths, woods and easy loops for a walk, run, hike or ride, any day you like.</p>
+        <div class="chips" id="outsideAreas" role="group" aria-label="Area"></div>
+        <div id="outsideList"></div>
       </div>
     </section>
 
@@ -345,18 +362,19 @@
     <p class="fine">We don't run these events, and details can change, so check with the host before you go. Listings are for information only and aren't medical advice.</p>
   </footer>
 
-  <script src="data/events.js?v=43"></script>
-  <script src="data/events-eventbrite.js?v=43"></script>
-  <script src="data/events-move-shops.js?v=43"></script>
-  <script src="data/events-venues.js?v=43"></script>
-  <script src="data/events-cafes.js?v=43"></script>
-  <script src="data/events-libraries.js?v=43"></script>
-  <script src="data/events-herbal.js?v=43"></script>
-  <script src="data/events-meditation.js?v=43"></script>
-  <script src="data/events-calendars.js?v=43"></script>
-  <script src="data/events-meetup.js?v=43"></script>
-  <script src="data/collections.js?v=43"></script>
-  <script src="data/towns.js?v=43"></script>
-  <script src="app.js?v=43"></script>
+  <script src="data/events.js?v=45"></script>
+  <script src="data/events-eventbrite.js?v=45"></script>
+  <script src="data/events-move-shops.js?v=45"></script>
+  <script src="data/events-venues.js?v=45"></script>
+  <script src="data/events-cafes.js?v=45"></script>
+  <script src="data/events-libraries.js?v=45"></script>
+  <script src="data/events-herbal.js?v=45"></script>
+  <script src="data/events-meditation.js?v=45"></script>
+  <script src="data/events-calendars.js?v=45"></script>
+  <script src="data/events-meetup.js?v=45"></script>
+  <script src="data/events-trails.js?v=45"></script>
+  <script src="data/collections.js?v=45"></script>
+  <script src="data/towns.js?v=45"></script>
+  <script src="app.js?v=45"></script>
 </body>
 </html>

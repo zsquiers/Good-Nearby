@@ -303,7 +303,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   {
     id: "mass-audubon-stony-brook",
     title: "Stony Brook Wildlife Sanctuary Trails",
-    category: "walk",
+    category: "walk", trail: "loop",
     schedule: "Trails open daily, dawn to dusk",
     venue: "Mass Audubon Stony Brook Wildlife Sanctuary", address: "108 North St", city: "Norfolk, MA",
     lat: 42.1150, lng: -71.3450,
@@ -316,7 +316,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   {
     id: "mass-audubon-broadmoor",
     title: "Broadmoor Wildlife Sanctuary Trails",
-    category: "walk",
+    category: "walk", trail: "loop",
     schedule: "Trails open daily, dawn to dusk",
     venue: "Mass Audubon Broadmoor Wildlife Sanctuary", address: "280 Eliot St", city: "Natick, MA",
     lat: 42.2560, lng: -71.3420,

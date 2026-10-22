@@ -21,6 +21,8 @@ Shareable links: `#/day/franklin-area/2026-10-17` opens that day in Franklin & n
 
 **Areas** are about 30 minutes across: a place only shows under an area if it's within ~15 miles of that area's nearest town (`AREA_CAP_MILES` in `app.js`). Farther places still show under Everywhere.
 
+**Get outside:** `#/outside` lists rail trails, bike paths, woods and easy loops by area, grouped by kind. They live in `data/events-trails.js`; any listing with a `trail` field (`rail`, `loop` or `woods`) shows there, with optional `miles` and `surface`. Trails also turn up in Move my body.
+
 **Seasonal collections:** `#/find/halloween` gathers every upcoming listing about a theme into one page, by day, with area chips. The seasons (Halloween, Thanksgiving, holidays, New Year, Valentine's, Mother's Day) live in `data/collections.js`, each with its dates and the words it looks for. Add one by copying an entry. Any word works too: `#/find/pottery`. While a season is on and has at least 3 things, the first screen shows a link to it.
 
 **Saved list on another device:** the Saved screen has "Text my saved list to myself", which shares a link like `#/saved/<id>,<id>`. Opening it adds those listings to that device's saved list. No accounts. Below it, a nudge to sign up for Weekend Favorites.
@@ -45,6 +47,7 @@ Design rules: one decision per screen, no menus, big tap targets, plain language
 | `data/events-meditation.js` | Meditation centers' regular sits, beginner classes and short courses |
 | `data/events-calendars.js` | Classes read straight from venues' own calendars, e.g. Common Street Spiritual Center in Natick and Mount Auburn (made by `tools/calendar_collect.py`) |
 | `data/events-meetup.js` | In-person meditation, yoga, sound, walking and book groups found on Meetup (made by `tools/meetup_collect.py`) |
+| `data/events-trails.js` | Rail trails, bike paths, woods and easy walking loops for the Get outside list |
 | `data/events-cafes.js` | Cozy independent cafés, bakeries and garden-center / farm cafés (no chains) |
 | `sources/` | The list of every source we check, and the monthly report (see `sources/README.md`) |
 | `tools/` | Small scripts that check sources and pull in Eventbrite events |

@@ -10,6 +10,7 @@
 //   #/weekend                 Weekend Favorites: newsletter sign-up + this weekend\'s picks
 //   #/weekend/thanks|confirmed  where Buttondown sends people after signing up / confirming
 //   #/find/<collection|word>[/<area>]   a seasonal collection (data/collections.js) or any word
+//   #/outside/<area>          Get outside: trails, rail trails & bike paths (data/events-trails.js)
 //   #/saved                   events saved on this device
 //   #/saved/<id>,<id>         a saved list sent from another device (added to this one)
 (function () {
@@ -48,6 +49,7 @@
     salt:       { label: "Salt cave",          photo: "https://images.pexels.com/photos/2624400/pexels-photo-2624400.jpeg?auto=compress&cs=tinysrgb&w=1100" },
     run:        { label: "Community run",      photo: "https://images.pexels.com/photos/8381747/pexels-photo-8381747.jpeg?auto=compress&cs=tinysrgb&w=1100" },
     walk:       { label: "Walk",               photo: "https://images.pexels.com/photos/6960/pexels-photo-6960.jpeg?auto=compress&cs=tinysrgb&w=1100" },
+    trail:      { label: "Trail & path",       photo: "https://images.pexels.com/photos/6960/pexels-photo-6960.jpeg?auto=compress&cs=tinysrgb&w=1100" },
     hike:       { label: "Hike",               photo: "https://images.pexels.com/photos/19141785/pexels-photo-19141785.jpeg?auto=compress&cs=tinysrgb&w=1100" },
     movement:   { label: "Movement & dance",   photo: "https://images.pexels.com/photos/36715608/pexels-photo-36715608.jpeg?auto=compress&cs=tinysrgb&w=1100" },
     shop:       { label: "Holistic shop",      photo: "https://images.pexels.com/photos/3610753/pexels-photo-3610753.jpeg?auto=compress&cs=tinysrgb&w=1100" },
@@ -69,8 +71,8 @@
   };
 
   const MOODS = [
-    { id: "move",   label: "Move my body",          hint: "Yoga · runs · walks · hikes",                         tone: "#d98a68", ink: "#fff",
-      match: (e) => ["yoga", "tai-chi", "run", "walk", "hike", "movement"].includes(e.category) },
+    { id: "move",   label: "Move my body",          hint: "Yoga · runs · walks · trails",                         tone: "#d98a68", ink: "#fff",
+      match: (e) => ["yoga", "tai-chi", "run", "walk", "hike", "trail", "movement"].includes(e.category) },
     { id: "calm",   label: "Quiet my mind",         hint: "Meditation · sound baths · salt caves",  tone: "#c3cab0", ink: "#304022",
       match: (e) => ["meditation", "sound", "breathwork", "salt"].includes(e.category) },
     { id: "care",   label: "Be cared for",          hint: "Massage · reiki · acupuncture · herbalism",   tone: "#f0d3c4", ink: "#9a5236",
@@ -290,6 +292,7 @@
     if (!e.sessions) {
       if (e.hours) { const h = e.hours[DKEYS[now.getDay()]]; return `Today: ${h ? span(h) : "closed"}`; }
       if (isPlace(e)) return e.schedule && !/check/i.test(e.schedule) ? e.schedule : "Hours: see Google Maps below";
+      if (e.trail) return [e.miles ? `${e.miles} miles` : "", e.surface || ""].filter(Boolean).join(" · ") || "Go any day you like";
       return "Whenever works for you — check their schedule";
     }
     const s = sessionFor(e);
@@ -444,7 +447,7 @@
 
   // ---------- rendering ----------
   const $ = (id) => document.getElementById(id);
-  const screens = { find: $("screenFind"), start: $("screenStart"), browse: $("screenBrowse"), day: $("screenDay"), weekend: $("screenWeekend"), submit: $("screenSubmit"), pick: $("screenPick"), saved: $("screenSaved"), wander: $("screenWander") };
+  const screens = { outside: $("screenOutside"), find: $("screenFind"), start: $("screenStart"), browse: $("screenBrowse"), day: $("screenDay"), weekend: $("screenWeekend"), submit: $("screenSubmit"), pick: $("screenPick"), saved: $("screenSaved"), wander: $("screenWander") };
   const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // base: the URL prefix for the current deck; day: the chosen day when browsing by day
@@ -825,6 +828,39 @@
     link.innerHTML = `<span aria-hidden="true">${c.emoji}</span><span><strong>${escapeHtml(c.title)}</strong> — ${n} things coming up</span><span aria-hidden="true">→</span>`;
   }
 
+  // ---------- Get outside: trails, rail trails & bike paths (listings with a `trail` field) ----------
+  let outsideArea = "all";
+  const OUTSIDE_GROUPS = [
+    { kind: "rail", title: "Rail trails & bike paths", note: "flat & easy, great for strollers and bikes" },
+    { kind: "loop", title: "Easy loops, ponds & gardens", note: "" },
+    { kind: "woods", title: "Woods, hills & longer hikes", note: "" },
+  ];
+  function outsideList(areaId) {
+    const places = events.filter((e) => e.trail && !e.sessions && inArea(e, areaId));
+    const order = (a, b) => (origin ? distanceMiles(origin, a) - distanceMiles(origin, b) : a.title.localeCompare(b.title));
+    return OUTSIDE_GROUPS.map((g) => ({ ...g, items: places.filter((e) => e.trail === g.kind).sort(order) })).filter((g) => g.items.length);
+  }
+  const outsideDeck = (areaId) => outsideList(areaId).flatMap((g) => g.items.map((e) => e.id));
+  function renderOutside(areaId) {
+    outsideArea = areaId;
+    $("outsideAreas").innerHTML = AREAS.map((a) =>
+      `<button type="button" class="chip${a.id === areaId ? " on" : ""}" data-outsidearea="${a.id}" aria-pressed="${a.id === areaId}">${escapeHtml(a.id === "all" ? "Everywhere" : a.area)}</button>`).join("");
+    let i = 0;
+    $("outsideList").innerHTML = outsideList(areaId).map((g) => `<section class="slot"><h3>${escapeHtml(g.title)}${g.note ? ` <span>${escapeHtml(g.note)}</span>` : ""}</h3><ul class="rows">${
+      g.items.map((e, k) => {
+        const meta = [e.city.replace(/, MA$/, ""), milesText(e), e.price === 0 ? "Free" : ""].filter(Boolean).map(escapeHtml).join(" · ");
+        return `<li${k >= 6 ? ' class="more" hidden' : ""}><button type="button" class="row" data-outsideopen="${i++}">
+          <span class="row-time small">${e.miles ? `${e.miles} mi` : "🌲"}${e.surface ? `<br><span class="sub">${escapeHtml(e.surface)}</span>` : ""}</span>
+          <span class="row-main">
+            <span class="row-title">${escapeHtml(e.title)}${saved.has(e.id) ? ' <span class="row-saved" aria-label="saved">♥</span>' : ""}</span>
+            <span class="row-meta">${meta}</span>
+          </span>
+          <span class="row-arrow" aria-hidden="true">›</span>
+        </button></li>`;
+      }).join("")}</ul>${g.items.length > 6 ? `<button type="button" class="show-more" data-showmore>Show ${g.items.length - 6} more</button>` : ""}</section>`).join("")
+      || `<div class="nothing"><p class="nothing-title">Nothing listed in this area yet.</p><p><a class="inline-link" href="#/outside/all">See everywhere →</a></p></div>`;
+  }
+
   const dayDeck = (areaId, day) => [...eventsOn(areaId, day).map((x) => x.e.id), ...ongoingIn(areaId).map((e) => e.id)];
   const goDay = (areaId, d) => { location.hash = `#/day/${areaId}/${ymd(d)}`; };
 
@@ -1029,6 +1065,18 @@
       renderPick(true);
       return;
     }
+    if (kind === "op" && areaById.has(arg)) {
+      const key = `op:${arg}`;
+      if (state.mood !== key || !state.deck.length) { state.mood = key; state.deck = outsideDeck(arg); }
+      state.limit = Infinity; state.deckBuiltFor = null; state.day = null;
+      state.base = `#/op/${arg}`;
+      state.back = { href: `#/outside/${arg}`, label: "← Back to trails" };
+      setPickBack();
+      state.index = Math.min(Math.max(parseInt(parts[2], 10) || 0, 0), state.deck.length);
+      showScreen("pick");
+      renderPick(true);
+      return;
+    }
     if (kind === "p" && areaById.has(arg)) {
       const key = `p:${arg}`;
       if (state.mood !== key || !state.deck.length) { state.mood = key; state.deck = wanderDeck(arg); }
@@ -1047,6 +1095,13 @@
       renderWander(areaId);
       showScreen("wander");
       $("wanderTitle").focus({ preventScroll: true });
+      updateSavedPill();
+      return;
+    }
+    if (kind === "outside") {
+      renderOutside(areaById.has(arg) ? arg : (browseArea || "all"));
+      showScreen("outside");
+      $("outsideTitle").focus({ preventScroll: true });
       updateSavedPill();
       return;
     }
@@ -1165,6 +1220,10 @@
     }
     const more = ev.target.closest("[data-showmore]");
     if (more) { more.closest(".slot").querySelectorAll("li.more").forEach((li) => { li.hidden = false; }); more.remove(); return; }
+    const oArea = ev.target.closest("[data-outsidearea]");
+    if (oArea) { location.hash = `#/outside/${oArea.dataset.outsidearea}`; return; }
+    const oOpen = ev.target.closest("[data-outsideopen]");
+    if (oOpen) { location.hash = `#/op/${outsideArea}/${oOpen.dataset.outsideopen}`; return; }
     const fArea = ev.target.closest("[data-findarea]");
     if (fArea) { location.hash = `#/find/${encodeURIComponent(findView.key)}/${fArea.dataset.findarea}`; return; }
     const fOpen = ev.target.closest("[data-findopen]");
