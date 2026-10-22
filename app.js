@@ -75,17 +75,17 @@
   };
 
   const MOODS = [
-    { id: "move",   label: "Move my body",          hint: "Yoga · runs · walks · hikes",                         tone: "#d98a68", ink: "#fff",
+    { id: "move",   label: "Move my body",          hint: "Yoga · runs · walks · hikes", short: "Yoga · runs · hikes",                         tone: "#d98a68", ink: "#fff",
       match: (e) => ["yoga", "tai-chi", "run", "walk", "hike", "movement"].includes(e.category) },
-    { id: "calm",   label: "Quiet my mind",         hint: "Meditation · sound baths · salt caves",  tone: "#c3cab0", ink: "#304022",
+    { id: "calm",   label: "Quiet my mind",         hint: "Meditation · sound baths · salt caves", short: "Meditation · sound",  tone: "#c3cab0", ink: "#304022",
       match: (e) => ["meditation", "sound", "breathwork", "salt"].includes(e.category) },
-    { id: "care",   label: "Be cared for",          hint: "Massage · reiki · acupuncture · herbalism",   tone: "#f0d3c4", ink: "#9a5236",
+    { id: "care",   label: "Be cared for",          hint: "Massage · reiki · acupuncture · herbalism", short: "Massage · reiki",   tone: "#f0d3c4", ink: "#9a5236",
       match: (e) => ["massage", "reiki", "acupuncture", "herbal"].includes(e.category) },
-    { id: "make",   label: "Make something good",   hint: "Pottery · painting · flowers · herbs",   tone: "#ddd0e6", ink: "#5e4670",
+    { id: "make",   label: "Make something good",   hint: "Pottery · painting · flowers · herbs", short: "Pottery · painting",   tone: "#ddd0e6", ink: "#5e4670",
       match: (e) => ["craft", "herbal"].includes(e.category) },
-    { id: "wander", label: "Wander somewhere cozy", hint: "Cafés · bakeries · little shops",   tone: "#e6d6bd", ink: "#7a5a2e",
+    { id: "wander", label: "Wander somewhere cozy", hint: "Cafés · bakeries · little shops", short: "Cafés · little shops",   tone: "#e6d6bd", ink: "#7a5a2e",
       match: (e) => ["cafe", "bakery", "shop"].includes(e.category) },
-    { id: "people", label: "Be with good people",   hint: "Classes, circles & book groups",   tone: "#e3c98f", ink: "#304022",
+    { id: "people", label: "Be with good people",   hint: "Classes, circles & book groups", short: "Classes · groups",   tone: "#e3c98f", ink: "#304022",
       // anything with a date that people attend together (not one-on-one appointments)
       match: (e) => ["expo", "workshop", "book"].includes(e.category) || (e.sessions && !["massage", "reiki", "acupuncture", "shop", "cafe", "bakery"].includes(e.category))
         || (!e.sessions && (e.tags || []).includes("come-alone") && !["shop", "cafe", "bakery"].includes(e.category)) },
@@ -479,8 +479,8 @@
 
   // Two extra tiles beside the feelings: they open a list (Get outside) or a random few (Surprise me).
   const EXTRA_TILES = [
-    { id: "outside",  label: "Get outside", hint: "Trails · rail trails · bike paths", tone: "#a9bf95", ink: "#304022" },
-    { id: "surprise", label: "Surprise me", hint: "A few good things, any kind",       tone: "#f1e3c6", ink: "#a15e3d" },
+    { id: "outside",  label: "Get outside", hint: "Trails · rail trails · bike paths", short: "Trails · bike paths", tone: "#a9bf95", ink: "#304022" },
+    { id: "surprise", label: "Surprise me", hint: "A few good things, any kind", short: "Anything good",       tone: "#f1e3c6", ink: "#a15e3d" },
   ];
   function renderStart() {
     fillAreaPicks();
@@ -492,6 +492,7 @@
         <span class="mood-text">
           <span class="mood-label">${m.label}</span>
           <span class="mood-hint">${m.hint}</span>
+          <span class="mood-short">${m.short}</span>
         </span>
         <span class="mood-arrow" aria-hidden="true">→</span>
       </button>`).join("");
