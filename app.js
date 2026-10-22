@@ -131,6 +131,12 @@
         const day = ymd(d);
         out.sessions.push({ start: parseLocal(`${day}T${m.time}`), end: parseLocal(`${day}T${m.endTime || m.time}`) });
       }
+    } else if (e.start && e.end && e.start.includes("T") && parseLocal(e.end) - parseLocal(e.start) > 6 * DAY_MS) {
+      // A course or series with only its first and last date (e.g. "6 Wednesdays, Oct 21 – Dec 2"):
+      // we don't know each class date, so list it as ongoing until its last date instead of "every day".
+      if (parseLocal(e.end) < now) return null;
+      out.schedule = `Several dates through ${new Intl.DateTimeFormat(undefined, { month: "short", day: "numeric" }).format(parseLocal(e.end))} — see the event page`;
+      out.series = true;
     } else if (e.start) {
       out.allDay = !e.start.includes("T");
       const start = parseLocal(e.start);
@@ -296,6 +302,7 @@
     if (!e.sessions) {
       if (e.hours) { const h = e.hours[DKEYS[now.getDay()]]; return `Today: ${h ? span(h) : "closed"}`; }
       if (isPlace(e)) return e.schedule && !/check/i.test(e.schedule) ? e.schedule : "Hours: see Google Maps below";
+      if (e.series) return "A course or series — sign up for the dates that suit you";
       if (e.trail) return [e.miles ? `${e.miles} miles` : "", e.surface || ""].filter(Boolean).join(" · ") || "Go any day you like";
       return "Whenever works for you — check their schedule";
     }

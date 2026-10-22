@@ -68,6 +68,7 @@ Open `data/events.js` and copy an existing entry that matches the kind of listin
 - **All-day or multi-day event:** dates only, e.g. `start: "2026-11-14", end: "2026-11-15"`
 - **Weekly series:** `weekly: { day: "Saturday", time: "10:00", endTime: "11:00", from: "2026-09-19", until: "2026-10-17", skip: [] }`
 - **Monthly (e.g. every 2nd Monday):** `monthly: { week: 2, day: "Monday", time: "19:00", endTime: "20:30" }` — shows the next few months automatically
+- **Course or series with only a first and last date** (start and end more than 6 days apart, e.g. from Eventbrite): shown as "Several dates through Dec 2 — see the event page" until the last date, not as every day in between. Better: give it `weekly` dates if you know them.
 - **Ongoing class or practitioner:** no dates, just a `schedule` note such as `"Classes daily"` or `"By appointment"`
 - **Photo:** add `image: "https://…"` to use the event's own photo instead of the category photo.
 - **Café, bakery or shop:** add `hours: { mon: "07:00-15:00", tue: …, sun: null }` (null = closed) and, if they have one, `menu: "https://…"`. The site then shows "Open now · until 3 PM", the week's hours, and Menu / Directions / Reviews buttons. Only use hours from the place's own website — leave `hours` out if unsure, and the card points people to Google Maps instead.
@@ -93,6 +94,7 @@ Photos load from Unsplash. Each event uses a photo for its category, set in the 
 - **Connecting it:** create a free account at [Buttondown](https://buttondown.com), then put your Buttondown username in `NEWSLETTER.buttondownUsername` at the top of `app.js`. Until then the form politely says sign-ups open soon and collects nothing.
 - **Spotlight and full calendar:** every email ends with a "📅 See the full calendar" button. In season, the builder also adds a spotlight box (e.g. "🎃 Halloween & spooky season — See all 21 →") linking to that collection; pick a different one or none from the Seasonal spotlight menu.
 - **Areas (off for now):** with `NEWSLETTER.askArea: true` in `app.js`, both sign-up forms ask for the person's area (it starts on the area they're browsing) and send it to Buttondown as a tag: Franklin & nearby, MetroWest, Boston area, South Shore or Everywhere. On `newsletter.html`, pick the area and the picks, café, spotlight and calendar link all follow it; it says which tag to send that edition to. Tags need Buttondown's paid Basic plan, so this is off until then and the builder makes one edition for everyone.
+- **Everyone edition:** with "Everyone (one edition)" chosen, the email is sorted by area (📍 Franklin & nearby first, then MetroWest, Boston area, South Shore), about 3 picks each, a cozy spot nearby and a "More in … this weekend →" link per area. Descriptions are trimmed to their first sentence.
 - **Writing it:** open `newsletter.html` on the site (it isn't linked anywhere). Add a line or two in your own voice, tick the favorites you want (it suggests about 8 varied picks from everything on the site), and it builds the email with a subject line and a cozy café of the week. Click **Copy email** and paste it into Buttondown.
 
 ## Updating the site
