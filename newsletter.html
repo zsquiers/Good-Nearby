@@ -20,6 +20,7 @@
     label { font-weight: 600; }
     .subject { padding: 12px 16px; background: #fff; border-radius: 12px; border: 1px solid rgba(48,64,34,.15); }
     .email { margin-top: 14px; padding: 28px; background: #fff; border-radius: 16px; border: 1px solid rgba(48,64,34,.15); }
+    .sendto { margin: 0 0 14px; padding: 10px 14px; border-radius: 12px; background: #eef1e2; }
     .status { color: #a15e3d; font-weight: 600; min-height: 1.5em; }
     textarea { width: 100%; box-sizing: border-box; font: inherit; padding: 12px; border-radius: 12px; border: 1px solid rgba(48,64,34,.2); }
     details.pick { margin: 14px 0; background: #fbf7ef; border-radius: 12px; padding: 10px 14px; }
@@ -36,10 +37,13 @@
   <div class="tools">
     <label for="friday">Weekend starting Friday</label>
     <input type="date" id="friday">
+    <label for="area">Area</label>
+    <select id="area"></select>
     <button type="button" id="copyHtml">Copy email</button>
     <button type="button" class="soft" id="copyText">Copy as plain text</button>
   </div>
   <p class="status" id="status" aria-live="polite"></p>
+  <p class="sendto" id="sendto"></p>
 
   <p><label for="intro">Your note at the top <span style="font-weight:400;color:#5a5e4e;">(optional — a line or two in your own voice)</span></label></p>
   <textarea id="intro" rows="3" placeholder="e.g. The leaves are turning and I'm craving slow mornings. Here's what I'd do this weekend…"></textarea>
@@ -120,16 +124,37 @@
     const to = addDays(friday, 3);
     const out = [];
     for (const e of window.GOOD_NEARBY_EVENTS || []) {
+      if (!inArea(e)) continue;
       const s = sessions(e).find((x) => (x.end || x.start) >= from && x.start < to);
       if (s) out.push({ e, s, day: s.start < from ? from : s.start });
     }
     return out.sort((a, b) => a.day - b.day);
   }
 
+  // Areas, the same way the site decides them: the listing's town, or the nearest town within ~15 miles.
+  const AREAS = window.GOOD_NEARBY_TOWNS || [];
+  const TOWNS = AREAS.flatMap((a) => a.towns.map((t) => ({ ...t, areaId: a.id })));
+  const miles = (a, b) => {
+    const r = (d) => (d * Math.PI) / 180, h = Math.sin(r(b.lat - a.lat) / 2) ** 2 + Math.cos(r(a.lat)) * Math.cos(r(b.lat)) * Math.sin(r(b.lng - a.lng) / 2) ** 2;
+    return 2 * 3958.8 * Math.asin(Math.sqrt(h));
+  };
+  function areaOf(e) {
+    const name = (e.city || "").replace(/, MA$/, "").trim().toLowerCase();
+    const t = TOWNS.find((x) => x.name.toLowerCase() === name);
+    if (t) return t.areaId;
+    if (e.lat == null) return null;
+    const near = TOWNS.reduce((b, x) => (miles(e, x) < miles(e, b) ? x : b), TOWNS[0]);
+    return near && miles(e, near) <= 15 ? near.areaId : null;
+  }
+  const inArea = (e) => { const a = $("area").value; return a === "all" || areaOf(e) === a; };
+  const areaName = () => { const a = AREAS.find((x) => x.id === $("area").value); return a ? a.area : "Everywhere"; };
+  // "in Franklin & nearby", "in the Boston area", "on the South Shore"
+  const inWords = () => ({ "boston-area": "in the Boston area", "south-shore": "on the South Shore", all: "around the region" }[$("area").value] || `in ${areaName()}`);
+
   const price = (e) => (e.price === 0 ? "Free" : typeof e.price === "number" ? `$${e.price}` : "");
 
   const chosen = new Map();   // weekend key → Set of picked ids (so ticks survive re-renders)
-  const key = () => $("friday").value;
+  const key = () => `${$("friday").value}|${$("area").value}`;
 
   // Suggest ~8 varied picks: spread across days and kinds, free / come-alone first, at most one per host.
   function suggest(list) {
@@ -146,7 +171,9 @@
   }
 
   function cafeOfWeek(friday) {
-    const cafes = (window.GOOD_NEARBY_EVENTS || []).filter((e) => ["cafe", "bakery"].includes(e.category) && !e.start && !e.weekly);
+    const all = (window.GOOD_NEARBY_EVENTS || []).filter((e) => ["cafe", "bakery"].includes(e.category) && !e.start && !e.weekly);
+    const local = all.filter(inArea);
+    const cafes = local.length ? local : all;
     if (!cafes.length) return null;
     const week = Math.floor(friday.getTime() / (7 * 86400000));
     return cafes[week % cafes.length];
@@ -163,7 +190,7 @@
     const from = addDays(friday, -1), [m, d] = c.to.split("-").map(Number);
     let end = new Date(from.getFullYear(), m - 1, d + 1);
     if (end <= from) end = new Date(from.getFullYear() + 1, m - 1, d + 1);
-    return (window.GOOD_NEARBY_EVENTS || []).filter((e) => c.match.test(`${e.title} ${e.description || ""}`)
+    return (window.GOOD_NEARBY_EVENTS || []).filter((e) => inArea(e) && c.match.test(`${e.title} ${e.description || ""}`)
       && sessions(e).some((s) => (s.end || s.start) >= from && s.start < end)).length;
   }
   let spotlightFor = "";
@@ -195,9 +222,11 @@
     }).join("") || "<p>Nothing on this weekend yet.</p>";
 
     const show = list.filter((x) => picked.has(x.e.id));
+    const where = $("area").value === "all" ? "near you" : inWords();
     $("subject").textContent = show.length
-      ? `Weekend Favorites: ${show.length} good thing${show.length === 1 ? "" : "s"} near you, ${md.format(friday)}–${sun.getDate()}`
+      ? `Weekend Favorites: ${show.length} good thing${show.length === 1 ? "" : "s"} ${where}, ${md.format(friday)}–${sun.getDate()}`
       : `Weekend Favorites, ${md.format(friday)}–${sun.getDate()}`;
+    $("sendto").innerHTML = `📬 In Buttondown, send this edition to subscribers tagged <strong>${esc(areaName())}</strong>.`;
 
     const groups = new Map();
     for (const x of show) {
@@ -208,7 +237,7 @@
     const intro = $("intro").value.trim();
     let html = `<p style="font-family:Georgia,serif;font-size:22px;margin:0 0 8px;color:#304022;">🌻 This weekend, ${md.format(friday)}–${sun.getDate()}</p>
 ${intro ? `<p style="margin:0 0 14px;">${esc(intro).replace(/\n/g, "<br>")}</p>` : ""}
-<p style="margin:0 0 18px;color:#5a5e4e;">A few good things happening near you this weekend, ${md.format(friday)}–${sun.getDate()}. Pick one, and go easy on yourself.</p>`;
+<p style="margin:0 0 18px;color:#5a5e4e;">A few good things happening ${esc(inWords())} this weekend, ${md.format(friday)}–${sun.getDate()}. Pick one, and go easy on yourself.</p>`;
     if (!show.length) html += `<p>Nothing picked yet — tick a few favorites above.</p>`;
     for (const [label, items] of groups) {
       html += `<p style="margin:22px 0 6px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:13px;color:#a15e3d;">${label}</p>`;
@@ -232,11 +261,11 @@ ${esc(e.description)}</p>`;
       html += `<div style="margin:28px 0 0;padding:20px 22px;background:#fbf3e6;border-radius:16px;">
 <p style="margin:0 0 6px;font-family:Georgia,serif;font-size:20px;color:#304022;">${spot.emoji} ${esc(spot.title)}</p>
 <p style="margin:0 0 14px;color:#5a5e4e;">${n} thing${n === 1 ? "" : "s"} coming up nearby — ${esc(spot.blurb)}.</p>
-${button(`${SITE}#/find/${spot.id}`, `See all ${n} →`, "#a15e3d")}</div>`;
+${button(`${SITE}#/find/${spot.id}/${$("area").value}`, `See all ${n} →`, "#a15e3d")}</div>`;
     }
     html += `<div style="margin:28px 0 0;text-align:center;">
 <p style="margin:0 0 12px;color:#5a5e4e;">Want more than the highlights? Every class, gathering and cozy spot near you, any day.</p>
-${button(`${SITE}#/browse`, "📅 See the full calendar", "#304022")}</div>`;
+${button(`${SITE}#/day/${$("area").value}/${ymd(friday)}`, "📅 See the full calendar", "#304022")}</div>`;
     html += `<p style="margin:26px 0 0;color:#5a5e4e;">Find more good things any day at <a href="${SITE}" style="color:#a15e3d;">Good Nearby</a>. Know something lovely we should share? <a href="${SITE}#/submit" style="color:#a15e3d;">Tell us</a>. Details can change — a quick check with the host is always a good idea.</p>`;
     $("email").innerHTML = html;
   }
@@ -269,7 +298,9 @@ ${button(`${SITE}#/browse`, "📅 See the full calendar", "#304022")}</div>`;
   const today = new Date(); today.setHours(0, 0, 0, 0);
   const dow = today.getDay();
   $("friday").value = ymd(addDays(today, dow === 0 ? -2 : dow === 6 ? -1 : 5 - dow));
+  $("area").innerHTML = AREAS.map((a) => `<option value="${a.id}">${esc(a.area)}</option>`).join("") + `<option value="all">A bit of everywhere</option>`;
   $("friday").addEventListener("change", build);
+  $("area").addEventListener("change", build);
   $("intro").addEventListener("input", build);
   $("spotlight").addEventListener("change", build);
   $("pickList").addEventListener("change", (ev) => {

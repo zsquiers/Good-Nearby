@@ -474,6 +474,7 @@
     { id: "surprise", label: "Surprise me", hint: "A few good things, any kind",       tone: "#f1e3c6", ink: "#a15e3d" },
   ];
   function renderStart() {
+    fillAreaPicks();
     $("moods").innerHTML = [...MOODS, ...EXTRA_TILES].map((m) => `
       <button type="button" class="mood" data-mood="${m.id}">
         <span class="mood-icon" style="--tone:${m.tone};--icon:${m.ink}">
@@ -1118,6 +1119,7 @@
     }
     if (kind === "weekend") {
       renderWeekend();
+      fillAreaPicks();
       // Buttondown sends people back here: #/weekend/thanks after signing up, #/weekend/confirmed after confirming.
       const note = $("signupNote");
       note.classList.toggle("saved-note", arg === "thanks" || arg === "confirmed");
@@ -1387,7 +1389,18 @@
     window.scrollTo(0, 0);
   });
 
-  // Weekend Favorites sign-up (on the first screen and the Weekend Favorites page)
+  // Weekend Favorites sign-up (on the first screen and the Weekend Favorites page).
+  // The chosen area is sent to Buttondown as a tag, so each area can get its own edition.
+  function fillAreaPicks() {
+    const near = browseArea && browseArea !== "all" ? browseArea : "";
+    document.querySelectorAll("select.area-pick").forEach((sel) => {
+      const chosen = sel.value || (near && areaById.get(near).area) || "";
+      sel.innerHTML = `<option value="" disabled ${chosen ? "" : "selected"}>Your area…</option>` +
+        AREAS.filter((a) => a.id !== "all").map((a) => `<option ${a.area === chosen ? "selected" : ""}>${escapeHtml(a.area)}</option>`).join("") +
+        `<option value="Everywhere" ${chosen === "Everywhere" ? "selected" : ""}>A bit of everywhere</option>`;
+    });
+  }
+  fillAreaPicks();
   document.querySelectorAll("form[data-signup]").forEach((signup) => {
     const note = signup.nextElementSibling;
     if (NEWSLETTER.buttondownUsername) {
@@ -1428,6 +1441,7 @@
     events.forEach((e) => { e.area = areaOf(e); });
     state.deck = []; state.deckBuiltFor = null;
     renderWhere();
+    fillAreaPicks();
   }
   document.addEventListener("change", (ev) => {
     if (ev.target.id !== "whereTown") return;
