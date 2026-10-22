@@ -823,6 +823,39 @@
       }).join("")}</ul></section>`;
     }).join("") || `<div class="nothing"><p class="nothing-title">Nothing coming up${areaId !== "all" ? " in this area" : ""} — yet.</p>${areaId !== "all" ? `<p><a class="inline-link" href="#/find/${encodeURIComponent(key)}/all">See everywhere →</a></p>` : `<p><a class="inline-link" href="#/browse">Browse the full calendar →</a></p>`}</div>`;
   }
+  // ---------- Get outside: trails, rail trails & bike paths (listings with a `trail` field) ----------
+  let outsideArea = "all";
+  const OUTSIDE_GROUPS = [
+    { kind: "rail", title: "Rail trails & bike paths", note: "flat & easy, great for strollers and bikes" },
+    { kind: "loop", title: "Easy loops, ponds & gardens", note: "" },
+    { kind: "woods", title: "Woods, hills & longer hikes", note: "" },
+  ];
+  function outsideList(areaId) {
+    const places = events.filter((e) => e.trail && !e.sessions && inArea(e, areaId));
+    const order = (a, b) => (origin ? distanceMiles(origin, a) - distanceMiles(origin, b) : a.title.localeCompare(b.title));
+    return OUTSIDE_GROUPS.map((g) => ({ ...g, items: places.filter((e) => e.trail === g.kind).sort(order) })).filter((g) => g.items.length);
+  }
+  const outsideDeck = (areaId) => outsideList(areaId).flatMap((g) => g.items.map((e) => e.id));
+  function renderOutside(areaId) {
+    outsideArea = areaId;
+    $("outsideAreas").innerHTML = AREAS.map((a) =>
+      `<button type="button" class="chip${a.id === areaId ? " on" : ""}" data-outsidearea="${a.id}" aria-pressed="${a.id === areaId}">${escapeHtml(a.id === "all" ? "Everywhere" : a.area)}</button>`).join("");
+    let i = 0;
+    $("outsideList").innerHTML = outsideList(areaId).map((g) => `<section class="slot"><h3>${escapeHtml(g.title)}${g.note ? ` <span>${escapeHtml(g.note)}</span>` : ""}</h3><ul class="rows">${
+      g.items.map((e, k) => {
+        const meta = [e.city.replace(/, MA$/, ""), milesText(e), e.price === 0 ? "Free" : ""].filter(Boolean).map(escapeHtml).join(" · ");
+        return `<li${k >= 6 ? ' class="more" hidden' : ""}><button type="button" class="row" data-outsideopen="${i++}">
+          <span class="row-time small">${e.miles ? `${e.miles} mi` : "🌲"}${e.surface ? `<br><span class="sub">${escapeHtml(e.surface)}</span>` : ""}</span>
+          <span class="row-main">
+            <span class="row-title">${escapeHtml(e.title)}${saved.has(e.id) ? ' <span class="row-saved" aria-label="saved">♥</span>' : ""}</span>
+            <span class="row-meta">${meta}</span>
+          </span>
+          <span class="row-arrow" aria-hidden="true">›</span>
+        </button></li>`;
+      }).join("")}</ul>${g.items.length > 6 ? `<button type="button" class="show-more" data-showmore>Show ${g.items.length - 6} more</button>` : ""}</section>`).join("")
+      || `<div class="nothing"><p class="nothing-title">Nothing listed in this area yet.</p><p><a class="inline-link" href="#/outside/all">See everywhere →</a></p></div>`;
+  }
+
   const dayDeck = (areaId, day) => [...eventsOn(areaId, day).map((x) => x.e.id), ...ongoingIn(areaId).map((e) => e.id)];
   const goDay = (areaId, d) => { location.hash = `#/day/${areaId}/${ymd(d)}`; };
 
