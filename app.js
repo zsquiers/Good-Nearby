@@ -1413,7 +1413,7 @@
     }
     box.innerHTML = `<label class="visually-hidden" for="whereTown">Where are you?</label>
       <div class="where-row">
-        <input id="whereTown" list="whereTowns" placeholder="📍 Your town" autocomplete="address-level2">
+        <input id="whereTown" list="whereTowns" placeholder="📍 Town or ZIP" autocomplete="address-level2">
         <button type="button" class="where-btn" id="whereGeo" aria-label="Use my location">Near me</button>
       </div>
       <datalist id="whereTowns">${allTowns.map((t) => `<option value="${escapeHtml(t.name)}">`).join("")}</datalist>
@@ -1430,9 +1430,18 @@
   }
   document.addEventListener("change", (ev) => {
     if (ev.target.id !== "whereTown") return;
-    const t = allTowns.find((x) => x.name.toLowerCase() === ev.target.value.trim().toLowerCase());
+    const typed = ev.target.value.trim();
+    const zip = (typed.match(/^(\d{5})(-\d{4})?$/) || [])[1];
+    if (zip) {
+      // A ZIP code: its location from data/zips.js (Census ZIP centers in and around our areas).
+      const z = (window.GOOD_NEARBY_ZIPS || {})[zip];
+      if (z) setOrigin({ lat: z[0], lng: z[1], name: z[2] ? `${z[2]} (${zip})` : zip });
+      else renderWhere("That ZIP is outside the areas we cover — try a nearby town, or use your location.");
+      return;
+    }
+    const t = allTowns.find((x) => x.name.toLowerCase() === typed.toLowerCase());
     if (t) setOrigin({ lat: t.lat, lng: t.lng, name: t.name });
-    else renderWhere("We don't know that town yet — try a nearby one, or use your location.");
+    else renderWhere("We don't know that town yet — try your ZIP code, a nearby town, or use your location.");
   });
   document.addEventListener("click", (ev) => {
     if (ev.target.id === "whereChange") { origin = null; store("goodNearby.origin", null); renderWhere(); $("whereTown")?.focus(); }
