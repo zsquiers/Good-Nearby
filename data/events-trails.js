@@ -139,7 +139,62 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
     tags: ["come-alone", "beginner", "outdoors"]
   },
 
+
+  // ---------- Rhode Island (close to Franklin & Bellingham) ----------
+  {
+    id: "trail-blackstone-river-bikeway",
+    title: "Blackstone River Bikeway (RI)",
+    category: "trail", trail: "rail", surface: "Paved & stone dust",
+    schedule: "Open daily",
+    venue: "Blackstone River Bikeway", address: "Blackstone River Bikeway, Woonsocket", city: "Woonsocket, RI",
+    lat: 42.002, lng: -71.513,
+    price: 0,
+    host: "Blackstone River Valley",
+    description: "A riverside path along the Blackstone River in northern Rhode Island, part of the long route from Worcester to Providence. Walk or bike any stretch of it, about 25 minutes from Franklin.",
+    url: "https://www.traillink.com/trail/blackstone-river-bikeway/",
+    tags: ["free", "come-alone", "beginner", "outdoors"]
+  },
+  {
+    id: "trail-east-bay-bike-path",
+    title: "East Bay Bike Path (RI)",
+    category: "trail", trail: "rail", miles: 14.3, surface: "Paved",
+    schedule: "Open daily",
+    venue: "East Bay Bike Path", address: "India Point Park, Providence", city: "Providence, RI",
+    lat: 41.818, lng: -71.392,
+    price: 0,
+    host: "Rhode Island DEM",
+    description: "14.3 paved miles along Narragansett Bay from India Point Park in Providence to Bristol, with water views most of the way. A classic bike ride.",
+    url: "https://www.traillink.com/trail/east-bay-bike-path/",
+    tags: ["free", "come-alone", "beginner", "outdoors"]
+  },
+
   // ---------- MetroWest ----------
+  {
+    id: "trail-bay-colony-needham",
+    title: "Bay Colony Rail Trail (Needham)",
+    category: "trail", trail: "rail", miles: 1.7, surface: "Crushed stone",
+    schedule: "Open daily",
+    venue: "Bay Colony Rail Trail", address: "Bay Colony Rail Trail, Needham", city: "Needham, MA",
+    lat: 42.276, lng: -71.254,
+    price: 0,
+    host: "Bay Colony Rail Trail Association",
+    description: "A quiet 1.7-mile stone-dust path from Needham Junction through the woods to the Charles River.",
+    url: "https://www.traillink.com/trail/bay-colony-rail-trail/",
+    tags: ["free", "come-alone", "beginner", "outdoors"]
+  },
+  {
+    id: "trail-bruce-freeman",
+    title: "Bruce Freeman Rail Trail",
+    category: "trail", trail: "rail", miles: 20.1, surface: "Paved",
+    schedule: "Open daily",
+    venue: "Bruce Freeman Rail Trail", address: "Bruce Freeman Rail Trail, Acton", city: "Acton, MA",
+    lat: 42.485, lng: -71.433,
+    price: 0,
+    host: "Friends of the Bruce Freeman Rail Trail",
+    description: "20 paved miles from Lowell south through Chelmsford, Westford, Acton and Concord toward Sudbury, with farm fields, ponds and wetlands along the way.",
+    url: "https://www.traillink.com/trail/bruce-freeman-rail-trail/",
+    tags: ["free", "come-alone", "beginner", "outdoors"]
+  },
   {
     id: "trail-upper-charles",
     title: "Upper Charles Rail Trail",
@@ -207,6 +262,32 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   },
 
   // ---------- Boston area ----------
+  {
+    id: "trail-southwest-corridor",
+    title: "Southwest Corridor Park",
+    category: "trail", trail: "rail", miles: 4.1, surface: "Paved",
+    schedule: "Open daily",
+    venue: "Southwest Corridor Park", address: "Southwest Corridor Park", city: "Boston, MA",
+    lat: 42.333, lng: -71.092,
+    price: 0,
+    host: "Mass. DCR",
+    description: "A 4.1-mile paved park path from Back Bay to Jamaica Plain, with gardens, playgrounds and benches all along it.",
+    url: "https://www.traillink.com/trail/southwest-corridor-park/",
+    tags: ["free", "come-alone", "beginner", "outdoors"]
+  },
+  {
+    id: "trail-northern-strand",
+    title: "Northern Strand Community Trail",
+    category: "trail", trail: "rail", miles: 9.9, surface: "Paved",
+    schedule: "Open daily",
+    venue: "Northern Strand Community Trail", address: "Northern Strand Community Trail, Everett", city: "Everett, MA",
+    lat: 42.408, lng: -71.053,
+    price: 0,
+    host: "Mass. DCR",
+    description: "9.9 paved miles from Everett through Malden, Revere and Saugus to Lynn, crossing the salt marsh on the way to the ocean.",
+    url: "https://www.traillink.com/trail/northern-strand-community-trail/",
+    tags: ["free", "come-alone", "beginner", "outdoors"]
+  },
   {
     id: "trail-blue-hills",
     title: "Blue Hills Reservation",
