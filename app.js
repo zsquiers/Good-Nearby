@@ -500,9 +500,10 @@
 
   function photo(e, w) {
     const cat = CATEGORY[e.category];
-    // The event's own picture when we have one, otherwise a photo for its category.
+    // A free stock photo for its category (Unsplash/Pexels). A listing's own picture is shown only
+    // with permission (photoOk: true, e.g. a host sent it to us), since event photos belong to their hosts.
     // A photo that fails to load is removed, leaving the warm gradient behind it.
-    if (e.image) return `<img src="${escapeHtml(e.image)}" alt="" onerror="this.remove()">`;
+    if (e.image && e.photoOk) return `<img src="${escapeHtml(e.image)}" alt="" onerror="this.remove()">`;
     return cat ? `<img src="${unsplash(cat.photo, w)}" alt="" onerror="this.remove()">` : "";
   }
 
