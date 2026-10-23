@@ -14,7 +14,7 @@
   --shadow: 0 24px 70px rgba(57, 49, 31, 0.14);
   --radius: 28px;
   --hero: url("assets/hero.jpg");
-  color-scheme: light;
+  color-scheme: only light;
 }
 
 * { box-sizing: border-box; }
