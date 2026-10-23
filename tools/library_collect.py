@@ -5,6 +5,7 @@
 # covers them all. Keeps upcoming events already in the file, drops past ones, adds new finds and
 # prints what's new for a person to review. To add a library, add a line to LIBRARIES.
 import datetime, html, json, os, re, sys, time, urllib.request
+from listing_text import short_sentence   # safe wording: facts only, no photos
 
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"
 
@@ -112,8 +113,8 @@ def to_listing(e):
         "venue": venue, "address": street, "city": f'{e["town"]}, MA',
         "lat": e["lat"], "lng": e["lng"],
         "price": 0, "host": e["library"],
-        "description": (e["desc"][:300] or "See the library's page for details."),
-        "url": e["url"], "source": "Library", **({"image": e["img"]} if e.get("img") else {}),
+        "description": short_sentence(e["desc"], fallback="See the library's page for details."),
+        "url": e["url"], "source": "Library",
         "tags": ["free", "come-alone"],
     }
 

@@ -14,10 +14,9 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "price": null,
   "priceNote": "Free to join on Meetup — some events ask a small fee",
   "host": "Open Doors Braintree - Classes / Workshops / Special Events",
-  "description": "**Cost: $25 Early Registration If Register At Least 3 Days Prior** **Cost: $35 Late Registration If Register Less Than 3 Days Prior** TO REGISTER FOR CLASS CALL 781-843-8224 OR GO TO: www.OpenDoors7.com/welcome This class is specifically designed for those who have difficulty meditating. Meditation …",
+  "description": "A meditation session at Open Doors Metaphysical Gift Shop & Psychic Readings in Braintree. See the Meetup page for details and to sign up.",
   "url": "https://www.meetup.com/opendoorsbraintree/events/316398332/",
   "source": "Meetup",
-  "image": "https://secure.meetupstatic.com/photos/event/c/5/f/9/highres_535970681.jpeg",
   "tags": [
    "come-alone"
   ]
@@ -35,10 +34,9 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "price": null,
   "priceNote": "Free to join on Meetup — some events ask a small fee",
   "host": "Open Doors Braintree - Classes / Workshops / Special Events",
-  "description": "**Free-Of-Charge (Donations Accepted)** **9:15 AM - 10:15 AM** **No Pre-registration required** Join us in a welcoming circle of compassion, connection, and healing as we come together with a shared intention to nurture ourselves and send healing to others. Each gathering includes a gentle guided me…",
+  "description": "A meditation session at Open Doors in Braintree. See the Meetup page for details and to sign up.",
   "url": "https://www.meetup.com/opendoorsbraintree/events/316838807/",
   "source": "Meetup",
-  "image": "https://secure.meetupstatic.com/photos/event/a/2/c/1/highres_535181665.jpeg",
   "tags": [
    "come-alone"
   ]
@@ -56,10 +54,9 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "price": null,
   "priceNote": "Free to join on Meetup — some events ask a small fee",
   "host": "Sober & Curious Boston",
-  "description": "**Join [Sober & Curious Boston](https://www.sobercuriousboston.com) for a Saturday morning in downtown Hingham.** We’ll meet at **Slow Coffee from 9:30–10:00 AM**. Grab a coffee, say hello, and meet some new people. Slow Coffee is a small space, so we won’t be sitting down as one big group. Think of…",
+  "description": "A group walk at 106 North Street in Hingham. See the Meetup page for details and to sign up.",
   "url": "https://www.meetup.com/sober-curious-circle-boston-south-shore/events/316751816/",
   "source": "Meetup",
-  "image": "https://secure.meetupstatic.com/photos/event/4/c/c/3/highres_536359651.jpeg",
   "tags": [
    "come-alone"
   ]
@@ -77,10 +74,9 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "price": null,
   "priceNote": "Free to join on Meetup — some events ask a small fee",
   "host": "Cambridge Zen Center",
-  "description": "Begin or deepen your meditation practice in community with other students and young adults. Each session includes sitting and walking meditation, a check-in, and then a short talk or reading about how to integrate Zen practice into everyday life. Doors open at 12:15. Street parking in Cambridge is f…",
+  "description": "A meditation session at Cambridge Zen Center (CZC). See the Meetup page for details and to sign up.",
   "url": "https://www.meetup.com/cambridge-zen-center/events/316856134/",
   "source": "Meetup",
-  "image": "https://secure.meetupstatic.com/photos/event/c/f/0/c/highres_493733004.jpeg",
   "tags": [
    "come-alone"
   ]
@@ -98,10 +94,9 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "price": null,
   "priceNote": "Free to join on Meetup — some events ask a small fee",
   "host": "The Zen Art Center",
-  "description": "Welcome to The Zen Writer's and Poet's Society! Are you a writer looking for a community to nurture your creativity? Look no further. The Zen Writer's and Poet's Society offers a sanctuary where meditation and writing intertwine, inspiring and uplifting poets and writers of all levels. Hosted by The…",
+  "description": "A meditation session at The Zen Art Center in Somerville. See the Meetup page for details and to sign up.",
   "url": "https://www.meetup.com/zenartcenter/events/316774681/",
   "source": "Meetup",
-  "image": "https://secure.meetupstatic.com/photos/event/2/d/0/2/highres_528371522.jpeg",
   "tags": [
    "come-alone"
   ]
@@ -119,10 +114,9 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "price": null,
   "priceNote": "Free to join on Meetup — some events ask a small fee",
   "host": "Open Doors Braintree - Classes / Workshops / Special Events",
-  "description": "**Cost: $35 Early Registration If Register At Least 3 Days Prior** **Cost: $50 Late Registration If Register Less Than 3 Days Prior** **Class Size Is Held to 8 Participants. Register Early to Ensure Enrollment.** TO REGISTER FOR CLASS CALL 781-843-8224 OR GO TO: www.OpenDoors7.com/welcome Become imm…",
+  "description": "A sound bath at Open Doors Metaphysical Gift Shop & Psychic Readings in Braintree. See the Meetup page for details and to sign up.",
   "url": "https://www.meetup.com/opendoorsbraintree/events/315616727/",
   "source": "Meetup",
-  "image": "https://secure.meetupstatic.com/photos/event/a/3/2/1/highres_522281761.jpeg",
   "tags": [
    "come-alone"
   ]
@@ -140,10 +134,9 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "price": null,
   "priceNote": "Free to join on Meetup — some events ask a small fee",
   "host": "Heart of Recovery Boston Shambhala Center",
-  "description": "The group meets weekly from 7:30 to 9pm to: ~ Meditate with others who are in recovery or exploring recovery. ~ Offer contemplation and readings which inspire our recovery and support our practices. ~ Share our personal experience, strength and courage. ~ Integrate the basic goodness of meditation w…",
+  "description": "A meditation session at Shambhala Meditation Center in Brookline. See the Meetup page for details and to sign up.",
   "url": "https://www.meetup.com/heart-of-recovery-boston-shambhala-center/events/316875750/",
   "source": "Meetup",
-  "image": "https://secure.meetupstatic.com/photos/event/4/8/3/0/highres_487098480.jpeg",
   "tags": [
    "come-alone"
   ]
@@ -161,10 +154,9 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "price": null,
   "priceNote": "Free to join on Meetup — some events ask a small fee",
   "host": "Samsara Yoga Studio",
-  "description": "Are you looking to de-stress and deeply relax? Our Yoga Nidra class is designed just for that! This session balances gentle movement with guided meditation, easing you out of the day’s “go mode” and into a restful, recovery-focused state. **Class Highlights:** * **Gentle Movement:** The first half o…",
+  "description": "A meditation session at Samsara Yoga @The Gentle Place in Framingham. See the Meetup page for details and to sign up.",
   "url": "https://www.meetup.com/samsara-yoga-studio/events/316871978/",
   "source": "Meetup",
-  "image": "https://secure.meetupstatic.com/photos/event/7/5/2/7/highres_528989991.jpeg",
   "tags": [
    "come-alone"
   ]
@@ -182,10 +174,9 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "price": null,
   "priceNote": "Free to join on Meetup — some events ask a small fee",
   "host": "Walk 'N Mass: Walk for Fun, Fitness, Friendship in MA & RI",
-  "description": "Meet at 9:45, depart at 10. This year's 10km and 5km routes include the Newton City Hall & War Memorial built in 1932 in Colonial Revival Style; WWI and 9-11 memorials; two small shopping & eating areas; residential neighborhoods; Crystal Lake (a 33-acre natural pond); a large recreation area includ…",
+  "description": "A group walk at Newton Public Library. See the Meetup page for details and to sign up.",
   "url": "https://www.meetup.com/walk-n-mass/events/316048519/",
   "source": "Meetup",
-  "image": "https://secure.meetupstatic.com/photos/event/7/c/0/b/highres_508831755.jpeg",
   "tags": [
    "come-alone"
   ]
@@ -203,10 +194,9 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "price": null,
   "priceNote": "Free to join on Meetup — some events ask a small fee",
   "host": "Twin Hearts Meditation 🧘‍♀️🪷",
-  "description": "Join us for a free, guided Twin Hearts Meditation. This gentle practice blesses the earth with loving-kindness while activating the crown and heart chakras. No experience needed. Many participants leave feeling positive, at peace, and more relaxed. Led by a certified GMCKS Pranic Healer, this sessio…",
+  "description": "A meditation session at Boston Public Library. See the Meetup page for details and to sign up.",
   "url": "https://www.meetup.com/twinheatsmeditation/events/315846121/",
   "source": "Meetup",
-  "image": "https://secure.meetupstatic.com/photos/event/c/5/5/1/highres_535250513.jpeg",
   "tags": [
    "come-alone"
   ]
@@ -224,10 +214,9 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "price": null,
   "priceNote": "Free to join on Meetup — some events ask a small fee",
   "host": "OutBreath - LGBTQ Meditation Community",
-  "description": "*Shambhala Boston's LGBTQ+ meditation group provides a welcoming environment for individuals of diverse sexual orientation and gender identity who are interested in exploring the teachings and principles of meditation and Buddhism.* We provide an open space for genuine exploration of how these teach…",
+  "description": "A meditation session at Shambhala Meditation Center in Brookline. See the Meetup page for details and to sign up.",
   "url": "https://www.meetup.com/outbreath/events/312156437/",
   "source": "Meetup",
-  "image": "https://secure.meetupstatic.com/photos/event/d/7/d/a/highres_531415258.jpeg",
   "tags": [
    "come-alone"
   ]
@@ -245,10 +234,9 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "price": null,
   "priceNote": "Free to join on Meetup — some events ask a small fee",
   "host": "The *Sh*&%t, I forgot to read the Book * Club",
-  "description": "For November of 2026 we will be reading the #1 *New York Times* bestseller ***Atmosphere***, by Taylor Jenkins Reid. We will hold the book club for ***Atmosphere*** in our usual spot, the Piano Craft Gallery (http://pianocraftgallery.com) at 793 Tremont in Boston. Bring whatever you would like to sh…",
+  "description": "A book group at Piano Craft Gallery in Boston. See the Meetup page for details and to sign up.",
   "url": "https://www.meetup.com/the-sh-t-i-forgot-to-read-the-book-club/events/316571197/",
   "source": "Meetup",
-  "image": "https://secure.meetupstatic.com/photos/event/5/a/4/highres_536161444.jpeg",
   "tags": [
    "come-alone"
   ]
@@ -266,10 +254,9 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "price": null,
   "priceNote": "Free to join on Meetup — some events ask a small fee",
   "host": "Open Doors Braintree - Classes / Workshops / Special Events",
-  "description": "**Cost: $35 Early Registration If Register At Least 3 Days Prior** **Cost: $45 Late Registration If Register Less Than 3 Days Prior** TO REGISTER FOR CLASS CALL 781-843-8224 OR GO TO: www.OpenDoors7.com/welcome Utilize the energy of the moon and take a deep dive into opening your internal flow of se…",
+  "description": "A breathwork session at Open Doors Metaphysical Gift Shop & Psychic Readings in Braintree. See the Meetup page for details and to sign up.",
   "url": "https://www.meetup.com/opendoorsbraintree/events/316398342/",
   "source": "Meetup",
-  "image": "https://secure.meetupstatic.com/photos/event/9/4/a/4/highres_503918052.jpeg",
   "tags": [
    "come-alone"
   ]
@@ -287,10 +274,9 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "price": null,
   "priceNote": "Free to join on Meetup — some events ask a small fee",
   "host": "Inner Engineering Boston (Isha Yoga & Meditation Classes)",
-  "description": "To learn more and register please **[Click Here.](https://online.innerengineering.com/en/program-details/yogasanas-cityprogram-italo-american-educational-club--massachusetts-us-nov-07-2026)** **Yogasanas** The word asana literally means a posture. Out of the innumerable asanas a body can assume, 84 …",
+  "description": "A yoga class at ITALO AMERICAN EDUCATIONAL CLUB in Wellesley. See the Meetup page for details and to sign up.",
   "url": "https://www.meetup.com/isha-yoga-inner-engineering-boston-yoga-meditation/events/316759819/",
   "source": "Meetup",
-  "image": "https://secure.meetupstatic.com/photos/event/a/8/a/7/highres_530383175.jpeg",
   "tags": [
    "come-alone"
   ]
@@ -308,10 +294,9 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "price": null,
   "priceNote": "Free to join on Meetup — some events ask a small fee",
   "host": "The Zen Art Center",
-  "description": "Welcome to The Zen Writer's and Poet's Society! Are you a writer looking for a community to nurture your creativity? Look no further. The Zen Writer's and Poet's Society offers a sanctuary where meditation and writing intertwine, inspiring and uplifting poets and writers of all levels. Hosted by The…",
+  "description": "A meditation session at The Zen Art Center in Somerville. See the Meetup page for details and to sign up.",
   "url": "https://www.meetup.com/zenartcenter/events/316774701/",
   "source": "Meetup",
-  "image": "https://secure.meetupstatic.com/photos/event/2/d/0/2/highres_528371522.jpeg",
   "tags": [
    "come-alone"
   ]
@@ -329,10 +314,9 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "price": null,
   "priceNote": "Free to join on Meetup — some events ask a small fee",
   "host": "Samsara Yoga Studio",
-  "description": "This class blends mindful, breath-centered movement with longer-held restorative poses. We'll flow through an accessible sequence designed to create space and ease in the body, and then settle into supported stillness for grounding and deep rest. **Details:** * **Where:** Samsara Yoga @ The Gentle P…",
+  "description": "A yoga class at Samsara Yoga @The Gentle Place in Framingham. See the Meetup page for details and to sign up.",
   "url": "https://www.meetup.com/samsara-yoga-studio/events/316872001/",
   "source": "Meetup",
-  "image": "https://secure.meetupstatic.com/photos/event/5/f/e/b/highres_536484555.jpeg",
   "tags": [
    "come-alone"
   ]
@@ -350,10 +334,9 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "price": null,
   "priceNote": "Free to join on Meetup — some events ask a small fee",
   "host": "PhLEx: Philosophy Literature Exchange (20's and 30's)",
-  "description": "Come join us to yap about our next book over dim sum 🥟 and drinks! 🍷 Everyone welcome - prompts will be provided. Meetings begin with a small philosophical warmup then conclude with book discussion. 📚**Book discussions take place on the second Thursday of every month** at the same location. A new bo…",
+  "description": "A book group at Emperor's Garden Restaurant in Boston. See the Meetup page for details and to sign up.",
   "url": "https://www.meetup.com/phlex-philosophy-literature-exchange-20s-and-30s/events/316979467/",
   "source": "Meetup",
-  "image": "https://secure.meetupstatic.com/photos/event/6/5/7/a/highres_536605978.jpeg",
   "tags": [
    "come-alone"
   ]
@@ -371,10 +354,9 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "price": null,
   "priceNote": "Free to join on Meetup — some events ask a small fee",
   "host": "The Zen Art Center",
-  "description": "Welcome to The Zen Artist's Collective! Are you seeking a sanctuary for your creativity? A space where meditation and art intertwine to inspire and uplift? Look no further. The Zen Art Collective is your haven for artistic expression, where the journey of creation becomes a moving meditation. Each s…",
+  "description": "A meditation session at The Zen Art Center in Somerville. See the Meetup page for details and to sign up.",
   "url": "https://www.meetup.com/zenartcenter/events/316774702/",
   "source": "Meetup",
-  "image": "https://secure.meetupstatic.com/photos/event/2/d/a/6/highres_528371686.jpeg",
   "tags": [
    "come-alone"
   ]
@@ -392,10 +374,9 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "price": null,
   "priceNote": "Free to join on Meetup — some events ask a small fee",
   "host": "Open Doors Braintree - Classes / Workshops / Special Events",
-  "description": "**Cost: $35 Early Registration If Register At Least 3 Days Prior** **Cost: $45 Late Registration If Register Less Than 3 Days Prior** TO REGISTER FOR CLASS CALL 781-843-8224 OR GO TO: www.OpenDoors7.com/welcome Utilize the energy of the moon and take a deep dive into opening your internal flow of se…",
+  "description": "A breathwork session at Open Doors Metaphysical Gift Shop & Psychic Readings in Braintree. See the Meetup page for details and to sign up.",
   "url": "https://www.meetup.com/opendoorsbraintree/events/316398347/",
   "source": "Meetup",
-  "image": "https://secure.meetupstatic.com/photos/event/9/4/a/4/highres_503918052.jpeg",
   "tags": [
    "come-alone"
   ]

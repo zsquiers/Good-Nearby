@@ -5,6 +5,7 @@
 # Keeps every upcoming event already in the file, drops ones that have passed, adds new finds,
 # skips anything already listed by hand in the other data files, and prints what's new.
 import datetime, glob, json, os, re, sys
+from listing_text import facts_description   # safe wording: facts only, no photos
 src, out = sys.argv[1], sys.argv[2]
 d = json.load(open(src))
 today = datetime.date.today().isoformat()
@@ -114,8 +115,8 @@ for e in sorted(d, key=lambda x: (x["start_date"], x["start_time"] or "")):
         "lat": round(float(e["lat"]), 4), "lng": round(float(e["lng"]), 4),
         "price": price, **({"priceNote": note} if note else {}),
         "host": e["organizer"] or e["venue"] or "See event page",
-        "description": (e["summary"] or "See the event page for details.").strip(),
-        "url": e["url"], "source": "Eventbrite", **({"image": e["image"]} if e.get("image") else {}),
+        "description": facts_description(cat, e["venue"], city, "the Eventbrite page"),
+        "url": e["url"], "source": "Eventbrite",
     })
 # Merge with what's already listed: keep upcoming events, drop past ones, add new finds.
 existing = []
@@ -130,9 +131,8 @@ kept = [r for r in existing if upcoming(r) and not dup(r["title"], r["start"][:1
         and not (r["category"] in ("craft", "herbal") and re.search(KIDS, (r["title"] + " " + r["description"]).lower())
                  and not re.search(r"adults? only|\b18\+|\b21\+", (r["title"] + " " + r["description"]).lower()))]
 have = {r["id"] for r in kept}
-fresh_img = {r["id"]: r["image"] for r in rows if r.get("image")}
 for r in kept:
-    if r["id"] in fresh_img: r["image"] = fresh_img[r["id"]]
+    r.pop("image", None)                                     # photos belong to hosts: never stored
 new = [r for r in rows if r["id"] not in have and upcoming(r)]
 merged = sorted(kept + new, key=lambda r: r["start"])
 hdr = ("// Wellness events found on Eventbrite across Greater Boston, MetroWest, the South Shore and the Franklin area.\n"

@@ -6,6 +6,7 @@
 # Classes that repeat on the same weekday and time become one weekly listing. The venue's calendar is the
 # source of truth, so each run rewrites the file from scratch and prints the list.
 import datetime, html, json, os, re, sys, urllib.request
+from listing_text import short_sentence   # safe wording: facts only, no photos
 
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"
 
@@ -84,9 +85,8 @@ def to_listing(sid, site, e):
         "address": site["address"], "city": site["city"], "lat": site["lat"], "lng": site["lng"],
         "price": price, **({"priceNote": cost} if cost and price is None else {}),
         "host": site["venue"],
-        "description": (desc[:300] + ("…" if len(desc) > 300 else "")) or "See the event page for details.",
+        "description": short_sentence(desc),
         "url": e["url"], "source": "Venue calendar",
-        **({"image": e["image"]["url"]} if isinstance(e.get("image"), dict) and e["image"].get("url") else {}),
         **({"tags": ["free"]} if price == 0 else {}),
     }
 
