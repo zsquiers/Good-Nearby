@@ -464,7 +464,7 @@
   const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // base: the URL prefix for the current deck; day: the chosen day when browsing by day
-  const state = { mood: null, deck: [], index: 0, base: "", day: null, back: null, limit: Infinity, deckBuiltFor: null };
+  const state = { mood: null, deck: [], index: 0, base: "", day: null, back: null };
 
   function showScreen(name) {
     Object.entries(screens).forEach(([k, el]) => { el.hidden = k !== name; });
@@ -534,25 +534,6 @@
     const card = $("pickCard");
     const total = state.deck.length;
 
-    // "Just 3 for you": after each batch, a gentle pause instead of an endless stack.
-    if (state.index >= state.limit && state.index < total) {
-      $("progress").innerHTML = '<button type="button" class="quiet-link" data-act="prev">‹ Back</button>';
-      const left = total - state.index;
-      card.innerHTML = `
-        <div class="pick-body done">
-          <p class="done-mark" aria-hidden="true">🌻</p>
-          <h2 id="pickTitle" tabindex="-1">That's your ${state.limit === 3 ? "3" : "picks"} for now.</h2>
-          <p class="lede">Save the one that feels right, or see a few more.</p>
-          <div class="done-actions">
-            <button type="button" class="btn btn-dark" data-act="more">Show me ${Math.min(3, left)} more</button>
-            <a href="#/" class="btn btn-soft">Pick another feeling</a>
-            ${saved.size ? `<a href="#/saved" class="btn btn-soft">See what I saved (${saved.size})</a>` : ""}
-          </div>
-        </div>`;
-      afterRender(focusTitle);
-      return;
-    }
-
     if (state.index >= total) {
       $("progress").textContent = "";
       card.innerHTML = `
@@ -573,14 +554,9 @@
 
     const e = byId.get(state.deck[state.index]);
     const isSaved = saved.has(e.id);
-    const batched = Number.isFinite(state.limit);
-    const batchStart = batched ? Math.floor(state.index / 3) * 3 : 0;
-    const batchSize = batched ? Math.min(3, total - batchStart) : 0;
     $("progress").innerHTML =
       `${state.index > 0 ? '<button type="button" class="quiet-link" data-act="prev">‹ Back</button>' : ""}` +
-      (batched
-        ? `<span class="dots" aria-label="${state.index - batchStart + 1} of ${batchSize}">${Array.from({ length: batchSize }, (_, k) => `<i class="${batchStart + k === state.index ? "on" : ""}"></i>`).join("")}</span>`
-        : `<span>${state.index + 1} of ${total}</span>`);
+      `<span>${state.index + 1} of ${total}</span>`;
 
     const where = [e.venue && e.venue !== e.title && !e.title.startsWith(e.venue) ? e.venue : "", e.city.replace(/, MA$/, ""), milesText(e)].filter(Boolean).map(escapeHtml).join(" · ");
     const placeQuery = encodeURIComponent([e.venue, e.address, e.city].filter(Boolean).join(", "));
@@ -620,7 +596,7 @@
           <span aria-hidden="true">${isSaved ? "♥" : "♡"}</span> ${isSaved ? "Saved" : "Save"}
         </button>
         ${place ? "" : `<button type="button" class="act" data-act="go" aria-expanded="false" aria-controls="goPanel">I'm in</button>`}
-        <button type="button" class="act act-next" data-act="next">${state.index + 1 < Math.min(total, state.limit) ? "Next" : "Done"} <span aria-hidden="true">→</span></button>
+        <button type="button" class="act act-next" data-act="next">${state.index + 1 < total ? "Next" : "Done"} <span aria-hidden="true">→</span></button>
       </div>`;
     afterRender(focusTitle);
   }
@@ -1029,7 +1005,6 @@
         state.mood = arg;
         state.deck = buildDeck(arg);
       }
-      if (state.deckBuiltFor !== arg) { state.limit = (MOODS.some((m) => m.id === arg) || arg === "surprise") ? 3 : Infinity; state.deckBuiltFor = arg; }
       state.base = `#/m/${arg}`;
       state.back = arg === "saved" ? { href: "#/saved", label: "← Back to saved" }
         : arg === "weekend" ? { href: "#/weekend", label: "← Back to Weekend Favorites" } : null;
@@ -1056,7 +1031,7 @@
       return;
     }
     if (kind === "e" && arg && byId.has(decodeURIComponent(arg))) {
-      state.mood = `e:${arg}`; state.deck = [decodeURIComponent(arg)]; state.limit = Infinity; state.deckBuiltFor = null;
+      state.mood = `e:${arg}`; state.deck = [decodeURIComponent(arg)];
       state.day = null; state.base = `#/e/${arg}`; state.back = null; setPickBack();
       state.index = 0; showScreen("pick"); renderPick(true);
       return;
@@ -1064,7 +1039,7 @@
     if (kind === "fp" && arg && areaById.has(parts[2])) {
       const key = decodeURIComponent(arg), deckKey = `fp:${key}:${parts[2]}`;
       if (state.mood !== deckKey || !state.deck.length) { state.mood = deckKey; state.deck = findDeck(key, parts[2]); }
-      state.limit = Infinity; state.deckBuiltFor = null; state.day = null;
+      state.day = null;
       state.base = `#/fp/${arg}/${parts[2]}`;
       state.back = { href: `#/find/${arg}/${parts[2]}`, label: "← Back to the list" };
       setPickBack();
@@ -1076,7 +1051,7 @@
     if (kind === "op" && areaById.has(arg)) {
       const key = `op:${arg}`;
       if (state.mood !== key || !state.deck.length) { state.mood = key; state.deck = outsideDeck(arg); }
-      state.limit = Infinity; state.deckBuiltFor = null; state.day = null;
+      state.day = null;
       state.base = `#/op/${arg}`;
       state.back = { href: `#/outside/${arg}`, label: "← Back to trails" };
       setPickBack();
@@ -1280,7 +1255,6 @@
           break;
         }
         case "calendar": downloadIcs(e); break;
-        case "more": state.limit += 3; renderPick(true); break;
         case "share": shareListing(e, act); break;
       }
       return;
@@ -1450,7 +1424,7 @@
     const near = o && allTowns.reduce((b, t) => (distanceMiles(o, t) < distanceMiles(o, b) ? t : b), allTowns[0]);
     if (near) { browseArea = near.areaId; store("goodNearby.area", browseArea); }
     events.forEach((e) => { e.area = areaOf(e); });
-    state.deck = []; state.deckBuiltFor = null;
+    state.deck = [];
     renderWhere();
     fillAreaPicks();
   }

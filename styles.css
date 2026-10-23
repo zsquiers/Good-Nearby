@@ -641,9 +641,6 @@ table.hours tr.today th, table.hours tr.today td { color: var(--ink); font-weigh
 .where-set strong { color: var(--ink); }
 .where-box .hint { margin: 6px 0 0; font-size: .82rem; color: var(--ink-soft); }
 /* progress dots for "Just 3" */
-.dots { display: inline-flex; gap: 6px; align-items: center; }
-.dots i { width: 8px; height: 8px; border-radius: 50%; background: var(--line); display: block; }
-.dots i.on { background: var(--clay); }
 
 /* Very small phones: icon above the words, so long words like "somewhere" fit in the tile. */
 @media (max-width: 379px) {

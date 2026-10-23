@@ -9,7 +9,7 @@ The first screen says **"Find what makes you feel good."** and offers two ways i
 **1. By feeling (one good thing at a time)** — except **Wander somewhere cozy**, which opens an organized list of cafés, bakeries and little shops by area, grouped (coffee + a wander, cozy cafés, little shops) with what's open now at the top.
 - "What would feel good right now?" — Move my body, Quiet my mind, Be cared for, Make something good (pottery, painting, flowers, cooking), Wander somewhere cozy (independent cafés, bakeries and little shops), Be with good people (classes, circles and book groups), or ✨ Surprise me.
 - **Where are you?** is asked once, above the feelings (type a town or tap "Use my location"). It's remembered on the device, sorts things closest first and shows "~12 min away". Skipping it is fine.
-- Then **just 3** picks, one at a time, with dots showing where you are. Picks are ranked: soon, free, come-alone-friendly, hand-checked and close count in their favor, and the same host never shows twice in a row. After three: "That's your 3 for now", with "Show me 3 more" if you want.
+- Then the picks, one at a time ("1 of 24"), best first: soon, free, come-alone-friendly, hand-checked and close count in their favor, and the same host never shows twice in a row.
 - Three buttons: ♡ Save, I'm in, Next. "I'm in" reveals Add to my calendar (with a 2-hour reminder), Directions, Sign up, Call and 💬 Send to a friend (shares a link that opens that one listing, `#/e/<id>`). Cafés and shops instead show their hours, Menu, Directions and "Reviews, photos & map" straight away.
 
 **2. Browse by area & day**
