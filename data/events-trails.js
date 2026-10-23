@@ -22,6 +22,19 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
     tags: ["free", "come-alone", "beginner", "outdoors"]
   },
   {
+    id: "trail-medfield-rail-trail",
+    title: "Medfield Rail Trail",
+    category: "trail", trail: "rail", miles: 1.3, surface: "Stone dust",
+    schedule: "Open daily",
+    venue: "Medfield Rail Trail", address: "Ice House Rd (parking across from the trail)", city: "Medfield, MA",
+    lat: 42.1990, lng: -71.3230,
+    price: 0,
+    host: "Friends of the Bay Colony Rail Trail",
+    description: "A flat, peaceful 1.3 miles along the old Bay Colony railroad, from Ice House Road to the Dover line, with a lovely tree tunnel. It meets the Bay Circuit Trail at the Ice House Road lot.",
+    url: "https://medfield.baycolonyrailtrail.org/",
+    tags: ["free", "come-alone", "beginner", "outdoors"]
+  },
+  {
     id: "trail-franklin-state-forest",
     title: "Franklin State Forest",
     category: "hike", trail: "woods", surface: "Woods trails",
