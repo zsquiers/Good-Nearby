@@ -3,7 +3,7 @@
 #
 # Compares each data file with the last run (saved in sources/collector-counts.json) and writes
 # sources/health.md. It warns when a collector found nothing new, when a file shrank a lot,
-# when the next two weeks look thin, or when Eventbrite / Meetup photos stop loading.
+# or when the next two weeks look thin.
 # Then it saves this run's numbers for next month.
 import datetime, json, os, subprocess, sys, urllib.request
 
@@ -11,13 +11,12 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SAVED = os.path.join(ROOT, "sources", "collector-counts.json")
 REPORT = os.path.join(ROOT, "sources", "health.md")
 # Files filled by a collector — these should find something new every month.
+# Eventbrite and Meetup are paused (their terms forbid automated collection), so they aren't expected to grow.
 COLLECTED = {
-    "events-eventbrite.js": "Eventbrite (tools/eventbrite_collect.py + eventbrite_to_js.py)",
-    "events-meetup.js": "Meetup (tools/meetup_collect.py)",
     "events-libraries.js": "Library calendars (tools/library_collect.py)",
     "events-calendars.js": "Venue calendars (tools/calendar_collect.py)",
 }
-PHOTO_HOSTS = {"img.evbuc.com": "Eventbrite", "secure.meetupstatic.com": "Meetup"}
+PHOTO_HOSTS = {}   # collected photos are no longer shown, so there's nothing to check
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"
 
 def listings():

@@ -4,6 +4,7 @@
 # Reads Meetup's public search pages (no account needed). Keeps upcoming events already in the file,
 # drops past ones, adds new finds, skips anything another data file already lists, and prints what's new.
 import datetime, html, json, os, re, subprocess, sys, time, urllib.parse, urllib.request
+from listing_text import facts_description   # safe wording: facts only, no photos
 
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"
 SEARCH_TOWNS = ["Franklin", "Framingham", "Natick", "Needham", "Boston", "Quincy", "Hingham", "Plymouth"]
@@ -99,8 +100,8 @@ def main():
             "venue": e["venue"] or e["group"], "address": street, "city": f"{e['city']}, MA",
             "lat": lat, "lng": lng, "price": None, "priceNote": "Free to join on Meetup — some events ask a small fee",
             "host": e["group"] or e["venue"],
-            "description": (e["desc"][:300] + ("…" if len(e["desc"]) > 300 else "")) or "See the Meetup page for details.",
-            "url": e["url"], "source": "Meetup", **({"image": e["image"]} if e["image"] else {}),
+            "description": facts_description(cat, e["venue"] or e["group"], f"{e['city']}, MA", "the Meetup page"),
+            "url": e["url"], "source": "Meetup",
             "tags": ["come-alone"],
         })
 
