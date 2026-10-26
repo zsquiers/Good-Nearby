@@ -82,3 +82,10 @@ Birchwood Bakery & Kitchen,Franklin & nearby,still open,every 3 months,https://w
 Taunton Public Library,South Shore,libraries,monthly,https://tauntonlibrary.assabetinteractive.com/calendar/,"Read by tools/library_collect.py (Taunton area, near Berkley)"
 Dighton Rock State Park,South Shore,still open,every 3 months,https://www.mass.gov/locations/dighton-rock-state-park,"Trails in Berkley; mass.gov blocks bots, check by hand"
 Massasoit State Park,South Shore,still open,every 3 months,https://www.mass.gov/locations/massasoit-state-park,"Five Pond Loop, East Taunton; mass.gov blocks bots, check by hand"
+Plimoth Patuxet Museums — events,South Shore,events,monthly,https://plimoth.org/events,Workshops & classes; was on Eventbrite
+Emerald Yoga Studio (Pembroke),South Shore,events,monthly,https://www.emeraldyogastudio.com/,Sound baths & yoga workshops; was on Eventbrite
+Joyful Kitchen Cooking School (Wellesley),MetroWest,events,monthly,https://joyfulkitchen.com/,Cooking classes; was on Eventbrite
+WeBreathe Wellness (Walpole),Franklin & nearby,events,monthly,https://www.webreathewellness.com/,Breathwork & wellness workshops; was on Eventbrite
+Nourish Collaborative (Kingston),South Shore,events,monthly,https://www.nourishcollaborative.com/,Meditation & wellness; was on Eventbrite
+Craft Loft (Cambridge),Boston area,events,monthly,https://craft-loft.com/collections/boston-workshops,"Mosaic, stamp carving, pressed flowers; was on Eventbrite (15 listings)"
+Art Complex Museum (Duxbury),South Shore,calendars,monthly,https://www.artcomplex.org/events/,Read automatically by tools/calendar_collect.py
