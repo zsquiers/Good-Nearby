@@ -24,6 +24,7 @@ LIBRARIES = {
     "goodnowlibrary":     ("Goodnow Library",              "Sudbury",     42.3835, -71.4160),
     "norwoodlibrary":     ("Morrill Memorial Library",     "Norwood",     42.1945, -71.1995),
     "ventresslibrary":    ("Ventress Memorial Library",    "Marshfield",  42.0920, -70.7055),
+    "tauntonlibrary":     ("Taunton Public Library",       "Taunton",     41.9005, -71.0905),
 }
 
 # What we list, checked against the title first, then the description. First match wins.

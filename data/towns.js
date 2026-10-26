@@ -54,5 +54,13 @@ window.GOOD_NEARBY_TOWNS = [
     { id: "marshfield",   name: "Marshfield",   lat: 42.0918, lng: -70.7056 },
     { id: "duxbury",      name: "Duxbury",      lat: 42.0418, lng: -70.6723 },
     { id: "plymouth",     name: "Plymouth",     lat: 41.9584, lng: -70.6673 },
+    // Taunton & the towns around it, so Berkley and its neighbors see good things nearby
+    { id: "bridgewater",  name: "Bridgewater",  lat: 41.9904, lng: -70.9750 },
+    { id: "raynham",      name: "Raynham",      lat: 41.9487, lng: -71.0731 },
+    { id: "taunton",      name: "Taunton",      lat: 41.9001, lng: -71.0898 },
+    { id: "middleborough",name: "Middleborough",lat: 41.8932, lng: -70.9112 },
+    { id: "lakeville",    name: "Lakeville",    lat: 41.8457, lng: -70.9495 },
+    { id: "berkley",      name: "Berkley",      lat: 41.8459, lng: -71.0828 },
+    { id: "dighton",      name: "Dighton",      lat: 41.8132, lng: -71.1206 },
   ]},
 ];

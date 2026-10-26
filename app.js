@@ -326,6 +326,17 @@
     return "Price: ask the host";
   }
 
+  // Who runs it, and how to reach them: right on the card, not hidden behind "I'm in".
+  function hostLine(e, place) {
+    const links = [
+      e.url ? `<a href="${escapeHtml(e.url)}" target="_blank" rel="noopener">🌐 ${place ? "Website" : "Host's page"}</a>` : "",
+      e.phone ? `<a href="tel:${escapeHtml(e.phone.replace(/[^\d+]/g, ""))}">📞 ${escapeHtml(e.phone)}</a>` : "",
+    ].filter(Boolean).join("");
+    if (!links) return "";
+    const who = e.host && e.host !== e.venue && e.host !== e.title ? `<span class="host-name">Hosted by ${escapeHtml(e.host)}</span>` : "";
+    return `<p class="host-line">${who}<span class="host-links">${links}</span></p>`;
+  }
+
   function distanceMiles(a, b) {
     const R = 3958.8;
     const toRad = (d) => (d * Math.PI) / 180;
@@ -381,7 +392,12 @@
     sc += e.source === "Eventbrite" ? 0 : e.source ? 1 : 2;
     if (e.price === 0) sc += 1;
     if ((e.tags || []).includes("come-alone")) sc += 0.5;
-    if (origin && e.lat != null) sc -= distanceMiles(origin, e) / 8;
+    // With a town set ("closest first"), distance matters most: ~1 point per 3 miles,
+    // and anything over ~20 miles (40+ minutes) goes after everything closer.
+    if (origin && e.lat != null) {
+      const mi = distanceMiles(origin, e);
+      sc -= mi / 3 + (mi > 20 ? 20 : 0);
+    }
     return sc;
   }
   function bestFirst(list) {
@@ -530,9 +546,41 @@
     } catch (_) { /* closed the share sheet — nothing to do */ }
   }
 
+  // A feeling can be seen one card at a time or as a list; the choice is remembered on this device.
+  let pickView = load("goodNearby.view", "one") === "list" ? "list" : "one";
+  let showList = pickView === "list";
+  const listable = () => state.base.startsWith("#/m/") && state.deck.length > 1;
+
+  function renderPickList(focusTitle) {
+    const card = $("pickCard");
+    $("progress").textContent = `${state.deck.length} things`;
+    card.innerHTML = `<div class="pick-body pick-list">
+      <h2 id="pickTitle" tabindex="-1" class="visually-hidden">All of them</h2>
+      <ul class="rows">${state.deck.map((id, i) => {
+        const e = byId.get(id);
+        const meta = [e.venue && e.venue !== e.title ? e.venue : "", e.city.replace(/, MA$/, ""), milesText(e), e.price === 0 ? "Free" : ""].filter(Boolean).map(escapeHtml).join(" · ");
+        return `<li><button type="button" class="row" data-pickopen="${i}">
+          <span class="row-time small">${whenBig(e)}</span>
+          <span class="row-main">
+            <span class="row-title">${escapeHtml(e.title)}${saved.has(e.id) ? ' <span class="row-saved" aria-label="saved">♥</span>' : ""}</span>
+            <span class="row-meta">${meta}</span>
+            <span class="row-cat">${escapeHtml(catLabel(e.category))}</span>
+          </span>
+          <span class="row-arrow" aria-hidden="true">›</span>
+        </button></li>`;
+      }).join("")}</ul></div>`;
+    afterRender(focusTitle);
+  }
+
   function renderPick(focusTitle) {
     const card = $("pickCard");
     const total = state.deck.length;
+    const toggle = $("viewToggle");
+    toggle.hidden = !listable();
+    if (listable()) {
+      toggle.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String((b.dataset.view === "list") === showList)));
+      if (showList) { renderPickList(focusTitle); return; }
+    }
 
     if (state.index >= total) {
       $("progress").textContent = "";
@@ -571,7 +619,10 @@
         <p class="when-small">${escapeHtml(whenSmall(e))}</p>
         <h2 id="pickTitle" tabindex="-1">${escapeHtml(e.title)}</h2>
         <p class="where">${where}</p>
-        <p class="price ${e.price === 0 ? "free" : ""}">${priceLabel(e)}${e.priceNote ? ` <span>· ${escapeHtml(e.priceNote)}</span>` : ""}</p>
+        <p class="price ${e.price === 0 ? "free" : ""}">${priceLabel(e) === "Price: ask the host" && e.url
+          ? `<a href="${escapeHtml(e.url)}" target="_blank" rel="noopener">Price: see the host's page ↗</a>`
+          : priceLabel(e)}${e.priceNote ? ` <span>· ${escapeHtml(e.priceNote)}</span>` : ""}</p>
+        ${hostLine(e, place)}
         ${e.tags && e.tags.length ? `<p class="tags">${tagChips(e)}</p>` : ""}
         <p class="desc">${escapeHtml(e.description)}</p>
         ${CARE_NOTE.includes(e.category) ? '<p class="care-note">Not medical advice. If you have a health condition or are pregnant, check with your doctor first.</p>' : ""}
@@ -588,10 +639,11 @@
             <button type="button" class="go-btn" data-act="share"><span aria-hidden="true">💬</span> Send to a friend</button>
             ${e.phone ? `<a class="go-btn" href="tel:${escapeHtml(e.phone.replace(/[^\d+]/g, ""))}"><span aria-hidden="true">📞</span> Call ${escapeHtml(e.phone)}</a>` : ""}
           </div>
-          <p class="confirm">Details can change — a quick check with the host is always a good idea.</p>
+          <p class="confirm">Details can change, so a quick check is always a good idea${e.url ? ` — <a href="${escapeHtml(e.url)}" target="_blank" rel="noopener">see the host's page</a>` : ""}${e.phone ? ` or call ${escapeHtml(e.phone)}` : ""}.</p>
         </div>
       </div>
-      <div class="pick-actions${place ? " two" : ""}">
+      <div class="pick-actions${place ? " two" : ""}${state.index > 0 ? " with-back" : ""}">
+        ${state.index > 0 ? '<button type="button" class="act act-back" data-act="prev" aria-label="Back to the previous one">‹ Back</button>' : ""}
         <button type="button" class="act ${isSaved ? "on" : ""}" data-act="save" aria-pressed="${isSaved}">
           <span aria-hidden="true">${isSaved ? "♥" : "♡"}</span> ${isSaved ? "Saved" : "Save"}
         </button>
@@ -1004,6 +1056,7 @@
       if (state.mood !== arg || !state.deck.length) {
         state.mood = arg;
         state.deck = buildDeck(arg);
+        showList = pickView === "list";
       }
       state.base = `#/m/${arg}`;
       state.back = arg === "saved" ? { href: "#/saved", label: "← Back to saved" }
@@ -1173,6 +1226,15 @@
 
   // ---------- interactions ----------
   document.addEventListener("click", (ev) => {
+    const view = ev.target.closest("[data-view]");
+    if (view) {
+      pickView = view.dataset.view; showList = pickView === "list";
+      store("goodNearby.view", pickView);
+      renderPick(true);
+      return;
+    }
+    const pickOpen = ev.target.closest("[data-pickopen]");
+    if (pickOpen) { showList = false; goTo(Number(pickOpen.dataset.pickopen)); window.scrollTo(0, 0); return; }
     const area = ev.target.closest("[data-area]");
     if (area) {
       browseArea = area.dataset.area;
