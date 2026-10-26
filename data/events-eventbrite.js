@@ -4374,24 +4374,6 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "source": "Eventbrite"
  },
  {
-  "id": "eb-1998445857356",
-  "title": "Cookbook Addiction: Six Seasons of Pasta (Dec. 8 @ 6 PM)",
-  "category": "craft",
-  "start": "2026-12-08T18:00",
-  "end": "2026-12-08T21:00",
-  "venue": "Joyful Kitchen Cooking School",
-  "address": "12 Greenwood Rd",
-  "city": "Wellesley, MA",
-  "lat": 42.3137,
-  "lng": -71.2829,
-  "price": null,
-  "priceNote": "Tickets & price on Eventbrite",
-  "host": "Joyful Kitchen Cooking School",
-  "description": "A creative class at Joyful Kitchen Cooking School in Wellesley. See the Eventbrite page for details and to sign up.",
-  "url": "https://www.eventbrite.com/e/cookbook-addiction-six-seasons-of-pasta-dec-8-6-pm-tickets-1998445857356",
-  "source": "Eventbrite"
- },
- {
   "id": "eb-1990592466653",
   "title": "Holiday Edition Pottery Workshop",
   "category": "craft",
@@ -4407,24 +4389,6 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Trillium - Canton",
   "description": "A creative class at Trillium - Canton. See the Eventbrite page for details and to sign up.",
   "url": "https://www.eventbrite.com/e/holiday-edition-pottery-workshop-tickets-1990592466653",
-  "source": "Eventbrite"
- },
- {
-  "id": "eb-1998445175316",
-  "title": "Cookbook Addiction: Six Seasons of Pasta (Dec. 10 @ 10:30 AM)",
-  "category": "craft",
-  "start": "2026-12-10T10:30",
-  "end": "2026-12-10T13:30",
-  "venue": "Joyful Kitchen Cooking School",
-  "address": "12 Greenwood Rd",
-  "city": "Wellesley, MA",
-  "lat": 42.3137,
-  "lng": -71.2829,
-  "price": null,
-  "priceNote": "Tickets & price on Eventbrite",
-  "host": "Joyful Kitchen Cooking School",
-  "description": "A creative class at Joyful Kitchen Cooking School in Wellesley. See the Eventbrite page for details and to sign up.",
-  "url": "https://www.eventbrite.com/e/cookbook-addiction-six-seasons-of-pasta-dec-10-1030-am-tickets-1998445175316",
   "source": "Eventbrite"
  },
  {
