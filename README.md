@@ -85,7 +85,7 @@ Photos load from Unsplash. Each event uses a photo for its category, set in the 
 
 "Know something good? Share it here" (bottom of every page) opens **Share something good**, modeled on Community Kangaroo. First, people choose **I'm hosting it** or **I'm recommending something I love**. Hosts pick the area, then give the basics: the name, town, a link with the details (and an optional day-of updates link), and their name, email and organization (not published). They can optionally add the type, date, address and cost. People recommending something just say what it is, the town, and a few words about when and why it's good. A link and their contact details are optional. A short "What we list" guide sits on top. Every submission is reviewed before it goes live.
 
-- **Connecting it:** create a free form at [Formspree](https://formspree.io) and put its id (the part after `/f/` in the form's address) in `SUBMISSIONS.formspreeId` at the top of `app.js`. Formspree emails you each submission. Until then the form thanks the host and explains online listing is being set up — nothing is sent.
+- **Connected:** submissions go to Formspree (form `mpppprnn`, set in `SUBMISSIONS.formspreeId` at the top of `app.js`), which emails each one to findgoodnearby@gmail.com.
 - **Adding an approved listing:** each email includes `paste_into_events_js` — a finished entry (with the town's approximate location) to paste into `data/events.js`.
 
 ## Weekend Favorites newsletter

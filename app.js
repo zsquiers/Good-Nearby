@@ -28,7 +28,7 @@
   // "Share something good" sends each submission to Formspree (formspree.io), which emails it
   // to you. Put your Formspree form id here (the part after /f/ in its address). Until then the
   // form explains that online submissions are being set up, and nothing is sent.
-  const SUBMISSIONS = { formspreeId: "" };
+  const SUBMISSIONS = { formspreeId: "mpppprnn" };
 
   // Care listings get a gentle "not medical advice" line on their card.
   const CARE_NOTE = ["massage", "reiki", "acupuncture", "herbal", "breathwork", "salt"];
