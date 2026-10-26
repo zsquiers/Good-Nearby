@@ -382,6 +382,32 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
 
   // ---------- South Shore ----------
   {
+    id: "trail-dighton-rock",
+    title: "Dighton Rock State Park",
+    category: "walk", trail: "loop", surface: "Woods trails",
+    schedule: "Open daily — see the park page for hours",
+    venue: "Dighton Rock State Park", address: "Dighton Rock State Park", city: "Berkley, MA",
+    lat: 41.8130, lng: -71.1100,
+    price: 0,
+    host: "Mass. DCR",
+    description: "Short, peaceful trails along the Taunton River, with picnic spots and the famous carved boulder in its small museum (open by appointment).",
+    url: "https://www.mass.gov/locations/dighton-rock-state-park",
+    tags: ["free", "come-alone", "beginner", "outdoors"]
+  },
+  {
+    id: "trail-massasoit",
+    title: "Massasoit State Park",
+    category: "walk", trail: "loop", miles: 3, surface: "Woods trails",
+    schedule: "Open daily — see the park page for hours",
+    venue: "Massasoit State Park", address: "Massasoit State Park, Turner St", city: "Taunton, MA",
+    lat: 41.8820, lng: -71.0290,
+    price: 0,
+    host: "Mass. DCR",
+    description: "An easy 3-mile Five Pond Loop past ponds, pines and scarlet cranberry bogs. Especially lovely in the fall.",
+    url: "https://www.mass.gov/locations/massasoit-state-park",
+    tags: ["free", "come-alone", "beginner", "outdoors"]
+  },
+  {
     id: "trail-worlds-end",
     title: "World's End",
     category: "walk", trail: "loop", surface: "Carriage paths",

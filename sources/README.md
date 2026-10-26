@@ -53,3 +53,7 @@ Events posted only on Instagram or Facebook. Those come in through the "List som
 - **No collected photos** are stored or shown; cards use free stock photos (Unsplash/Pexels). A listing's own photo appears only with `photoOk: true`, when the host has given permission.
 - **Eventbrite and Meetup collection is paused** because their terms forbid automated collection. Listings already found stay up as facts with a link back until their dates pass.
 - If anyone asks for a listing or photo to be removed, remove it the same day.
+
+## Areas that need more sources
+
+- **Taunton, Berkley, Raynham, Dighton, Bridgewater & Middleborough** (added to the South Shore area in Oct 2026). So far: Dighton Rock and Massasoit state parks, Taunton Public Library and Wat Nawamin in Raynham. Look for studios, libraries, land trusts and cafés there that publish their own calendars.
