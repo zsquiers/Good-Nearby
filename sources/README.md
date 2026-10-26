@@ -54,6 +54,10 @@ Events posted only on Instagram or Facebook. Those come in through the "List som
 - **Eventbrite and Meetup collection is paused** because their terms forbid automated collection. Listings already found stay up as facts with a link back until their dates pass.
 - If anyone asks for a listing or photo to be removed, remove it the same day.
 
+## Replacing Eventbrite
+
+Most Eventbrite listings belong to local hosts who also post on their own sites. `hosts-to-contact.csv` lists the main ones in our areas, with where to reach them and the next step: either "monthly search reads their site" (their events page is in `sources.csv`) or "ask to list" (no website found, so reach out on Instagram/Facebook). Fill in the Status column as you go. The monthly search should add events from those hosts' own pages, never from Eventbrite.
+
 ## Areas that need more sources
 
 - **Taunton, Berkley, Raynham, Dighton, Bridgewater & Middleborough** (added to the South Shore area in Oct 2026). So far: Dighton Rock and Massasoit state parks, Taunton Public Library and Wat Nawamin in Raynham. Look for studios, libraries, land trusts and cafés there that publish their own calendars.

@@ -22,6 +22,11 @@ SITES = {
         "venue": "Mount Auburn Cemetery", "address": "580 Mount Auburn St", "city": "Cambridge, MA",
         "lat": 42.3708, "lng": -71.1446,
     },
+    "artcomplex": {
+        "url": "https://www.artcomplex.org",
+        "venue": "Art Complex Museum", "address": "189 Alden St", "city": "Duxbury, MA",
+        "lat": 42.0388, "lng": -70.6990,
+    },
 }
 
 # What we list, checked against the title first. First match wins.
@@ -34,7 +39,7 @@ RULES = [
     ("walk",       r"walking tour|nature walk|\bwalk\b"),
     ("movement",   r"ballet|biodanza|dance|5rhythms|embodiment"),
     ("herbal",     r"herbal|\bherbs?\b|tea blend|apothecary"),
-    ("craft",      r"craft circle|art sanctuary|pottery|watercolou?r|painting|knit|crochet|sewing|wreath|centerpiece"),
+    ("craft",      r"craft circle|art sanctuary|pottery|watercolou?r|painting|knit|crochet|sewing|wreath|centerpiece|mixed media|tablescape|collage|printmak|sketch"),
     ("book",       r"book (club|group|discussion)"),
 ]
 SKIP = (r"devotion|tarot|oracle|open mic|#?letstalktech|support group|constellation|standout|blessing bags|showing|"
