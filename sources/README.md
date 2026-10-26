@@ -56,7 +56,7 @@ Events posted only on Instagram or Facebook. Those come in through the "List som
 
 ## Replacing Eventbrite
 
-Most Eventbrite listings belong to local hosts who also post on their own sites. `hosts-to-contact.csv` lists the main ones in our areas, with where to reach them and the next step: either "monthly search reads their site" (their events page is in `sources.csv`) or "ask to list" (no website found, so reach out on Instagram/Facebook). Fill in the Status column as you go. The monthly search should add events from those hosts' own pages, never from Eventbrite.
+Most Eventbrite listings belong to local hosts who also post on their own sites. `hosts-to-contact.csv` lists the main ones in our areas, with where to reach them and the next step: either "monthly search reads their site" (their events page is in `sources.csv`) or "ask to list" (no website found, so reach out on Instagram/Facebook). Fill in the Status column as you go. The monthly search should add events from those hosts' own pages to `data/events-hosts.js` (facts only), never from Eventbrite.
 
 ## Areas that need more sources
 

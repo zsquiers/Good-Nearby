@@ -47,6 +47,7 @@ Design rules: one decision per screen, no menus, big tap targets, plain language
 | `data/events-meditation.js` | Meditation centers' regular sits, beginner classes and short courses |
 | `data/events-calendars.js` | Classes read straight from venues' own calendars, e.g. Common Street Spiritual Center in Natick and Mount Auburn (made by `tools/calendar_collect.py`) |
 | `data/events-meetup.js` | In-person meditation, yoga, sound, walking and book groups found on Meetup (made by `tools/meetup_collect.py`) |
+| `data/events-hosts.js` | Events taken from hosts' own websites (facts only), replacing Eventbrite: e.g. Joyful Kitchen's classes, Craft Loft |
 | `data/events-trails.js` | Rail trails, bike paths, woods and easy walking loops for the Get outside list |
 | `data/events-cafes.js` | Cozy independent cafés, bakeries and garden-center / farm cafés (no chains) |
 | `sources/` | The list of every source we check, and the monthly report (see `sources/README.md`) |
