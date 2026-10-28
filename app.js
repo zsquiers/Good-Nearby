@@ -1460,8 +1460,23 @@
         return;
       }
       // The form posts to Buttondown in a new tab, which asks the person to confirm by email.
-      note.textContent = "Almost done — check your inbox for a confirmation email. 🌻";
-      setTimeout(() => signup.reset(), 500);
+      // That tab is easy to miss on phones, so swap the form for a clear "check your inbox" box.
+      const email = signup.querySelector("input[type=email]").value.trim();
+      setTimeout(() => {
+        signup.reset();
+        signup.hidden = true;
+        note.classList.add("signup-done");
+        note.innerHTML = `<strong>🌻 You're almost in!</strong>
+          We just emailed <strong>${escapeHtml(email)}</strong>. Tap <strong>Confirm subscription</strong> in that email and you're all set.
+          <span class="signup-small">Don't see it in a minute? Check Spam or Promotions.
+          <button type="button" class="inline-link signup-again">Use a different email</button></span>`;
+        note.querySelector(".signup-again").addEventListener("click", () => {
+          note.classList.remove("signup-done");
+          note.textContent = "";
+          signup.hidden = false;
+          signup.querySelector("input[type=email]").focus();
+        });
+      }, 300);
     });
   });
 
