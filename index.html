@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Jost:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=91" />
+  <link rel="stylesheet" href="styles.css?v=92" />
 </head>
 <body>
   <div class="backdrop" aria-hidden="true"></div>
@@ -375,21 +375,48 @@
     <p class="fine">We don't run these events, and details can change, so check with the host before you go. Listings are for information only and aren't medical advice.</p>
   </footer>
 
-  <script src="data/events.js?v=91"></script>
-  <script src="data/events-eventbrite.js?v=91"></script>
-  <script src="data/events-move-shops.js?v=91"></script>
-  <script src="data/events-venues.js?v=91"></script>
-  <script src="data/events-cafes.js?v=91"></script>
-  <script src="data/events-libraries.js?v=91"></script>
-  <script src="data/events-herbal.js?v=91"></script>
-  <script src="data/events-meditation.js?v=91"></script>
-  <script src="data/events-calendars.js?v=91"></script>
-  <script src="data/events-meetup.js?v=91"></script>
-  <script src="data/events-trails.js?v=91"></script>
-  <script src="data/events-hosts.js?v=91"></script>
-  <script src="data/collections.js?v=91"></script>
-  <script src="data/towns.js?v=91"></script>
-  <script src="data/zips.js?v=91"></script>
-  <script src="app.js?v=91"></script>
+  <script src="data/events.js?v=92"></script>
+  <script src="data/events-eventbrite.js?v=92"></script>
+  <script src="data/events-move-shops.js?v=92"></script>
+  <script src="data/events-venues.js?v=92"></script>
+  <script src="data/events-cafes.js?v=92"></script>
+  <script src="data/events-libraries.js?v=92"></script>
+  <script src="data/events-herbal.js?v=92"></script>
+  <script src="data/events-meditation.js?v=92"></script>
+  <script src="data/events-calendars.js?v=92"></script>
+  <script src="data/events-meetup.js?v=92"></script>
+  <script src="data/events-trails.js?v=92"></script>
+  <script src="data/events-hosts.js?v=92"></script>
+  <script src="data/collections.js?v=92"></script>
+  <script src="data/towns.js?v=92"></script>
+  <script src="data/zips.js?v=92"></script>
+  <script src="app.js?v=92"></script>
+  <!-- Visitor counts: GoatCounter (goodnearby.goatcounter.com). No cookies, no personal data; it only counts which
+       screens are viewed and which host links are tapped. Saved lists and positions are trimmed from the paths. -->
+  <script>
+    (function () {
+      function screen() {
+        var h = location.hash.replace(/^#\/?/, "");
+        if (/^saved\//.test(h)) h = "saved";             // a shared saved list holds someone's picks: count it, don't record them
+        h = h.replace(/^(m|fp|op)\/([^/]+)\/\d+$/, "$1/$2"); // drop the "card 3 of 12" position
+        return "/" + (h ? "#/" + h : "");
+      }
+      window.goatcounter = { path: function () { return screen(); } };
+      var last = screen();
+      window.addEventListener("hashchange", function () {
+        var now = screen();
+        if (now === last || !window.goatcounter.count) return;  // flipping cards in one feeling counts once
+        last = now;
+        window.goatcounter.count({ path: now });
+      });
+      // Taps on links that leave the site (host pages, maps, sign-ups), counted by where they go.
+      document.addEventListener("click", function (e) {
+        var a = e.target.closest && e.target.closest("a[href^='http']");
+        if (!a || a.hostname === location.hostname || !window.goatcounter.count) return;
+        window.goatcounter.count({ path: "out: " + a.hostname.replace(/^www\./, ""), title: a.textContent.trim().slice(0, 60), event: true });
+      }, true);
+    })();
+  </script>
+  <script data-goatcounter="https://goodnearby.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
