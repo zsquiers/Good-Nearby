@@ -190,11 +190,11 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
     category: "yoga",
     schedule: "Classes daily — see the schedule",
     venue: "Emerald Yoga Studio", address: "15 Columbia Rd", city: "Pembroke, MA",
-    lat: 42.0717, lng: -70.8090,
-    price: null, priceNote: "First month $59",
+    lat: 42.1057, lng: -70.8077,
+    price: null, priceNote: "New students: first month unlimited $59",
     host: "Emerald Yoga Studio",
-    description: "A long-running, beginner-friendly South Shore studio. For calm, try Restorative Yin, Revive & Thrive (gentle props and acupressure) or Soulful Slow Flow.",
-    url: "https://www.emeraldyoga.com/class-descriptions",
+    description: "A long-running, beginner-friendly South Shore studio, in person or livestream. For calm, try Restorative Yin, Revive & Thrive (gentle props and acupressure), Soulful Slow Flow or Chair Yoga.",
+    url: "https://www.emeraldyoga.com/classes",
     tags: ["beginner"]
   }
 ]);
