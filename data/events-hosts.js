@@ -54,6 +54,64 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
     url: "https://joyfulkitchen.com/classes/six-seasons-of-pasta-thurs", tags: ["come-alone"]
   },
 
+  // ---------- Emerald Yoga Studio, Pembroke (emeraldyoga.com/events · /classes) — said yes to being listed, Oct 2026 ----------
+  {
+    id: "emerald-chakra-root-2026-11-06", title: "Restorative Journey Through the Chakras: Root",
+    category: "yoga", start: "2026-11-06T17:30", end: "2026-11-06T18:45",
+    venue: "Emerald Yoga Studio", address: "15 Columbia Rd, Ste 10", city: "Pembroke, MA", lat: 42.1057, lng: -70.8077,
+    price: 40, priceNote: "or $210 for all 7 (members pay less)", host: "Emerald Yoga Studio",
+    description: "Grounding poses and stillness, with aromatherapy and meditation. Part of a 7-week restorative series; come to one night or all. No yoga experience needed.",
+    url: "https://www.emeraldyoga.com/chakra-journey", tags: ["come-alone", "beginner"]
+  },
+  {
+    id: "emerald-chakra-sacral-2026-11-13", title: "Restorative Journey Through the Chakras: Sacral",
+    category: "yoga", start: "2026-11-13T17:30", end: "2026-11-13T18:45",
+    venue: "Emerald Yoga Studio", address: "15 Columbia Rd, Ste 10", city: "Pembroke, MA", lat: 42.1057, lng: -70.8077,
+    price: 40, priceNote: "or $210 for all 7 (members pay less)", host: "Emerald Yoga Studio",
+    description: "Soft, sensory movement, with aromatherapy and meditation. Part of a 7-week restorative series; come to one night or all. No yoga experience needed.",
+    url: "https://www.emeraldyoga.com/chakra-journey", tags: ["come-alone", "beginner"]
+  },
+  {
+    id: "emerald-chakra-solar-plexus-2026-11-20", title: "Restorative Journey Through the Chakras: Solar Plexus",
+    category: "yoga", start: "2026-11-20T17:30", end: "2026-11-20T18:45",
+    venue: "Emerald Yoga Studio", address: "15 Columbia Rd, Ste 10", city: "Pembroke, MA", lat: 42.1057, lng: -70.8077,
+    price: 40, priceNote: "or $210 for all 7 (members pay less)", host: "Emerald Yoga Studio",
+    description: "Restorative poses and intention-setting, with aromatherapy and meditation. Part of a 7-week restorative series; come to one night or all. No yoga experience needed.",
+    url: "https://www.emeraldyoga.com/chakra-journey", tags: ["come-alone", "beginner"]
+  },
+  {
+    id: "emerald-chakra-heart-2026-11-27", title: "Restorative Journey Through the Chakras: Heart",
+    category: "yoga", start: "2026-11-27T17:30", end: "2026-11-27T18:45",
+    venue: "Emerald Yoga Studio", address: "15 Columbia Rd, Ste 10", city: "Pembroke, MA", lat: 42.1057, lng: -70.8077,
+    price: 40, priceNote: "or $210 for all 7 (members pay less)", host: "Emerald Yoga Studio",
+    description: "A nurturing evening to soften and ease, with aromatherapy and meditation. Part of a 7-week restorative series; come to one night or all. No yoga experience needed.",
+    url: "https://www.emeraldyoga.com/chakra-journey", tags: ["come-alone", "beginner"]
+  },
+  {
+    id: "emerald-chakra-throat-2026-12-04", title: "Restorative Journey Through the Chakras: Throat",
+    category: "yoga", start: "2026-12-04T17:30", end: "2026-12-04T18:45",
+    venue: "Emerald Yoga Studio", address: "15 Columbia Rd, Ste 10", city: "Pembroke, MA", lat: 42.1057, lng: -70.8077,
+    price: 40, priceNote: "or $210 for all 7 (members pay less)", host: "Emerald Yoga Studio",
+    description: "Gentle poses for honest expression, with aromatherapy and meditation. Part of a 7-week restorative series; come to one night or all. No yoga experience needed.",
+    url: "https://www.emeraldyoga.com/chakra-journey", tags: ["come-alone", "beginner"]
+  },
+  {
+    id: "emerald-chakra-third-eye-2026-12-11", title: "Restorative Journey Through the Chakras: Third Eye",
+    category: "yoga", start: "2026-12-11T17:30", end: "2026-12-11T18:45",
+    venue: "Emerald Yoga Studio", address: "15 Columbia Rd, Ste 10", city: "Pembroke, MA", lat: 42.1057, lng: -70.8077,
+    price: 40, priceNote: "or $210 for all 7 (members pay less)", host: "Emerald Yoga Studio",
+    description: "Quiet, meditative postures, with aromatherapy and meditation. Part of a 7-week restorative series; come to one night or all. No yoga experience needed.",
+    url: "https://www.emeraldyoga.com/chakra-journey", tags: ["come-alone", "beginner"]
+  },
+  {
+    id: "emerald-chakra-crown-2026-12-18", title: "Restorative Journey Through the Chakras: Crown",
+    category: "yoga", start: "2026-12-18T17:30", end: "2026-12-18T18:45",
+    venue: "Emerald Yoga Studio", address: "15 Columbia Rd, Ste 10", city: "Pembroke, MA", lat: 42.1057, lng: -70.8077,
+    price: 40, priceNote: "or $210 for all 7 (members pay less)", host: "Emerald Yoga Studio",
+    description: "A peaceful, reflective close to the year, with aromatherapy and meditation. Part of a 7-week restorative series; come to one night or all. No yoga experience needed.",
+    url: "https://www.emeraldyoga.com/chakra-journey", tags: ["come-alone", "beginner"]
+  },
+
   // ---------- Craft Loft, Cambridge (craft-loft.com) ----------
   {
     id: "craft-loft-cambridge", title: "Craft Loft Workshops",
