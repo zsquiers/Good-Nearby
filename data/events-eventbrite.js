@@ -2754,24 +2754,6 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "source": "Eventbrite"
  },
  {
-  "id": "eb-2001378633368",
-  "title": "Mother's Reset",
-  "category": "reiki",
-  "start": "2026-11-05T10:00",
-  "end": "2026-11-05T11:30",
-  "venue": "JPH at Ferry Hill",
-  "address": "76 Ferry Hill Rd",
-  "city": "Marshfield, MA",
-  "lat": 42.1395,
-  "lng": -70.704,
-  "price": null,
-  "priceNote": "Tickets & price on Eventbrite",
-  "host": "JPH at Ferry Hill",
-  "description": "A reiki session at JPH at Ferry Hill in Marshfield. See the Eventbrite page for details and to sign up.",
-  "url": "https://www.eventbrite.com/e/mothers-reset-tickets-2001378633368",
-  "source": "Eventbrite"
- },
- {
   "id": "eb-2003008263636",
   "title": "Spirit in Nature: A Guided Meditation Walk at Wolbach Farm",
   "category": "walk",
@@ -2988,24 +2970,6 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "source": "Eventbrite"
  },
  {
-  "id": "eb-2002080731362",
-  "title": "Breathing Room: Yin Yoga & Sound Meditation",
-  "category": "breathwork",
-  "start": "2026-11-08T10:00",
-  "end": "2026-11-08T23:15",
-  "venue": "JPH at Ferry Hill",
-  "address": "76 Ferry Hill Road",
-  "city": "Marshfield, MA",
-  "lat": 42.1394,
-  "lng": -70.7039,
-  "price": null,
-  "priceNote": "Tickets & price on Eventbrite",
-  "host": "JPH at Ferry Hill",
-  "description": "A breathwork session at JPH at Ferry Hill in Marshfield. See the Eventbrite page for details and to sign up.",
-  "url": "https://www.eventbrite.com/e/breathing-room-yin-yoga-sound-meditation-tickets-2002080731362",
-  "source": "Eventbrite"
- },
- {
   "id": "eb-2003433752284",
   "title": "Yoga & Strings  @ Museum Of Modern Renaissance!",
   "category": "yoga",
@@ -3168,24 +3132,6 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "source": "Eventbrite"
  },
  {
-  "id": "eb-2002583221323",
-  "title": "Dragonfly Yoga with Emma",
-  "category": "yoga",
-  "start": "2026-11-11T17:30",
-  "end": "2026-11-11T18:45",
-  "venue": "JPH at Ferry Hill",
-  "address": "76 Ferry Hill Road",
-  "city": "Marshfield, MA",
-  "lat": 42.1394,
-  "lng": -70.7039,
-  "price": null,
-  "priceNote": "Tickets & price on Eventbrite",
-  "host": "JPH at Ferry Hill",
-  "description": "A yoga class at JPH at Ferry Hill in Marshfield. See the Eventbrite page for details and to sign up.",
-  "url": "https://www.eventbrite.com/e/dragonfly-yoga-with-emma-tickets-2002583221323",
-  "source": "Eventbrite"
- },
- {
   "id": "eb-2002924695682",
   "title": "11/11 Beginners Classical Mat Pilates (6PM or 7:15PM)",
   "category": "movement",
@@ -3345,24 +3291,6 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Long Live Roxbury",
   "description": "A creative class at Long Live Roxbury in Boston. See the Eventbrite page for details and to sign up.",
   "url": "https://www.eventbrite.com/e/holiday-edition-pottery-workshop-tickets-1996749022076",
-  "source": "Eventbrite"
- },
- {
-  "id": "eb-2002583648601",
-  "title": "Reset and Recenter - Restorative Yoga",
-  "category": "yoga",
-  "start": "2026-11-14T09:30",
-  "end": "2026-11-14T10:45",
-  "venue": "JPH at Ferry Hill",
-  "address": "76 Ferry Hill Road",
-  "city": "Marshfield, MA",
-  "lat": 42.1394,
-  "lng": -70.7039,
-  "price": null,
-  "priceNote": "Tickets & price on Eventbrite",
-  "host": "JPH at Ferry Hill",
-  "description": "A yoga class at JPH at Ferry Hill in Marshfield. See the Eventbrite page for details and to sign up.",
-  "url": "https://www.eventbrite.com/e/reset-and-recenter-restorative-yoga-tickets-2002583648601",
   "source": "Eventbrite"
  },
  {
@@ -3744,24 +3672,6 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "source": "Eventbrite"
  },
  {
-  "id": "eb-2001379315408",
-  "title": "Mother's Reset",
-  "category": "reiki",
-  "start": "2026-11-19T10:00",
-  "end": "2026-11-19T11:30",
-  "venue": "JPH at Ferry Hill",
-  "address": "76 Ferry Hill Rd",
-  "city": "Marshfield, MA",
-  "lat": 42.1395,
-  "lng": -70.704,
-  "price": null,
-  "priceNote": "Tickets & price on Eventbrite",
-  "host": "JPH at Ferry Hill",
-  "description": "A reiki session at JPH at Ferry Hill in Marshfield. See the Eventbrite page for details and to sign up.",
-  "url": "https://www.eventbrite.com/e/mothers-reset-tickets-2001379315408",
-  "source": "Eventbrite"
- },
- {
   "id": "eb-2003188663216",
   "title": "Fresh Evergreen Wreath-Making Workshop | Holiday DIY Experience",
   "category": "craft",
@@ -3939,24 +3849,6 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Medusa Brewing Company",
   "description": "A yoga class at Medusa Brewing Company in Hudson. See the Eventbrite page for details and to sign up.",
   "url": "https://www.eventbrite.com/e/brew-good-yoga-with-medusa-tickets-2003504802798",
-  "source": "Eventbrite"
- },
- {
-  "id": "eb-2002550759228",
-  "title": "Dragonfly Experience-Yoga-Sound-Reiki",
-  "category": "reiki",
-  "start": "2026-11-22T10:30",
-  "end": "2026-11-22T12:00",
-  "venue": "JPH at Ferry Hill",
-  "address": "76 Ferry Hill Road",
-  "city": "Marshfield, MA",
-  "lat": 42.1394,
-  "lng": -70.7039,
-  "price": null,
-  "priceNote": "Tickets & price on Eventbrite",
-  "host": "JPH at Ferry Hill",
-  "description": "A reiki session at JPH at Ferry Hill in Marshfield. See the Eventbrite page for details and to sign up.",
-  "url": "https://www.eventbrite.com/e/dragonfly-experience-yoga-sound-reiki-tickets-2002550759228",
   "source": "Eventbrite"
  },
  {

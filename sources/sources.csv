@@ -89,3 +89,4 @@ WeBreathe Wellness (Walpole),Franklin & nearby,events,monthly,https://www.webrea
 Nourish Collaborative (Kingston),South Shore,events,monthly,https://www.nourishcollaborative.com/,Meditation & wellness; was on Eventbrite
 Craft Loft (Cambridge),Boston area,events,monthly,https://craft-loft.com/collections/boston-workshops,"Mosaic, stamp carving, pressed flowers; was on Eventbrite (15 listings)"
 Art Complex Museum (Duxbury),South Shore,calendars,monthly,https://www.artcomplex.org/events/,Read automatically by tools/calendar_collect.py
+JPH at Ferry Hill (Marshfield),South Shore,events,monthly,https://www.jphcommunity.org/programs-events,"Nonprofit; said yes to being listed (Oct 2026). Monthly calendar is a PDF (Download link); add wellness programs to data/events-hosts.js, skip support groups (trauma, recovery, grief, caregivers, Workforce Day)"

@@ -112,6 +112,145 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
     url: "https://www.emeraldyoga.com/chakra-journey", tags: ["come-alone", "beginner"]
   },
 
+  // ---------- JPH at Ferry Hill, Marshfield (jphcommunity.org/programs-events, monthly PDF calendar) — said yes, Oct 2026 ----------
+  // A nonprofit; most programs are free and grant-funded. Support groups (trauma, recovery, grief, caregivers) are left off on purpose.
+  {
+    id: "jph-open-art-studio-2026-11-04", title: "Open Art Studio",
+    category: "craft", start: "2026-11-04T11:30", end: "2026-11-04T12:45",
+    venue: "JPH at Ferry Hill", address: "76 Ferry Hill Rd", city: "Marshfield, MA", lat: 42.1394, lng: -70.7039,
+    price: 0, priceNote: "register ahead", host: "JPH at Ferry Hill (nonprofit)",
+    description: "A relaxed open art studio. Drop your worries and make something. A nonprofit wellness space.",
+    url: "https://www.jphcommunity.org/programs-events", tags: ["come-alone"]
+  },
+  {
+    id: "jph-open-art-studio-2026-11-11", title: "Open Art Studio",
+    category: "craft", start: "2026-11-11T11:30", end: "2026-11-11T12:45",
+    venue: "JPH at Ferry Hill", address: "76 Ferry Hill Rd", city: "Marshfield, MA", lat: 42.1394, lng: -70.7039,
+    price: 0, priceNote: "register ahead", host: "JPH at Ferry Hill (nonprofit)",
+    description: "A relaxed open art studio. Drop your worries and make something. A nonprofit wellness space.",
+    url: "https://www.jphcommunity.org/programs-events", tags: ["come-alone"]
+  },
+  {
+    id: "jph-open-art-studio-2026-11-18", title: "Open Art Studio",
+    category: "craft", start: "2026-11-18T11:30", end: "2026-11-18T12:45",
+    venue: "JPH at Ferry Hill", address: "76 Ferry Hill Rd", city: "Marshfield, MA", lat: 42.1394, lng: -70.7039,
+    price: 0, priceNote: "register ahead", host: "JPH at Ferry Hill (nonprofit)",
+    description: "A relaxed open art studio. Drop your worries and make something. A nonprofit wellness space.",
+    url: "https://www.jphcommunity.org/programs-events", tags: ["come-alone"]
+  },
+  {
+    id: "jph-dragonfly-yoga-2026-11-04", title: "Dragonfly Yoga with Emma",
+    category: "yoga", start: "2026-11-04T17:30", end: "2026-11-04T18:45",
+    venue: "JPH at Ferry Hill", address: "76 Ferry Hill Rd", city: "Marshfield, MA", lat: 42.1394, lng: -70.7039,
+    price: null, priceNote: "small fee, register ahead", host: "JPH at Ferry Hill (nonprofit)",
+    description: "An evening yoga class at JPH's peaceful Ferry Hill property. A nonprofit wellness space.",
+    url: "https://www.jphcommunity.org/programs-events", tags: ["come-alone"]
+  },
+  {
+    id: "jph-dragonfly-yoga-2026-11-11", title: "Dragonfly Yoga with Emma",
+    category: "yoga", start: "2026-11-11T17:30", end: "2026-11-11T18:45",
+    venue: "JPH at Ferry Hill", address: "76 Ferry Hill Rd", city: "Marshfield, MA", lat: 42.1394, lng: -70.7039,
+    price: null, priceNote: "small fee, register ahead", host: "JPH at Ferry Hill (nonprofit)",
+    description: "An evening yoga class at JPH's peaceful Ferry Hill property. A nonprofit wellness space.",
+    url: "https://www.jphcommunity.org/programs-events", tags: ["come-alone"]
+  },
+  {
+    id: "jph-dragonfly-yoga-2026-11-18", title: "Dragonfly Yoga with Emma",
+    category: "yoga", start: "2026-11-18T17:30", end: "2026-11-18T18:45",
+    venue: "JPH at Ferry Hill", address: "76 Ferry Hill Rd", city: "Marshfield, MA", lat: 42.1394, lng: -70.7039,
+    price: null, priceNote: "small fee, register ahead", host: "JPH at Ferry Hill (nonprofit)",
+    description: "An evening yoga class at JPH's peaceful Ferry Hill property. A nonprofit wellness space.",
+    url: "https://www.jphcommunity.org/programs-events", tags: ["come-alone"]
+  },
+  {
+    id: "jph-mothers-reset-2026-11-05", title: "Mother's Reset",
+    category: "reiki", start: "2026-11-05T10:00", end: "2026-11-05T11:30",
+    venue: "JPH at Ferry Hill", address: "76 Ferry Hill Rd", city: "Marshfield, MA", lat: 42.1394, lng: -70.7039,
+    price: null, priceNote: "small fee, register ahead", host: "JPH at Ferry Hill (nonprofit)",
+    description: "A restful morning just for moms. A nonprofit wellness space.",
+    url: "https://www.jphcommunity.org/programs-events", tags: ["come-alone"]
+  },
+  {
+    id: "jph-mothers-reset-2026-11-19", title: "Mother's Reset",
+    category: "reiki", start: "2026-11-19T10:00", end: "2026-11-19T11:30",
+    venue: "JPH at Ferry Hill", address: "76 Ferry Hill Rd", city: "Marshfield, MA", lat: 42.1394, lng: -70.7039,
+    price: null, priceNote: "small fee, register ahead", host: "JPH at Ferry Hill (nonprofit)",
+    description: "A restful morning just for moms. A nonprofit wellness space.",
+    url: "https://www.jphcommunity.org/programs-events", tags: ["come-alone"]
+  },
+  {
+    id: "jph-breathing-room-2026-11-08", title: "Breathing Room: Yin Yoga & Sound",
+    category: "sound", start: "2026-11-08T10:00", end: "2026-11-08T11:15",
+    venue: "JPH at Ferry Hill", address: "76 Ferry Hill Rd", city: "Marshfield, MA", lat: 42.1394, lng: -70.7039,
+    price: null, priceNote: "small fee, register ahead", host: "JPH at Ferry Hill (nonprofit)",
+    description: "Slow yin yoga followed by a sound meditation. A nonprofit wellness space.",
+    url: "https://www.jphcommunity.org/programs-events", tags: ["come-alone"]
+  },
+  {
+    id: "jph-community-meditation-2026-11-09", title: "Community Meditation",
+    category: "meditation", start: "2026-11-09T19:00", end: "2026-11-09T20:00",
+    venue: "JPH at Ferry Hill", address: "76 Ferry Hill Rd", city: "Marshfield, MA", lat: 42.1394, lng: -70.7039,
+    price: 0, priceNote: "register ahead", host: "JPH at Ferry Hill (nonprofit)",
+    description: "A free evening group meditation. A nonprofit wellness space.",
+    url: "https://www.jphcommunity.org/programs-events", tags: ["come-alone"]
+  },
+  {
+    id: "jph-qigong-2026-11-10", title: "Inner Balance Qigong",
+    category: "tai-chi", start: "2026-11-10T18:00", end: "2026-11-10T19:00",
+    venue: "JPH at Ferry Hill", address: "76 Ferry Hill Rd", city: "Marshfield, MA", lat: 42.1394, lng: -70.7039,
+    price: 0, priceNote: "register ahead", host: "JPH at Ferry Hill (nonprofit)",
+    description: "Gentle qigong movement and breathing. A nonprofit wellness space.",
+    url: "https://www.jphcommunity.org/programs-events", tags: ["come-alone"]
+  },
+  {
+    id: "jph-midday-reset-2026-11-11", title: "Pause & Restore: Midday Reset",
+    category: "meditation", start: "2026-11-11T12:00", end: "2026-11-11T13:30",
+    venue: "JPH at Ferry Hill", address: "76 Ferry Hill Rd", city: "Marshfield, MA", lat: 42.1394, lng: -70.7039,
+    price: null, priceNote: "small fee, register ahead", host: "JPH at Ferry Hill (nonprofit)",
+    description: "A midday break to pause and restore. A nonprofit wellness space.",
+    url: "https://www.jphcommunity.org/programs-events", tags: ["come-alone"]
+  },
+  {
+    id: "jph-restorative-yoga-2026-11-14", title: "Restorative Yoga: Reset & Recenter",
+    category: "yoga", start: "2026-11-14T09:30", end: "2026-11-14T10:45",
+    venue: "JPH at Ferry Hill", address: "76 Ferry Hill Rd", city: "Marshfield, MA", lat: 42.1394, lng: -70.7039,
+    price: null, priceNote: "small fee, register ahead", host: "JPH at Ferry Hill (nonprofit)",
+    description: "Slow, supported restorative yoga. A nonprofit wellness space.",
+    url: "https://www.jphcommunity.org/programs-events", tags: ["come-alone"]
+  },
+  {
+    id: "jph-back-to-earth-2026-11-15", title: "Back to Earth",
+    category: "meditation", start: "2026-11-15T10:00", end: "2026-11-15T11:00",
+    venue: "JPH at Ferry Hill", address: "76 Ferry Hill Rd", city: "Marshfield, MA", lat: 42.1394, lng: -70.7039,
+    price: 0, priceNote: "register ahead", host: "JPH at Ferry Hill (nonprofit)",
+    description: "A free grounding session. A nonprofit wellness space.",
+    url: "https://www.jphcommunity.org/programs-events", tags: ["come-alone"]
+  },
+  {
+    id: "jph-candlelight-meditation-2026-11-16", title: "Candlelight Meditation: A Journey of Deep Rest",
+    category: "meditation", start: "2026-11-16T18:00", end: "2026-11-16T19:00",
+    venue: "JPH at Ferry Hill", address: "76 Ferry Hill Rd", city: "Marshfield, MA", lat: 42.1394, lng: -70.7039,
+    price: 0, priceNote: "register ahead", host: "JPH at Ferry Hill (nonprofit)",
+    description: "A free candlelit meditation for deep rest. A nonprofit wellness space.",
+    url: "https://www.jphcommunity.org/programs-events", tags: ["come-alone"]
+  },
+  {
+    id: "jph-dragonfly-experience-2026-11-22", title: "Dragonfly Experience: Yoga, Sound & Reiki",
+    category: "reiki", start: "2026-11-22T10:30", end: "2026-11-22T12:00",
+    venue: "JPH at Ferry Hill", address: "76 Ferry Hill Rd", city: "Marshfield, MA", lat: 42.1394, lng: -70.7039,
+    price: null, priceNote: "small fee, register ahead", host: "JPH at Ferry Hill (nonprofit)",
+    description: "Yoga, a sound bath and reiki in one morning. A nonprofit wellness space.",
+    url: "https://www.jphcommunity.org/programs-events", tags: ["come-alone"]
+  },
+  {
+    id: "jph-holiday-art-2026-11-30", title: "Community Holiday Art",
+    category: "craft", start: "2026-11-30T18:00", end: "2026-11-30T19:30",
+    venue: "JPH at Ferry Hill", address: "76 Ferry Hill Rd", city: "Marshfield, MA", lat: 42.1394, lng: -70.7039,
+    price: 0, priceNote: "register ahead", host: "JPH at Ferry Hill (nonprofit)",
+    description: "A free evening of holiday crafting together. A nonprofit wellness space.",
+    url: "https://www.jphcommunity.org/programs-events", tags: ["come-alone"]
+  },
+
   // ---------- Craft Loft, Cambridge (craft-loft.com) ----------
   {
     id: "craft-loft-cambridge", title: "Craft Loft Workshops",
