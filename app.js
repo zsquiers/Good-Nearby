@@ -594,7 +594,7 @@
             <a href="#/" class="btn ${state.back ? "btn-soft" : "btn-dark"}">Pick a feeling</a>
             ${saved.size ? `<a href="#/saved" class="btn btn-soft">See what I saved (${saved.size})</a>` : ""}
           </div>
-          ${state.mood === "weekend" ? "" : `<p class="nudge"><a href="#/weekend">💌 Get Weekend Favorites in your inbox every Thursday →</a></p>`}
+          ${state.mood === "weekend" ? "" : `<p class="nudge"><a href="#/weekend">💌 Be first to get Weekend Favorites, our weekly email (coming soon) →</a></p>`}
         </div>`;
       afterRender(focusTitle);
       return;
@@ -906,7 +906,7 @@
     $("weekendPreviewTitle").textContent = `This weekend's good things · ${mdFmt.format(w.friday)}–${sun.getDate()}`;
     const picks = weekendPicks();
     if (!picks.length) {
-      $("weekendList").innerHTML = `<p class="hint-static">Nothing listed for this weekend yet — sign up and we'll send the latest on Thursday.</p>`;
+      $("weekendList").innerHTML = `<p class="hint-static">Nothing listed for this weekend yet. Sign up and you'll be first to get our weekly picks.</p>`;
       return;
     }
     const groups = new Map();
@@ -1162,7 +1162,7 @@
       const note = $("signupNote");
       note.classList.toggle("saved-note", arg === "thanks" || arg === "confirmed");
       if (arg === "thanks") note.textContent = "Almost there! Check your inbox and tap the link in our email to confirm. 🌻";
-      else if (arg === "confirmed") note.textContent = "You're in! Your first Weekend Favorites arrives on Thursday. 🌻";
+      else if (arg === "confirmed") note.textContent = "You're in! 🌻 You'll be among the first to get Weekend Favorites when it starts.";
       showScreen("weekend");
       $("weekendTitle").focus({ preventScroll: true });
       updateSavedPill();
