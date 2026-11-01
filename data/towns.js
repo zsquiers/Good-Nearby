@@ -2,6 +2,7 @@
 // An event belongs to the area of its town (matched by name, or the nearest town by distance).
 // lat/lng are approximate town centers — used to measure distance to events.
 // To add a town, copy a line into the right area. `id` must be unique (lowercase, dashes).
+// `aliases` (optional) are other names people type for the same town, e.g. "North Attleboro".
 
 window.GOOD_NEARBY_TOWNS = [
   { id: "franklin-area", area: "Franklin & nearby", towns: [
@@ -18,6 +19,8 @@ window.GOOD_NEARBY_TOWNS = [
     { id: "millis",       name: "Millis",       lat: 42.1676, lng: -71.3578 },
     { id: "sharon",       name: "Sharon",       lat: 42.1237, lng: -71.1787 },
     { id: "plainville",   name: "Plainville",   lat: 42.0040, lng: -71.3328 },
+    { id: "north-attleborough", name: "North Attleborough", lat: 41.9837, lng: -71.3328, aliases: ["North Attleboro", "N Attleboro", "N. Attleboro", "N Attleborough", "N. Attleborough", "Attleboro Falls"] },
+    { id: "attleboro",    name: "Attleboro",    lat: 41.9445, lng: -71.2856, aliases: ["Attleborough", "South Attleboro", "S Attleboro", "S. Attleboro"] },
     { id: "westwood",     name: "Westwood",     lat: 42.2140, lng: -71.2245 },
     { id: "norwood",      name: "Norwood",      lat: 42.1945, lng: -71.1995 },
   ]},

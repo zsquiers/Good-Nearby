@@ -108,7 +108,8 @@ function miles(a, b) {
 const townName = (e) => (e.city || "").replace(/, (MA|RI)$/, "").trim();
 const stateOf = (e) => ((e.city || "").match(/, (MA|RI)$/) || [, "MA"])[1];
 function areaOf(e) {
-  const t = ALL_TOWNS.find((x) => x.name.toLowerCase() === townName(e).toLowerCase());
+  const n = townName(e).toLowerCase();
+  const t = ALL_TOWNS.find((x) => x.name.toLowerCase() === n || (x.aliases || []).some((a) => a.toLowerCase() === n));
   if (t) return t.areaId;
   if (e.lat == null) return null;
   let best = null, bestMi = Infinity;

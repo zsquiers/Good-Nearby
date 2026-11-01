@@ -171,6 +171,11 @@
   const AREAS = [...(window.GOOD_NEARBY_TOWNS || []), { id: "all", area: "Everywhere", towns: [] }];
   const areaById = new Map(AREAS.map((a) => [a.id, a]));
   const allTowns = AREAS.flatMap((a) => a.towns.map((t) => ({ ...t, areaId: a.id })));
+  // A town by name or one of its other spellings ("North Attleboro"), ignoring case.
+  const townByName = (name) => {
+    const n = name.trim().toLowerCase();
+    return allTowns.find((t) => t.name.toLowerCase() === n || (t.aliases || []).some((a) => a.toLowerCase() === n));
+  };
   let browseArea = areaById.has(load("goodNearby.area", "")) ? load("goodNearby.area", "") : null;
 
   // An event's area: its town by name, otherwise the nearest listed town.
@@ -178,7 +183,7 @@
   const AREA_CAP_MILES = 15;   // ≈ 30 minutes' drive (same estimate as driveMin)
   function areaOf(e) {
     const name = e.city.replace(/, MA$/, "").trim().toLowerCase();
-    const match = allTowns.find((t) => t.name.toLowerCase() === name);
+    const match = townByName(name);
     if (match) return match.areaId;
     if (e.lat == null) return null;
     let best = null, bestMi = Infinity;
@@ -958,7 +963,7 @@
   function buildEntry(f) {
     const v = (k) => (f.get(k) || "").toString().trim();
     const town = v("town");
-    const t = allTowns.find((x) => x.name.toLowerCase() === town.toLowerCase())
+    const t = townByName(town)
       || (submitArea && areaById.get(submitArea).towns[0]);
     const kind = v("kind");
     const entry = { id: "", title: v("title"), category: v("category") || "TODO" };
@@ -1516,7 +1521,7 @@
       else renderWhere("That ZIP is outside the areas we cover — try a nearby town, or use your location.");
       return;
     }
-    const t = allTowns.find((x) => x.name.toLowerCase() === typed.toLowerCase());
+    const t = townByName(typed);
     if (t) setOrigin({ lat: t.lat, lng: t.lng, name: t.name });
     else renderWhere("We don't know that town yet — try your ZIP code, a nearby town, or use your location.");
   });
