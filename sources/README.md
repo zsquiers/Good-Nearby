@@ -7,9 +7,9 @@ Community Kangaroo's team checks over 2,000 websites by hand every month. Good N
 | File | What it is |
 | --- | --- |
 | `sources.csv` | Every place we check: studios, venues, calendars, cafés. Open it in Excel, Numbers or Google Sheets to add a row. |
-| `snapshots/` | A plain-text copy of each page from the last check, so the next check can spot what's new. |
+| `snapshots/` | A fingerprint of each page from the last check (one short code per line, never the page's own text, because this repository is public), so the next check can spot what's new. |
 | `last-check.json` | When each source was last checked. |
-| `report.md` | The latest report: what changed, what's new, and what couldn't be reached. |
+| `report.md` | The latest report: what changed, what's new, and what couldn't be reached. Written during the monthly search and not saved to the repository. |
 | `../tools/check_sources.py` | Checks the sources that are due and writes the report. |
 | `../tools/eventbrite_collect.py` + `eventbrite_to_js.py` | **Paused** (Eventbrite's terms forbid automated collection). Searches Eventbrite for wellness events (and, with `--make`, creative classes) and merges new ones into `data/events-eventbrite.js`. Events that have passed drop off. Chains, kids' events and bar nights are skipped. |
 | `../tools/calendar_collect.py` | Reads venues' own calendars (any site using the WordPress "Events Calendar") and turns repeating classes into weekly listings (`data/events-calendars.js`). Add a venue to its `SITES` list. |
@@ -56,7 +56,7 @@ Events posted only on Instagram or Facebook. Those come in through the "List som
 
 ## Replacing Eventbrite
 
-Most Eventbrite listings belong to local hosts who also post on their own sites. `hosts-to-contact.csv` lists the main ones in our areas, with where to reach them and the next step: either "monthly search reads their site" (their events page is in `sources.csv`) or "ask to list" (no website found, so reach out on Instagram/Facebook). Fill in the Status column as you go. The monthly search should add events from those hosts' own pages to `data/events-hosts.js` (facts only), never from Eventbrite.
+Most Eventbrite listings belong to local hosts who also post on their own sites. `hosts.csv` lists the main ones in our areas and where we read their events. It holds business websites only: contact names, email addresses and outreach notes stay in the owner's private spreadsheet, never in this public repository. The monthly search should add events from those hosts' own pages to `data/events-hosts.js` (facts only), never from Eventbrite.
 
 ## Areas that need more sources
 

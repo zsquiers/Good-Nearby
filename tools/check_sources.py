@@ -2,8 +2,9 @@
 # Usage: python3 tools/check_sources.py            (checks the sources that are due)
 #        python3 tools/check_sources.py --all      (checks everything)
 #
-# For each source it saves the page as text in sources/snapshots/ and compares it with the
-# previous copy. The report (sources/report.md) lists:
+# For each source it saves a fingerprint of the page in sources/snapshots/ (one short hash per
+# line, never the page's own text, because this repository is public) and compares it with the
+# previous check. The report (sources/report.md, not saved to the repository) lists:
 #   - pages that couldn't be reached (the place may have closed or moved its page)
 #   - pages that changed, with the new lines that mention a date or time — usually new events
 # A person (or Claude) then reads the report and decides what to add. Nothing is added automatically.
@@ -26,6 +27,8 @@ def fetch_text(url):
     t = html.unescape(re.sub(r"<[^>]+>", "\n", s))
     lines = [re.sub(r"\s+", " ", l).strip() for l in t.split("\n")]
     return "\n".join(l for l in lines if l) + "\n"
+
+def line_hash(line): return hashlib.sha1(line.encode()).hexdigest()[:12]
 
 def slug(s): return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")[:60]
 
@@ -51,8 +54,9 @@ def main():
             state[url] = {**state.get(url, {}), "checked": today.isoformat(), "error": str(e)[:80]}
             continue
         old = open(path).read() if os.path.exists(path) else None
-        open(path, "w").write(text)
-        h = hashlib.sha1(text.encode()).hexdigest()[:12]
+        prints = "\n".join(line_hash(l) for l in text.split("\n") if l) + "\n"
+        open(path, "w").write(prints)
+        h = hashlib.sha1(prints.encode()).hexdigest()[:12]
         if old is not None and hashlib.sha1(old.encode()).hexdigest()[:12] == h:
             same.append(row)
         else:
@@ -60,7 +64,7 @@ def main():
             lines = text.split("\n")
             # Show each new dated line with its neighbours, so "Oct 17" comes with the event's name.
             fresh = list(dict.fromkeys(" · ".join(lines[max(0, i - 2): i + 2])
-                                       for i, l in enumerate(lines) if l and l not in seen and DATEISH.search(l)))
+                                       for i, l in enumerate(lines) if l and line_hash(l) not in seen and DATEISH.search(l)))
             changed.append((row, fresh[:40], old is None))
         state[url] = {"checked": today.isoformat(), "hash": h}
         print(f"{'changed' if changed and changed[-1][0] is row else 'same   '}  {name}", file=sys.stderr)

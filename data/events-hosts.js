@@ -1,6 +1,6 @@
 // Events taken from hosts' own websites (facts only: what, when, where, price, link), replacing
 // what used to come from Eventbrite. Checked against each host's page; add more by copying an entry.
-// See sources/hosts-to-contact.csv for which hosts to read or contact.
+// See sources/hosts.csv for which hosts are read this way.
 
 window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
 
@@ -54,7 +54,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
     url: "https://joyfulkitchen.com/classes/six-seasons-of-pasta-thurs", tags: ["come-alone"]
   },
 
-  // ---------- Emerald Yoga Studio, Pembroke (emeraldyoga.com/events · /classes) — said yes to being listed, Oct 2026 ----------
+  // ---------- Emerald Yoga Studio, Pembroke (emeraldyoga.com/events · /classes) ----------
   {
     id: "emerald-chakra-root-2026-11-06", title: "Restorative Journey Through the Chakras: Root",
     category: "yoga", start: "2026-11-06T17:30", end: "2026-11-06T18:45",
@@ -112,7 +112,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
     url: "https://www.emeraldyoga.com/chakra-journey", tags: ["come-alone", "beginner"]
   },
 
-  // ---------- JPH at Ferry Hill, Marshfield (jphcommunity.org/programs-events, monthly PDF calendar) — said yes, Oct 2026 ----------
+  // ---------- JPH at Ferry Hill, Marshfield (jphcommunity.org/programs-events, monthly PDF calendar) ----------
   // A nonprofit; most programs are free and grant-funded. Support groups (trauma, recovery, grief, caregivers) are left off on purpose.
   {
     id: "jph-open-art-studio-2026-11-04", title: "Open Art Studio",

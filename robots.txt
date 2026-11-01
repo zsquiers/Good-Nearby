@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /sources/
+Disallow: /tools/
+Disallow: /docs/
 
 Sitemap: https://findgoodnearby.com/sitemap.xml
