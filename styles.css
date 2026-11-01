@@ -673,6 +673,9 @@ table.hours tr.today th, table.hours tr.today td { color: var(--ink); font-weigh
   .region { white-space: normal; }
 }
 
-/* "Explore" line in the footer: quiet links to the area and topic pages (built by tools/build_pages.js) */
-.footer .explore { flex-basis: 100%; display: flex; flex-wrap: wrap; justify-content: center; gap: 2px 8px; margin: 2px 0 0; font-size: .8rem; }
+/* "Explore by area & topic" in the footer: folded links to the area and topic pages (built by tools/build_pages.js) */
+.footer .explore { flex-basis: 100%; margin: 2px 0 0; text-align: center; font-size: .8rem; }
+.footer .explore summary { display: inline; cursor: pointer; color: var(--ink-soft); text-decoration: underline; list-style: none; }
+.footer .explore summary::-webkit-details-marker { display: none; }
+.footer .explore nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 2px 8px; margin-top: 6px; }
 .footer .explore a { color: var(--ink-soft); }

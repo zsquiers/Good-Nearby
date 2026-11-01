@@ -336,7 +336,7 @@ function page({ path: p, title, description, h1, eyebrow, crumbs, body, jsonld =
 function exploreNav() {
   const regions = Object.keys(REGIONS).map((id) => `<a href="${regionPath(id)}">${esc(REGIONS[id].name)}</a>`);
   const topics = topicPages.map((t) => `<a href="/${t.slug}/">${esc(t.name)}</a>`);
-  return `<nav class="explore" aria-label="Explore Good Nearby"><span>Explore:</span> ${[...regions, ...topics].join(' <span class="sep" aria-hidden="true">·</span> ')}</nav>`;
+  return `<details class="explore"><summary>Explore by area &amp; topic</summary><nav aria-label="Explore Good Nearby">${[...regions, ...topics].join(' <span class="sep" aria-hidden="true">·</span> ')}</nav></details>`;
 }
 
 const home = { name: "Home", path: "/" };
