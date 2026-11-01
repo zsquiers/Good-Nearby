@@ -74,6 +74,19 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
     tags: ["free", "come-alone", "outdoors"]
   },
   {
+    id: "trail-patriot-place-cranberry-bog",
+    title: "Nature Trail & Ocean Spray Cranberry Bog",
+    category: "walk", trail: "loop", miles: 0.5, surface: "Dirt path with roots (not wheelchair accessible)",
+    schedule: "Open daily, dawn to dusk",
+    venue: "The Nature Trail at Patriot Place", address: "1 Bass Pro Drive", city: "Foxborough, MA",
+    lat: 42.0960, lng: -71.2660,
+    price: null,
+    host: "Patriot Place",
+    description: "A half-mile nature walk behind Bass Pro Shops, past seven acres of working cranberry bogs first planted in 1929. Signs along the way explain how cranberries grow. Calm, and surprising so close to the stadium.",
+    url: "https://www.patriot-place.com/tenant/cranberrybog/",
+    tags: ["come-alone", "beginner", "outdoors"]
+  },
+  {
     id: "trail-wrentham-state-forest",
     title: "Wrentham State Forest",
     category: "hike", trail: "woods", surface: "Woods trails",
