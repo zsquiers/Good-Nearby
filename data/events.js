@@ -500,5 +500,70 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
     description: "Quiet time on your own, no practitioner needed: a Himalayan salt room for up to four people, and a two-person full-spectrum infrared sauna with salt walls and soft colored light. Lovely on its own or after a massage.",
     url: "https://www.holisticwellnesscenter.org/passive-therapies",
     tags: ["come-alone"]
+  },
+  // ---------- Attleboro Public Library (attleborolibrary.libcal.com; read by the monthly search) ----------
+  {
+    id: "apl-wednesday-book-group", title: "Wednesday Morning Book Group",
+    category: "book", monthly: { week: 1, day: "Wednesday", time: "10:00", endTime: "11:00" },
+    venue: "Attleboro Public Library", address: "74 North Main St", city: "Attleboro, MA", lat: 41.9459, lng: -71.2860,
+    price: 0, host: "Attleboro Public Library",
+    description: "A friendly monthly book group on the first Wednesday morning. November's book is The Book of Lost Names by Kristin Harmel.",
+    url: "https://attleborolibrary.libcal.com/event/16142077", source: "Library", tags: ["free", "come-alone"]
+  },
+  {
+    id: "apl-yarn-2026-11-03", title: "Yarn Lovers Group",
+    category: "craft", start: "2026-11-03T09:00", end: "2026-11-03T10:00",
+    venue: "Attleboro Public Library", address: "74 North Main St", city: "Attleboro, MA", lat: 41.9459, lng: -71.286,
+    price: 0, host: "Attleboro Public Library",
+    description: "Drop in with your knitting, crochet, embroidery or other fiber project and meet other makers. Meets every other Tuesday morning.",
+    url: "https://attleborolibrary.libcal.com/event/17712284", source: "Library", tags: ["free", "come-alone"]
+  },
+  {
+    id: "apl-yarn-2026-11-17", title: "Yarn Lovers Group",
+    category: "craft", start: "2026-11-17T09:00", end: "2026-11-17T10:00",
+    venue: "Attleboro Public Library", address: "74 North Main St", city: "Attleboro, MA", lat: 41.9459, lng: -71.286,
+    price: 0, host: "Attleboro Public Library",
+    description: "Drop in with your knitting, crochet, embroidery or other fiber project and meet other makers. Meets every other Tuesday morning.",
+    url: "https://attleborolibrary.libcal.com/event/17712285", source: "Library", tags: ["free", "come-alone"]
+  },
+  {
+    id: "apl-yarn-2026-12-01", title: "Yarn Lovers Group",
+    category: "craft", start: "2026-12-01T09:00", end: "2026-12-01T10:00",
+    venue: "Attleboro Public Library", address: "74 North Main St", city: "Attleboro, MA", lat: 41.9459, lng: -71.286,
+    price: 0, host: "Attleboro Public Library",
+    description: "Drop in with your knitting, crochet, embroidery or other fiber project and meet other makers. Meets every other Tuesday morning.",
+    url: "https://attleborolibrary.libcal.com/event/17712286", source: "Library", tags: ["free", "come-alone"]
+  },
+  {
+    id: "apl-writing-2026-11-02", title: "APL Writing Group",
+    category: "craft", start: "2026-11-02T18:30", end: "2026-11-02T20:00",
+    venue: "Attleboro Public Library", address: "74 North Main St", city: "Attleboro, MA", lat: 41.9459, lng: -71.286,
+    price: 0, priceNote: "Register ahead (space is limited)", host: "Attleboro Public Library",
+    description: "A new writing group: work on a prompt, share your pages and get friendly feedback.",
+    url: "https://attleborolibrary.libcal.com/event/16796437", source: "Library", tags: ["free", "come-alone"]
+  },
+  {
+    id: "apl-writing-2026-11-16", title: "APL Writing Group",
+    category: "craft", start: "2026-11-16T18:30", end: "2026-11-16T20:00",
+    venue: "Attleboro Public Library", address: "74 North Main St", city: "Attleboro, MA", lat: 41.9459, lng: -71.286,
+    price: 0, priceNote: "Register ahead (space is limited)", host: "Attleboro Public Library",
+    description: "A new writing group: work on a prompt, share your pages and get friendly feedback.",
+    url: "https://attleborolibrary.libcal.com/event/16796439", source: "Library", tags: ["free", "come-alone"]
+  },
+  {
+    id: "apl-writing-2026-11-30", title: "APL Writing Group",
+    category: "craft", start: "2026-11-30T18:30", end: "2026-11-30T20:00",
+    venue: "Attleboro Public Library", address: "74 North Main St", city: "Attleboro, MA", lat: 41.9459, lng: -71.286,
+    price: 0, priceNote: "Register ahead (space is limited)", host: "Attleboro Public Library",
+    description: "A new writing group: work on a prompt, share your pages and get friendly feedback.",
+    url: "https://attleborolibrary.libcal.com/event/16796440", source: "Library", tags: ["free", "come-alone"]
+  },
+  {
+    id: "apl-ww2-books-2026-11-17", title: "World War II Nonfiction Book Group",
+    category: "book", start: "2026-11-17T10:00", end: "2026-11-17T11:00",
+    venue: "Attleboro Public Library", address: "74 North Main St", city: "Attleboro, MA", lat: 41.9459, lng: -71.286,
+    price: 0, host: "Attleboro Public Library",
+    description: "A monthly nonfiction book group. November's book is Appeasement by Tim Bouverie; copies are at the library.",
+    url: "https://attleborolibrary.libcal.com/event/17249792", source: "Library", tags: ["free", "come-alone"]
   }
 ]);

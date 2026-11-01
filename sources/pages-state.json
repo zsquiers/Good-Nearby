@@ -1,149 +1,154 @@
 {
  "pages": {
   "/metrowest/": {
-   "hash": "b3c93386971b",
+   "hash": "246086a62298",
    "lastmod": "2026-11-01",
    "index": true
   },
   "/franklin-area/": {
-   "hash": "4b78c0b9cef4",
+   "hash": "4fc1cc0205e0",
    "lastmod": "2026-11-01",
    "index": true
   },
   "/boston-area/": {
-   "hash": "3da6177d40fb",
+   "hash": "75a47920dbf0",
    "lastmod": "2026-11-01",
    "index": true
   },
   "/south-shore/": {
-   "hash": "6244caea3427",
+   "hash": "0ee45b1885b1",
    "lastmod": "2026-11-01",
    "index": true
   },
   "/towns/franklin-ma/": {
-   "hash": "4fb743e6bf66",
+   "hash": "a047f3a93085",
    "lastmod": "2026-11-01",
    "index": true
   },
   "/towns/norfolk-ma/": {
-   "hash": "e55918f73209",
+   "hash": "3157f5c91e21",
    "lastmod": "2026-11-01",
    "index": true
   },
   "/towns/wrentham-ma/": {
-   "hash": "e3aae46e0aa4",
+   "hash": "57df750c192d",
    "lastmod": "2026-11-01",
    "index": true
   },
   "/towns/framingham-ma/": {
-   "hash": "b210c5af3097",
+   "hash": "e5d5072c820d",
    "lastmod": "2026-11-01",
    "index": true
   },
   "/towns/natick-ma/": {
-   "hash": "2c8447be4565",
+   "hash": "3168016afb9c",
    "lastmod": "2026-11-01",
    "index": true
   },
   "/towns/jamaica-plain-ma/": {
-   "hash": "0341aa5b6540",
+   "hash": "e79e25ba94a0",
    "lastmod": "2026-11-01",
    "index": true
   },
   "/towns/boston-ma/": {
-   "hash": "5f68132ca3b5",
+   "hash": "26a9788b5ca1",
    "lastmod": "2026-11-01",
    "index": true
   },
   "/towns/cambridge-ma/": {
-   "hash": "fc2239920192",
+   "hash": "3ce74eb57c3f",
    "lastmod": "2026-11-01",
    "index": true
   },
   "/towns/marshfield-ma/": {
-   "hash": "9aae09d061c4",
+   "hash": "050443c8cf3a",
    "lastmod": "2026-11-01",
    "index": true
   },
   "/towns/pembroke-ma/": {
-   "hash": "4cd853540c35",
+   "hash": "4996a969a159",
    "lastmod": "2026-11-01",
    "index": true
   },
   "/towns/medway-ma/": {
-   "hash": "f6e2d3391b1a",
+   "hash": "30feae1dc02d",
    "lastmod": "2026-11-01",
    "index": true
   },
   "/towns/bellingham-ma/": {
-   "hash": "747f09e878c0",
+   "hash": "834f3024f8b1",
    "lastmod": "2026-11-01",
    "index": true
   },
   "/towns/foxborough-ma/": {
-   "hash": "77b6fdae7686",
+   "hash": "54a490a27591",
    "lastmod": "2026-11-01",
    "index": true
   },
   "/towns/medfield-ma/": {
-   "hash": "4677b5ef1b41",
+   "hash": "4651b30ca6c7",
    "lastmod": "2026-11-01",
    "index": true
   },
   "/towns/scituate-ma/": {
-   "hash": "fda01650f2b4",
+   "hash": "cc4cbd332fb5",
    "lastmod": "2026-11-01",
    "index": true
   },
   "/sound-baths/": {
-   "hash": "017e63899fce",
+   "hash": "2f0fc91d8b91",
    "lastmod": "2026-11-01",
    "index": true
   },
   "/yoga/": {
-   "hash": "504e699e2ee5",
+   "hash": "121ccf4782e0",
    "lastmod": "2026-11-01",
    "index": true
   },
   "/meditation/": {
-   "hash": "1390d9973b7b",
+   "hash": "26c5514424f5",
    "lastmod": "2026-11-01",
    "index": true
   },
   "/reiki-massage-acupuncture/": {
-   "hash": "a64973b1747e",
+   "hash": "77c9fdd5adc9",
    "lastmod": "2026-11-01",
    "index": true
   },
   "/salt-caves/": {
-   "hash": "3654661c5a1f",
+   "hash": "6d34c3eac75f",
    "lastmod": "2026-11-01",
    "index": true
   },
   "/creative-classes/": {
-   "hash": "713b6b2bc67f",
+   "hash": "e71568ff1467",
    "lastmod": "2026-11-01",
    "index": true
   },
   "/book-groups/": {
-   "hash": "3e44cce7c811",
+   "hash": "0177467f01ed",
    "lastmod": "2026-11-01",
    "index": true
   },
   "/trails-and-walks/": {
-   "hash": "35718d5abfa1",
+   "hash": "15fae288dc1f",
    "lastmod": "2026-11-01",
    "index": true
   },
   "/cafes-and-bakeries/": {
-   "hash": "19c90466f823",
+   "hash": "bb6a16cef3f8",
+   "lastmod": "2026-11-01",
+   "index": true
+  },
+  "/towns/attleboro-ma/": {
+   "hash": "4bca52dd093f",
    "lastmod": "2026-11-01",
    "index": true
   }
  },
  "listings": {},
  "home": {
-  "hash": "96",
+  "hash": "97",
   "lastmod": "2026-11-01"
  },
  "built": "2026-11-01"

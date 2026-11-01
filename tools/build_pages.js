@@ -170,6 +170,8 @@ const REGIONS = {
 };
 // Hand-written; each names only ongoing listings (places, regular classes, libraries), checked on every build.
 const TOWN_NOTES = {
+  "Attleboro": { named: ["Oak Knoll Wildlife Sanctuary", "Attleboro Public Library"],
+    text: "In Attleboro, Mass Audubon's Oak Knoll Wildlife Sanctuary has free, quiet trails through woods and marsh and around the lake. Downtown, the Attleboro Public Library hosts free book groups, a yarn and fiber arts group and a writing group." },
   "Bellingham": { named: ["Bellingham Public Library"],
     text: "Most of what's on in Bellingham happens at the Bellingham Public Library, and it's free: book discussions, needlecraft nights, chat-and-craft workshops, gentle yoga and the occasional group sound bath." },
   "Boston": { named: ["Charles River Esplanade", "Southwest Corridor Park", "A Sanctuary Café", "Beacon Hill Books"],

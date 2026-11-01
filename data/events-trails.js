@@ -74,6 +74,32 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
     tags: ["free", "come-alone", "outdoors"]
   },
   {
+    id: "trail-oak-knoll",
+    title: "Oak Knoll Wildlife Sanctuary",
+    category: "walk", trail: "loop", miles: 1.5, surface: "Woods trails & boardwalk",
+    schedule: "Trails open daily, dawn to dusk",
+    venue: "Mass Audubon Oak Knoll Wildlife Sanctuary", address: "1417 Park St", city: "Attleboro, MA",
+    lat: 41.9396, lng: -71.3120,
+    price: 0,
+    host: "Mass Audubon",
+    description: "A quiet Mass Audubon sanctuary with 1.5 miles of trails through woods, a red maple swamp and freshwater marsh, and around the lake. Free to visit.",
+    url: "https://www.massaudubon.org/places-to-explore/wildlife-sanctuaries/oak-knoll",
+    tags: ["free", "come-alone", "beginner", "outdoors"]
+  },
+  {
+    id: "park-ww1-memorial-north-attleborough",
+    title: "World War I Memorial Park & Zoo",
+    category: "walk", trail: "woods", surface: "Park paths & woods trails",
+    schedule: "Open daily, dawn to dusk",
+    venue: "World War I Memorial Park", address: "World War I Memorial Park", city: "North Attleborough, MA",
+    lat: 41.9905, lng: -71.3400,
+    price: 0,
+    host: "North Attleborough Parks & Recreation",
+    description: "A free town park with walking trails, picnic areas and a small zoo of horses, donkeys, llamas, goats and deer, plus peacocks wandering the grounds and the peaceful Julia's Garden.",
+    url: "https://nattleboro.com/463/World-War-I-Memorial-Park-Zoo",
+    tags: ["free", "come-alone", "outdoors"]
+  },
+  {
     id: "trail-patriot-place-cranberry-bog",
     title: "Nature Trail & Ocean Spray Cranberry Bog",
     category: "walk", trail: "loop", miles: 0.5, surface: "Dirt path with roots (not wheelchair accessible)",
