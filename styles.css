@@ -672,3 +672,7 @@ table.hours tr.today th, table.hours tr.today td { color: var(--ink); font-weigh
 @media (max-width: 340px) {
   .region { white-space: normal; }
 }
+
+/* "Explore" line in the footer: quiet links to the area and topic pages (built by tools/build_pages.js) */
+.footer .explore { flex-basis: 100%; display: flex; flex-wrap: wrap; justify-content: center; gap: 2px 8px; margin: 2px 0 0; font-size: .8rem; }
+.footer .explore a { color: var(--ink-soft); }

@@ -1,0 +1,36 @@
+# Rebuilds the Google-readable pages each morning, so passed events drop off and new ones appear
+# without anyone running anything. It only publishes if tools/check_pages.js finds no problems.
+name: Rebuild pages for Google
+
+on:
+  schedule:
+    - cron: "17 9 * * *"        # every day, about 4–5 AM in Boston
+  workflow_dispatch:             # "Run workflow" button on the Actions tab
+  push:
+    branches: [main]
+    paths: ["data/**", "tools/build_pages.js"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build pages
+        run: node tools/build_pages.js
+      - name: Check pages
+        run: node tools/check_pages.js
+      - name: Publish if anything changed
+        run: |
+          git config user.name "Good Nearby page builder"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then echo "No changes."; exit 0; fi
+          git commit -m "Rebuild pages for Google ($(date -u +%Y-%m-%d))"
+          git push
