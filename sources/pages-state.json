@@ -1,7 +1,7 @@
 {
  "pages": {
   "/metrowest/": {
-   "hash": "04124f8848b9",
+   "hash": "bf41382adacc",
    "lastmod": "2026-11-02",
    "index": true
   },
@@ -16,7 +16,7 @@
    "index": true
   },
   "/south-shore/": {
-   "hash": "0c8d9a67e3b7",
+   "hash": "60ffbfacb742",
    "lastmod": "2026-11-02",
    "index": true
   },
@@ -41,7 +41,7 @@
    "index": true
   },
   "/towns/natick-ma/": {
-   "hash": "63e30a8dfd2c",
+   "hash": "15060a2748a5",
    "lastmod": "2026-11-02",
    "index": true
   },
@@ -91,7 +91,7 @@
    "index": true
   },
   "/towns/scituate-ma/": {
-   "hash": "66e858b1bf06",
+   "hash": "53fb11b22959",
    "lastmod": "2026-11-02",
    "index": true
   },
@@ -101,7 +101,7 @@
    "index": true
   },
   "/yoga/": {
-   "hash": "c7305256d292",
+   "hash": "97425a853803",
    "lastmod": "2026-11-02",
    "index": true
   },
@@ -126,8 +126,8 @@
    "index": true
   },
   "/book-groups/": {
-   "hash": "0177467f01ed",
-   "lastmod": "2026-11-01",
+   "hash": "06bf45910cac",
+   "lastmod": "2026-11-02",
    "index": true
   },
   "/trails-and-walks/": {
