@@ -1,23 +1,23 @@
 {
  "pages": {
   "/metrowest/": {
-   "hash": "246086a62298",
-   "lastmod": "2026-11-01",
+   "hash": "04124f8848b9",
+   "lastmod": "2026-11-02",
    "index": true
   },
   "/franklin-area/": {
-   "hash": "4fc1cc0205e0",
-   "lastmod": "2026-11-01",
+   "hash": "653256165725",
+   "lastmod": "2026-11-02",
    "index": true
   },
   "/boston-area/": {
-   "hash": "75a47920dbf0",
-   "lastmod": "2026-11-01",
+   "hash": "309a201e8007",
+   "lastmod": "2026-11-02",
    "index": true
   },
   "/south-shore/": {
-   "hash": "0ee45b1885b1",
-   "lastmod": "2026-11-01",
+   "hash": "0c8d9a67e3b7",
+   "lastmod": "2026-11-02",
    "index": true
   },
   "/towns/franklin-ma/": {
@@ -41,8 +41,8 @@
    "index": true
   },
   "/towns/natick-ma/": {
-   "hash": "3168016afb9c",
-   "lastmod": "2026-11-01",
+   "hash": "63e30a8dfd2c",
+   "lastmod": "2026-11-02",
    "index": true
   },
   "/towns/jamaica-plain-ma/": {
@@ -56,8 +56,8 @@
    "index": true
   },
   "/towns/cambridge-ma/": {
-   "hash": "3ce74eb57c3f",
-   "lastmod": "2026-11-01",
+   "hash": "3efc0cb15072",
+   "lastmod": "2026-11-02",
    "index": true
   },
   "/towns/marshfield-ma/": {
@@ -91,8 +91,8 @@
    "index": true
   },
   "/towns/scituate-ma/": {
-   "hash": "cc4cbd332fb5",
-   "lastmod": "2026-11-01",
+   "hash": "66e858b1bf06",
+   "lastmod": "2026-11-02",
    "index": true
   },
   "/sound-baths/": {
@@ -101,13 +101,13 @@
    "index": true
   },
   "/yoga/": {
-   "hash": "121ccf4782e0",
-   "lastmod": "2026-11-01",
+   "hash": "c7305256d292",
+   "lastmod": "2026-11-02",
    "index": true
   },
   "/meditation/": {
-   "hash": "26c5514424f5",
-   "lastmod": "2026-11-01",
+   "hash": "53e30e70a636",
+   "lastmod": "2026-11-02",
    "index": true
   },
   "/reiki-massage-acupuncture/": {
@@ -131,8 +131,8 @@
    "index": true
   },
   "/trails-and-walks/": {
-   "hash": "15fae288dc1f",
-   "lastmod": "2026-11-01",
+   "hash": "235e949d4a0c",
+   "lastmod": "2026-11-02",
    "index": true
   },
   "/cafes-and-bakeries/": {
@@ -151,5 +151,5 @@
   "hash": "97",
   "lastmod": "2026-11-01"
  },
- "built": "2026-11-01"
+ "built": "2026-11-02"
 }
