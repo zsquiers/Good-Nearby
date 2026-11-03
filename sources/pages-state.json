@@ -6,8 +6,8 @@
    "index": true
   },
   "/franklin-area/": {
-   "hash": "653256165725",
-   "lastmod": "2026-11-02",
+   "hash": "17fed8141e0c",
+   "lastmod": "2026-11-03",
    "index": true
   },
   "/boston-area/": {
@@ -26,8 +26,8 @@
    "index": true
   },
   "/towns/norfolk-ma/": {
-   "hash": "3157f5c91e21",
-   "lastmod": "2026-11-01",
+   "hash": "39a53a0d49c6",
+   "lastmod": "2026-11-03",
    "index": true
   },
   "/towns/wrentham-ma/": {
@@ -71,18 +71,18 @@
    "index": true
   },
   "/towns/medway-ma/": {
-   "hash": "30feae1dc02d",
-   "lastmod": "2026-11-01",
+   "hash": "c1de4d776a99",
+   "lastmod": "2026-11-03",
    "index": true
   },
   "/towns/bellingham-ma/": {
-   "hash": "834f3024f8b1",
-   "lastmod": "2026-11-01",
+   "hash": "458d2a410108",
+   "lastmod": "2026-11-03",
    "index": true
   },
   "/towns/foxborough-ma/": {
-   "hash": "54a490a27591",
-   "lastmod": "2026-11-01",
+   "hash": "761035b24008",
+   "lastmod": "2026-11-03",
    "index": true
   },
   "/towns/medfield-ma/": {
@@ -121,13 +121,13 @@
    "index": true
   },
   "/creative-classes/": {
-   "hash": "e71568ff1467",
-   "lastmod": "2026-11-01",
+   "hash": "6b2b7d616add",
+   "lastmod": "2026-11-03",
    "index": true
   },
   "/book-groups/": {
-   "hash": "06bf45910cac",
-   "lastmod": "2026-11-02",
+   "hash": "ee45651897c7",
+   "lastmod": "2026-11-03",
    "index": true
   },
   "/trails-and-walks/": {
@@ -141,8 +141,8 @@
    "index": true
   },
   "/towns/attleboro-ma/": {
-   "hash": "4bca52dd093f",
-   "lastmod": "2026-11-01",
+   "hash": "90d9a245913d",
+   "lastmod": "2026-11-03",
    "index": true
   }
  },
@@ -151,5 +151,5 @@
   "hash": "97",
   "lastmod": "2026-11-01"
  },
- "built": "2026-11-02"
+ "built": "2026-11-03"
 }
