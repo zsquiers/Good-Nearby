@@ -100,6 +100,45 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
     tags: ["free", "outdoors"]
   },
   {
+    id: "trail-copicut-woods",
+    title: "Copicut Woods",
+    category: "hike", trail: "woods", miles: 5.4, surface: "Woods trails, cart paths & an accessible discovery trail",
+    schedule: "Open daily, sunrise to sunset",
+    venue: "The Trustees' Copicut Woods", address: "Indian Town Rd", city: "Fall River, MA",
+    lat: 41.7480, lng: -71.0475,
+    price: 0,
+    host: "The Trustees",
+    description: "Quiet woods with vernal pools, an old farm settlement and Miller Lane, a 150-year-old stone-walled cart path, plus a timber-frame shed for a picnic. Free. Follow the Trustees' driving directions: GPS can send you down rough, unmaintained roads.",
+    url: "https://thetrustees.org/place/copicut-woods/",
+    tags: ["free", "come-alone", "outdoors"]
+  },
+  {
+    id: "trail-boyden-refuge-taunton",
+    title: "Boyden Wildlife Refuge",
+    category: "walk", trail: "loop", surface: "Nature trails",
+    schedule: "Open daily — daylight hours",
+    venue: "Gertrude M. Boyden Wildlife Refuge", address: "1298 Cohannet St", city: "Taunton, MA",
+    lat: 41.9205, lng: -71.1260,
+    price: 0,
+    host: "Taunton Conservation Commission",
+    description: "A 50-acre city refuge on the Three Mile River with walking trails, river and marsh views, and a replica of the cabin ornithologist Arthur Cleveland Bent used for birdwatching.",
+    url: "https://savethetaunton.org/explore-enjoy/where-to-go-in-the-taunton-river-watershed/",
+    tags: ["free", "come-alone", "beginner", "outdoors"]
+  },
+  {
+    id: "trail-great-river-preserve",
+    title: "Great River Preserve",
+    category: "walk", trail: "loop", surface: "Wide mowed grass paths & a paved path to the river",
+    schedule: "Open daily — daylight hours",
+    venue: "Wildlands Trust Great River Preserve", address: "End of Auburn St", city: "Bridgewater, MA",
+    lat: 41.9705, lng: -70.9580,
+    price: 0,
+    host: "Wildlands Trust",
+    description: "Over a mile of quiet Taunton River frontage, open fields and pine-oak woods. Wide, flat mowed paths make for easy strolling, and a paved path leads to a wheelchair-accessible platform overlooking the river. Paths can flood in spring and fall.",
+    url: "https://www.wildlandstrust.org/great-river-preserve",
+    tags: ["free", "come-alone", "beginner", "outdoors"]
+  },
+  {
     id: "trail-oak-knoll",
     title: "Oak Knoll Wildlife Sanctuary",
     category: "walk", trail: "loop", miles: 1.5, surface: "Woods trails & boardwalk",

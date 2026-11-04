@@ -196,5 +196,18 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
     description: "A long-running, beginner-friendly South Shore studio, in person or livestream. For calm, try Restorative Yin, Revive & Thrive (gentle props and acupressure), Soulful Slow Flow or Chair Yoga.",
     url: "https://www.emeraldyoga.com/classes",
     tags: ["beginner"]
+  },
+  {
+    id: "open-doors-yoga-taunton",
+    title: "Open Doors Yoga Studios · Taunton",
+    category: "yoga",
+    schedule: "Classes most days — see the schedule",
+    venue: "Open Doors Yoga Studios", address: "13 Main St (Taunton Green)", city: "Taunton, MA",
+    lat: 41.9010, lng: -71.0898,
+    price: null,
+    host: "Open Doors Yoga Studios",
+    description: "A yoga studio on the Taunton Green with classes and workshops. Check the schedule on the day: it can change.",
+    url: "https://opendoorsyogastudios.com/taunton",
+    tags: ["come-alone"]
   }
 ]);

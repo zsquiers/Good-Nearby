@@ -25,6 +25,9 @@ LIBRARIES = {
     "norwoodlibrary":     ("Morrill Memorial Library",     "Norwood",     42.1945, -71.1995),
     "ventresslibrary":    ("Ventress Memorial Library",    "Marshfield",  42.0920, -70.7055),
     "tauntonlibrary":     ("Taunton Public Library",       "Taunton",     41.9005, -71.0905),
+    "raynhampubliclibrary": ("Raynham Public Library",     "Raynham",     41.9310, -71.0580),
+    "somersetpubliclibrary": ("Somerset Public Library",   "Somerset",    41.7700, -71.1290),
+    "amesfreelibrary":    ("Ames Free Library",            "Easton",      42.0640, -71.0990),
 }
 
 # What we list, checked against the title first, then the description. First match wins.

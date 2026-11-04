@@ -459,5 +459,33 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
     description: "A family-owned Portuguese bakery and café making São Miguel and Lisbon-style pastries, breads and sandwiches on site, with espresso and a seating area. Known for its custard tarts.",
     url: "https://www.google.com/maps/search/?api=1&query=Barcelos+Bakery+695+Bedford+St+Fall+River+MA",
     tags: ["come-alone"]
+  },
+  // ---------- Taunton ----------
+  {
+    id: "cafe-neighbors-taunton",
+    title: "Neighbors Coffee & Co.",
+    category: "cafe",
+    schedule: "Tue–Sun 7–2 · closed Mondays",
+    hours: { mon: null, tue: "07:00-14:00", wed: "07:00-14:00", thu: "07:00-14:00", fri: "07:00-14:00", sat: "07:00-14:00", sun: "07:00-14:00" },
+    venue: "Neighbors Coffee & Co.", address: "32 Weir St", city: "Taunton, MA",
+    lat: 41.8995, lng: -71.0860,
+    price: null,
+    host: "Neighbors Coffee & Co.",
+    description: "A local roaster's café: ethically sourced coffee roasted right in Taunton. You can order ahead online.",
+    url: "https://theneighborscoffee.com/",
+    tags: ["come-alone"]
+  },
+  {
+    id: "cafe-identity-taunton",
+    title: "Identity Coffee Co.",
+    category: "cafe",
+    schedule: "Check hours before you go",
+    venue: "Identity Coffee Co.", address: "49 Main St", city: "Taunton, MA",
+    lat: 41.9012, lng: -71.0895,
+    price: null,
+    host: "Identity Coffee Co.",
+    description: "A coffee bar right on the Taunton Green, a short walk from the library and the yoga studio.",
+    url: "https://identitycoffee.com/taunton-ma",
+    tags: ["come-alone"]
   }
 ]);
