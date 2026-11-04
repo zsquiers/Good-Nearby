@@ -716,7 +716,7 @@
     const list = eventsOn(areaId, day);
     const ongoing = ongoingIn(areaId);
     const row = (e, i, time, extra) => {
-      const meta = [e.venue, e.city.replace(/, MA$/, ""), priceLabel(e) === "Price: ask the host" ? "" : priceLabel(e)]
+      const meta = [e.venue, e.city.replace(/, MA$/, ""), milesText(e), priceLabel(e) === "Price: ask the host" ? "" : priceLabel(e)]
         .filter(Boolean).map(escapeHtml).join(" · ");
       return `<li><button type="button" class="row" data-dayopen="${i}">
         <span class="row-time${extra ? " small" : ""}">${time}</span>
@@ -776,13 +776,21 @@
   function wanderList(areaId) {
     const places = events.filter((e) => !e.sessions && isPlace(e) && inArea(e, areaId));
     const rank = (e) => { const st = openStatus(e); return st ? (st.open ? 0 : 1) : 2; };
-    const order = (a, b) => rank(a) - rank(b) || (origin ? distanceMiles(origin, a) - distanceMiles(origin, b) : a.title.localeCompare(b.title));
-    return WANDER_GROUPS.map((g) => ({ ...g, items: places.filter(g.test).sort(order) })).filter((g) => g.items.length);
+    // Knowing where someone is, nearest comes first (open now only breaks ties); otherwise open-now first.
+    const order = origin
+      ? (a, b) => distanceMiles(origin, a) - distanceMiles(origin, b) || rank(a) - rank(b)
+      : (a, b) => rank(a) - rank(b) || a.title.localeCompare(b.title);
+    const groups = WANDER_GROUPS.map((g) => ({ ...g, items: places.filter(g.test).sort(order) })).filter((g) => g.items.length);
+    if (origin) groups.sort((a, b) => distanceMiles(origin, a.items[0]) - distanceMiles(origin, b.items[0]));
+    return groups;
   }
   const wanderDeck = (areaId) => wanderList(areaId).flatMap((g) => g.items.map((e) => e.id));
 
   function renderWander(areaId) {
     wanderArea = areaId;
+    $("wanderLede").textContent = origin
+      ? "Independent cafés, bakeries and little shops, closest to you first."
+      : "Independent cafés, bakeries and little shops. What's open right now is at the top.";
     $("wanderAreas").innerHTML = AREAS.map((a) =>
       `<button type="button" class="chip${a.id === areaId ? " on" : ""}" data-wanderarea="${a.id}" aria-pressed="${a.id === areaId}">${escapeHtml(a.id === "all" ? "Everywhere" : a.area)}</button>`).join("");
     const groups = wanderList(areaId);
@@ -856,7 +864,7 @@
     $("findList").innerHTML = [...days.values()].map(({ d, rows }) => {
       const w = dayWord(d);
       return `<section class="slot"><h3>${escapeHtml(w.includes(",") ? w : `${w} · ${mdFmt.format(d)}`)}</h3><ul class="rows">${rows.map(({ e, s, i }) => {
-        const meta = [e.venue, e.city.replace(/, MA$/, ""), priceLabel(e) === "Price: ask the host" ? "" : priceLabel(e)].filter(Boolean).map(escapeHtml).join(" · ");
+        const meta = [e.venue, e.city.replace(/, MA$/, ""), milesText(e), priceLabel(e) === "Price: ask the host" ? "" : priceLabel(e)].filter(Boolean).map(escapeHtml).join(" · ");
         return `<li><button type="button" class="row" data-findopen="${i}">
           <span class="row-time">${e.allDay ? "All day" : shortTime(s.start)}</span>
           <span class="row-main">
