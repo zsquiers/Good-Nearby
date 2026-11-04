@@ -74,6 +74,32 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
     tags: ["free", "come-alone", "outdoors"]
   },
   {
+    id: "park-sweets-knoll-dighton",
+    title: "Sweets Knoll State Park",
+    category: "walk", trail: "loop", surface: "Grassy paths & meadows",
+    schedule: "Open daily — see the park page for hours",
+    venue: "Sweets Knoll State Park", address: "1387 Somerset Ave", city: "Dighton, MA",
+    lat: 41.7984, lng: -71.1240,
+    price: 0,
+    host: "Mass. DCR",
+    description: "A quiet little state park on the Taunton River: a knoll overlooking the water, meadows down to the shoreline, picnic spots and a canoe and kayak launch. Lovely for an easy walk and a picnic.",
+    url: "https://www.mass.gov/locations/sweets-knoll-state-park",
+    tags: ["free", "come-alone", "outdoors"]
+  },
+  {
+    id: "forest-freetown-fall-river",
+    title: "Freetown-Fall River State Forest & The Ledge",
+    category: "hike", trail: "woods", surface: "Rocky woods trails",
+    schedule: "Open daily, sunrise to sunset",
+    venue: "Freetown-Fall River State Forest", address: "110 Slab Bridge Rd", city: "Freetown, MA",
+    lat: 41.7740, lng: -71.0560,
+    price: 0,
+    host: "Mass. DCR",
+    description: "A big state forest whose best-known spot is The Ledge, a rocky outcrop with views over the trees. More of an adventure than a flat park walk: the ground is rocky, so pick an easy route and wear sturdy shoes.",
+    url: "https://www.mass.gov/locations/freetown-fall-river-state-forest",
+    tags: ["free", "outdoors"]
+  },
+  {
     id: "trail-oak-knoll",
     title: "Oak Knoll Wildlife Sanctuary",
     category: "walk", trail: "loop", miles: 1.5, surface: "Woods trails & boardwalk",

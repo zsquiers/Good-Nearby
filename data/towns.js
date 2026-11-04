@@ -65,5 +65,8 @@ window.GOOD_NEARBY_TOWNS = [
     { id: "lakeville",    name: "Lakeville",    lat: 41.8457, lng: -70.9495 },
     { id: "berkley",      name: "Berkley",      lat: 41.8459, lng: -71.0828 },
     { id: "dighton",      name: "Dighton",      lat: 41.8132, lng: -71.1206 },
+    { id: "freetown",     name: "Freetown",     lat: 41.7962, lng: -71.0670, aliases: ["Assonet", "East Freetown"] },
+    { id: "fall-river",   name: "Fall River",   lat: 41.7015, lng: -71.1550 },
+    { id: "somerset",     name: "Somerset",     lat: 41.7690, lng: -71.1290 },
   ]},
 ];

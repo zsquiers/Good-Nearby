@@ -430,5 +430,34 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
     url: "",
     phone: "(508) 830-1410",
     tags: ["come-alone", "outdoors"]
+  },
+  // ---------- Fall River ----------
+  {
+    id: "bakery-new-boston-fall-river",
+    title: "New Boston Bakery",
+    category: "bakery",
+    schedule: "Mon–Fri 7–3 · closed weekends",
+    hours: { mon: "07:00-15:00", tue: "07:00-15:00", wed: "07:00-15:00", thu: "07:00-15:00", fri: "07:00-15:00", sat: null, sun: null },
+    venue: "New Boston Bakery", address: "279 New Boston Rd", city: "Fall River, MA",
+    lat: 41.7210, lng: -71.1325,
+    price: null,
+    host: "New Boston Bakery",
+    description: "A Highland Village bakery since 1992 with homemade soups, salads, gourmet sandwiches and fresh pastries. Linger in the café or the cozy four-season sunroom.",
+    url: "https://www.newbostonbakery.com/",
+    tags: ["come-alone"]
+  },
+  {
+    id: "bakery-barcelos-fall-river",
+    title: "Barcelos Bakery",
+    category: "bakery",
+    schedule: "Opens early — call to check today's hours",
+    venue: "Barcelos Bakery", address: "695 Bedford St", city: "Fall River, MA",
+    lat: 41.7020, lng: -71.1490,
+    price: null,
+    host: "Barcelos Bakery",
+    phone: "(508) 676-8661",
+    description: "A family-owned Portuguese bakery and café making São Miguel and Lisbon-style pastries, breads and sandwiches on site, with espresso and a seating area. Known for its custard tarts.",
+    url: "https://www.google.com/maps/search/?api=1&query=Barcelos+Bakery+695+Bedford+St+Fall+River+MA",
+    tags: ["come-alone"]
   }
 ]);
