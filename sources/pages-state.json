@@ -1,18 +1,18 @@
 {
  "pages": {
   "/metrowest/": {
-   "hash": "bf41382adacc",
-   "lastmod": "2026-11-02",
+   "hash": "3fad3e1a62e2",
+   "lastmod": "2026-11-04",
    "index": true
   },
   "/franklin-area/": {
-   "hash": "17fed8141e0c",
-   "lastmod": "2026-11-03",
+   "hash": "2a6d11fe59f2",
+   "lastmod": "2026-11-04",
    "index": true
   },
   "/boston-area/": {
-   "hash": "309a201e8007",
-   "lastmod": "2026-11-02",
+   "hash": "fd1635ad032d",
+   "lastmod": "2026-11-04",
    "index": true
   },
   "/south-shore/": {
@@ -26,8 +26,8 @@
    "index": true
   },
   "/towns/norfolk-ma/": {
-   "hash": "39a53a0d49c6",
-   "lastmod": "2026-11-03",
+   "hash": "3d867edac469",
+   "lastmod": "2026-11-04",
    "index": true
   },
   "/towns/wrentham-ma/": {
@@ -36,13 +36,13 @@
    "index": true
   },
   "/towns/framingham-ma/": {
-   "hash": "e5d5072c820d",
-   "lastmod": "2026-11-01",
+   "hash": "99b532e63bd3",
+   "lastmod": "2026-11-04",
    "index": true
   },
   "/towns/natick-ma/": {
-   "hash": "15060a2748a5",
-   "lastmod": "2026-11-02",
+   "hash": "42f085ef5c00",
+   "lastmod": "2026-11-04",
    "index": true
   },
   "/towns/jamaica-plain-ma/": {
@@ -101,8 +101,8 @@
    "index": true
   },
   "/yoga/": {
-   "hash": "97425a853803",
-   "lastmod": "2026-11-02",
+   "hash": "71d9efdbb1ed",
+   "lastmod": "2026-11-04",
    "index": true
   },
   "/meditation/": {
@@ -121,18 +121,18 @@
    "index": true
   },
   "/creative-classes/": {
-   "hash": "6b2b7d616add",
-   "lastmod": "2026-11-03",
+   "hash": "819d804f1835",
+   "lastmod": "2026-11-04",
    "index": true
   },
   "/book-groups/": {
-   "hash": "ee45651897c7",
-   "lastmod": "2026-11-03",
+   "hash": "f7518ace8680",
+   "lastmod": "2026-11-04",
    "index": true
   },
   "/trails-and-walks/": {
-   "hash": "235e949d4a0c",
-   "lastmod": "2026-11-02",
+   "hash": "25d5db3d0c26",
+   "lastmod": "2026-11-04",
    "index": true
   },
   "/cafes-and-bakeries/": {
@@ -151,5 +151,5 @@
   "hash": "97",
   "lastmod": "2026-11-01"
  },
- "built": "2026-11-03"
+ "built": "2026-11-04"
 }
