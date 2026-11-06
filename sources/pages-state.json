@@ -1,23 +1,23 @@
 {
  "pages": {
   "/metrowest/": {
-   "hash": "02120bb265fc",
-   "lastmod": "2026-11-05",
+   "hash": "c7b6b8d2bec9",
+   "lastmod": "2026-11-06",
    "index": true
   },
   "/franklin-area/": {
-   "hash": "4776af91d87f",
-   "lastmod": "2026-11-05",
+   "hash": "feca9874508e",
+   "lastmod": "2026-11-06",
    "index": true
   },
   "/boston-area/": {
-   "hash": "aa8fb9969966",
-   "lastmod": "2026-11-05",
+   "hash": "987c582a67ba",
+   "lastmod": "2026-11-06",
    "index": true
   },
   "/south-shore/": {
-   "hash": "d80212410230",
-   "lastmod": "2026-11-05",
+   "hash": "a2ad0433be02",
+   "lastmod": "2026-11-06",
    "index": true
   },
   "/towns/franklin-ma/": {
@@ -41,8 +41,8 @@
    "index": true
   },
   "/towns/natick-ma/": {
-   "hash": "60581b6e5a8a",
-   "lastmod": "2026-11-05",
+   "hash": "6f9979d1596b",
+   "lastmod": "2026-11-06",
    "index": true
   },
   "/towns/jamaica-plain-ma/": {
@@ -56,8 +56,8 @@
    "index": true
   },
   "/towns/cambridge-ma/": {
-   "hash": "1b90e973fe78",
-   "lastmod": "2026-11-05",
+   "hash": "55e4b1b37a59",
+   "lastmod": "2026-11-06",
    "index": true
   },
   "/towns/marshfield-ma/": {
@@ -71,8 +71,8 @@
    "index": true
   },
   "/towns/medway-ma/": {
-   "hash": "1909c08d350e",
-   "lastmod": "2026-11-05",
+   "hash": "28bba3968d7f",
+   "lastmod": "2026-11-06",
    "index": true
   },
   "/towns/bellingham-ma/": {
@@ -91,8 +91,8 @@
    "index": true
   },
   "/towns/scituate-ma/": {
-   "hash": "6a3e9e1a44cf",
-   "lastmod": "2026-11-04",
+   "hash": "d3b1a7be21e5",
+   "lastmod": "2026-11-06",
    "index": true
   },
   "/sound-baths/": {
@@ -101,13 +101,13 @@
    "index": true
   },
   "/yoga/": {
-   "hash": "5e39a951d01b",
-   "lastmod": "2026-11-05",
+   "hash": "e85da53b6f2a",
+   "lastmod": "2026-11-06",
    "index": true
   },
   "/meditation/": {
-   "hash": "68fd23e16cd4",
-   "lastmod": "2026-11-05",
+   "hash": "66a56f1da10f",
+   "lastmod": "2026-11-06",
    "index": true
   },
   "/reiki-massage-acupuncture/": {
@@ -121,18 +121,18 @@
    "index": true
   },
   "/creative-classes/": {
-   "hash": "8461e8e4c4da",
-   "lastmod": "2026-11-05",
+   "hash": "2dcf36ba3620",
+   "lastmod": "2026-11-06",
    "index": true
   },
   "/book-groups/": {
-   "hash": "e4f2740b8986",
-   "lastmod": "2026-11-05",
+   "hash": "fc7e5220dece",
+   "lastmod": "2026-11-06",
    "index": true
   },
   "/trails-and-walks/": {
-   "hash": "2ab0b189d879",
-   "lastmod": "2026-11-04",
+   "hash": "6984f89d5c42",
+   "lastmod": "2026-11-06",
    "index": true
   },
   "/cafes-and-bakeries/": {
@@ -146,8 +146,8 @@
    "index": true
   },
   "/towns/millis-ma/": {
-   "hash": "af37011ccefc",
-   "lastmod": "2026-11-04",
+   "hash": "d800a4a1b9f5",
+   "lastmod": "2026-11-06",
    "index": true
   },
   "/towns/taunton-ma/": {
@@ -171,5 +171,5 @@
   "hash": "100",
   "lastmod": "2026-11-04"
  },
- "built": "2026-11-05"
+ "built": "2026-11-06"
 }
