@@ -1,23 +1,23 @@
 {
  "pages": {
   "/metrowest/": {
-   "hash": "c7b6b8d2bec9",
-   "lastmod": "2026-11-06",
+   "hash": "300facdf1e9f",
+   "lastmod": "2026-11-07",
    "index": true
   },
   "/franklin-area/": {
-   "hash": "feca9874508e",
-   "lastmod": "2026-11-06",
+   "hash": "f89303ac7a20",
+   "lastmod": "2026-11-07",
    "index": true
   },
   "/boston-area/": {
-   "hash": "987c582a67ba",
-   "lastmod": "2026-11-06",
+   "hash": "a59249b6d936",
+   "lastmod": "2026-11-07",
    "index": true
   },
   "/south-shore/": {
-   "hash": "a2ad0433be02",
-   "lastmod": "2026-11-06",
+   "hash": "447c86afeaf7",
+   "lastmod": "2026-11-07",
    "index": true
   },
   "/towns/franklin-ma/": {
@@ -26,8 +26,8 @@
    "index": true
   },
   "/towns/norfolk-ma/": {
-   "hash": "fb587471cd00",
-   "lastmod": "2026-11-04",
+   "hash": "5642b31f5dd1",
+   "lastmod": "2026-11-07",
    "index": true
   },
   "/towns/wrentham-ma/": {
@@ -41,8 +41,8 @@
    "index": true
   },
   "/towns/natick-ma/": {
-   "hash": "6f9979d1596b",
-   "lastmod": "2026-11-06",
+   "hash": "959e643e991e",
+   "lastmod": "2026-11-07",
    "index": true
   },
   "/towns/jamaica-plain-ma/": {
@@ -66,8 +66,8 @@
    "index": true
   },
   "/towns/pembroke-ma/": {
-   "hash": "5e62cc05fb07",
-   "lastmod": "2026-11-04",
+   "hash": "dab750ca4930",
+   "lastmod": "2026-11-07",
    "index": true
   },
   "/towns/medway-ma/": {
@@ -91,8 +91,8 @@
    "index": true
   },
   "/towns/scituate-ma/": {
-   "hash": "d3b1a7be21e5",
-   "lastmod": "2026-11-06",
+   "hash": "1f5f38f7bfba",
+   "lastmod": "2026-11-07",
    "index": true
   },
   "/sound-baths/": {
@@ -101,13 +101,13 @@
    "index": true
   },
   "/yoga/": {
-   "hash": "e85da53b6f2a",
-   "lastmod": "2026-11-06",
+   "hash": "819b55bfdf6d",
+   "lastmod": "2026-11-07",
    "index": true
   },
   "/meditation/": {
-   "hash": "66a56f1da10f",
-   "lastmod": "2026-11-06",
+   "hash": "39b84c21d34e",
+   "lastmod": "2026-11-07",
    "index": true
   },
   "/reiki-massage-acupuncture/": {
@@ -121,8 +121,8 @@
    "index": true
   },
   "/creative-classes/": {
-   "hash": "2dcf36ba3620",
-   "lastmod": "2026-11-06",
+   "hash": "ffe95b5feadb",
+   "lastmod": "2026-11-07",
    "index": true
   },
   "/book-groups/": {
@@ -131,8 +131,8 @@
    "index": true
   },
   "/trails-and-walks/": {
-   "hash": "6984f89d5c42",
-   "lastmod": "2026-11-06",
+   "hash": "5c8f95731079",
+   "lastmod": "2026-11-07",
    "index": true
   },
   "/cafes-and-bakeries/": {
@@ -171,5 +171,5 @@
   "hash": "100",
   "lastmod": "2026-11-04"
  },
- "built": "2026-11-06"
+ "built": "2026-11-07"
 }
