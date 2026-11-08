@@ -1,8 +1,8 @@
 {
  "pages": {
   "/metrowest/": {
-   "hash": "300facdf1e9f",
-   "lastmod": "2026-11-07",
+   "hash": "51a514b64836",
+   "lastmod": "2026-11-08",
    "index": true
   },
   "/franklin-area/": {
@@ -11,13 +11,13 @@
    "index": true
   },
   "/boston-area/": {
-   "hash": "a59249b6d936",
-   "lastmod": "2026-11-07",
+   "hash": "c10a521a1c0d",
+   "lastmod": "2026-11-08",
    "index": true
   },
   "/south-shore/": {
-   "hash": "447c86afeaf7",
-   "lastmod": "2026-11-07",
+   "hash": "b557c9801245",
+   "lastmod": "2026-11-08",
    "index": true
   },
   "/towns/franklin-ma/": {
@@ -41,8 +41,8 @@
    "index": true
   },
   "/towns/natick-ma/": {
-   "hash": "959e643e991e",
-   "lastmod": "2026-11-07",
+   "hash": "bff04732fe9c",
+   "lastmod": "2026-11-08",
    "index": true
   },
   "/towns/jamaica-plain-ma/": {
@@ -56,8 +56,8 @@
    "index": true
   },
   "/towns/cambridge-ma/": {
-   "hash": "55e4b1b37a59",
-   "lastmod": "2026-11-06",
+   "hash": "731af68aa77d",
+   "lastmod": "2026-11-08",
    "index": true
   },
   "/towns/marshfield-ma/": {
@@ -91,8 +91,8 @@
    "index": true
   },
   "/towns/scituate-ma/": {
-   "hash": "1f5f38f7bfba",
-   "lastmod": "2026-11-07",
+   "hash": "ff5f891b92e3",
+   "lastmod": "2026-11-08",
    "index": true
   },
   "/sound-baths/": {
@@ -101,8 +101,8 @@
    "index": true
   },
   "/yoga/": {
-   "hash": "819b55bfdf6d",
-   "lastmod": "2026-11-07",
+   "hash": "e3b3a7afd5d4",
+   "lastmod": "2026-11-08",
    "index": true
   },
   "/meditation/": {
@@ -131,8 +131,8 @@
    "index": true
   },
   "/trails-and-walks/": {
-   "hash": "5c8f95731079",
-   "lastmod": "2026-11-07",
+   "hash": "da6bce19b315",
+   "lastmod": "2026-11-08",
    "index": true
   },
   "/cafes-and-bakeries/": {
@@ -171,5 +171,5 @@
   "hash": "100",
   "lastmod": "2026-11-04"
  },
- "built": "2026-11-07"
+ "built": "2026-11-08"
 }
