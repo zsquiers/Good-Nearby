@@ -1,28 +1,28 @@
 {
  "pages": {
   "/metrowest/": {
-   "hash": "51a514b64836",
-   "lastmod": "2026-11-08",
+   "hash": "aa4240028b70",
+   "lastmod": "2026-11-09",
    "index": true
   },
   "/franklin-area/": {
-   "hash": "f89303ac7a20",
-   "lastmod": "2026-11-07",
+   "hash": "91251ae8530b",
+   "lastmod": "2026-11-09",
    "index": true
   },
   "/boston-area/": {
-   "hash": "c10a521a1c0d",
-   "lastmod": "2026-11-08",
+   "hash": "700581bc1a48",
+   "lastmod": "2026-11-09",
    "index": true
   },
   "/south-shore/": {
-   "hash": "b557c9801245",
-   "lastmod": "2026-11-08",
+   "hash": "48a38b20708e",
+   "lastmod": "2026-11-09",
    "index": true
   },
   "/towns/franklin-ma/": {
-   "hash": "a9342129ac77",
-   "lastmod": "2026-11-04",
+   "hash": "3942e9f3e98b",
+   "lastmod": "2026-11-09",
    "index": true
   },
   "/towns/norfolk-ma/": {
@@ -41,8 +41,8 @@
    "index": true
   },
   "/towns/natick-ma/": {
-   "hash": "bff04732fe9c",
-   "lastmod": "2026-11-08",
+   "hash": "aeb2f3ed98e3",
+   "lastmod": "2026-11-09",
    "index": true
   },
   "/towns/jamaica-plain-ma/": {
@@ -56,13 +56,13 @@
    "index": true
   },
   "/towns/cambridge-ma/": {
-   "hash": "731af68aa77d",
-   "lastmod": "2026-11-08",
+   "hash": "def61d82a9e9",
+   "lastmod": "2026-11-09",
    "index": true
   },
   "/towns/marshfield-ma/": {
-   "hash": "ef668b9d8126",
-   "lastmod": "2026-11-05",
+   "hash": "e7f027a84e2d",
+   "lastmod": "2026-11-09",
    "index": true
   },
   "/towns/pembroke-ma/": {
@@ -91,23 +91,23 @@
    "index": true
   },
   "/towns/scituate-ma/": {
-   "hash": "ff5f891b92e3",
-   "lastmod": "2026-11-08",
+   "hash": "1f5f38f7bfba",
+   "lastmod": "2026-11-09",
    "index": true
   },
   "/sound-baths/": {
-   "hash": "15a126612acf",
-   "lastmod": "2026-11-05",
+   "hash": "98d0ef5229f9",
+   "lastmod": "2026-11-09",
    "index": true
   },
   "/yoga/": {
-   "hash": "e3b3a7afd5d4",
-   "lastmod": "2026-11-08",
+   "hash": "8fff12ff5a8a",
+   "lastmod": "2026-11-09",
    "index": true
   },
   "/meditation/": {
-   "hash": "39b84c21d34e",
-   "lastmod": "2026-11-07",
+   "hash": "ccf2c6ec46bb",
+   "lastmod": "2026-11-09",
    "index": true
   },
   "/reiki-massage-acupuncture/": {
@@ -131,8 +131,8 @@
    "index": true
   },
   "/trails-and-walks/": {
-   "hash": "da6bce19b315",
-   "lastmod": "2026-11-08",
+   "hash": "dc7e5660de5f",
+   "lastmod": "2026-11-09",
    "index": true
   },
   "/cafes-and-bakeries/": {
@@ -171,5 +171,5 @@
   "hash": "100",
   "lastmod": "2026-11-04"
  },
- "built": "2026-11-08"
+ "built": "2026-11-09"
 }
