@@ -6,8 +6,8 @@
    "index": true
   },
   "/franklin-area/": {
-   "hash": "91251ae8530b",
-   "lastmod": "2026-11-09",
+   "hash": "772a1c2bd66e",
+   "lastmod": "2026-11-10",
    "index": true
   },
   "/boston-area/": {
@@ -16,8 +16,8 @@
    "index": true
   },
   "/south-shore/": {
-   "hash": "48a38b20708e",
-   "lastmod": "2026-11-09",
+   "hash": "6efa42cb0415",
+   "lastmod": "2026-11-10",
    "index": true
   },
   "/towns/franklin-ma/": {
@@ -61,8 +61,8 @@
    "index": true
   },
   "/towns/marshfield-ma/": {
-   "hash": "e7f027a84e2d",
-   "lastmod": "2026-11-09",
+   "hash": "cd0fc3a1dd33",
+   "lastmod": "2026-11-10",
    "index": true
   },
   "/towns/pembroke-ma/": {
@@ -71,13 +71,13 @@
    "index": true
   },
   "/towns/medway-ma/": {
-   "hash": "28bba3968d7f",
-   "lastmod": "2026-11-06",
+   "hash": "c0251b7fe5c7",
+   "lastmod": "2026-11-10",
    "index": true
   },
   "/towns/bellingham-ma/": {
-   "hash": "0c96eea81070",
-   "lastmod": "2026-11-05",
+   "hash": "db51bbb27365",
+   "lastmod": "2026-11-10",
    "index": true
   },
   "/towns/foxborough-ma/": {
@@ -101,13 +101,13 @@
    "index": true
   },
   "/yoga/": {
-   "hash": "8fff12ff5a8a",
-   "lastmod": "2026-11-09",
+   "hash": "455be0a609c2",
+   "lastmod": "2026-11-10",
    "index": true
   },
   "/meditation/": {
-   "hash": "ccf2c6ec46bb",
-   "lastmod": "2026-11-09",
+   "hash": "78cebce23706",
+   "lastmod": "2026-11-10",
    "index": true
   },
   "/reiki-massage-acupuncture/": {
@@ -121,13 +121,13 @@
    "index": true
   },
   "/creative-classes/": {
-   "hash": "ffe95b5feadb",
-   "lastmod": "2026-11-07",
+   "hash": "904838f11f0a",
+   "lastmod": "2026-11-10",
    "index": true
   },
   "/book-groups/": {
-   "hash": "fc7e5220dece",
-   "lastmod": "2026-11-06",
+   "hash": "b568efc7bceb",
+   "lastmod": "2026-11-10",
    "index": true
   },
   "/trails-and-walks/": {
@@ -146,8 +146,8 @@
    "index": true
   },
   "/towns/millis-ma/": {
-   "hash": "d800a4a1b9f5",
-   "lastmod": "2026-11-06",
+   "hash": "64fa5613eb49",
+   "lastmod": "2026-11-10",
    "index": true
   },
   "/towns/taunton-ma/": {
@@ -171,5 +171,5 @@
   "hash": "100",
   "lastmod": "2026-11-04"
  },
- "built": "2026-11-09"
+ "built": "2026-11-10"
 }
