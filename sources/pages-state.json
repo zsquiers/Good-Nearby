@@ -1,23 +1,23 @@
 {
  "pages": {
   "/metrowest/": {
-   "hash": "cb3b80bb410e",
-   "lastmod": "2026-11-11",
+   "hash": "0379e2bd4bf6",
+   "lastmod": "2026-11-12",
    "index": true
   },
   "/franklin-area/": {
-   "hash": "0a963878382f",
-   "lastmod": "2026-11-11",
+   "hash": "13e2625b005a",
+   "lastmod": "2026-11-12",
    "index": true
   },
   "/boston-area/": {
-   "hash": "19c14a42f1f6",
-   "lastmod": "2026-11-11",
+   "hash": "59b456634179",
+   "lastmod": "2026-11-12",
    "index": true
   },
   "/south-shore/": {
-   "hash": "d1100e5ec469",
-   "lastmod": "2026-11-11",
+   "hash": "871ca47685f3",
+   "lastmod": "2026-11-12",
    "index": true
   },
   "/towns/franklin-ma/": {
@@ -41,8 +41,8 @@
    "index": true
   },
   "/towns/natick-ma/": {
-   "hash": "2bac70fe5f4d",
-   "lastmod": "2026-11-11",
+   "hash": "0f6d33aa83f4",
+   "lastmod": "2026-11-12",
    "index": true
   },
   "/towns/jamaica-plain-ma/": {
@@ -56,13 +56,13 @@
    "index": true
   },
   "/towns/cambridge-ma/": {
-   "hash": "def61d82a9e9",
-   "lastmod": "2026-11-09",
+   "hash": "d795887e20ec",
+   "lastmod": "2026-11-12",
    "index": true
   },
   "/towns/marshfield-ma/": {
-   "hash": "d814086100ad",
-   "lastmod": "2026-11-11",
+   "hash": "4caeb3f82970",
+   "lastmod": "2026-11-12",
    "index": true
   },
   "/towns/pembroke-ma/": {
@@ -101,13 +101,13 @@
    "index": true
   },
   "/yoga/": {
-   "hash": "2d2a7538e94c",
-   "lastmod": "2026-11-11",
+   "hash": "f3f8262ba11d",
+   "lastmod": "2026-11-12",
    "index": true
   },
   "/meditation/": {
-   "hash": "73a9ca3fb8da",
-   "lastmod": "2026-11-11",
+   "hash": "bd59df3592a9",
+   "lastmod": "2026-11-12",
    "index": true
   },
   "/reiki-massage-acupuncture/": {
@@ -121,8 +121,8 @@
    "index": true
   },
   "/creative-classes/": {
-   "hash": "df2a7ffd8577",
-   "lastmod": "2026-11-11",
+   "hash": "1be33cfc8f4c",
+   "lastmod": "2026-11-12",
    "index": true
   },
   "/book-groups/": {
@@ -171,5 +171,5 @@
   "hash": "100",
   "lastmod": "2026-11-04"
  },
- "built": "2026-11-11"
+ "built": "2026-11-12"
 }
