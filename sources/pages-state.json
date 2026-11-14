@@ -1,8 +1,8 @@
 {
  "pages": {
   "/metrowest/": {
-   "hash": "f67495750e0f",
-   "lastmod": "2026-11-13",
+   "hash": "f5c84d98bc86",
+   "lastmod": "2026-11-14",
    "index": true
   },
   "/franklin-area/": {
@@ -11,13 +11,13 @@
    "index": true
   },
   "/boston-area/": {
-   "hash": "788e03ab2053",
-   "lastmod": "2026-11-13",
+   "hash": "23d9b866ae98",
+   "lastmod": "2026-11-14",
    "index": true
   },
   "/south-shore/": {
-   "hash": "66fa2ebfc452",
-   "lastmod": "2026-11-13",
+   "hash": "5ffc1b6a9106",
+   "lastmod": "2026-11-14",
    "index": true
   },
   "/towns/franklin-ma/": {
@@ -41,8 +41,8 @@
    "index": true
   },
   "/towns/natick-ma/": {
-   "hash": "868194f36bb9",
-   "lastmod": "2026-11-13",
+   "hash": "fce7db42b9cd",
+   "lastmod": "2026-11-14",
    "index": true
   },
   "/towns/jamaica-plain-ma/": {
@@ -61,13 +61,13 @@
    "index": true
   },
   "/towns/marshfield-ma/": {
-   "hash": "4caeb3f82970",
-   "lastmod": "2026-11-12",
+   "hash": "9f25a884d723",
+   "lastmod": "2026-11-14",
    "index": true
   },
   "/towns/pembroke-ma/": {
-   "hash": "dab750ca4930",
-   "lastmod": "2026-11-07",
+   "hash": "672334d289a5",
+   "lastmod": "2026-11-14",
    "index": true
   },
   "/towns/medway-ma/": {
@@ -101,13 +101,13 @@
    "index": true
   },
   "/yoga/": {
-   "hash": "d043ec82c59b",
-   "lastmod": "2026-11-13",
+   "hash": "008a7e32b4c3",
+   "lastmod": "2026-11-14",
    "index": true
   },
   "/meditation/": {
-   "hash": "1504e14d6da8",
-   "lastmod": "2026-11-13",
+   "hash": "8165f8a01c69",
+   "lastmod": "2026-11-14",
    "index": true
   },
   "/reiki-massage-acupuncture/": {
@@ -131,8 +131,8 @@
    "index": true
   },
   "/trails-and-walks/": {
-   "hash": "00a38e8a7f93",
-   "lastmod": "2026-11-13",
+   "hash": "dc7e5660de5f",
+   "lastmod": "2026-11-14",
    "index": true
   },
   "/cafes-and-bakeries/": {
@@ -171,5 +171,5 @@
   "hash": "100",
   "lastmod": "2026-11-04"
  },
- "built": "2026-11-13"
+ "built": "2026-11-14"
 }
