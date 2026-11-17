@@ -6,8 +6,8 @@
    "index": true
   },
   "/franklin-area/": {
-   "hash": "033811ae94b3",
-   "lastmod": "2026-11-16",
+   "hash": "d9a3ace9b778",
+   "lastmod": "2026-11-17",
    "index": true
   },
   "/boston-area/": {
@@ -16,8 +16,8 @@
    "index": true
   },
   "/south-shore/": {
-   "hash": "01488a4c069c",
-   "lastmod": "2026-11-16",
+   "hash": "4484ed63648f",
+   "lastmod": "2026-11-17",
    "index": true
   },
   "/towns/franklin-ma/": {
@@ -61,8 +61,8 @@
    "index": true
   },
   "/towns/marshfield-ma/": {
-   "hash": "33f7801fa468",
-   "lastmod": "2026-11-15",
+   "hash": "f4edf01afe7d",
+   "lastmod": "2026-11-17",
    "index": true
   },
   "/towns/pembroke-ma/": {
@@ -71,13 +71,13 @@
    "index": true
   },
   "/towns/medway-ma/": {
-   "hash": "1586423602c3",
-   "lastmod": "2026-11-15",
+   "hash": "46a4d6dcceca",
+   "lastmod": "2026-11-17",
    "index": true
   },
   "/towns/bellingham-ma/": {
-   "hash": "00bdff7ab72a",
-   "lastmod": "2026-11-13",
+   "hash": "ef75360b6bcf",
+   "lastmod": "2026-11-17",
    "index": true
   },
   "/towns/foxborough-ma/": {
@@ -101,13 +101,13 @@
    "index": true
   },
   "/yoga/": {
-   "hash": "1b1f37e94c20",
-   "lastmod": "2026-11-16",
+   "hash": "9da42ba4d073",
+   "lastmod": "2026-11-17",
    "index": true
   },
   "/meditation/": {
-   "hash": "11a52d7af692",
-   "lastmod": "2026-11-16",
+   "hash": "be4256649fe1",
+   "lastmod": "2026-11-17",
    "index": true
   },
   "/reiki-massage-acupuncture/": {
@@ -121,13 +121,13 @@
    "index": true
   },
   "/creative-classes/": {
-   "hash": "e382f602d8f5",
-   "lastmod": "2026-11-16",
+   "hash": "ac0b5ab2078a",
+   "lastmod": "2026-11-17",
    "index": true
   },
   "/book-groups/": {
-   "hash": "e8fd102fe670",
-   "lastmod": "2026-11-15",
+   "hash": "fa59c59c231f",
+   "lastmod": "2026-11-17",
    "index": true
   },
   "/trails-and-walks/": {
@@ -141,8 +141,8 @@
    "index": true
   },
   "/towns/attleboro-ma/": {
-   "hash": "d92016334527",
-   "lastmod": "2026-11-04",
+   "hash": "1f7a2f96a59a",
+   "lastmod": "2026-11-17",
    "index": true
   },
   "/towns/millis-ma/": {
@@ -161,8 +161,8 @@
    "index": true
   },
   "/towns/easton-ma/": {
-   "hash": "a410195e4901",
-   "lastmod": "2026-11-15",
+   "hash": "2c760044ae81",
+   "lastmod": "2026-11-17",
    "index": true
   }
  },
@@ -171,5 +171,5 @@
   "hash": "100",
   "lastmod": "2026-11-04"
  },
- "built": "2026-11-16"
+ "built": "2026-11-17"
 }
