@@ -1,23 +1,23 @@
 {
  "pages": {
   "/metrowest/": {
-   "hash": "5df8297300e8",
-   "lastmod": "2026-11-21",
+   "hash": "9993bf5d8e03",
+   "lastmod": "2026-11-22",
    "index": true
   },
   "/franklin-area/": {
-   "hash": "c9efcdf9b00e",
-   "lastmod": "2026-11-20",
+   "hash": "913bb4c92182",
+   "lastmod": "2026-11-22",
    "index": true
   },
   "/boston-area/": {
-   "hash": "23d9b866ae98",
-   "lastmod": "2026-11-21",
+   "hash": "9df5e798e5bd",
+   "lastmod": "2026-11-22",
    "index": true
   },
   "/south-shore/": {
-   "hash": "82e0a655bf35",
-   "lastmod": "2026-11-21",
+   "hash": "b1617fd34fb1",
+   "lastmod": "2026-11-22",
    "index": true
   },
   "/towns/franklin-ma/": {
@@ -41,8 +41,8 @@
    "index": true
   },
   "/towns/natick-ma/": {
-   "hash": "a40c4eed9bc4",
-   "lastmod": "2026-11-21",
+   "hash": "e6553884b698",
+   "lastmod": "2026-11-22",
    "index": true
   },
   "/towns/jamaica-plain-ma/": {
@@ -61,8 +61,8 @@
    "index": true
   },
   "/towns/marshfield-ma/": {
-   "hash": "2638694d30d5",
-   "lastmod": "2026-11-19",
+   "hash": "2c2f5d743119",
+   "lastmod": "2026-11-22",
    "index": true
   },
   "/towns/pembroke-ma/": {
@@ -81,8 +81,8 @@
    "index": true
   },
   "/towns/foxborough-ma/": {
-   "hash": "bfcb09d8ffab",
-   "lastmod": "2026-11-20",
+   "hash": "aeb3ea38c382",
+   "lastmod": "2026-11-22",
    "index": true
   },
   "/towns/medfield-ma/": {
@@ -91,8 +91,8 @@
    "index": true
   },
   "/towns/scituate-ma/": {
-   "hash": "b7c3b44949d3",
-   "lastmod": "2026-11-18",
+   "hash": "345e4d275bbf",
+   "lastmod": "2026-11-22",
    "index": true
   },
   "/sound-baths/": {
@@ -101,18 +101,18 @@
    "index": true
   },
   "/yoga/": {
-   "hash": "342cbcf547ce",
-   "lastmod": "2026-11-21",
+   "hash": "800d0cb473f4",
+   "lastmod": "2026-11-22",
    "index": true
   },
   "/meditation/": {
-   "hash": "65baed266aeb",
-   "lastmod": "2026-11-21",
+   "hash": "134cccefb67a",
+   "lastmod": "2026-11-22",
    "index": true
   },
   "/reiki-massage-acupuncture/": {
-   "hash": "aaaed3fab885",
-   "lastmod": "2026-11-19",
+   "hash": "9b481d557b4f",
+   "lastmod": "2026-11-22",
    "index": true
   },
   "/salt-caves/": {
@@ -121,8 +121,8 @@
    "index": true
   },
   "/creative-classes/": {
-   "hash": "ff91f8f61b1e",
-   "lastmod": "2026-11-20",
+   "hash": "8e1ca5cbd674",
+   "lastmod": "2026-11-22",
    "index": true
   },
   "/book-groups/": {
@@ -171,5 +171,5 @@
   "hash": "100",
   "lastmod": "2026-11-04"
  },
- "built": "2026-11-21"
+ "built": "2026-11-22"
 }
