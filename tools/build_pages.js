@@ -331,6 +331,11 @@ function page({ path: p, title, description, h1, eyebrow, crumbs, body, jsonld =
     <p class="fine">We don't run these events, and details can change, so check with the host before you go. Listings are for information only and aren't medical advice.</p>
   </footer>
   ${EXPIRY_JS}
+  <script>/* Visitor counts (GoatCounter, no cookies): page views, plus taps on links to hosts' own sites. */
+    document.addEventListener("click", function (e) { var a = e.target.closest && e.target.closest("a[href^='http']");
+      if (!a || a.hostname === location.hostname || !window.goatcounter || !window.goatcounter.count) return;
+      window.goatcounter.count({ path: "out: " + a.hostname.replace(/^www\./, ""), title: a.textContent.trim().slice(0, 60), event: true }); });</script>
+  <script data-goatcounter="https://goodnearby.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
 `;
