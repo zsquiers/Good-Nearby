@@ -6,8 +6,8 @@
    "index": true
   },
   "/franklin-area/": {
-   "hash": "32348fe64bf4",
-   "lastmod": "2026-11-23",
+   "hash": "1edc94ce9421",
+   "lastmod": "2026-11-24",
    "index": true
   },
   "/boston-area/": {
@@ -26,8 +26,8 @@
    "index": true
   },
   "/towns/norfolk-ma/": {
-   "hash": "c7c19b1c52d4",
-   "lastmod": "2026-11-23",
+   "hash": "194ff99cd25e",
+   "lastmod": "2026-11-24",
    "index": true
   },
   "/towns/wrentham-ma/": {
@@ -71,18 +71,18 @@
    "index": true
   },
   "/towns/medway-ma/": {
-   "hash": "3b126c3010c1",
-   "lastmod": "2026-11-23",
+   "hash": "a9ccdda6bfc8",
+   "lastmod": "2026-11-24",
    "index": true
   },
   "/towns/bellingham-ma/": {
-   "hash": "ddde36d245ff",
-   "lastmod": "2026-11-23",
+   "hash": "f2d6ec3a52ad",
+   "lastmod": "2026-11-24",
    "index": true
   },
   "/towns/foxborough-ma/": {
-   "hash": "b4d39f4043bd",
-   "lastmod": "2026-11-23",
+   "hash": "0d1da2edcce6",
+   "lastmod": "2026-11-24",
    "index": true
   },
   "/towns/medfield-ma/": {
@@ -101,8 +101,8 @@
    "index": true
   },
   "/yoga/": {
-   "hash": "4ea11e2d22f3",
-   "lastmod": "2026-11-23",
+   "hash": "1c4ca9d49ff2",
+   "lastmod": "2026-11-24",
    "index": true
   },
   "/meditation/": {
@@ -121,13 +121,13 @@
    "index": true
   },
   "/creative-classes/": {
-   "hash": "a19163ed927f",
-   "lastmod": "2026-11-23",
+   "hash": "f75e2784c8ec",
+   "lastmod": "2026-11-24",
    "index": true
   },
   "/book-groups/": {
-   "hash": "71ecb4934872",
-   "lastmod": "2026-11-23",
+   "hash": "7ac1f3a181cb",
+   "lastmod": "2026-11-24",
    "index": true
   },
   "/trails-and-walks/": {
@@ -171,5 +171,5 @@
   "hash": "100",
   "lastmod": "2026-11-04"
  },
- "built": "2026-11-23"
+ "built": "2026-11-24"
 }
