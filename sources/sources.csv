@@ -94,3 +94,7 @@ Attleboro Public Library,Franklin & nearby,events,monthly,https://attleborolibra
 Dighton Public Library,South Shore,events,monthly,https://dightonlibrary.libcal.com/calendar,"LibCal calendar; blocks automated reading, so check by hand. Add adult book groups, crafts and wellness programs to data/events.js"
 Open Doors Yoga Studios Taunton,South Shore,still open,every 3 months,https://opendoorsyogastudios.com/taunton,Yoga studio on the Taunton Green
 Rehoboth Land Trust,Franklin & nearby,still open,every 3 months,https://rehobothlandtrust.squarespace.com/,"Trails on Ephraim Hunt Ministerial Land and others; property pages lacked trail details in Nov 2026 — check before listing"
+Medfield Public Library,Franklin & nearby,events,monthly,https://medfieldpubliclibrary.assabetinteractive.com/calendar/,"Read automatically by tools/library_collect.py (added Nov 2026)"
+Old Colony History Museum (Taunton),South Shore,events,monthly,https://www.oldcolonyhistorymuseum.org/events/,"Read automatically by tools/calendar_collect.py; only walks, crafts and other matching programs are kept"
+Wicked Peaceful (Plainville),Franklin & nearby,events,monthly,https://wickedpeaceful.com/classes,"Studio at 25 Taunton St with a monthly sound bath (2nd Fridays, per third-party listings). Its own page loads by script, so confirm dates by hand before listing"
+Somerset Public Library calendar (new),South Shore,events,monthly,https://somerset-ma.whofi.com/,"Somerset moved its calendar here in Nov 2026; check adult programs by hand"

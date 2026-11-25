@@ -22,11 +22,12 @@ LIBRARIES = {
     "hopkintonlibrary":   ("Hopkinton Public Library",     "Hopkinton",   42.2285, -71.5225),
     "framinghamlibrary":  ("Framingham Public Library",    "Framingham",  42.2790, -71.4160),
     "goodnowlibrary":     ("Goodnow Library",              "Sudbury",     42.3835, -71.4160),
+    "medfieldpubliclibrary": ("Medfield Public Library",   "Medfield",    42.1870, -71.3060),
     "norwoodlibrary":     ("Morrill Memorial Library",     "Norwood",     42.1945, -71.1995),
     "ventresslibrary":    ("Ventress Memorial Library",    "Marshfield",  42.0920, -70.7055),
     "tauntonlibrary":     ("Taunton Public Library",       "Taunton",     41.9005, -71.0905),
     "raynhampubliclibrary": ("Raynham Public Library",     "Raynham",     41.9310, -71.0580),
-    "somersetpubliclibrary": ("Somerset Public Library",   "Somerset",    41.7700, -71.1290),
+    # Somerset moved its calendar off this system in Nov 2026 (now somerset-ma.whofi.com), so it's left out for now.
     "amesfreelibrary":    ("Ames Free Library",            "Easton",      42.0640, -71.0990),
 }
 

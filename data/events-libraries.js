@@ -2,1350 +2,6 @@
 // Made by tools/library_collect.py; re-run it rather than editing by hand.
 window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
  {
-  "id": "lib-framinghamlibrary-main-yarn-social-hour-5-2026-11-04",
-  "title": "Yarn Social Hour",
-  "category": "craft",
-  "start": "2026-11-04T10:00",
-  "end": "2026-11-04T11:00",
-  "venue": "Framingham Public Library",
-  "address": "49 Lexington Street ",
-  "city": "Framingham, MA",
-  "lat": 42.279,
-  "lng": -71.416,
-  "price": 0,
-  "host": "Framingham Public Library",
-  "description": "Join us for a yarn social hour for knitting, crocheting, and yarn crafting!",
-  "url": "https://framinghamlibrary.assabetinteractive.com/calendar/main-yarn-social-hour-5/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-raynhampubliclibrary-first-wednesday-book-club-41-2026-11-04",
-  "title": "First Wednesday Book Club -AT THE SENIOR CENTER",
-  "category": "book",
-  "start": "2026-11-04T13:00",
-  "end": "2026-11-04T14:00",
-  "venue": "Raynham Public Library",
-  "address": "",
-  "city": "Raynham, MA",
-  "lat": 41.931,
-  "lng": -71.058,
-  "price": 0,
-  "host": "Raynham Public Library",
-  "description": "Join us for our monthly book discussion.",
-  "url": "https://raynhampubliclibrary.assabetinteractive.com/calendar/first-wednesday-book-club-41/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-amesfreelibrary-ames-free-library-book-club-23-2026-11-04",
-  "title": "Ames Free Library Book Club - The Wilderness by Angela Flournoy",
-  "category": "book",
-  "start": "2026-11-04T13:30",
-  "end": "2026-11-04T14:30",
-  "venue": "Ames Free Library",
-  "address": "51 Main Street",
-  "city": "Easton, MA",
-  "lat": 42.064,
-  "lng": -71.099,
-  "price": 0,
-  "host": "Ames Free Library",
-  "description": "Join us the second Wednesday of each month for the Ames Free Library Book Club!",
-  "url": "https://amesfreelibrary.assabetinteractive.com/calendar/ames-free-library-book-club-23/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-medwaylib-block-party-sewing-meet-up-9-2026-11-04",
-  "title": "Block Party: Sewing Meet-Up",
-  "category": "craft",
-  "start": "2026-11-04T18:00",
-  "end": "2026-11-04T19:45",
-  "venue": "Medway Public Library",
-  "address": "26 High Street",
-  "city": "Medway, MA",
-  "lat": 42.1395,
-  "lng": -71.396,
-  "price": 0,
-  "host": "Medway Public Library",
-  "description": "Block Party is a casual time to join other sewists in the MakerSpace to start and/or continue individual sewing projects.",
-  "url": "https://medwaylib.assabetinteractive.com/calendar/block-party-sewing-meet-up-9/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-bellinghamlibrary-needlecraft-night-112-2026-11-04",
-  "title": "Needlecraft Night",
-  "category": "craft",
-  "start": "2026-11-04T18:00",
-  "end": "2026-11-04T20:00",
-  "venue": "Bellingham Public Library",
-  "address": "100 Blackstone Street",
-  "city": "Bellingham, MA",
-  "lat": 42.087,
-  "lng": -71.474,
-  "price": 0,
-  "host": "Bellingham Public Library",
-  "description": "Do you enjoy knitting, crocheting, or any of the other fiber arts?",
-  "url": "https://bellinghamlibrary.assabetinteractive.com/calendar/needlecraft-night-112/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-bellinghamlibrary-group-sound-bath-2026-11-04",
-  "title": "Group Sound Bath for Adults",
-  "category": "sound",
-  "start": "2026-11-04T18:00",
-  "end": "2026-11-04T20:00",
-  "venue": "Bellingham Public Library",
-  "address": "100 Blackstone Street",
-  "city": "Bellingham, MA",
-  "lat": 42.087,
-  "lng": -71.474,
-  "price": 0,
-  "host": "Bellingham Public Library",
-  "description": "About Sound TherapySound healing dates back thousands of years, with roots in ancient Tibetan and Native American cultures.",
-  "url": "https://bellinghamlibrary.assabetinteractive.com/calendar/group-sound-bath/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-framinghamlibrary-mcauliffe-yarn-social-19-2026-11-04",
-  "title": "Yarn Social",
-  "category": "craft",
-  "start": "2026-11-04T18:00",
-  "end": "2026-11-04T19:00",
-  "venue": "Framingham Public Library (McAuliffe Branch)",
-  "address": "746 Water Street",
-  "city": "Framingham, MA",
-  "lat": 42.279,
-  "lng": -71.416,
-  "price": 0,
-  "host": "Framingham Public Library",
-  "description": "Join us for a yarn social hour for knitting, crocheting, and yarn crafting!At the McAuliffe Branch, meet Wednesday evenings at 6 PM.",
-  "url": "https://framinghamlibrary.assabetinteractive.com/calendar/mcauliffe-yarn-social-19/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-goodnowlibrary-sudbury-yarn-enthusiasts-164-2026-11-04",
-  "title": "Sudbury Yarn Enthusiasts",
-  "category": "craft",
-  "start": "2026-11-04T19:00",
-  "end": "2026-11-04T20:30",
-  "venue": "Goodnow Library",
-  "address": "21 Concord Rd",
-  "city": "Sudbury, MA",
-  "lat": 42.3835,
-  "lng": -71.416,
-  "price": 0,
-  "host": "Goodnow Library",
-  "description": "Welcome to Sudbury Yarn Enthusiasts!",
-  "url": "https://goodnowlibrary.assabetinteractive.com/calendar/sudbury-yarn-enthusiasts-164/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-ventresslibrary-contemporary-book-group-103-2026-11-04",
-  "title": "Contemporary Book Group",
-  "category": "book",
-  "start": "2026-11-04T19:00",
-  "end": "2026-11-04T20:00",
-  "venue": "Ventress Memorial Library",
-  "address": "15 Library Plaza",
-  "city": "Marshfield, MA",
-  "lat": 42.092,
-  "lng": -70.7055,
-  "price": 0,
-  "host": "Ventress Memorial Library",
-  "description": "All are welcome. Copies of the book are available at the library.",
-  "url": "https://ventresslibrary.assabetinteractive.com/calendar/contemporary-book-group-103/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-medwaylib-medway-library-book-discussion-group-24-2026-11-05",
-  "title": "No Shelf Control Book Group",
-  "category": "book",
-  "start": "2026-11-05T13:00",
-  "end": "2026-11-05T14:00",
-  "venue": "Medway Public Library",
-  "address": "26 High Street",
-  "city": "Medway, MA",
-  "lat": 42.1395,
-  "lng": -71.396,
-  "price": 0,
-  "host": "Medway Public Library",
-  "description": "Medway Library's monthly book discussion held the first Thursday of each month.",
-  "url": "https://medwaylib.assabetinteractive.com/calendar/medway-library-book-discussion-group-24/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-millislibrary-clicquot-book-club-13-2026-11-05",
-  "title": "Clicquot Book Club",
-  "category": "book",
-  "start": "2026-11-05T14:00",
-  "end": "2026-11-05T15:30",
-  "venue": "Millis Public Library",
-  "address": "961 Main St",
-  "city": "Millis, MA",
-  "lat": 42.167,
-  "lng": -71.358,
-  "price": 0,
-  "host": "Millis Public Library",
-  "description": "Love books? Love talking about books?",
-  "url": "https://millislibrary.assabetinteractive.com/calendar/clicquot-book-club-13/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-medwaylib-medway-mens-book-club-6-2026-11-05",
-  "title": "Medway Men's Book Club",
-  "category": "book",
-  "start": "2026-11-05T18:30",
-  "end": "2026-11-05T20:00",
-  "venue": "Medway Public Library",
-  "address": "26 High Street",
-  "city": "Medway, MA",
-  "lat": 42.1395,
-  "lng": -71.396,
-  "price": 0,
-  "host": "Medway Public Library",
-  "description": "Join us for the Medway Men’s Book Club on October 1st from 6:30–8:00 PM in the Quiet Room as we discuss Guns, Germs, and Steel: The Fates of Human Societies…",
-  "url": "https://medwaylib.assabetinteractive.com/calendar/medway-mens-book-club-6/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-norfolkpl-fiber-art-group-161-2026-11-06",
-  "title": "Fiber Art Group",
-  "category": "craft",
-  "start": "2026-11-06T10:30",
-  "end": "2026-11-06T12:00",
-  "venue": "Norfolk Public Library",
-  "address": "2 Liberty Lane",
-  "city": "Norfolk, MA",
-  "lat": 42.119,
-  "lng": -71.325,
-  "price": 0,
-  "host": "Norfolk Public Library",
-  "description": "Do you love to knit, crochet, embroider, or do another fiber craft?",
-  "url": "https://norfolkpl.assabetinteractive.com/calendar/fiber-art-group-161/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-medwaylib-fiber-arts-mee-up-50-2026-11-09",
-  "title": "Fiber Arts Meet-Up",
-  "category": "craft",
-  "start": "2026-11-09T18:00",
-  "end": "2026-11-09T19:45",
-  "venue": "Medway Public Library",
-  "address": "26 High Street",
-  "city": "Medway, MA",
-  "lat": 42.1395,
-  "lng": -71.396,
-  "price": 0,
-  "host": "Medway Public Library",
-  "description": "This group welcomes anyone who is interested in the fiber arts which includes but not limited to knitting, crocheting, embroidery, needlepoint, and cross…",
-  "url": "https://medwaylib.assabetinteractive.com/calendar/fiber-arts-mee-up-50/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-millislibrary-horror-thriller-book-club-35-2026-11-09",
-  "title": "Horror & Thriller Book Club",
-  "category": "book",
-  "start": "2026-11-09T18:30",
-  "end": "2026-11-09T19:30",
-  "venue": "Millis Public Library",
-  "address": "961 Main St",
-  "city": "Millis, MA",
-  "lat": 42.167,
-  "lng": -71.358,
-  "price": 0,
-  "host": "Millis Public Library",
-  "description": "Looking to add some extra thrills to your life?",
-  "url": "https://millislibrary.assabetinteractive.com/calendar/horror-thriller-book-club-35/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-bellinghamlibrary-stretch-into-gratitude-november-2026-2026-11-10",
-  "title": "Stretch Into Gratitude Yoga / November 2026",
-  "category": "yoga",
-  "start": "2026-11-10T08:30",
-  "end": "2026-11-10T09:45",
-  "venue": "Bellingham Public Library",
-  "address": "100 Blackstone Street",
-  "city": "Bellingham, MA",
-  "lat": 42.087,
-  "lng": -71.474,
-  "price": 0,
-  "host": "Bellingham Public Library",
-  "description": "It’s time to transition to a yoga practice that helps our body and mind get in rhythm with the shorter days and cooler, crisper air of the season.",
-  "url": "https://bellinghamlibrary.assabetinteractive.com/calendar/stretch-into-gratitude-november-2026/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-fiskelib-leaf-paintiung-2026-11-10",
-  "title": "Leaf Painting",
-  "category": "craft",
-  "start": "2026-11-10T11:30",
-  "end": "2026-11-10T13:30",
-  "venue": "Fiske Public Library",
-  "address": "110 Randall Road",
-  "city": "Wrentham, MA",
-  "lat": 42.0655,
-  "lng": -71.329,
-  "price": 0,
-  "host": "Fiske Public Library",
-  "description": "Join us on November 10 to paint leaves.",
-  "url": "https://fiskelib.assabetinteractive.com/calendar/leaf-paintiung/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-norfolkpl-watercolor-meet-up-352-2026-11-10",
-  "title": "Watercolor Meet Up",
-  "category": "craft",
-  "start": "2026-11-10T13:00",
-  "end": "2026-11-10T15:00",
-  "venue": "Norfolk Public Library",
-  "address": "2 Liberty Lane",
-  "city": "Norfolk, MA",
-  "lat": 42.119,
-  "lng": -71.325,
-  "price": 0,
-  "host": "Norfolk Public Library",
-  "description": "Do you enjoy painting with watercolors?",
-  "url": "https://norfolkpl.assabetinteractive.com/calendar/watercolor-meet-up-352/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-tauntonlibrary-adult-yoga-37-2026-11-10",
-  "title": "Adult Yoga",
-  "category": "yoga",
-  "start": "2026-11-10T18:00",
-  "end": "2026-11-10T19:00",
-  "venue": "Taunton Public Library",
-  "address": "12 Pleasant St.",
-  "city": "Taunton, MA",
-  "lat": 41.9005,
-  "lng": -71.0905,
-  "price": 0,
-  "host": "Taunton Public Library",
-  "description": "Come and join us, and experience the transformative power of yoga.",
-  "url": "https://tauntonlibrary.assabetinteractive.com/calendar/adult-yoga-37/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-framinghamlibrary-mcauliffe-evening-book-discussion-5-2026-11-10",
-  "title": "Evening Book Discussion: Lady Tan's Circle of Women",
-  "category": "book",
-  "start": "2026-11-10T19:00",
-  "end": "2026-11-10T20:00",
-  "venue": "Framingham Public Library (McAuliffe Branch)",
-  "address": "746 Water Street",
-  "city": "Framingham, MA",
-  "lat": 42.279,
-  "lng": -71.416,
-  "price": 0,
-  "host": "Framingham Public Library",
-  "description": "Join us on the second Tuesday of the month for a lively discussion.",
-  "url": "https://framinghamlibrary.assabetinteractive.com/calendar/mcauliffe-evening-book-discussion-5/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-bellinghamlibrary-chat-craft-for-adults-make-a-holiday-book-wreath-2026-11-12",
-  "title": "Chat & Craft for Adults: Make a Holiday Book Wreath",
-  "category": "craft",
-  "start": "2026-11-12T18:00",
-  "end": "2026-11-12T19:30",
-  "venue": "Bellingham Public Library",
-  "address": "100 Blackstone Street",
-  "city": "Bellingham, MA",
-  "lat": 42.087,
-  "lng": -71.474,
-  "price": 0,
-  "host": "Bellingham Public Library",
-  "description": "Meet us at the library for our next seasonal Chat & Craft!",
-  "url": "https://bellinghamlibrary.assabetinteractive.com/calendar/chat-craft-for-adults-make-a-holiday-book-wreath/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-amesfreelibrary-nonfiction-book-club-23-2026-11-12",
-  "title": "Nonfiction Book Club - The Gales of November by John Bacon",
-  "category": "book",
-  "start": "2026-11-12T18:00",
-  "end": "2026-11-12T19:00",
-  "venue": "Ames Free Library",
-  "address": "51 Main Street",
-  "city": "Easton, MA",
-  "lat": 42.064,
-  "lng": -71.099,
-  "price": 0,
-  "host": "Ames Free Library",
-  "description": "Join the Nonfiction Book Club on the second Thursday of each month!",
-  "url": "https://amesfreelibrary.assabetinteractive.com/calendar/nonfiction-book-club-23/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-raynhampubliclibrary-novels-night-book-club-29-2026-11-12",
-  "title": "Novels @ Night Book Club",
-  "category": "book",
-  "start": "2026-11-12T18:30",
-  "end": "2026-11-12T19:30",
-  "venue": "Raynham Public Library",
-  "address": "",
-  "city": "Raynham, MA",
-  "lat": 41.931,
-  "lng": -71.058,
-  "price": 0,
-  "host": "Raynham Public Library",
-  "description": "Join us for book club at night!",
-  "url": "https://raynhampubliclibrary.assabetinteractive.com/calendar/novels-night-book-club-29/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-norfolkpl-fiber-art-group-162-2026-11-13",
-  "title": "Fiber Art Group",
-  "category": "craft",
-  "start": "2026-11-13T10:30",
-  "end": "2026-11-13T12:00",
-  "venue": "Norfolk Public Library",
-  "address": "2 Liberty Lane",
-  "city": "Norfolk, MA",
-  "lat": 42.119,
-  "lng": -71.325,
-  "price": 0,
-  "host": "Norfolk Public Library",
-  "description": "Do you love to knit, crochet, embroider, or do another fiber craft?",
-  "url": "https://norfolkpl.assabetinteractive.com/calendar/fiber-art-group-162/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-framinghamlibrary-main-yarn-social-hour-98-2026-11-14",
-  "title": "Yarn Social Hour",
-  "category": "craft",
-  "start": "2026-11-14T10:00",
-  "end": "2026-11-14T11:00",
-  "venue": "Framingham Public Library",
-  "address": "49 Lexington Street ",
-  "city": "Framingham, MA",
-  "lat": 42.279,
-  "lng": -71.416,
-  "price": 0,
-  "host": "Framingham Public Library",
-  "description": "Join us for a yarn social hour for knitting, crocheting, and yarn crafting!",
-  "url": "https://framinghamlibrary.assabetinteractive.com/calendar/main-yarn-social-hour-98/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-medwaylib-winter-pysanky-the-art-of-ukrainian-egg-decorating-2026-11-14",
-  "title": "Winter Pysanky: The Art of Ukrainian Egg Decorating",
-  "category": "craft",
-  "start": "2026-11-14T11:00",
-  "end": "2026-11-14T13:00",
-  "venue": "Medway Public Library",
-  "address": "26 High Street",
-  "city": "Medway, MA",
-  "lat": 42.1395,
-  "lng": -71.396,
-  "price": 0,
-  "host": "Medway Public Library",
-  "description": "Discover the beautiful Ukrainian art of egg painting!",
-  "url": "https://medwaylib.assabetinteractive.com/calendar/winter-pysanky-the-art-of-ukrainian-egg-decorating/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-amesfreelibrary-silent-book-club-easton-25-2026-11-14",
-  "title": "Silent Book Club Easton",
-  "category": "book",
-  "start": "2026-11-14T13:30",
-  "end": "2026-11-14T15:30",
-  "venue": "Ames Free Library",
-  "address": "51 Main Street",
-  "city": "Easton, MA",
-  "lat": 42.064,
-  "lng": -71.099,
-  "price": 0,
-  "host": "Ames Free Library",
-  "description": "Looking for a place to read in cozy camaraderie?",
-  "url": "https://amesfreelibrary.assabetinteractive.com/calendar/silent-book-club-easton-25/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-medwaylib-fiber-arts-mee-up-51-2026-11-16",
-  "title": "Fiber Arts Meet-Up",
-  "category": "craft",
-  "start": "2026-11-16T18:00",
-  "end": "2026-11-16T19:45",
-  "venue": "Medway Public Library",
-  "address": "26 High Street",
-  "city": "Medway, MA",
-  "lat": 42.1395,
-  "lng": -71.396,
-  "price": 0,
-  "host": "Medway Public Library",
-  "description": "This group welcomes anyone who is interested in the fiber arts which includes but not limited to knitting, crocheting, embroidery, needlepoint, and cross…",
-  "url": "https://medwaylib.assabetinteractive.com/calendar/fiber-arts-mee-up-51/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-amesfreelibrary-womens-wellness-yoga-with-andrea-4-2026-11-16",
-  "title": "Women's Wellness Yoga with Andrea",
-  "category": "yoga",
-  "start": "2026-11-16T18:00",
-  "end": "2026-11-16T19:00",
-  "venue": "Ames Free Library",
-  "address": "51 Main Street",
-  "city": "Easton, MA",
-  "lat": 42.064,
-  "lng": -71.099,
-  "price": 0,
-  "host": "Ames Free Library",
-  "description": "As the warmth of the holidays approach, so does the cold weather!",
-  "url": "https://amesfreelibrary.assabetinteractive.com/calendar/womens-wellness-yoga-with-andrea-4/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-bellinghamlibrary-stretch-into-gratitude-november-2026-2-2026-11-17",
-  "title": "Stretch Into Gratitude Yoga / November 2026",
-  "category": "yoga",
-  "start": "2026-11-17T08:30",
-  "end": "2026-11-17T09:45",
-  "venue": "Bellingham Public Library",
-  "address": "100 Blackstone Street",
-  "city": "Bellingham, MA",
-  "lat": 42.087,
-  "lng": -71.474,
-  "price": 0,
-  "host": "Bellingham Public Library",
-  "description": "It’s time to transition to a yoga practice that helps our body and mind get in rhythm with the shorter days and cooler, crisper air of the season.",
-  "url": "https://bellinghamlibrary.assabetinteractive.com/calendar/stretch-into-gratitude-november-2026-2/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-norfolkpl-watercolor-meet-up-353-2026-11-17",
-  "title": "Watercolor Meet Up",
-  "category": "craft",
-  "start": "2026-11-17T13:00",
-  "end": "2026-11-17T15:00",
-  "venue": "Norfolk Public Library",
-  "address": "2 Liberty Lane",
-  "city": "Norfolk, MA",
-  "lat": 42.119,
-  "lng": -71.325,
-  "price": 0,
-  "host": "Norfolk Public Library",
-  "description": "Do you enjoy painting with watercolors?",
-  "url": "https://norfolkpl.assabetinteractive.com/calendar/watercolor-meet-up-353/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-goodnowlibrary-lunchtime-yoga-6-2026-11-17",
-  "title": "Lunchtime Yoga",
-  "category": "yoga",
-  "start": "2026-11-17T13:00",
-  "end": "2026-11-17T14:00",
-  "venue": "Goodnow Library",
-  "address": "21 Concord Rd",
-  "city": "Sudbury, MA",
-  "lat": 42.3835,
-  "lng": -71.416,
-  "price": 0,
-  "host": "Goodnow Library",
-  "description": "Take some time to relax and slow down by joining us in the Community Room during lunch for some yoga.",
-  "url": "https://goodnowlibrary.assabetinteractive.com/calendar/lunchtime-yoga-6/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-fiskelib-fiske-library-book-club-19-2026-11-17",
-  "title": "Fiske Library Book Club",
-  "category": "book",
-  "start": "2026-11-17T19:00",
-  "end": "2026-11-17T20:00",
-  "venue": "Fiske Public Library",
-  "address": "110 Randall Road",
-  "city": "Wrentham, MA",
-  "lat": 42.0655,
-  "lng": -71.329,
-  "price": 0,
-  "host": "Fiske Public Library",
-  "description": "Monthly meeting of the Fiske Public Library Book Club.",
-  "url": "https://fiskelib.assabetinteractive.com/calendar/fiske-library-book-club-19/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-framinghamlibrary-mcauliffe-queer-reads-book-discussion-5-2026-11-17",
-  "title": "Queer Reads Book Discussion: Moonflow",
-  "category": "book",
-  "start": "2026-11-17T19:00",
-  "end": "2026-11-17T20:00",
-  "venue": "Framingham Public Library (McAuliffe Branch)",
-  "address": "746 Water Street",
-  "city": "Framingham, MA",
-  "lat": 42.279,
-  "lng": -71.416,
-  "price": 0,
-  "host": "Framingham Public Library",
-  "description": "The Queer Reads Book Discussion celebrates queer authors, books, and themes.",
-  "url": "https://framinghamlibrary.assabetinteractive.com/calendar/mcauliffe-queer-reads-book-discussion-5/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-framinghamlibrary-main-yarn-social-hour-7-2026-11-18",
-  "title": "Yarn Social Hour",
-  "category": "craft",
-  "start": "2026-11-18T10:00",
-  "end": "2026-11-18T11:00",
-  "venue": "Framingham Public Library",
-  "address": "49 Lexington Street ",
-  "city": "Framingham, MA",
-  "lat": 42.279,
-  "lng": -71.416,
-  "price": 0,
-  "host": "Framingham Public Library",
-  "description": "Join us for a yarn social hour for knitting, crocheting, and yarn crafting!",
-  "url": "https://framinghamlibrary.assabetinteractive.com/calendar/main-yarn-social-hour-7/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-norwoodlibrary-turn-the-page-book-group-hello-beautiful-2026-11-18",
-  "title": "Turn the Page Book Group-Hello Beautiful",
-  "category": "book",
-  "start": "2026-11-18T10:00",
-  "end": "2026-11-18T11:30",
-  "venue": "Morrill Memorial Library",
-  "address": "33 Walpole St.",
-  "city": "Norwood, MA",
-  "lat": 42.1945,
-  "lng": -71.1995,
-  "price": 0,
-  "host": "Morrill Memorial Library",
-  "description": "Connect with Patty Bailey and fellow local readers for a friendly and informal conversation of Hello Beautiful, a novel written by Ann Napolitano.",
-  "url": "https://norwoodlibrary.assabetinteractive.com/calendar/turn-the-page-book-group-hello-beautiful/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-bellinghamlibrary-needlecraft-night-114-2026-11-18",
-  "title": "Needlecraft Night",
-  "category": "craft",
-  "start": "2026-11-18T18:00",
-  "end": "2026-11-18T20:00",
-  "venue": "Bellingham Public Library",
-  "address": "100 Blackstone Street",
-  "city": "Bellingham, MA",
-  "lat": 42.087,
-  "lng": -71.474,
-  "price": 0,
-  "host": "Bellingham Public Library",
-  "description": "Do you enjoy knitting, crocheting, or any of the other fiber arts?",
-  "url": "https://bellinghamlibrary.assabetinteractive.com/calendar/needlecraft-night-114/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-framinghamlibrary-main-hot-takes-romance-book-discussion-6-2026-11-18",
-  "title": "Hot Takes: Romance Book Discussion",
-  "category": "book",
-  "start": "2026-11-18T18:00",
-  "end": "2026-11-18T19:00",
-  "venue": "Framingham Public Library",
-  "address": "49 Lexington Street ",
-  "city": "Framingham, MA",
-  "lat": 42.279,
-  "lng": -71.416,
-  "price": 0,
-  "host": "Framingham Public Library",
-  "description": "Join us for Hot Takes: Romance Book Discussion every third Wednesday of the month at the Main Library!",
-  "url": "https://framinghamlibrary.assabetinteractive.com/calendar/main-hot-takes-romance-book-discussion-6/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-framinghamlibrary-mcauliffe-yarn-social-21-2026-11-18",
-  "title": "Yarn Social",
-  "category": "craft",
-  "start": "2026-11-18T18:00",
-  "end": "2026-11-18T19:00",
-  "venue": "Framingham Public Library (McAuliffe Branch)",
-  "address": "746 Water Street",
-  "city": "Framingham, MA",
-  "lat": 42.279,
-  "lng": -71.416,
-  "price": 0,
-  "host": "Framingham Public Library",
-  "description": "Join us for a yarn social hour for knitting, crocheting, and yarn crafting!At the McAuliffe Branch, meet Wednesday evenings at 6 PM.",
-  "url": "https://framinghamlibrary.assabetinteractive.com/calendar/mcauliffe-yarn-social-21/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-amesfreelibrary-fantastical-fiction-book-club-23-2026-11-18",
-  "title": "Fantastical Fiction Book Club - The Very Secret Society of Irregular Witches by Sangu Mandanna",
-  "category": "book",
-  "start": "2026-11-18T18:00",
-  "end": "2026-11-18T19:00",
-  "venue": "Ames Free Library",
-  "address": "51 Main Street",
-  "city": "Easton, MA",
-  "lat": 42.064,
-  "lng": -71.099,
-  "price": 0,
-  "host": "Ames Free Library",
-  "description": "Join our Fantastical Fiction Book Club on the third Wednesday of every month!",
-  "url": "https://amesfreelibrary.assabetinteractive.com/calendar/fantastical-fiction-book-club-23/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-norfolkpl-meditation-session-with-revikrishnan-balakrishnapillai-placeholder-2-2026-11-18",
-  "title": "Meditation Session with Revikrishnan Balakrishnapillai (in Lounge)",
-  "category": "meditation",
-  "start": "2026-11-18T18:30",
-  "end": "2026-11-18T19:15",
-  "venue": "Norfolk Public Library",
-  "address": "2 Liberty Lane",
-  "city": "Norfolk, MA",
-  "lat": 42.119,
-  "lng": -71.325,
-  "price": 0,
-  "host": "Norfolk Public Library",
-  "description": "Looking to relax after a stressful day at work, school or after being home with the kids?",
-  "url": "https://norfolkpl.assabetinteractive.com/calendar/meditation-session-with-revikrishnan-balakrishnapillai-placeholder-2/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-ventresslibrary-nonfiction-book-group-65-2026-11-18",
-  "title": "Nonfiction Book Group",
-  "category": "book",
-  "start": "2026-11-18T18:30",
-  "end": "2026-11-18T19:30",
-  "venue": "Ventress Memorial Library",
-  "address": "15 Library Plaza",
-  "city": "Marshfield, MA",
-  "lat": 42.092,
-  "lng": -70.7055,
-  "price": 0,
-  "host": "Ventress Memorial Library",
-  "description": "Nonfiction enthusiasts are welcome to join us in the Library Plaza Program Room for a lively book discussion.",
-  "url": "https://ventresslibrary.assabetinteractive.com/calendar/nonfiction-book-group-65/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-boydenlibrary-friends-book-club-32-2026-11-18",
-  "title": "Friends Book Club",
-  "category": "book",
-  "start": "2026-11-18T18:45",
-  "end": "2026-11-18T21:00",
-  "venue": "Boyden Library",
-  "address": "2 Baker Street",
-  "city": "Foxborough, MA",
-  "lat": 42.065,
-  "lng": -71.248,
-  "price": 0,
-  "host": "Boyden Library",
-  "description": "monthly meeting of our book club",
-  "url": "https://boydenlibrary.assabetinteractive.com/meeting-and-study-rooms/friends-book-club-32/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-framinghamlibrary-mcauliffe-craft-ladies-19-2026-11-18",
-  "title": "Craft Ladies: Stamped Wrapping Paper",
-  "category": "craft",
-  "start": "2026-11-18T19:00",
-  "end": "2026-11-18T20:30",
-  "venue": "Framingham Public Library (McAuliffe Branch)",
-  "address": "746 Water Street",
-  "city": "Framingham, MA",
-  "lat": 42.279,
-  "lng": -71.416,
-  "price": 0,
-  "host": "Framingham Public Library",
-  "description": "Join us on the third Wednesday of the month for a fun make and take craft for adults.",
-  "url": "https://framinghamlibrary.assabetinteractive.com/calendar/mcauliffe-craft-ladies-19/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-framinghamlibrary-main-science-fiction-book-discussion-2026-11-18",
-  "title": "Science Fiction Book Discussion",
-  "category": "book",
-  "start": "2026-11-18T19:00",
-  "end": "2026-11-18T20:00",
-  "venue": "Framingham Public Library",
-  "address": "49 Lexington Street ",
-  "city": "Framingham, MA",
-  "lat": 42.279,
-  "lng": -71.416,
-  "price": 0,
-  "host": "Framingham Public Library",
-  "description": "Dungeon Crawler Carl by Matt Dinniman\"You know what’s worse than breaking up with your girlfriend?",
-  "url": "https://framinghamlibrary.assabetinteractive.com/calendar/main-science-fiction-book-discussion/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-goodnowlibrary-sudbury-yarn-enthusiasts-166-2026-11-18",
-  "title": "Sudbury Yarn Enthusiasts",
-  "category": "craft",
-  "start": "2026-11-18T19:00",
-  "end": "2026-11-18T20:30",
-  "venue": "Goodnow Library",
-  "address": "21 Concord Rd",
-  "city": "Sudbury, MA",
-  "lat": 42.3835,
-  "lng": -71.416,
-  "price": 0,
-  "host": "Goodnow Library",
-  "description": "Welcome to Sudbury Yarn Enthusiasts!",
-  "url": "https://goodnowlibrary.assabetinteractive.com/calendar/sudbury-yarn-enthusiasts-166/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-framinghamlibrary-mcauliffe-morning-book-discussion-5-2026-11-19",
-  "title": "Morning Book Discussion: Five Decembers",
-  "category": "book",
-  "start": "2026-11-19T10:00",
-  "end": "2026-11-19T11:00",
-  "venue": "Framingham Public Library (McAuliffe Branch)",
-  "address": "746 Water Street",
-  "city": "Framingham, MA",
-  "lat": 42.279,
-  "lng": -71.416,
-  "price": 0,
-  "host": "Framingham Public Library",
-  "description": "Join us on the third Thursday of the month for a lively discussion.",
-  "url": "https://framinghamlibrary.assabetinteractive.com/calendar/mcauliffe-morning-book-discussion-5/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-amesfreelibrary-mystery-book-club-23-2026-11-19",
-  "title": "Mystery Book Club - Last Girl Ghosted by Lisa Unger",
-  "category": "book",
-  "start": "2026-11-19T15:00",
-  "end": "2026-11-19T16:00",
-  "venue": "Ames Free Library",
-  "address": "51 Main Street",
-  "city": "Easton, MA",
-  "lat": 42.064,
-  "lng": -71.099,
-  "price": 0,
-  "host": "Ames Free Library",
-  "description": "Join us for Mystery Book Club on the last Thursday of every month!",
-  "url": "https://amesfreelibrary.assabetinteractive.com/calendar/mystery-book-club-23/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-fiskelib-learn-to-sew-ii-3-2026-11-19",
-  "title": "Learn to Sew II",
-  "category": "craft",
-  "start": "2026-11-19T18:00",
-  "end": "2026-11-19T20:00",
-  "venue": "Fiske Public Library",
-  "address": "110 Randall Road",
-  "city": "Wrentham, MA",
-  "lat": 42.0655,
-  "lng": -71.329,
-  "price": 0,
-  "host": "Fiske Public Library",
-  "description": "After taking the Learn to Sew class, or if you have basic sewing skills, how about a sew-on-your-own session.",
-  "url": "https://fiskelib.assabetinteractive.com/calendar/learn-to-sew-ii-3/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-medwaylib-silent-book-club-7-2026-11-19",
-  "title": "Silent Book Club",
-  "category": "book",
-  "start": "2026-11-19T19:00",
-  "end": "2026-11-19T20:00",
-  "venue": "Medway Public Library",
-  "address": "26 High Street",
-  "city": "Medway, MA",
-  "lat": 42.1395,
-  "lng": -71.396,
-  "price": 0,
-  "host": "Medway Public Library",
-  "description": "Settle in for a cozy evening of quiet connection at our Silent Book Club.",
-  "url": "https://medwaylib.assabetinteractive.com/calendar/silent-book-club-7/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-milfordtownlibrary-milford-town-library-adult-book-club-9-2026-11-19",
-  "title": "Milford Town Library Adult Book Club",
-  "category": "book",
-  "start": "2026-11-19T19:00",
-  "end": "2026-11-19T20:00",
-  "venue": "Milford Town Library",
-  "address": "80 Spruce St.",
-  "city": "Milford, MA",
-  "lat": 42.14,
-  "lng": -71.516,
-  "price": 0,
-  "host": "Milford Town Library",
-  "description": "Love reading and discussing books with others?",
-  "url": "https://milfordtownlibrary.assabetinteractive.com/calendar/milford-town-library-adult-book-club-9/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-norfolkpl-moms-off-duty-book-club-21-2026-11-19",
-  "title": "Moms Off Duty Book Club",
-  "category": "book",
-  "start": "2026-11-19T19:30",
-  "end": "2026-11-19T21:00",
-  "venue": "Norfolk Public Library",
-  "address": "",
-  "city": "Norfolk, MA",
-  "lat": 42.119,
-  "lng": -71.325,
-  "price": 0,
-  "host": "Norfolk Public Library",
-  "description": "November’s book: The Knight and the MothContact: Elise, elise.",
-  "url": "https://norfolkpl.assabetinteractive.com/meeting-and-study-rooms/moms-off-duty-book-club-21/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-boydenlibrary-zentangle-workshop-37-2026-11-20",
-  "title": "Zentangle Workshop",
-  "category": "craft",
-  "start": "2026-11-20T10:00",
-  "end": "2026-11-20T11:30",
-  "venue": "Boyden Library",
-  "address": "2 Baker Street",
-  "city": "Foxborough, MA",
-  "lat": 42.065,
-  "lng": -71.248,
-  "price": 0,
-  "host": "Boyden Library",
-  "description": "Come Join CZT Linda Evans to learn and practice this relaxed method of drawing.",
-  "url": "https://boydenlibrary.assabetinteractive.com/calendar/zentangle-workshop-37/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-norfolkpl-fiber-art-group-163-2026-11-20",
-  "title": "Fiber Art Group",
-  "category": "craft",
-  "start": "2026-11-20T10:30",
-  "end": "2026-11-20T12:00",
-  "venue": "Norfolk Public Library",
-  "address": "2 Liberty Lane",
-  "city": "Norfolk, MA",
-  "lat": 42.119,
-  "lng": -71.325,
-  "price": 0,
-  "host": "Norfolk Public Library",
-  "description": "Do you love to knit, crochet, embroider, or do another fiber craft?",
-  "url": "https://norfolkpl.assabetinteractive.com/calendar/fiber-art-group-163/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-boydenlibrary-adult-paint-workshop-with-dimple-shah-3-2026-11-21",
-  "title": "Adult Paint Workshop with Dimple Shah",
-  "category": "craft",
-  "start": "2026-11-21T11:00",
-  "end": "2026-11-21T13:00",
-  "venue": "Boyden Library",
-  "address": "2 Baker Street",
-  "city": "Foxborough, MA",
-  "lat": 42.065,
-  "lng": -71.248,
-  "price": 0,
-  "host": "Boyden Library",
-  "description": "September: Fall trees and foliage painting (2 mini canvases)October: Jack-o'-lanterns and/ or a spooky tree featuring a cat and a bat (1 large…",
-  "url": "https://boydenlibrary.assabetinteractive.com/calendar/adult-paint-workshop-with-dimple-shah-3/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-norwoodlibrary-diwali-rangoli-mat-2026-11-21",
-  "title": "Diwali Art: Rangoli Mat",
-  "category": "craft",
-  "start": "2026-11-21T14:00",
-  "end": "2026-11-21T15:30",
-  "venue": "Morrill Memorial Library",
-  "address": "33 Walpole St.",
-  "city": "Norwood, MA",
-  "lat": 42.1945,
-  "lng": -71.1995,
-  "price": 0,
-  "host": "Morrill Memorial Library",
-  "description": "Morrill Memorial Library is thrilled to welcome back Kashmica Sarkar for a Diwali-themed art class.",
-  "url": "https://norwoodlibrary.assabetinteractive.com/calendar/diwali-rangoli-mat/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-medwaylib-fiber-arts-mee-up-52-2026-11-23",
-  "title": "Fiber Arts Meet-Up",
-  "category": "craft",
-  "start": "2026-11-23T18:00",
-  "end": "2026-11-23T19:45",
-  "venue": "Medway Public Library",
-  "address": "26 High Street",
-  "city": "Medway, MA",
-  "lat": 42.1395,
-  "lng": -71.396,
-  "price": 0,
-  "host": "Medway Public Library",
-  "description": "This group welcomes anyone who is interested in the fiber arts which includes but not limited to knitting, crocheting, embroidery, needlepoint, and cross…",
-  "url": "https://medwaylib.assabetinteractive.com/calendar/fiber-arts-mee-up-52/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-bellinghamlibrary-stretch-into-gratitude-november-2026-3-2026-11-24",
-  "title": "Stretch Into Gratitude Yoga / November 2026",
-  "category": "yoga",
-  "start": "2026-11-24T08:30",
-  "end": "2026-11-24T09:45",
-  "venue": "Bellingham Public Library",
-  "address": "100 Blackstone Street",
-  "city": "Bellingham, MA",
-  "lat": 42.087,
-  "lng": -71.474,
-  "price": 0,
-  "host": "Bellingham Public Library",
-  "description": "It’s time to transition to a yoga practice that helps our body and mind get in rhythm with the shorter days and cooler, crisper air of the season.",
-  "url": "https://bellinghamlibrary.assabetinteractive.com/calendar/stretch-into-gratitude-november-2026-3/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-boydenlibrary-boyden-library-book-club-55-2026-11-24",
-  "title": "Boyden Library Book Club",
-  "category": "book",
-  "start": "2026-11-24T11:00",
-  "end": "2026-11-24T12:00",
-  "venue": "Boyden Library",
-  "address": "2 Baker Street",
-  "city": "Foxborough, MA",
-  "lat": 42.065,
-  "lng": -71.248,
-  "price": 0,
-  "host": "Boyden Library",
-  "description": "The Boyden Library is hosting a book club that will meet on the fourth Tuesday of every month.",
-  "url": "https://boydenlibrary.assabetinteractive.com/calendar/boyden-library-book-club-55/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-norfolkpl-watercolor-meet-up-354-2026-11-24",
-  "title": "Watercolor Meet Up",
-  "category": "craft",
-  "start": "2026-11-24T13:00",
-  "end": "2026-11-24T15:00",
-  "venue": "Norfolk Public Library",
-  "address": "2 Liberty Lane",
-  "city": "Norfolk, MA",
-  "lat": 42.119,
-  "lng": -71.325,
-  "price": 0,
-  "host": "Norfolk Public Library",
-  "description": "Do you enjoy painting with watercolors?",
-  "url": "https://norfolkpl.assabetinteractive.com/calendar/watercolor-meet-up-354/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-norfolkpl-page-turners-book-club-52-2026-11-24",
-  "title": "Page Turners Book Club",
-  "category": "book",
-  "start": "2026-11-24T13:00",
-  "end": "2026-11-24T14:00",
-  "venue": "Norfolk Public Library",
-  "address": "2 Liberty Lane",
-  "city": "Norfolk, MA",
-  "lat": 42.119,
-  "lng": -71.325,
-  "price": 0,
-  "host": "Norfolk Public Library",
-  "description": "Page Turners is a book club that meets the last Tuesday of every month.",
-  "url": "https://norfolkpl.assabetinteractive.com/calendar/page-turners-book-club-52/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-tauntonlibrary-adult-yoga-38-2026-11-24",
-  "title": "Adult Yoga",
-  "category": "yoga",
-  "start": "2026-11-24T18:00",
-  "end": "2026-11-24T19:00",
-  "venue": "Taunton Public Library",
-  "address": "12 Pleasant St.",
-  "city": "Taunton, MA",
-  "lat": 41.9005,
-  "lng": -71.0905,
-  "price": 0,
-  "host": "Taunton Public Library",
-  "description": "Come and join us, and experience the transformative power of yoga.",
-  "url": "https://tauntonlibrary.assabetinteractive.com/calendar/adult-yoga-38/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-hollistonlibrary-adult-yoga-with-regina-savage-2026-11-24",
-  "title": "Adult Yoga with Regina Savage",
-  "category": "yoga",
-  "start": "2026-11-24T18:45",
-  "end": "2026-11-24T19:45",
-  "venue": "Holliston Public Library",
-  "address": "752 Washington St",
-  "city": "Holliston, MA",
-  "lat": 42.2,
-  "lng": -71.425,
-  "price": 0,
-  "host": "Holliston Public Library",
-  "description": "We are excited to host Regina Savage, a 28-year resident of Holliston, and a certified yoga instructor who offers regular classes at the Gym in Milford.",
-  "url": "https://hollistonlibrary.assabetinteractive.com/calendar/adult-yoga-with-regina-savage/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
-  "id": "lib-norwoodlibrary-titles-on-tap-book-group-76-2026-11-24",
-  "title": "Titles on Tap Book Group - Underground Airlines",
-  "category": "book",
-  "start": "2026-11-24T19:30",
-  "end": "2026-11-24T21:00",
-  "venue": "Morrill Memorial Library",
-  "address": "46 Day St",
-  "city": "Norwood, MA",
-  "lat": 42.1945,
-  "lng": -71.1995,
-  "price": 0,
-  "host": "Morrill Memorial Library",
-  "description": "Join us for our next meeting of Titles on Tap.",
-  "url": "https://norwoodlibrary.assabetinteractive.com/calendar/titles-on-tap-book-group-76/",
-  "source": "Library",
-  "tags": [
-   "free",
-   "come-alone"
-  ]
- },
- {
   "id": "lib-framinghamlibrary-main-yarn-social-hour-8-2026-11-25",
   "title": "Yarn Social Hour",
   "category": "craft",
@@ -1409,6 +65,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   ]
  },
  {
+  "id": "lib-medwaylib-fiber-arts-meet-up-2026-11-30",
+  "title": "Fiber Arts Meet-Up",
+  "category": "craft",
+  "start": "2026-11-30T18:00",
+  "end": "2026-11-30T19:45",
+  "venue": "Medway Public Library",
+  "address": "26 High Street",
+  "city": "Medway, MA",
+  "lat": 42.1395,
+  "lng": -71.396,
+  "price": 0,
+  "host": "Medway Public Library",
+  "description": "This group welcomes anyone who is interested in the fiber arts which includes but not limited to knitting, crocheting, embroidery, needlepoint, and cross…",
+  "url": "https://medwaylib.assabetinteractive.com/calendar/fiber-arts-meet-up/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
   "id": "lib-norfolkpl-watercolor-meet-up-355-2026-12-01",
   "title": "Watercolor Meet Up",
   "category": "craft",
@@ -1430,6 +107,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   ]
  },
  {
+  "id": "lib-norfolkpl-page-turners-book-club-52-2026-12-01",
+  "title": "Page Turners Book Club",
+  "category": "book",
+  "start": "2026-12-01T13:00",
+  "end": "2026-12-01T14:00",
+  "venue": "Norfolk Public Library",
+  "address": "2 Liberty Lane",
+  "city": "Norfolk, MA",
+  "lat": 42.119,
+  "lng": -71.325,
+  "price": 0,
+  "host": "Norfolk Public Library",
+  "description": "Page Turners is a book club that meets the last Tuesday of every month.",
+  "url": "https://norfolkpl.assabetinteractive.com/calendar/page-turners-book-club-52/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
   "id": "lib-framinghamlibrary-mcauliffe-recipe-readers-cookbook-group-8-2026-12-01",
   "title": "Recipe Readers Cookbook Group: American Cookie",
   "category": "book",
@@ -1444,6 +142,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Framingham Public Library",
   "description": "Each month, we explore a new cookbook, try out new recipes at home, and come together to share our experiences making the recipe.",
   "url": "https://framinghamlibrary.assabetinteractive.com/calendar/mcauliffe-recipe-readers-cookbook-group-8/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
+  "id": "lib-medfieldpubliclibrary-romantasy-book-club-26-2026-12-01",
+  "title": "Romantasy Book Club",
+  "category": "book",
+  "start": "2026-12-01T18:30",
+  "end": "2026-12-01T19:30",
+  "venue": "Medfield Public Library",
+  "address": "468 Main St",
+  "city": "Medfield, MA",
+  "lat": 42.187,
+  "lng": -71.306,
+  "price": 0,
+  "host": "Medfield Public Library",
+  "description": "If you love magic and the mystical, high drama and happy endings, then our Romantasy Book Club is for you!",
+  "url": "https://medfieldpubliclibrary.assabetinteractive.com/calendar/romantasy-book-club-26/",
   "source": "Library",
   "tags": [
    "free",
@@ -1619,6 +338,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   ]
  },
  {
+  "id": "lib-medfieldpubliclibrary-lunch-break-meditation-105-2026-12-03",
+  "title": "Lunch Break Meditation",
+  "category": "meditation",
+  "start": "2026-12-03T12:30",
+  "end": "2026-12-03T13:15",
+  "venue": "Medfield Public Library",
+  "address": "468 Main St",
+  "city": "Medfield, MA",
+  "lat": 42.187,
+  "lng": -71.306,
+  "price": 0,
+  "host": "Medfield Public Library",
+  "description": "Join us for a little lunch break meditation session with long-time practitioner, Eddie.",
+  "url": "https://medfieldpubliclibrary.assabetinteractive.com/calendar/lunch-break-meditation-105/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
   "id": "lib-medwaylib-medway-library-book-discussion-group-25-2026-12-03",
   "title": "No Shelf Control Book Group",
   "category": "book",
@@ -1661,6 +401,48 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   ]
  },
  {
+  "id": "lib-framinghamlibrary-winter-arrangements-2026-12-03",
+  "title": "Winter Arrangements",
+  "category": "craft",
+  "start": "2026-12-03T18:00",
+  "end": "2026-12-03T20:00",
+  "venue": "Framingham Public Library",
+  "address": "49 Lexington Street ",
+  "city": "Framingham, MA",
+  "lat": 42.279,
+  "lng": -71.416,
+  "price": 0,
+  "host": "Framingham Public Library",
+  "description": "Create a festive seasonal arrangement using a beautiful mix of evergreen foliage, dried plant materials, berries, ribbon, and decorative winter accents.",
+  "url": "https://framinghamlibrary.assabetinteractive.com/calendar/winter-arrangements/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
+  "id": "lib-medwaylib-medway-mens-book-club-7-2026-12-03",
+  "title": "Medway Men's Book Club",
+  "category": "book",
+  "start": "2026-12-03T18:30",
+  "end": "2026-12-03T20:00",
+  "venue": "Medway Public Library",
+  "address": "26 High Street",
+  "city": "Medway, MA",
+  "lat": 42.1395,
+  "lng": -71.396,
+  "price": 0,
+  "host": "Medway Public Library",
+  "description": "Join us for the Medway Men’s Book Club on October 1st from 6:30–8:00 PM in the Quiet Room as we discuss Stuff Matters by Mark Miodownik!All are welcome to…",
+  "url": "https://medwaylib.assabetinteractive.com/calendar/medway-mens-book-club-7/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
   "id": "lib-millislibrary-millennial-womens-book-club-2-2026-12-03",
   "title": "Millennial Women's Book Club",
   "category": "book",
@@ -1682,6 +464,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   ]
  },
  {
+  "id": "lib-medfieldpubliclibrary-science-fiction-book-club-26-2026-12-03",
+  "title": "Science Fiction Book Club",
+  "category": "book",
+  "start": "2026-12-03T19:00",
+  "end": "2026-12-03T20:00",
+  "venue": "Medfield Public Library",
+  "address": "120 N Meadows Rd",
+  "city": "Medfield, MA",
+  "lat": 42.187,
+  "lng": -71.306,
+  "price": 0,
+  "host": "Medfield Public Library",
+  "description": "Join us at Farthest Star Sake Brewery in Medfield on the first Thursday of every month to discuss a different Science Fiction novel!This month's book is…",
+  "url": "https://medfieldpubliclibrary.assabetinteractive.com/calendar/science-fiction-book-club-26/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
   "id": "lib-norfolkpl-fiber-art-group-165-2026-12-04",
   "title": "Fiber Art Group",
   "category": "craft",
@@ -1696,6 +499,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Norfolk Public Library",
   "description": "Do you love to knit, crochet, embroider, or do another fiber craft?",
   "url": "https://norfolkpl.assabetinteractive.com/calendar/fiber-art-group-165/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
+  "id": "lib-medfieldpubliclibrary-collage-craft-night-15-2026-12-05",
+  "title": "Collage Crafternoon for Adults",
+  "category": "craft",
+  "start": "2026-12-05T14:30",
+  "end": "2026-12-05T16:30",
+  "venue": "Medfield Public Library",
+  "address": "468 Main St",
+  "city": "Medfield, MA",
+  "lat": 42.187,
+  "lng": -71.306,
+  "price": 0,
+  "host": "Medfield Public Library",
+  "description": "Come in and play with us.",
+  "url": "https://medfieldpubliclibrary.assabetinteractive.com/calendar/collage-craft-night-15/",
   "source": "Library",
   "tags": [
    "free",
@@ -1738,6 +562,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Goodnow Library",
   "description": "Join us for our next meeting of The Bookies Book Group!",
   "url": "https://goodnowlibrary.assabetinteractive.com/calendar/the-bookies-book-group-46/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
+  "id": "lib-medwaylib-fiber-arts-meet-up-2-2026-12-07",
+  "title": "Fiber Arts Meet-Up",
+  "category": "craft",
+  "start": "2026-12-07T18:00",
+  "end": "2026-12-07T19:45",
+  "venue": "Medway Public Library",
+  "address": "26 High Street",
+  "city": "Medway, MA",
+  "lat": 42.1395,
+  "lng": -71.396,
+  "price": 0,
+  "host": "Medway Public Library",
+  "description": "This group welcomes anyone who is interested in the fiber arts which includes but not limited to knitting, crocheting, embroidery, needlepoint, and cross…",
+  "url": "https://medwaylib.assabetinteractive.com/calendar/fiber-arts-meet-up-2/",
   "source": "Library",
   "tags": [
    "free",
@@ -1892,6 +737,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   ]
  },
  {
+  "id": "lib-medfieldpubliclibrary-nonfiction-book-club-for-adults-4-2026-12-08",
+  "title": "Nonfiction Book Club for Adults",
+  "category": "book",
+  "start": "2026-12-08T18:30",
+  "end": "2026-12-08T19:30",
+  "venue": "Medfield Public Library",
+  "address": "468 Main St",
+  "city": "Medfield, MA",
+  "lat": 42.187,
+  "lng": -71.306,
+  "price": 0,
+  "host": "Medfield Public Library",
+  "description": "Our Nonfiction Book Club has fun twist: instead of reading the same book each month, members choose their own book based on a monthly prompt then get together…",
+  "url": "https://medfieldpubliclibrary.assabetinteractive.com/calendar/nonfiction-book-club-for-adults-4/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
   "id": "lib-framinghamlibrary-mcauliffe-evening-book-discussion-6-2026-12-08",
   "title": "Evening Book Discussion: The Road To Tender Hearts",
   "category": "book",
@@ -1948,6 +814,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Ames Free Library",
   "description": "Join us the second Wednesday of each month for the Ames Free Library Book Club!",
   "url": "https://amesfreelibrary.assabetinteractive.com/calendar/ames-free-library-book-club-24/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
+  "id": "lib-medwaylib-embroidery-for-adults-12-2026-12-09",
+  "title": "Embroidery for Adults",
+  "category": "craft",
+  "start": "2026-12-09T17:15",
+  "end": "2026-12-09T18:15",
+  "venue": "Medway Public Library",
+  "address": "26 High Street",
+  "city": "Medway, MA",
+  "lat": 42.1395,
+  "lng": -71.396,
+  "price": 0,
+  "host": "Medway Public Library",
+  "description": "Join us for a guided embroidery class for adults, where you’ll learn basic hand-stitching techniques and work on a project of your choice.",
+  "url": "https://medwaylib.assabetinteractive.com/calendar/embroidery-for-adults-12/",
   "source": "Library",
   "tags": [
    "free",
@@ -2032,6 +919,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Goodnow Library",
   "description": "Welcome to Sudbury Yarn Enthusiasts!",
   "url": "https://goodnowlibrary.assabetinteractive.com/calendar/sudbury-yarn-enthusiasts-169/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
+  "id": "lib-medfieldpubliclibrary-lunch-break-meditation-106-2026-12-10",
+  "title": "Lunch Break Meditation",
+  "category": "meditation",
+  "start": "2026-12-10T12:30",
+  "end": "2026-12-10T13:15",
+  "venue": "Medfield Public Library",
+  "address": "468 Main St",
+  "city": "Medfield, MA",
+  "lat": 42.187,
+  "lng": -71.306,
+  "price": 0,
+  "host": "Medfield Public Library",
+  "description": "Join us for a little lunch break meditation session with long-time practitioner, Eddie.",
+  "url": "https://medfieldpubliclibrary.assabetinteractive.com/calendar/lunch-break-meditation-106/",
   "source": "Library",
   "tags": [
    "free",
@@ -2207,6 +1115,48 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   ]
  },
  {
+  "id": "lib-framinghamlibrary-holiday-inspired-terrariums-2026-12-12",
+  "title": "Holiday-Inspired Terrariums",
+  "category": "craft",
+  "start": "2026-12-12T14:30",
+  "end": "2026-12-12T16:30",
+  "venue": "Framingham Public Library",
+  "address": "49 Lexington Street ",
+  "city": "Framingham, MA",
+  "lat": 42.279,
+  "lng": -71.416,
+  "price": 0,
+  "host": "Framingham Public Library",
+  "description": "Create a festive miniature indoor garden in glass using moss, small plants, natural materials, and holiday-inspired decorations.",
+  "url": "https://framinghamlibrary.assabetinteractive.com/calendar/holiday-inspired-terrariums/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
+  "id": "lib-medwaylib-fiber-arts-meet-up-3-2026-12-14",
+  "title": "Fiber Arts Meet-Up",
+  "category": "craft",
+  "start": "2026-12-14T18:00",
+  "end": "2026-12-14T19:45",
+  "venue": "Medway Public Library",
+  "address": "26 High Street",
+  "city": "Medway, MA",
+  "lat": 42.1395,
+  "lng": -71.396,
+  "price": 0,
+  "host": "Medway Public Library",
+  "description": "This group welcomes anyone who is interested in the fiber arts which includes but not limited to knitting, crocheting, embroidery, needlepoint, and cross…",
+  "url": "https://medwaylib.assabetinteractive.com/calendar/fiber-arts-meet-up-3/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
   "id": "lib-millislibrary-horror-thriller-book-club-36-2026-12-14",
   "title": "Horror & Thriller Book Club",
   "category": "book",
@@ -2284,6 +1234,48 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Norfolk Public Library",
   "description": "Do you enjoy painting with watercolors?",
   "url": "https://norfolkpl.assabetinteractive.com/calendar/watercolor-meet-up-357/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
+  "id": "lib-ventresslibrary-needle-felted-ornaments-2026-12-15",
+  "title": "Needle Felted Ornaments",
+  "category": "craft",
+  "start": "2026-12-15T18:00",
+  "end": "2026-12-15T19:30",
+  "venue": "Ventress Memorial Library",
+  "address": "15 Library Plaza",
+  "city": "Marshfield, MA",
+  "lat": 42.092,
+  "lng": -70.7055,
+  "price": 0,
+  "host": "Ventress Memorial Library",
+  "description": "Try your hand a needle felting!",
+  "url": "https://ventresslibrary.assabetinteractive.com/calendar/needle-felted-ornaments/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
+  "id": "lib-medfieldpubliclibrary-fiction-book-club-50-2026-12-15",
+  "title": "Fiction Book Club",
+  "category": "book",
+  "start": "2026-12-15T18:30",
+  "end": "2026-12-15T19:30",
+  "venue": "Medfield Public Library",
+  "address": "468 Main St",
+  "city": "Medfield, MA",
+  "lat": 42.187,
+  "lng": -71.306,
+  "price": 0,
+  "host": "Medfield Public Library",
+  "description": "Join us at Fiction Book Club to discuss a different novel each month.",
+  "url": "https://medfieldpubliclibrary.assabetinteractive.com/calendar/fiction-book-club-50/",
   "source": "Library",
   "tags": [
    "free",
@@ -2397,7 +1389,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
  },
  {
   "id": "lib-framinghamlibrary-main-hot-takes-romance-book-discussion-7-2026-12-16",
-  "title": "Hot Takes: Romance Book Discussion",
+  "title": "Hot Takes: Romance Book Discussion: A Touch of Darkness",
   "category": "book",
   "start": "2026-12-16T18:00",
   "end": "2026-12-16T19:00",
@@ -2408,7 +1400,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "lng": -71.416,
   "price": 0,
   "host": "Framingham Public Library",
-  "description": "Join us for Hot Takes: Romance Book Discussion every third Wednesday of the month at the Main Library!",
+  "description": "Join us for Hot Takes: Romance Book Discussion every third Wednesday of the month at the Main Library!December's Discussion Book: A Touch of Darkness by…",
   "url": "https://framinghamlibrary.assabetinteractive.com/calendar/main-hot-takes-romance-book-discussion-7/",
   "source": "Library",
   "tags": [
@@ -2480,6 +1472,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   ]
  },
  {
+  "id": "lib-medfieldpubliclibrary-romance-book-club-15-2026-12-16",
+  "title": "Romance Book Club",
+  "category": "book",
+  "start": "2026-12-16T18:30",
+  "end": "2026-12-16T20:00",
+  "venue": "Medfield Public Library",
+  "address": "1 Green Street",
+  "city": "Medfield, MA",
+  "lat": 42.187,
+  "lng": -71.306,
+  "price": 0,
+  "host": "Medfield Public Library",
+  "description": "Join us at Takara Japanese Restaurant on the third Wednesday of every month to discuss a different contemporary romance novel over drinks and sushi!",
+  "url": "https://medfieldpubliclibrary.assabetinteractive.com/calendar/romance-book-club-15/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
   "id": "lib-ventresslibrary-nonfiction-book-group-66-2026-12-16",
   "title": "Nonfiction Book Group",
   "category": "book",
@@ -2502,7 +1515,7 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
  },
  {
   "id": "lib-framinghamlibrary-mcauliffe-craft-ladies-20-2026-12-16",
-  "title": "Craft Ladies",
+  "title": "Craft Ladies: Upcycled Mini Gift Boxes",
   "category": "craft",
   "start": "2026-12-16T19:00",
   "end": "2026-12-16T20:30",
@@ -2557,6 +1570,69 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Framingham Public Library",
   "description": "Join us on the third Thursday of the month for a lively discussion.",
   "url": "https://framinghamlibrary.assabetinteractive.com/calendar/mcauliffe-morning-book-discussion-6/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
+  "id": "lib-medfieldpubliclibrary-lunch-break-meditation-107-2026-12-17",
+  "title": "Lunch Break Meditation",
+  "category": "meditation",
+  "start": "2026-12-17T12:30",
+  "end": "2026-12-17T13:15",
+  "venue": "Medfield Public Library",
+  "address": "468 Main St",
+  "city": "Medfield, MA",
+  "lat": 42.187,
+  "lng": -71.306,
+  "price": 0,
+  "host": "Medfield Public Library",
+  "description": "Join us for a little lunch break meditation session with long-time practitioner, Eddie.",
+  "url": "https://medfieldpubliclibrary.assabetinteractive.com/calendar/lunch-break-meditation-107/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
+  "id": "lib-medfieldpubliclibrary-personalized-2027-gratitude-journal-workshop-2026-12-17",
+  "title": "Personalized 2027 Gratitude Journal Workshop Drop In",
+  "category": "craft",
+  "start": "2026-12-17T17:00",
+  "end": "2026-12-17T19:30",
+  "venue": "Medfield Public Library",
+  "address": "468 Main St",
+  "city": "Medfield, MA",
+  "lat": 42.187,
+  "lng": -71.306,
+  "price": 0,
+  "host": "Medfield Public Library",
+  "description": "Expressing Gratitude has been shown to improve one's mental, emotional, and physical health!",
+  "url": "https://medfieldpubliclibrary.assabetinteractive.com/calendar/personalized-2027-gratitude-journal-workshop/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
+  "id": "lib-medfieldpubliclibrary-eco-centric-book-club-26-2026-12-17",
+  "title": "Eco-Centric Book Club",
+  "category": "book",
+  "start": "2026-12-17T18:30",
+  "end": "2026-12-17T19:30",
+  "venue": "Medfield Public Library",
+  "address": "468 Main St",
+  "city": "Medfield, MA",
+  "lat": 42.187,
+  "lng": -71.306,
+  "price": 0,
+  "host": "Medfield Public Library",
+  "description": "The Eco-Centric Book Club gathers to discuss books about Climate Change and Environmental Conservation.",
+  "url": "https://medfieldpubliclibrary.assabetinteractive.com/calendar/eco-centric-book-club-26/",
   "source": "Library",
   "tags": [
    "free",
@@ -2620,6 +1696,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Norfolk Public Library",
   "description": "Do you love to knit, crochet, embroider, or do another fiber craft?",
   "url": "https://norfolkpl.assabetinteractive.com/calendar/fiber-art-group-167/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
+  "id": "lib-medwaylib-fiber-arts-meet-up-4-2026-12-21",
+  "title": "Fiber Arts Meet-Up",
+  "category": "craft",
+  "start": "2026-12-21T18:00",
+  "end": "2026-12-21T19:45",
+  "venue": "Medway Public Library",
+  "address": "26 High Street",
+  "city": "Medway, MA",
+  "lat": 42.1395,
+  "lng": -71.396,
+  "price": 0,
+  "host": "Medway Public Library",
+  "description": "This group welcomes anyone who is interested in the fiber arts which includes but not limited to knitting, crocheting, embroidery, needlepoint, and cross…",
+  "url": "https://medwaylib.assabetinteractive.com/calendar/fiber-arts-meet-up-4/",
   "source": "Library",
   "tags": [
    "free",
@@ -2816,6 +1913,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   ]
  },
  {
+  "id": "lib-medwaylib-fiber-arts-meet-up-5-2026-12-28",
+  "title": "Fiber Arts Meet-Up",
+  "category": "craft",
+  "start": "2026-12-28T18:00",
+  "end": "2026-12-28T19:45",
+  "venue": "Medway Public Library",
+  "address": "26 High Street",
+  "city": "Medway, MA",
+  "lat": 42.1395,
+  "lng": -71.396,
+  "price": 0,
+  "host": "Medway Public Library",
+  "description": "This group welcomes anyone who is interested in the fiber arts which includes but not limited to knitting, crocheting, embroidery, needlepoint, and cross…",
+  "url": "https://medwaylib.assabetinteractive.com/calendar/fiber-arts-meet-up-5/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
   "id": "lib-norfolkpl-watercolor-meet-up-359-2026-12-29",
   "title": "Watercolor Meet Up",
   "category": "craft",
@@ -2872,6 +1990,27 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
   "host": "Norfolk Public Library",
   "description": "Bird enthusiasts and crafters- come enjoy a paint night at the library!",
   "url": "https://norfolkpl.assabetinteractive.com/calendar/paint-night-birdwatchers-edition/",
+  "source": "Library",
+  "tags": [
+   "free",
+   "come-alone"
+  ]
+ },
+ {
+  "id": "lib-medfieldpubliclibrary-history-nonfiction-book-club-16-2026-12-29",
+  "title": "History (Nonfiction) Book Club",
+  "category": "book",
+  "start": "2026-12-29T18:30",
+  "end": "2026-12-29T19:30",
+  "venue": "Medfield Public Library",
+  "address": "468 Main St",
+  "city": "Medfield, MA",
+  "lat": 42.187,
+  "lng": -71.306,
+  "price": 0,
+  "host": "Medfield Public Library",
+  "description": "History Lovers are invited to join the group to discuss a different book on the last Tuesday of each month, covering a wide range of historical events,…",
+  "url": "https://medfieldpubliclibrary.assabetinteractive.com/calendar/history-nonfiction-book-club-16/",
   "source": "Library",
   "tags": [
    "free",

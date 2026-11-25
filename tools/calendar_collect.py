@@ -27,6 +27,11 @@ SITES = {
         "venue": "Art Complex Museum", "address": "189 Alden St", "city": "Duxbury, MA",
         "lat": 42.0388, "lng": -70.6990,
     },
+    "oldcolony": {
+        "url": "https://www.oldcolonyhistorymuseum.org",
+        "venue": "Old Colony History Museum", "address": "66 Church Green", "city": "Taunton, MA",
+        "lat": 41.9010, "lng": -71.0912,
+    },
 }
 
 # What we list, checked against the title first. First match wins.

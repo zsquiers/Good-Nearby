@@ -507,8 +507,8 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
     category: "book", monthly: { week: 1, day: "Wednesday", time: "10:00", endTime: "11:00" },
     venue: "Attleboro Public Library", address: "74 North Main St", city: "Attleboro, MA", lat: 41.9459, lng: -71.2860,
     price: 0, host: "Attleboro Public Library",
-    description: "A friendly monthly book group on the first Wednesday morning. November's book is The Book of Lost Names by Kristin Harmel.",
-    url: "https://attleborolibrary.libcal.com/event/16142077", source: "Library", tags: ["free", "come-alone"]
+    description: "A friendly monthly book group on the first Wednesday morning. December's book is Buckeye by Patrick Ryan.",
+    url: "https://attleborolibrary.libcal.com/event/16142078", source: "Library", tags: ["free", "come-alone"]
   },
   {
     id: "apl-yarn-2026-11-03", title: "Yarn Lovers Group",
@@ -565,5 +565,93 @@ window.GOOD_NEARBY_EVENTS = (window.GOOD_NEARBY_EVENTS || []).concat([
     price: 0, host: "Attleboro Public Library",
     description: "A monthly nonfiction book group. November's book is Appeasement by Tim Bouverie; copies are at the library.",
     url: "https://attleborolibrary.libcal.com/event/17249792", source: "Library", tags: ["free", "come-alone"]
+  },
+  {
+    id: "apl-festive-botanicals-2026-11-30", title: "Festive Botanicals: Myths and Legends of Holiday Plants",
+    category: "workshop", start: "2026-11-30T18:30", end: "2026-11-30T20:00",
+    venue: "Attleboro Public Library", address: "74 North Main St", city: "Attleboro, MA", lat: 41.9459, lng: -71.286,
+    price: 0, host: "Attleboro Public Library",
+    description: "A free evening talk on the stories behind holiday trees and plants.",
+    url: "https://attleborolibrary.libcal.com/event/17551839", source: "Library", tags: ["free", "come-alone"]
+  },
+  {
+    id: "apl-mahjong-2026-12-03", title: "Mahjong Group",
+    category: "workshop", start: "2026-12-03T13:00", end: "2026-12-03T16:00",
+    venue: "Attleboro Public Library", address: "74 North Main St", city: "Attleboro, MA", lat: 41.9459, lng: -71.286,
+    price: 0, host: "Attleboro Public Library",
+    description: "Drop in to play mahjong on the first and third Thursday afternoons.",
+    url: "https://attleborolibrary.libcal.com/event/17838223", source: "Library", tags: ["free", "come-alone"]
+  },
+  {
+    id: "apl-yarn-2026-12-15", title: "Yarn Lovers Group",
+    category: "craft", start: "2026-12-15T09:00", end: "2026-12-15T10:00",
+    venue: "Attleboro Public Library", address: "74 North Main St", city: "Attleboro, MA", lat: 41.9459, lng: -71.286,
+    price: 0, host: "Attleboro Public Library",
+    description: "Drop in with your knitting, crochet, embroidery or other fiber project and meet other makers. Meets every other Tuesday morning.",
+    url: "https://attleborolibrary.libcal.com/event/17712287", source: "Library", tags: ["free", "come-alone"]
+  },
+  {
+    id: "apl-ww2-books-2026-12-15", title: "World War II Nonfiction Book Group",
+    category: "book", start: "2026-12-15T10:00", end: "2026-12-15T11:00",
+    venue: "Attleboro Public Library", address: "74 North Main St", city: "Attleboro, MA", lat: 41.9459, lng: -71.286,
+    price: 0, host: "Attleboro Public Library",
+    description: "A monthly morning book group reading World War II nonfiction.",
+    url: "https://attleborolibrary.libcal.com/event/17249796", source: "Library", tags: ["free", "come-alone"]
+  },
+  {
+    id: "apl-mahjong-2026-12-17", title: "Mahjong Group",
+    category: "workshop", start: "2026-12-17T13:00", end: "2026-12-17T16:00",
+    venue: "Attleboro Public Library", address: "74 North Main St", city: "Attleboro, MA", lat: 41.9459, lng: -71.286,
+    price: 0, host: "Attleboro Public Library",
+    description: "Drop in to play mahjong on the first and third Thursday afternoons.",
+    url: "https://attleborolibrary.libcal.com/event/17838224", source: "Library", tags: ["free", "come-alone"]
+  },
+  {
+    id: "apl-poetry-2026-12-19", title: "Poetry Discussion Group",
+    category: "book", start: "2026-12-19T10:30", end: "2026-12-19T12:00",
+    venue: "Attleboro Public Library", address: "74 North Main St", city: "Attleboro, MA", lat: 41.9459, lng: -71.286,
+    price: 0, host: "Attleboro Public Library",
+    description: "A relaxed Saturday morning group for reading and talking about poems.",
+    url: "https://attleborolibrary.libcal.com/event/17908877", source: "Library", tags: ["free", "come-alone"]
+  },
+  {
+    id: "apl-silent-book-club-2026-12-21", title: "Silent Book Club",
+    category: "book", start: "2026-12-21T18:30", end: "2026-12-21T20:00",
+    venue: "Attleboro Public Library", address: "74 North Main St", city: "Attleboro, MA", lat: 41.9459, lng: -71.286,
+    price: 0, host: "Attleboro Public Library",
+    description: "Bring any book and read quietly together; chat if you like.",
+    url: "https://attleborolibrary.libcal.com/event/16969890", source: "Library", tags: ["free", "come-alone"]
+  },
+  {
+    id: "somerset-lib-book-nooks-2026-12-07", title: "Book Nooks Craft Night",
+    category: "craft", start: "2026-12-07T18:00", end: "2026-12-07T19:00",
+    venue: "Somerset Public Library", address: "", city: "Somerset, MA", lat: 41.77, lng: -71.129,
+    price: 0, priceNote: "Registration required", host: "Somerset Public Library",
+    description: "Make a tiny book nook for your shelf; supplies provided. Registration required.",
+    url: "https://somerset-ma.whofi.com/calendar", source: "Library", tags: ["free", "come-alone"]
+  },
+  {
+    id: "somerset-lib-fiction-2026-12-07", title: "Fiction Book Club",
+    category: "book", start: "2026-12-07T18:30", end: "2026-12-07T19:30",
+    venue: "Somerset Public Library", address: "", city: "Somerset, MA", lat: 41.77, lng: -71.129,
+    price: 0, host: "Somerset Public Library",
+    description: "A monthly evening fiction book club for adults.",
+    url: "https://somerset-ma.whofi.com/calendar", source: "Library", tags: ["free", "come-alone"]
+  },
+  {
+    id: "somerset-lib-nonfiction-2026-12-14", title: "Nonfiction Book Club",
+    category: "book", start: "2026-12-14T18:30", end: "2026-12-14T19:30",
+    venue: "Somerset Public Library", address: "", city: "Somerset, MA", lat: 41.77, lng: -71.129,
+    price: 0, host: "Somerset Public Library",
+    description: "A monthly evening nonfiction book club for adults.",
+    url: "https://somerset-ma.whofi.com/calendar", source: "Library", tags: ["free", "come-alone"]
+  },
+  {
+    id: "somerset-lib-thrills-2026-12-15", title: "Thrills & Chills Book Club",
+    category: "book", start: "2026-12-15T18:30", end: "2026-12-15T19:30",
+    venue: "Somerset Public Library", address: "", city: "Somerset, MA", lat: 41.77, lng: -71.129,
+    price: 0, host: "Somerset Public Library",
+    description: "A book club for fans of mysteries and thrillers.",
+    url: "https://somerset-ma.whofi.com/calendar", source: "Library", tags: ["free", "come-alone"]
   }
 ]);
