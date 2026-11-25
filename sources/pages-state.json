@@ -1,23 +1,23 @@
 {
  "pages": {
   "/metrowest/": {
-   "hash": "164487f476ff",
-   "lastmod": "2026-11-23",
+   "hash": "eed9a74a177b",
+   "lastmod": "2026-11-25",
    "index": true
   },
   "/franklin-area/": {
-   "hash": "1edc94ce9421",
-   "lastmod": "2026-11-24",
+   "hash": "13e685e9404b",
+   "lastmod": "2026-11-25",
    "index": true
   },
   "/boston-area/": {
-   "hash": "a62ca067dd68",
-   "lastmod": "2026-11-23",
+   "hash": "f8742316c901",
+   "lastmod": "2026-11-25",
    "index": true
   },
   "/south-shore/": {
-   "hash": "0150ffc38f17",
-   "lastmod": "2026-11-23",
+   "hash": "5673ec55481a",
+   "lastmod": "2026-11-25",
    "index": true
   },
   "/towns/franklin-ma/": {
@@ -36,13 +36,13 @@
    "index": true
   },
   "/towns/framingham-ma/": {
-   "hash": "407d014383e0",
-   "lastmod": "2026-11-23",
+   "hash": "b9eaa50f6f11",
+   "lastmod": "2026-11-25",
    "index": true
   },
   "/towns/natick-ma/": {
-   "hash": "5a40e00c96fc",
-   "lastmod": "2026-11-23",
+   "hash": "ad3b2c7d5956",
+   "lastmod": "2026-11-25",
    "index": true
   },
   "/towns/jamaica-plain-ma/": {
@@ -101,8 +101,8 @@
    "index": true
   },
   "/yoga/": {
-   "hash": "1c4ca9d49ff2",
-   "lastmod": "2026-11-24",
+   "hash": "4e5084ea0d18",
+   "lastmod": "2026-11-25",
    "index": true
   },
   "/meditation/": {
@@ -121,18 +121,18 @@
    "index": true
   },
   "/creative-classes/": {
-   "hash": "f75e2784c8ec",
-   "lastmod": "2026-11-24",
+   "hash": "c0eee63e9437",
+   "lastmod": "2026-11-25",
    "index": true
   },
   "/book-groups/": {
-   "hash": "7ac1f3a181cb",
-   "lastmod": "2026-11-24",
+   "hash": "45e07d9f7a1a",
+   "lastmod": "2026-11-25",
    "index": true
   },
   "/trails-and-walks/": {
-   "hash": "866b527a15b4",
-   "lastmod": "2026-11-23",
+   "hash": "fc34bec38a25",
+   "lastmod": "2026-11-25",
    "index": true
   },
   "/cafes-and-bakeries/": {
@@ -151,8 +151,8 @@
    "index": true
   },
   "/towns/taunton-ma/": {
-   "hash": "c973740ec513",
-   "lastmod": "2026-11-23",
+   "hash": "27a13eaf684a",
+   "lastmod": "2026-11-25",
    "index": true
   },
   "/towns/sudbury-ma/": {
@@ -171,5 +171,5 @@
   "hash": "100",
   "lastmod": "2026-11-04"
  },
- "built": "2026-11-24"
+ "built": "2026-11-25"
 }
