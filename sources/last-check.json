@@ -8,16 +8,44 @@
   "hash": "6aa35bc605df"
  },
  "https://amcboston.org/": {
-  "checked": "2026-10-09",
-  "hash": "37efa256d5f5"
+  "checked": "2026-11-25",
+  "hash": "2212e0fe00ce"
+ },
+ "https://attleborolibrary.libcal.com/rss.php?cid=21308&m=month": {
+  "checked": "2026-11-25",
+  "hash": "4e72f167ba71"
  },
  "https://bomdough.com/": {
   "checked": "2026-10-09",
   "hash": "9b22f0f78d19"
  },
+ "https://boston.shambhala.org/": {
+  "checked": "2026-11-25",
+  "hash": "2ccd1a2d5680"
+ },
  "https://bpl.bibliocommons.com/v2/events?q=yoga": {
-  "checked": "2026-10-09",
-  "hash": "052b77a9aaf7"
+  "checked": "2026-11-25",
+  "hash": "5e0002d6172d"
+ },
+ "https://cambridgeinsight.org/programs/evening-sit-in-person/": {
+  "checked": "2026-11-25",
+  "hash": "9b8b43ba7dfa"
+ },
+ "https://cambridgenaturals.com/events": {
+  "checked": "2026-11-25",
+  "hash": "ebd7a35f02f6"
+ },
+ "https://cambridgezen.org/newcomers": {
+  "checked": "2026-11-25",
+  "hash": "df99c55a3f96"
+ },
+ "https://craft-loft.com/collections/boston-workshops": {
+  "checked": "2026-11-25",
+  "hash": "db9a29532691"
+ },
+ "https://dightonlibrary.libcal.com/calendar": {
+  "checked": "2026-11-25",
+  "hash": "7679588ea4b4"
  },
  "https://enchantedfox.com/": {
   "checked": "2026-10-09",
@@ -28,28 +56,40 @@
   "hash": "2c13a338703f"
  },
  "https://franklinacupunkture.com/upcoming-events-and-workshops/": {
-  "checked": "2026-10-09",
-  "hash": "f275aa6d8d80"
+  "checked": "2026-11-25",
+  "hash": "11a8bfa04ec4"
  },
  "https://healingbywilhelmina.com/public-event-and-retreats": {
-  "checked": "2026-10-09",
-  "hash": "49e9d59328b5"
+  "checked": "2026-11-25",
+  "hash": "375a03138ccf"
  },
  "https://healthandwellnessshow.net/": {
   "checked": "2026-10-09",
   "hash": "a06983c30601"
  },
+ "https://joyfulkitchen.com/": {
+  "checked": "2026-11-25",
+  "hash": "ba2e3c236d5f"
+ },
  "https://justbreathesaltspa.com/": {
   "checked": "2026-10-09",
   "hash": "452bdabd34ae"
+ },
+ "https://linktr.ee/herbstudiesboston": {
+  "checked": "2026-11-25",
+  "hash": "840551fc2905"
  },
  "https://madhousecafe.com/": {
   "checked": "2026-10-09",
   "hash": "26daa7faa4c0"
  },
+ "https://meditationinboston.org/findaclass": {
+  "checked": "2026-11-25",
+  "hash": "362453fae409"
+ },
  "https://mountauburn.org/events/": {
-  "checked": "2026-10-09",
-  "hash": "7bd44f7de19b"
+  "checked": "2026-11-25",
+  "hash": "a22d3085171a"
  },
  "https://nirvanateahousecafe.com/": {
   "checked": "2026-10-09",
@@ -59,13 +99,33 @@
   "checked": "2026-10-09",
   "hash": "3c83375c5a40"
  },
+ "https://opendoorsyogastudios.com/taunton": {
+  "checked": "2026-11-25",
+  "hash": "c6b1df469090"
+ },
+ "https://pathsangha.com/": {
+  "checked": "2026-11-25",
+  "hash": "a4dda77d2dc1"
+ },
+ "https://plimoth.org/events": {
+  "checked": "2026-11-25",
+  "hash": "954d1a2af205"
+ },
  "https://plymouthma.myrec.com/info/activities/default.aspx": {
-  "checked": "2026-10-09",
-  "hash": "d813cb9d5a89"
+  "checked": "2026-11-25",
+  "hash": "9988be2db146"
+ },
+ "https://providencezen.org/schedule": {
+  "checked": "2026-11-25",
+  "error": "<urlopen error [Errno 104] Connection reset by peer>"
+ },
+ "https://rehobothlandtrust.squarespace.com/": {
+  "checked": "2026-11-25",
+  "hash": "b0b9ef0d8248"
  },
  "https://scituatesaltcave.com/events": {
-  "checked": "2026-10-09",
-  "hash": "66fe6c8b152c"
+  "checked": "2026-11-25",
+  "hash": "56b8d5ea94fb"
  },
  "https://thegentleplace.com": {
   "checked": "2026-10-09",
@@ -83,6 +143,14 @@
   "checked": "2026-10-09",
   "hash": "6fd05e193d01"
  },
+ "https://us.srichinmoycentre.org/meditation-boston": {
+  "checked": "2026-11-25",
+  "hash": "b23552e049b4"
+ },
+ "https://watnawamin.org/courses/evening-meditation/": {
+  "checked": "2026-11-25",
+  "hash": "87e1260a076e"
+ },
  "https://www.3littlefigs.com/": {
   "checked": "2026-10-09",
   "hash": "9bc5e33f63ab"
@@ -99,9 +167,21 @@
   "checked": "2026-10-09",
   "hash": "76e8ceda1263"
  },
+ "https://www.birchwoodbakery.com/": {
+  "checked": "2026-11-25",
+  "hash": "d66a4fdc5c5a"
+ },
+ "https://www.bknewengland.org/": {
+  "checked": "2026-11-25",
+  "hash": "52ceaa89e79a"
+ },
  "https://www.boston.gov/calendar": {
-  "checked": "2026-10-09",
-  "hash": "3cc90e460924"
+  "checked": "2026-11-25",
+  "hash": "6b7fd9ff5b0b"
+ },
+ "https://www.bostonfoodforest.org/workshops": {
+  "checked": "2026-11-25",
+  "hash": "a24d9024db02"
  },
  "https://www.broadsheetcoffee.com/": {
   "checked": "2026-10-09",
@@ -115,49 +195,81 @@
   "checked": "2026-10-09",
   "hash": "34969af9b438"
  },
+ "https://www.emeraldyoga.com/": {
+  "checked": "2026-11-25",
+  "hash": "fb3c9d105eef"
+ },
+ "https://www.emeraldyoga.com/chakra-journey": {
+  "checked": "2026-11-25",
+  "hash": "f682b739c155"
+ },
  "https://www.eventbrite.com/o/healing-with-spirit-3874767831": {
-  "checked": "2026-10-09",
-  "hash": "e62516ed81fa"
+  "checked": "2026-11-25",
+  "hash": "82d98292d8e3"
  },
  "https://www.fells.org/": {
-  "checked": "2026-10-09",
-  "hash": "909668db2923"
+  "checked": "2026-11-25",
+  "hash": "1deea277bcb9"
  },
  "https://www.franklinlibrary.org/events": {
   "checked": "2026-10-09",
   "hash": "ddf26f09d6ae"
+ },
+ "https://www.franklinma.gov/233/Franklin-Public-Library": {
+  "checked": "2026-11-25",
+  "hash": "b146d8664c6b"
  },
  "https://www.franklinma.gov/583/Franklin-Senior-Center-Council-on-Aging": {
   "checked": "2026-10-09",
   "hash": "c8dd15f2012a"
  },
  "https://www.franklinyoga.com/workshops": {
-  "checked": "2026-10-09",
-  "hash": "833a894e7bb1"
+  "checked": "2026-11-25",
+  "hash": "ba03299a8cac"
  },
  "https://www.friendsofthebluehills.org/": {
-  "checked": "2026-10-09",
-  "hash": "774216488477"
+  "checked": "2026-11-25",
+  "hash": "a42acb160dd8"
  },
  "https://www.heirloomweston.com/": {
   "checked": "2026-10-09",
   "hash": "a537f9d30cad"
  },
+ "https://www.herbrally.com/events/massachusetts": {
+  "checked": "2026-11-25",
+  "hash": "55ae4c38a729"
+ },
  "https://www.heylo.com/event/-OZirSSbWYcQ0tVsRIYt": {
   "checked": "2026-10-09",
   "hash": "26e2d9213410"
+ },
+ "https://www.holisticwellnesscenter.org/contact": {
+  "checked": "2026-11-25",
+  "hash": "3bc8fb2da1da"
  },
  "https://www.honeybeancafe.com/": {
   "checked": "2026-10-09",
   "hash": "adc83b19e793"
  },
  "https://www.houseofstellium.com/": {
-  "checked": "2026-10-09",
-  "hash": "dd10c4204eab"
+  "checked": "2026-11-25",
+  "hash": "94bf7bcc2bb0"
+ },
+ "https://www.jphcommunity.org/programs-events": {
+  "checked": "2026-11-25",
+  "hash": "911de2b5ff68"
+ },
+ "https://www.mass.gov/locations/dighton-rock-state-park": {
+  "checked": "2026-11-25",
+  "error": "HTTP Error 403: Forbidden"
+ },
+ "https://www.mass.gov/locations/massasoit-state-park": {
+  "checked": "2026-11-25",
+  "error": "HTTP Error 403: Forbidden"
  },
  "https://www.massaudubon.org/programs": {
-  "checked": "2026-10-09",
-  "hash": "0dd31203e180"
+  "checked": "2026-11-25",
+  "hash": "8b6fb0c24125"
  },
  "https://www.meetup.com/find/?keywords=meditation&location=us--ma--Boston": {
   "checked": "2026-10-09",
@@ -168,12 +280,16 @@
   "hash": "f7e4bfcfbe7e"
  },
  "https://www.naturalawakeningsboston.com/calendar/": {
-  "checked": "2026-10-09",
-  "hash": "4557ccd448fb"
+  "checked": "2026-11-25",
+  "hash": "caba1fce01df"
  },
  "https://www.naturalexpo.org/": {
   "checked": "2026-10-09",
   "hash": "c336af9f7440"
+ },
+ "https://www.nourishcollaborative.com/": {
+  "checked": "2026-11-25",
+  "hash": "d1a6cb3519ca"
  },
  "https://www.oceanairhimalayansaltcave.com/": {
   "checked": "2026-10-09",
@@ -208,8 +324,8 @@
   "hash": "b1ac50124aea"
  },
  "https://www.thehealingmoon.com": {
-  "checked": "2026-10-09",
-  "hash": "b985ff9e9b6f"
+  "checked": "2026-11-25",
+  "hash": "8db6028bbf09"
  },
  "https://www.theserendipityplace.com/": {
   "checked": "2026-10-09",
@@ -234,5 +350,9 @@
  "https://www.wardsberryfarm.com/": {
   "checked": "2026-10-09",
   "hash": "a1ab15d0b72a"
+ },
+ "https://www.webreathewellness.com/": {
+  "checked": "2026-11-25",
+  "hash": "4f9dbda2834a"
  }
 }
