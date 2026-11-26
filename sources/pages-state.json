@@ -1,18 +1,18 @@
 {
  "pages": {
   "/metrowest/": {
-   "hash": "eed9a74a177b",
-   "lastmod": "2026-11-25",
+   "hash": "b917a2dc7632",
+   "lastmod": "2026-11-26",
    "index": true
   },
   "/franklin-area/": {
-   "hash": "13e685e9404b",
-   "lastmod": "2026-11-25",
+   "hash": "25c35b384751",
+   "lastmod": "2026-11-26",
    "index": true
   },
   "/boston-area/": {
-   "hash": "f8742316c901",
-   "lastmod": "2026-11-25",
+   "hash": "d569ef9ab78c",
+   "lastmod": "2026-11-26",
    "index": true
   },
   "/south-shore/": {
@@ -41,8 +41,8 @@
    "index": true
   },
   "/towns/natick-ma/": {
-   "hash": "ad3b2c7d5956",
-   "lastmod": "2026-11-25",
+   "hash": "e7ada4a46769",
+   "lastmod": "2026-11-26",
    "index": true
   },
   "/towns/jamaica-plain-ma/": {
@@ -56,8 +56,8 @@
    "index": true
   },
   "/towns/cambridge-ma/": {
-   "hash": "d94e3641ee71",
-   "lastmod": "2026-11-23",
+   "hash": "ed403789728c",
+   "lastmod": "2026-11-26",
    "index": true
   },
   "/towns/marshfield-ma/": {
@@ -101,13 +101,13 @@
    "index": true
   },
   "/yoga/": {
-   "hash": "4e5084ea0d18",
-   "lastmod": "2026-11-25",
+   "hash": "6c5b82833362",
+   "lastmod": "2026-11-26",
    "index": true
   },
   "/meditation/": {
-   "hash": "d2bd02a44ce8",
-   "lastmod": "2026-11-23",
+   "hash": "23ef8d68c0ee",
+   "lastmod": "2026-11-26",
    "index": true
   },
   "/reiki-massage-acupuncture/": {
@@ -171,5 +171,5 @@
   "hash": "100",
   "lastmod": "2026-11-04"
  },
- "built": "2026-11-25"
+ "built": "2026-11-26"
 }
