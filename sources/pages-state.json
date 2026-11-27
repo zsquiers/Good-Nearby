@@ -1,23 +1,23 @@
 {
  "pages": {
   "/metrowest/": {
-   "hash": "b917a2dc7632",
-   "lastmod": "2026-11-26",
+   "hash": "94180b54d438",
+   "lastmod": "2026-11-27",
    "index": true
   },
   "/franklin-area/": {
-   "hash": "25c35b384751",
-   "lastmod": "2026-11-26",
+   "hash": "6a862183baba",
+   "lastmod": "2026-11-27",
    "index": true
   },
   "/boston-area/": {
-   "hash": "d569ef9ab78c",
-   "lastmod": "2026-11-26",
+   "hash": "8002a85d4ed4",
+   "lastmod": "2026-11-27",
    "index": true
   },
   "/south-shore/": {
-   "hash": "5673ec55481a",
-   "lastmod": "2026-11-25",
+   "hash": "09efbeb70a5a",
+   "lastmod": "2026-11-27",
    "index": true
   },
   "/towns/franklin-ma/": {
@@ -26,8 +26,8 @@
    "index": true
   },
   "/towns/norfolk-ma/": {
-   "hash": "194ff99cd25e",
-   "lastmod": "2026-11-24",
+   "hash": "3c0f25227336",
+   "lastmod": "2026-11-27",
    "index": true
   },
   "/towns/wrentham-ma/": {
@@ -41,8 +41,8 @@
    "index": true
   },
   "/towns/natick-ma/": {
-   "hash": "e7ada4a46769",
-   "lastmod": "2026-11-26",
+   "hash": "d769616b6b45",
+   "lastmod": "2026-11-27",
    "index": true
   },
   "/towns/jamaica-plain-ma/": {
@@ -56,8 +56,8 @@
    "index": true
   },
   "/towns/cambridge-ma/": {
-   "hash": "ed403789728c",
-   "lastmod": "2026-11-26",
+   "hash": "680c0bd555ad",
+   "lastmod": "2026-11-27",
    "index": true
   },
   "/towns/marshfield-ma/": {
@@ -101,13 +101,13 @@
    "index": true
   },
   "/yoga/": {
-   "hash": "6c5b82833362",
-   "lastmod": "2026-11-26",
+   "hash": "ee71419ed708",
+   "lastmod": "2026-11-27",
    "index": true
   },
   "/meditation/": {
-   "hash": "23ef8d68c0ee",
-   "lastmod": "2026-11-26",
+   "hash": "d24114c27120",
+   "lastmod": "2026-11-27",
    "index": true
   },
   "/reiki-massage-acupuncture/": {
@@ -121,8 +121,8 @@
    "index": true
   },
   "/creative-classes/": {
-   "hash": "c0eee63e9437",
-   "lastmod": "2026-11-25",
+   "hash": "3e1a7f67fa1f",
+   "lastmod": "2026-11-27",
    "index": true
   },
   "/book-groups/": {
@@ -131,8 +131,8 @@
    "index": true
   },
   "/trails-and-walks/": {
-   "hash": "fc34bec38a25",
-   "lastmod": "2026-11-25",
+   "hash": "cccbc832035f",
+   "lastmod": "2026-11-27",
    "index": true
   },
   "/cafes-and-bakeries/": {
@@ -171,5 +171,5 @@
   "hash": "100",
   "lastmod": "2026-11-04"
  },
- "built": "2026-11-26"
+ "built": "2026-11-27"
 }
