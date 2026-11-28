@@ -1,8 +1,8 @@
 {
  "pages": {
   "/metrowest/": {
-   "hash": "94180b54d438",
-   "lastmod": "2026-11-27",
+   "hash": "2b10aaadf52f",
+   "lastmod": "2026-11-28",
    "index": true
   },
   "/franklin-area/": {
@@ -11,13 +11,13 @@
    "index": true
   },
   "/boston-area/": {
-   "hash": "8002a85d4ed4",
-   "lastmod": "2026-11-27",
+   "hash": "c84e8e05387d",
+   "lastmod": "2026-11-28",
    "index": true
   },
   "/south-shore/": {
-   "hash": "09efbeb70a5a",
-   "lastmod": "2026-11-27",
+   "hash": "543f6781d106",
+   "lastmod": "2026-11-28",
    "index": true
   },
   "/towns/franklin-ma/": {
@@ -36,13 +36,13 @@
    "index": true
   },
   "/towns/framingham-ma/": {
-   "hash": "b9eaa50f6f11",
-   "lastmod": "2026-11-25",
+   "hash": "f9e28b2c6800",
+   "lastmod": "2026-11-28",
    "index": true
   },
   "/towns/natick-ma/": {
-   "hash": "d769616b6b45",
-   "lastmod": "2026-11-27",
+   "hash": "6fbc378042d3",
+   "lastmod": "2026-11-28",
    "index": true
   },
   "/towns/jamaica-plain-ma/": {
@@ -66,8 +66,8 @@
    "index": true
   },
   "/towns/pembroke-ma/": {
-   "hash": "de4c2cbc66b2",
-   "lastmod": "2026-11-23",
+   "hash": "8ce2c0b3024f",
+   "lastmod": "2026-11-28",
    "index": true
   },
   "/towns/medway-ma/": {
@@ -101,13 +101,13 @@
    "index": true
   },
   "/yoga/": {
-   "hash": "ee71419ed708",
-   "lastmod": "2026-11-27",
+   "hash": "d1a2448361e7",
+   "lastmod": "2026-11-28",
    "index": true
   },
   "/meditation/": {
-   "hash": "d24114c27120",
-   "lastmod": "2026-11-27",
+   "hash": "96de10747413",
+   "lastmod": "2026-11-28",
    "index": true
   },
   "/reiki-massage-acupuncture/": {
@@ -121,8 +121,8 @@
    "index": true
   },
   "/creative-classes/": {
-   "hash": "3e1a7f67fa1f",
-   "lastmod": "2026-11-27",
+   "hash": "b99d461e7b49",
+   "lastmod": "2026-11-28",
    "index": true
   },
   "/book-groups/": {
@@ -131,8 +131,8 @@
    "index": true
   },
   "/trails-and-walks/": {
-   "hash": "cccbc832035f",
-   "lastmod": "2026-11-27",
+   "hash": "866b527a15b4",
+   "lastmod": "2026-11-28",
    "index": true
   },
   "/cafes-and-bakeries/": {
@@ -171,5 +171,5 @@
   "hash": "100",
   "lastmod": "2026-11-04"
  },
- "built": "2026-11-27"
+ "built": "2026-11-28"
 }
